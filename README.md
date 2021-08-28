@@ -58,5 +58,23 @@ Week |Date |  Topic | Resources | Instructors
 
 
 
-
-
+## Practicals
+The practicals will touch on different MLOPS and will be held alongside classes each week.
+Week |Date |  Topic | Resources | Instructors
+|---|---| ---| --- | --|
+1| 4-Sep |  Data Science Notebook Frameworks| |
+2 |11-Sep | A web scraping task with basic intro first;  Data Labelling Tools and Frameworks|   | 
+3 |18-Sep | Intro to Pandas; Optimized computational Framework part 1 (Pandas related)| | 
+4 |25-Sep | Industrial Strength Visualization libraries |  | 
+5 |2-Oct | Intro to numpy; Optimized computational Framework part 2 (Numpy related) | | 
+6 |9-Oct | Outlier and Anomaly Detection | |
+7 |16-Oct |Intro to Sklearn |  |
+8 |23-Oct | No Practicals 
+9 |30-Oct | **Break** 
+10 |6-Nov | Model and Data Versioning||
+11 | 13-Nov | Feature Engineering Automation | |
+13 | 27-Nov | Model Serving and Monitoring| |
+14 | 4-Dec | No Practicals| |
+15 | 11-Dec | No Practicals  | |
+16 | 18-Dec | No Practicals | |
+|17|8-Jan|**Project Presentation**
