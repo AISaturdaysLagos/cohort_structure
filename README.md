@@ -29,6 +29,11 @@ In the last 6 cohorts, we have offered free machine learning classes to more tha
 
 **Team Github Repository:** Each team is expected to create a Github repository for their team under AI Saturdays Lagos Github organization, where each member would complete and contribute to the tasks.
 
+## Certificate Requirements
+- You are expected to have about 60% or more participation in class.  Participation will be monitored by taking attendance (team secretary's duty)
+- You are expected to have about 80% participation in Practicals. Participation is monitored by inspecting commits to the tasks repo and team weekly meeting attendance. 
+- You are expected to have a 100% participation in final Project. Participation is monitored by inspecting commits to the project repository.
+
 ## Curriculum
 We will primarily be using the three fantastic courses listed below. However, each volunteer course instructor has full autonomy in choosing which materials to use to teach their classes.
 
@@ -60,7 +65,7 @@ Week |Date |  Topic | Resources | Instructors
 
 ## Practicals
 The practicals will touch on different MLOPS and will be held alongside classes each week.
-Week |Date |  Topic | Resources | Instructors
+Week |Date |  Topic | Resources | TAs
 |---|---| ---| --- | --|
 1| 4-Sep |  Data Science Notebook Frameworks| |
 2 |11-Sep | A web scraping task with basic intro first;  Data Labelling Tools and Frameworks|   | 
@@ -78,3 +83,6 @@ Week |Date |  Topic | Resources | Instructors
 15 | 11-Dec | No Practicals  | |
 16 | 18-Dec | No Practicals | |
 |17|8-Jan|**Project Presentation**
+
+
+
