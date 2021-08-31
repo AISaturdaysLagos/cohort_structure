@@ -43,22 +43,22 @@ We will primarily be using the three fantastic courses listed below. However, ea
 
 Week |Date |  Topic | Resources | Instructors
 |---|---| ---| --- | --|
-1| 4-Sep |  Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) |
-2 |11-Sep | Data Collection and Scraping | [Slide](http://www.datasciencecourse.org/slides/data_collection.pdf), [Note](http://www.datasciencecourse.org/notes/data_collection/) | 
-3 |18-Sep | Relational Data | [Slide](http://www.datasciencecourse.org/slides/relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | 
-4 |25-Sep | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) | 
-5 |2-Oct | Matrices, Vectors, and Linear Algebra | [Slide](http://www.datasciencecourse.org/slides/matrices.pdf), [Note](http://www.datasciencecourse.org/notes/matrices/) | 
-6 |9-Oct | Data Preprocessing | [Slide](https://mlvu.github.io/lectures/22.Methodology2.annotated.pdf), [Videos](https://www.youtube.com/playlist?list=PLCof9EqayQgsJDHLYb0dxn5xr2-pjmV08) |
-7 |16-Oct | Introduction to Machine Learning | [Slide](http://www.datasciencecourse.org/slides/ml_intro.pdf), [Note](http://www.datasciencecourse.org/notes/ml_intro/) |
-8 |23-Oct | Linear Models | [Slide](http://www.datasciencecourse.org/slides/linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQguePOyoKenR5LWOlCWCkCsM)|
+1| 4-Sep |  Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | Tejumade Afonja 
+2 |11-Sep | Data Collection and Scraping | [Slide](http://www.datasciencecourse.org/slides/data_collection.pdf), [Note](http://www.datasciencecourse.org/notes/data_collection/) | Akintayo Jabar
+3 |18-Sep | Relational Data | [Slide](http://www.datasciencecourse.org/slides/relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | Akintayo Jabar
+4 |25-Sep | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) |  Ahmed Olanrewaju
+5 |2-Oct | Matrices, Vectors, and Linear Algebra | [Slide](http://www.datasciencecourse.org/slides/matrices.pdf), [Note](http://www.datasciencecourse.org/notes/matrices/) | Lawrence Francis
+6 |9-Oct | Data Preprocessing | [Slide](https://mlvu.github.io/lectures/22.Methodology2.annotated.pdf), [Videos](https://www.youtube.com/playlist?list=PLCof9EqayQgsJDHLYb0dxn5xr2-pjmV08) | Esemeje Omole
+7 |16-Oct | Introduction to Machine Learning | [Slide](http://www.datasciencecourse.org/slides/ml_intro.pdf), [Note](http://www.datasciencecourse.org/notes/ml_intro/) | Olumide Okubadejo
+8 |23-Oct | Linear Models | [Slide](http://www.datasciencecourse.org/slides/linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQguePOyoKenR5LWOlCWCkCsM)| Stanley Dukor
 9 |30-Oct | **Break** 
-10 |6-Nov | Model Evaluation | [Slide](https://mlvu.github.io/lectures/21.Methodology1.annotated.pdf), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgt6iSJnt8ABPhMNiU2hmZiK) |
-11 | 13-Nov | Nonlinear Models | [Slide](http://www.datasciencecourse.org/slides/nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling/) |
-12 | 20-Nov | Probabilistic Models | [Slide](http://www.datasciencecourse.org/slides/probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability/) |
-13 | 27-Nov | Probabilistic Models part 2 | [Slide](http://www.datasciencecourse.org/slides/mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle/), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgs6gGKPUDURn6aoV6gCIUPa) |
-14 | 4-Dec | Tree Models | [Slide](http://www.datasciencecourse.org/slides/decision_trees.pdf), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgv5bPKEn7F1AEMyojCgTibW) |
-15 | 11-Dec | Unsupervised Learning  | [Slide](http://www.datasciencecourse.org/slides/unsupervised.pdf), [Note](http://www.datasciencecourse.org/notes/unsupervised/) |
-16 | 18-Dec | Recommenders Systems | [Slide](http://www.datasciencecourse.org/slides/recommender.pdf), [Note](http://www.datasciencecourse.org/notes/recommender/) |
+10 |6-Nov | Model Evaluation | [Slide](https://mlvu.github.io/lectures/21.Methodology1.annotated.pdf), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgt6iSJnt8ABPhMNiU2hmZiK) | Orevaoghene Ahia
+11 | 13-Nov | Nonlinear Models | [Slide](http://www.datasciencecourse.org/slides/nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling/) | Kenechi Dukor
+12 | 20-Nov | Probabilistic Models | [Slide](http://www.datasciencecourse.org/slides/probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability/) | Tejumade Afonja
+13 | 27-Nov | Probabilistic Models part 2 | [Slide](http://www.datasciencecourse.org/slides/mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle/), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgs6gGKPUDURn6aoV6gCIUPa) | Kenechi Dukor 
+14 | 4-Dec | Tree Models | [Slide](http://www.datasciencecourse.org/slides/decision_trees.pdf), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgv5bPKEn7F1AEMyojCgTibW) | Femi Azeez
+15 | 11-Dec | Unsupervised Learning  | [Slide](http://www.datasciencecourse.org/slides/unsupervised.pdf), [Note](http://www.datasciencecourse.org/notes/unsupervised/) | Olumide Okubadejo
+16 | 18-Dec | Recommenders Systems | [Slide](http://www.datasciencecourse.org/slides/recommender.pdf), [Note](http://www.datasciencecourse.org/notes/recommender/) | Jennifer Kwentoh
 |17|8-Jan|**Project Presentation**
 
 
