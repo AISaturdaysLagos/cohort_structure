@@ -10,7 +10,7 @@ For the past 6 cohorts (since January 6th 2018), we have offered free machine le
 - Certificate of participation if all the requirements are fulfiled (more details below)
 
 ## How can I access the classes?
-Our classes streamed weekly and can be accessed online, at anytime - for free!
+Our classes are streamed weekly and can be accessed online, at anytime - for free!
 
 [1] Cohort 7 Classes - [Youtube Playlist](https://youtube.com/playlist?list=PLD0HH4Qq3rcdvhgqY1FR17HTqOPn4c8YC)
 
