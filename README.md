@@ -1,13 +1,36 @@
 # cohort7_structure
 
-## Introduction
-In the last 6 cohorts, we have offered free machine learning classes to more than 600 Nigerians and we are excited to continue our long-standing tradition. However, in this cohort, we will be introducing our students to Machine Learning operations (MLOPS) tools in the hope of better preparing them for their future work in the field Machine Learning. This document will serve as a guideline for our students, as well as other communities looking to replicate the AI Saturdays Lagos model ❤️
+# Introduction
+For the past 6 cohorts (since January 6th 2018), we have offered free machine learning classes to more than 600 Nigerians and we are excited to continue our long-standing tradition. However, in this cohort, we will be introducing our students to Machine Learning operations (MLOPS) tools in the hope of better preparing them for their future work in the field Machine Learning. This document will serve as a guideline for our students, as well as other communities looking to replicate the AI Saturdays Lagos model ❤️
 
-## Cohort 7
+## What should I expect?
 - 15 weeks of Main class and 1 week break 😎
 - 10 practicals with MLOPS
 - 1 Main project
 - Certificate of participation if all the requirements are fulfiled (more details below)
+
+## How can I access the classes?
+Our classes streamed weekly and can be accessed online, at anytime - for free!
+
+[1] Cohort 7 Classes - [Youtube Playlist](https://youtube.com/playlist?list=PLD0HH4Qq3rcdvhgqY1FR17HTqOPn4c8YC)
+
+[2] Cohort 7 Practicals - [Youtube Playlist](https://youtube.com/playlist?list=PLD0HH4Qq3rcd8FqxQZf7NYFIiW2mAJCXH)
+
+
+## Where are the class materials?
+We draw on a wealth of knowledge available for free online and have linked to these excellent resources in the curriculum units below. We also provide a companion Github repository of slides and notebooks. Our practical classes are hands-on, introducing students to various MLOPs tools.
+
+[1] Cohort 7 Classes - [Github Repository](https://github.com/AISaturdaysLagos/cohort7_classes/)
+
+[2] Cohort 7 Practicals - [Github Repository](https://github.com/AISaturdaysLagos/cohort7_practicals)
+
+
+## It truly takes a village 
+We are extremely grateful to our selfless volunteers - class and practical instructors, teaching assistants, mentors, and many more. Our community is truly fortunate to have such an amazing, talented, kind, and incredible group of people❤️. 
+
+Are you interested in joining our next cohort? Please follow us on [our various socials media platforms](https://ai6lagos.notion.site/Social-Media-Pages-274e4ffbae40403da744403377e6c402) to keep in touch ✨.
+
+# Cohort Structure
 ## Subgroups
 **Team Lead:** Teams leads are software engineers or who have some degree of software engineering skills that can be leveraged across all members of their team. The function of the team lead would be to teach the students peripheral software skills like using Github, command line, debugging, etc. The team leads will report to the team mentor.
 
@@ -43,46 +66,49 @@ We will primarily be using the three fantastic courses listed below. However, ea
 
 Week |Date |  Topic | Resources | Instructors
 |---|---| ---| --- | --|
-1| 4-Sep |  Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | Tejumade Afonja 
-2 |11-Sep | Data Collection and Scraping | [Slide](http://www.datasciencecourse.org/slides/data_collection.pdf), [Note](http://www.datasciencecourse.org/notes/data_collection/) | Akintayo Jabar
-3 |18-Sep | Relational Data | [Slide](http://www.datasciencecourse.org/slides/relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | Akintayo Jabar
-4 |25-Sep | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) |  Ahmed Olanrewaju
-5 |2-Oct | Matrices, Vectors, and Linear Algebra | [Slide](http://www.datasciencecourse.org/slides/matrices.pdf), [Note](http://www.datasciencecourse.org/notes/matrices/) | Lawrence Francis
-6 |9-Oct | Data Preprocessing | [Slide](https://mlvu.github.io/lectures/22.Methodology2.annotated.pdf), [Videos](https://www.youtube.com/playlist?list=PLCof9EqayQgsJDHLYb0dxn5xr2-pjmV08) | Esemeje Omole
-7 |16-Oct | Introduction to Machine Learning | [Slide](http://www.datasciencecourse.org/slides/ml_intro.pdf), [Note](http://www.datasciencecourse.org/notes/ml_intro/) | Olumide Okubadejo
-8 |23-Oct | Linear Models | [Slide](http://www.datasciencecourse.org/slides/linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQguePOyoKenR5LWOlCWCkCsM)| Stanley Dukor
+1| 4-Sep |  Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
+2 |11-Sep | Data Collection and Scraping | [Slide](http://www.datasciencecourse.org/slides/data_collection.pdf), [Note](http://www.datasciencecourse.org/notes/data_collection/) | [Akintayo Jabar](https://www.linkedin.com/in/tayo-jabar/)
+3 |18-Sep | Relational Data | [Slide](http://www.datasciencecourse.org/slides/relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | [Akintayo Jabar](https://www.linkedin.com/in/tayo-jabar/)
+4 |25-Sep | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) |  [Ahmed Olanrewaju](https://www.linkedin.com/in/ahmed-olanrewaju-093b7b4a/)
+5 |2-Oct | Matrices, Vectors, and Linear Algebra | [Slide](http://www.datasciencecourse.org/slides/matrices.pdf), [Note](http://www.datasciencecourse.org/notes/matrices/) | [Lawrence Francis](https://www.linkedin.com/in/ldfrancis/)
+6 |9-Oct | Data Preprocessing | [Slide](https://mlvu.github.io/lectures/22.Methodology2.annotated.pdf), [Videos](https://www.youtube.com/playlist?list=PLCof9EqayQgsJDHLYb0dxn5xr2-pjmV08) | [Esemeje Omole](https://www.linkedin.com/in/esemejeomole/)
+7 |16-Oct | Introduction to Machine Learning | [Slide](http://www.datasciencecourse.org/slides/ml_intro.pdf), [Note](http://www.datasciencecourse.org/notes/ml_intro/) | [Olumide Okubadejo](https://www.linkedin.com/in/olumide-okubadejo/)
+8 |23-Oct | Linear Models | [Slide](http://www.datasciencecourse.org/slides/linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQguePOyoKenR5LWOlCWCkCsM)| [Stanley Dukor](https://www.linkedin.com/in/stanleydukor/)
 9 |30-Oct | **Break** 
-10 |6-Nov | Model Evaluation | [Slide](https://mlvu.github.io/lectures/21.Methodology1.annotated.pdf), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgt6iSJnt8ABPhMNiU2hmZiK) | Orevaoghene Ahia
-11 | 13-Nov | Nonlinear Models | [Slide](http://www.datasciencecourse.org/slides/nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling/) | Kenechi Dukor
-12 | 20-Nov | Probabilistic Models | [Slide](http://www.datasciencecourse.org/slides/probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability/) | Tejumade Afonja
-13 | 27-Nov | Probabilistic Models part 2 | [Slide](http://www.datasciencecourse.org/slides/mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle/), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgs6gGKPUDURn6aoV6gCIUPa) | Kenechi Dukor 
-14 | 4-Dec | Tree Models | [Slide](http://www.datasciencecourse.org/slides/decision_trees.pdf), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgv5bPKEn7F1AEMyojCgTibW) | Femi Azeez
-15 | 11-Dec | Unsupervised Learning  | [Slide](http://www.datasciencecourse.org/slides/unsupervised.pdf), [Note](http://www.datasciencecourse.org/notes/unsupervised/) | Olumide Okubadejo
-16 | 18-Dec | Recommenders Systems | [Slide](http://www.datasciencecourse.org/slides/recommender.pdf), [Note](http://www.datasciencecourse.org/notes/recommender/) | Jennifer Kwentoh
+10 |6-Nov | Model Evaluation | [Slide](https://mlvu.github.io/lectures/21.Methodology1.annotated.pdf), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgt6iSJnt8ABPhMNiU2hmZiK) | [Orevaoghene Ahia](https://www.linkedin.com/in/orevaoghene-ahia/)
+11 | 13-Nov | Nonlinear Models | [Slide](http://www.datasciencecourse.org/slides/nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling/) | [Kenechi Dukor](https://www.linkedin.com/in/kenechi-dukor-a30462b6/)
+12 | 20-Nov | Probabilistic Models | [Slide](http://www.datasciencecourse.org/slides/probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability/) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
+13 | 27-Nov | Probabilistic Models part 2 | [Slide](http://www.datasciencecourse.org/slides/mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle/), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgs6gGKPUDURn6aoV6gCIUPa) | [George Igwegbe](https://www.linkedin.com/in/george-igwegbe/)
+14 | 4-Dec | Tree Models | [Slide](http://www.datasciencecourse.org/slides/decision_trees.pdf), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgv5bPKEn7F1AEMyojCgTibW) | [Azeez Oluwafemi](https://www.linkedin.com/in/azeez-oluwafemi/)
+15 | 11-Dec | Unsupervised Learning  | [Slide](http://www.datasciencecourse.org/slides/unsupervised.pdf), [Note](http://www.datasciencecourse.org/notes/unsupervised/) | [Olumide Okubadejo](https://www.linkedin.com/in/olumide-okubadejo/)
+16 | 18-Dec | Recommenders Systems | [Slide](http://www.datasciencecourse.org/slides/recommender.pdf), [Note](http://www.datasciencecourse.org/notes/recommender/) | [Jennifer Kwentoh](https://www.linkedin.com/in/jennifer-c-kwentoh/)
 |17|8-Jan|**Project Presentation**
 
 
 
 ## Practicals
 The practicals will touch on different MLOPS and will be held alongside classes each week.
-Week |Date |  Topic | Resources | TAs
-|---|---| ---| --- | --|
-1| 4-Sep |  Data Science Notebook Frameworks| |
-2 |11-Sep | A web scraping task with basic intro first;  Data Labelling Tools and Frameworks|   | 
-3 |18-Sep | Intro to Pandas; Optimized computational Framework part 1 (Pandas related)| | 
-4 |25-Sep | Industrial Strength Visualization libraries |  | 
-5 |2-Oct | Intro to numpy; Optimized computational Framework part 2 (Numpy related) | | 
-6 |9-Oct | Outlier and Anomaly Detection | |
-7 |16-Oct |Intro to Sklearn |  |
-8 |23-Oct | No Practicals 
+Week |Date |  Topic | TAs
+|---|---| ---| --- |
+1| 4-Sep |  Data Science Notebook Frameworks| [Ojeifo Ozeigbe](https://www.linkedin.com/in/ojeifo-oziegbe-516560146/?originalSubdomain=ng)
+2 |11-Sep | Recap on Task 1|  [Azeez Oluwafemi](https://www.linkedin.com/in/azeez-oluwafemi/), [Akintunde Oladipo](https://www.linkedin.com/in/olasakins/) and [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
+3 |18-Sep | A web scraping task with basic intro first;  Data Labelling Tools and Frameworks|   [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) and [Akintunde Oladipo](https://www.linkedin.com/in/olasakins/)
+4 |25-Sep | **Break (IndabaXNigeria Conference)**| 
+5 |2-Oct | Intro to Pandas; Optimized computational Framework part 1 (Pandas related)| 
+6 |9-Oct | Industrial Strength Visualization libraries |  
+7 |16-Oct | Intro to numpy; Optimized computational Framework part 2 (Numpy related) | | 
+8 |23-Oct | Outlier and Anomaly Detection | 
 9 |30-Oct | **Break** 
-10 |6-Nov | Model and Data Versioning||
-11 | 13-Nov | Feature Engineering Automation | |
-13 | 27-Nov | Model Serving and Monitoring| |
-14 | 4-Dec | No Practicals| |
-15 | 11-Dec | No Practicals  | |
-16 | 18-Dec | No Practicals | |
+10 |6-Nov |Intro to Sklearn |  
+11 |13-Nov | Model and Data Versioning|
+12 | 20-Nov | Feature Engineering Automation | 
+13 | 27-Nov | Model Serving and Monitoring| 
+14 | 4-Dec | No Practicals  | 
+15 | 11-Dec | No Practicals  | 
+16 | 18-Dec | No Practicals | 
 |17|8-Jan|**Project Presentation**
+
+
 
 
 
