@@ -81,8 +81,8 @@ Week |Date |  Topic | Resources | Instructors
 13 | 27-Nov | Probabilistic Models | [Slide](http://www.datasciencecourse.org/slides/mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle/), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgs6gGKPUDURn6aoV6gCIUPa) | [George Igwegbe](https://www.linkedin.com/in/george-igwegbe/)
 14 | 4-Dec | Tree Models | [Slide](http://www.datasciencecourse.org/slides/decision_trees.pdf), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgv5bPKEn7F1AEMyojCgTibW) | [Azeez Oluwafemi](https://www.linkedin.com/in/azeez-oluwafemi/)
 15 | 11-Dec | Unsupervised Learning  | [Slide](http://www.datasciencecourse.org/slides/unsupervised.pdf), [Note](http://www.datasciencecourse.org/notes/unsupervised/) | [Olumide Okubadejo](https://www.linkedin.com/in/olumide-okubadejo/)
-16 | 18-Dec | Recommenders Systems | [Slide](http://www.datasciencecourse.org/slides/recommender.pdf), [Note](http://www.datasciencecourse.org/notes/recommender/) | [Farouq Oyebiyi](https://www.linkedin.com/in/farouq-oyebiyi-87ba2528)
-|17|8-Jan|**Project Presentation**
+16 | 8-Jan | Recommenders Systems | [Slide](http://www.datasciencecourse.org/slides/recommender.pdf), [Note](http://www.datasciencecourse.org/notes/recommender/) | [Farouq Oyebiyi](https://www.linkedin.com/in/farouq-oyebiyi-87ba2528)
+|17|29-Jan|**Project Presentation**
 
 
 
