@@ -64,6 +64,9 @@ We will primarily be using the three fantastic courses listed below. However, ea
 2. [Machine Learning @ VU University Amsterdam](https://mlvu.github.io/)
 3. [Stanford Machine Learning](http://cs229.stanford.edu/syllabus-spring2021.html)
 
+- [Youtube Playlist](https://youtube.com/playlist?list=PLD0HH4Qq3rcdvhgqY1FR17HTqOPn4c8YC)
+- [Github Repository](https://github.com/AISaturdaysLagos/cohort7_classes/)
+
 Week |Date |  Topic | Resources | Instructors
 |---|---| ---| --- | --|
 1| 4-Sep |  Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
@@ -74,7 +77,7 @@ Week |Date |  Topic | Resources | Instructors
 6 |9-Oct | Data Preprocessing | [Slide](https://mlvu.github.io/lectures/22.Methodology2.annotated.pdf), [Videos](https://www.youtube.com/playlist?list=PLCof9EqayQgsJDHLYb0dxn5xr2-pjmV08) | [Esemeje Omole](https://www.linkedin.com/in/esemejeomole/)
 7 |16-Oct | Introduction to Machine Learning | [Slide](http://www.datasciencecourse.org/slides/ml_intro.pdf), [Note](http://www.datasciencecourse.org/notes/ml_intro/) | [Olumide Okubadejo](https://www.linkedin.com/in/olumide-okubadejo/)
 8 |23-Oct | Linear Models | [Slide](http://www.datasciencecourse.org/slides/linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQguePOyoKenR5LWOlCWCkCsM)| [Stanley Dukor](https://www.linkedin.com/in/stanleydukor/)
-9 |30-Oct | **Break** 
+9 |30-Oct | **`Break`**
 10 |6-Nov | Model Evaluation | [Slide](https://mlvu.github.io/lectures/21.Methodology1.annotated.pdf), [Playlist](https://www.youtube.com/playlist?list=PLCof9EqayQgt6iSJnt8ABPhMNiU2hmZiK) | [Femi Ogunbode](https://www.linkedin.com/in/femiogunbode/?originalSubdomain=ng)
 11 | 13-Nov | Nonlinear Models | [Slide](http://www.datasciencecourse.org/slides/nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling/) | [Kenechi Dukor](https://www.linkedin.com/in/kenechi-dukor-a30462b6/)
 12 | 20-Nov | Basic Probability | [Slide](http://www.datasciencecourse.org/slides/probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability/) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
@@ -100,7 +103,6 @@ Week | Date | Topic | TAs
 5 | 2-Oct | Data Labelling Tools and Frameworks | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
 6 | 9-Oct | Intro to Pandas | [Gideon Onyewuenyi](https://www.linkedin.com/in/gideononyewuenyi/), [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-onyinyechi-91a4a3163/)
 7 | 16-Oct | Industrial Strength Visualization libraries |  [Sharon Ibejih](https://www.linkedin.com/in/sharonibejih/)
-8 | 23-Oct | Intro to Numpy | [Akintunde Oladipo](https://www.linkedin.com/in/olasakins/), [Gideon Onyewuenyi](https://www.linkedin.com/in/gideononyewuenyi/), [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-onyinyechi-91a4a3163/)
 9 | 6-Nov | Intro to Sklearn |  [Chizurum Olorondu](https://www.linkedin.com/in/chizurumolorondu/)
 10 | 30-Oct | Outlier and Anomaly Detection | [Kawthar Babatunde](https://www.linkedin.com/in/kawtharbabatunde/)
 11 | 13-Nov | Model and Data Versioning| [Akintunde Oladipo](https://www.linkedin.com/in/olasakins/)
