@@ -87,7 +87,10 @@ Week |Date |  Topic | Resources | Instructors
 
 
 ## Practicals
-The practicals will touch on different MLOPS and will be held alongside classes each week.
+The practicals will touch on different MLOPS and will be held alongside classes each week. 
+- [Github Repository](https://github.com/AISaturdaysLagos/cohort7_practicals)
+- [Youtube Playlist](https://youtube.com/playlist?list=PLD0HH4Qq3rcd8FqxQZf7NYFIiW2mAJCXH)
+
 Week | Date | Topic | TAs
 |---|---| ---| --- |
 1| 4-Sep |  Data Science Notebook Frameworks | [Ojeifo Ozeigbe](https://www.linkedin.com/in/ojeifo-oziegbe-516560146/?originalSubdomain=ng)
@@ -95,18 +98,15 @@ Week | Date | Topic | TAs
 3 | 18-Sep | A web scraping task with basic intro first | [Akintunde Oladipo](https://www.linkedin.com/in/olasakins/)
 4 | 25-Sep | **`Break (IndabaXNigeria Conference)`**
 5 | 2-Oct | Data Labelling Tools and Frameworks | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
-5 | 9-Oct | Intro to Pandas | [Gideon Onyewuenyi](https://www.linkedin.com/in/gideononyewuenyi/)
-6 | 16-Oct | Industrial Strength Visualization libraries |  -
-7 | 23-Oct | Intro to Numpy; Optimized computational Framework Part 2 (Numpy related) | -
-8 | 30-Oct | Outlier and Anomaly Detection | -
-10 | 6-Nov |Intro to Sklearn |  -
-11 | 13-Nov | Model and Data Versioning| -
-12 | 20-Nov | Feature Engineering Automation | -
-13 | 27-Nov | Model Serving and Monitoring| -
-14 | 4-Dec | No Practicals  | 
-15 | 11-Dec | No Practicals  | 
-16 | 18-Dec | No Practicals | 
-|17|8-Jan|**Project Presentation**
+6 | 9-Oct | Intro to Pandas | [Gideon Onyewuenyi](https://www.linkedin.com/in/gideononyewuenyi/), [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-onyinyechi-91a4a3163/)
+7 | 16-Oct | Industrial Strength Visualization libraries |  [Sharon Ibejih](https://www.linkedin.com/in/sharonibejih/)
+8 | 23-Oct | Intro to Numpy | [Akintunde Oladipo](https://www.linkedin.com/in/olasakins/), [Gideon Onyewuenyi](https://www.linkedin.com/in/gideononyewuenyi/), [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-onyinyechi-91a4a3163/)
+9 | 6-Nov | Intro to Sklearn |  [Chizurum Olorondu](https://www.linkedin.com/in/chizurumolorondu/)
+10 | 30-Oct | Outlier and Anomaly Detection | [Kawthar Babatunde](https://www.linkedin.com/in/kawtharbabatunde/)
+11 | 13-Nov | Model and Data Versioning| [Akintunde Oladipo](https://www.linkedin.com/in/olasakins/)
+12 | 20-Nov | Feature Engineering Automation | [Oluwafemi Azeez](https://www.linkedin.com/in/azeez-oluwafemi/)
+13 | 27-Nov | Model Serving and Monitoring | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/)
+
 
 
 
