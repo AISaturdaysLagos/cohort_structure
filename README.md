@@ -64,6 +64,7 @@ We will primarily be using the three fantastic courses listed below. However, ea
 2. [Machine Learning @ VU University Amsterdam](https://mlvu.github.io/)
 3. [Stanford Machine Learning](http://cs229.stanford.edu/syllabus-spring2021.html)
 
+You can access all our classes and materials via these links
 - [Youtube Playlist](https://youtube.com/playlist?list=PLD0HH4Qq3rcdvhgqY1FR17HTqOPn4c8YC)
 - [Github Repository](https://github.com/AISaturdaysLagos/cohort7_classes/)
 
