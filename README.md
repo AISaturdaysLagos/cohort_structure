@@ -24,11 +24,13 @@ We draw on a wealth of knowledge available for free online and have linked to th
 
 [2] Cohort 7 Practicals - [Github Repository](https://github.com/AISaturdaysLagos/cohort7_practicals)
 
+[3] Cohort 7 Projects - [Github Repository](https://github.com/AISaturdaysLagos/cohort7_projects)
+
 
 ## It truly takes a village 
 We are extremely grateful to our selfless volunteers - class and practical instructors, teaching assistants, mentors, and many more. Our community is truly fortunate to have such an amazing, talented, kind, and incredible group of people❤️. 
 
-Are you interested in joining our next cohort? Please follow us on [our various socials media platforms](https://ai6lagos.notion.site/Social-Media-Pages-274e4ffbae40403da744403377e6c402) to keep in touch ✨.
+Are you interested in joining our next cohort? Please follow us on [our various socials media platforms](https://ai6lagos.notion.site/Social-Media-Pages-78c3a6c29aa249c6b9a9579c1d02a53c) to keep in touch ✨.
 
 # Cohort Structure
 ## Subgroups
