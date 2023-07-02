@@ -20,14 +20,14 @@ Week |Date |  Topic | Resources | Instructors
 |---|---| ---| --- | --|
 0| 05-Aug |  Python Crash Course | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | TBD
 1| 12-Aug |  Introduction to Numpy, Pandas and Sklearn |  | TBD
-2 |19-Aug | Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | Khadijah Iddrisu (Phd Student, Dublin City University)
+2 |19-Aug | Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | TBD
 3 |26-Aug | Data Collection and Scraping | [Slide](http://www.datasciencecourse.org/slides/data_collection.pdf), [Note](http://www.datasciencecourse.org/notes/data_collection/) | TBD
 4 |02-Sep | Relational Data | [Slide](http://www.datasciencecourse.org/slides/relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | TBD
-5 |09-Sep | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) | Aseda Addai-Deseh (Data Scientist)
-6 |16-Sep | Matrices, Vectors, and Linear Algebra | [Slide](http://www.datasciencecourse.org/slides/matrices.pdf), [Note](http://www.datasciencecourse.org/notes/matrices/) | Nneka Okolo (RL Researcher, PHD student)
+5 |09-Sep | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) | TBD
+6 |16-Sep | Matrices, Vectors, and Linear Algebra | [Slide](http://www.datasciencecourse.org/slides/matrices.pdf), [Note](http://www.datasciencecourse.org/notes/matrices/) | TBD
 7 |23-Sep | Free text and natural language processing | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_9_free_text.pdf), [Note](http://www.datasciencecourse.org/notes/free_text) | TBD
 8 |30-Sep | Introduction to Machine Learning (Linear Regression) | [Slide](http://www.datasciencecourse.org/slides/ml_intro.pdf), [Note](http://www.datasciencecourse.org/notes/ml_intro/) |  TBD
-9 |07-Oct | Linear classification (Logistic Regression, Linear-SVM) | [Slide](http://www.datasciencecourse.org/slides/linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/)| Emefa Duah (Data Analyst)
+9 |07-Oct | Linear classification (Logistic Regression, Linear-SVM) | [Slide](http://www.datasciencecourse.org/slides/linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/)| TBD
 10 |14-Oct | **Break** |
 11 |21-Oct |  Nonlinear modeling, cross-validation | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_14_nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling) | TBD
 12 |28-Oct | Basics of probability | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_16_probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability) | TBD
