@@ -18,22 +18,25 @@ Additionally, participants are encouraged to work on a final project, exercising
 ## Selected Lectures
 Week |Date |  Topic | Resources | Instructors
 |---|---| ---| --- | --|
-1| 20-May |  Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | -
-2 |27-May | Data Collection and Scraping | [Slide](http://www.datasciencecourse.org/slides/data_collection.pdf), [Note](http://www.datasciencecourse.org/notes/data_collection/) | -
-3 |03-Jun | Relational Data | [Slide](http://www.datasciencecourse.org/slides/relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | -
-4 |10-Jun | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) | -
-5 |17-Jun |  Matrices, Vectors, and Linear Algebra | [Slide](http://www.datasciencecourse.org/slides/matrices.pdf), [Note](http://www.datasciencecourse.org/notes/matrices/) | -
-6 |24-Jun | Free text and natural language processing | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_9_free_text.pdf), [Note](http://www.datasciencecourse.org/notes/free_text) | -
-7 |01-Jul | Introduction to Machine Learning | [Slide](http://www.datasciencecourse.org/slides/ml_intro.pdf), [Note](http://www.datasciencecourse.org/notes/ml_intro/) |  -
-8 |08-Jul | Linear classification | [Slide](http://www.datasciencecourse.org/slides/linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/)| -
-9 |15-Jul | **Break**
-10 |22-Jul | Nonlinear modeling, cross-validation | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_14_nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling) | -
-11 |29-Jul | Basics of probability | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_16_probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability) | -
-12 |05-Aug | Maximum likelihood estimation | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_18_mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle) | -
-13 |12-Aug | Hypothesis testing and experimental design | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_19_hypothesis_testing.pdf) | -
-14 |19-Aug | Decision trees, interpretable models | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_22_decision_trees.pdf) | -
-15 |26-Aug | Deep learning | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | -
-16 |02-Sep | Conclusion of labs  |  | -
+0| 05-Aug |  Python Crash Course | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | TBD
+1| 12-Aug |  Introduction to Numpy, Pandas and Sklearn |  | TBD
+2 |19-Aug | Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | Khadijah Iddrisu (Phd Student, Dublin City University)
+3 |26-Aug | Data Collection and Scraping | [Slide](http://www.datasciencecourse.org/slides/data_collection.pdf), [Note](http://www.datasciencecourse.org/notes/data_collection/) | TBD
+4 |02-Sep | Relational Data | [Slide](http://www.datasciencecourse.org/slides/relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | TBD
+5 |09-Sep | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) | Aseda Addai-Deseh (Data Scientist)
+6 |16-Sep | Matrices, Vectors, and Linear Algebra | [Slide](http://www.datasciencecourse.org/slides/matrices.pdf), [Note](http://www.datasciencecourse.org/notes/matrices/) | Nneka Okolo (RL Researcher, PHD student)
+7 |23-Sep | Free text and natural language processing | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_9_free_text.pdf), [Note](http://www.datasciencecourse.org/notes/free_text) | TBD
+8 |30-Sep | Introduction to Machine Learning (Linear Regression) | [Slide](http://www.datasciencecourse.org/slides/ml_intro.pdf), [Note](http://www.datasciencecourse.org/notes/ml_intro/) |  TBD
+9 |07-Oct | Linear classification (Logistic Regression, Linear-SVM) | [Slide](http://www.datasciencecourse.org/slides/linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/)| Emefa Duah (Data Analyst)
+10 |14-Oct | **Break** |
+11 |21-Oct |  Nonlinear modeling, cross-validation | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_14_nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling) | TBD
+12 |28-Oct | Basics of probability | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_16_probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability) | TBD
+13 |04-Nov | Naive Bayes (Maximum likelihood estimation) | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_18_mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle) | TBD
+14 |11-Nov | Decision trees, interpretable models | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_22_decision_trees.pdf) | TBD
+15 |18-Nov | Introduction to Deep learning | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | TBD
+16 |25-Nov | Generative models - ChatGPT etc  |  | TBD
+17 |02-Dec | Career Day  |  | TBD
+18 |09-Dec | Presentations  |  | TBD
 
 
 
