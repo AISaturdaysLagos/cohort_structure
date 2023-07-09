@@ -1,16 +1,9 @@
 # cohort8_structure
 
 ## Overview
-In this cohort, we utilize learning resources from the [practical data science course](http://www.datasciencecourse.org/lectures/), with the goal of solving a data science problem, starting from data collection to model inference. 
+In this cohort, we utilize learning resources from the [practical data science course](http://www.datasciencecourse.org/lectures/), with the goal of learning how to come up with practical solutions to data science problems, starting from data collection to model inference. 
 
-The cohort would last 16 weeks with 15 weeks of lectures and lab work and a break on week 9. We would select relevant lectures from the [practical data science course](http://www.datasciencecourse.org/lectures/), study them carefully and use the learned concepts in the labs.
-
-There would be a series of labs, with each building up to a final solution to a chosen problem. For the labs, we have chosen to work on a fancy problem that involves reddit posts: 
-
- 
-> Given a reddit post, can you predict the subreddit to which it belongs? 
-
-Working on these labs would expose us to the art of building a data science project from the ground up, starting from data collection and completing the process with a model for inference.
+The cohort would last 16 weeks with 15 weeks of lectures and lab work and a break on week 9. We would select relevant lectures from the [practical data science course](http://www.datasciencecourse.org/lectures/), study them carefully and use the learned concepts in the labs. 
 
 Additionally, participants are encouraged to work on a final project, exercising skills acquired from tinkering with the labs.
 
@@ -40,21 +33,23 @@ Week |Date |  Topic | Resources | Instructors
 
 
 
-
 ## Labs
 S/N | Topic | 
 |---| ---|
-1| Intro and overview of libraries and frameworks to be used |
-2| Data collection |
-3| Relational data / sql |
-4| Data visualisation |
-5| Representing data; vectors and matrices |
+1| Python crash course |
+2| Introduction to numpy, pandas, sklearn |
+3| Data collection and scraping |
+4| Relational data and SQL |
+5| Data exploration and visualization |
 6| Text processing |
-7| Machine learning |
-8| Deep learning |
+7| Linear regression |
+8| Linear classification |
+9| Non-linear modeling |
+10| Neural Networks |
+
 
 
 
 
 ## Final project
-For the final project, each team would attempt to solve a problem by either emulating the steps used in the labs or using a different approach. We would like to see what you come up with. 
+For the final project, each team would attempt to solve a practical data science problem by emulating the steps used in the labs.
