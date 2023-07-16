@@ -18,18 +18,18 @@ Week |Date |  Topic | Resources | Instructors
 4 |02-Sep | Relational Data | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_4_relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | TBD
 5 |09-Sep | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) | TBD
 6 |16-Sep | Matrices, Vectors, and Linear Algebra | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_6_matrices.pdf), [Note](http://www.datasciencecourse.org/notes/matrices/) | TBD
-7 |23-Sep | Free text and natural language processing | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_9_free_text.pdf), [Note](http://www.datasciencecourse.org/notes/free_text) | TBD
+7 |23-Sep | Free Text and Natural Language Processing | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_9_free_text.pdf), [Note](http://www.datasciencecourse.org/notes/free_text) | TBD
 8 |30-Sep | Introduction to Machine Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_10_ml_intro.pdf), [Note](http://www.datasciencecourse.org/notes/ml_intro/) |  TBD
-9 |07-Oct | Linear classification (Logistic Regression, Linear-SVM) | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_12_linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/)| TBD
+9 |07-Oct | Linear Classification | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_12_linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/)| TBD
 10 |14-Oct | **Break** |
-11 |21-Oct |  Nonlinear modeling, cross-validation | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_14_nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling) | TBD
-12 |28-Oct | Basics of probability | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_16_probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability) | TBD
-13 |04-Nov | Maximum likelihood estimation, Naive bayes | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_18_mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle) | TBD
-14 |11-Nov | Decision trees, interpretable models | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_22_decision_trees.pdf) | TBD
-15 |18-Nov | Recommenders System| [Slide]() | TBD
-16 |25-Nov | Introduction to Deep Learning, Generative Models and Large Language Models | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | TBD
-17 |02-Dec | Career Day  |  | TBD
-18 |09-Dec | Presentations  |  | TBD
+11 |21-Oct |  Nonlinear Modeling, Cross-Validation | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_14_nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling) | TBD
+12 |28-Oct | Basics of Probability | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_16_probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability) | TBD
+13 |04-Nov | Maximum Likelihood Estimation, Naive bayes | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_18_mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle) | TBD
+14 |11-Nov | Unsupervised Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_20_unsupervised.pdf), [Note](https://www.datasciencecourse.org/notes/unsupervised/) | TBD
+15 |11-Nov | Decision Trees, Interpretable Models | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_22_decision_trees.pdf) | TBD
+16 |18-Nov | Recommenders System| [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_21_recommender.pdf), [Note](https://www.datasciencecourse.org/notes/recommender/) | TBD
+17 |25-Nov | Introduction to Deep Learning, and Generative Models | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | TBD
+18 |16-Dec | Presentations  |  
 
 
 
