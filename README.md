@@ -11,8 +11,8 @@ Additionally, participants are encouraged to work on a final project, exercising
 ## Selected Lectures
 Week |Date |  Topic | Resources | Instructors
 |---|---| ---| --- | --|
-0| 05-Aug |  Python Crash Course | [Slide](), [Note]() | TBD
-1| 12-Aug |  Introduction to Numpy, Pandas and Sklearn |  | TBD
+0| 05-Aug |  Python Refresher | [Note](https://www.kaggle.com/learn/python?utm_medium=social&utm_source=twitter.com&utm_campaign=new%20python%20course%20announcement) | TBD
+1| 12-Aug |  Numerical Computing with Python and Numpy | [Note](https://jovian.com/aakashns/python-numerical-computing-with-numpy) | TBD
 2 |19-Aug | Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | TBD
 3 |26-Aug | Data Collection and Scraping | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_2_data_collection.pdf), [Note](https://www.datasciencecourse.org/notes/data_collection/) | TBD
 4 |02-Sep | Relational Data | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_4_relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | TBD
