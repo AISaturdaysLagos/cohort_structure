@@ -28,7 +28,7 @@ Week |Date |  Topic | Resources | Instructors
 14 |11-Nov | Unsupervised Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_20_unsupervised.pdf), [Note](https://www.datasciencecourse.org/notes/unsupervised/) | TBD
 15 |11-Nov | Decision Trees, Interpretable Models | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_22_decision_trees.pdf) | TBD
 16 |18-Nov | Recommenders System| [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_21_recommender.pdf), [Note](https://www.datasciencecourse.org/notes/recommender/) | TBD
-17 |25-Nov | Introduction to Deep Learning, and Generative Models | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | TBD
+17 |25-Nov | Introduction to Deep Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | TBD
 18 |16-Dec | Presentations  |  
 
 
