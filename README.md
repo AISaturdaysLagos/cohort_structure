@@ -14,7 +14,7 @@ Week |Date |  Topic | Resources | Instructors
 0| 05-Aug |  Python Crash Course | [Slide](), [Note]() | TBD
 1| 12-Aug |  Introduction to Numpy, Pandas and Sklearn |  | TBD
 2 |19-Aug | Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | TBD
-3 |26-Aug | Data Collection and Scraping | [Slide](http://www.datasciencecourse.org/slides/data_collection.pdf), [Note](http://www.datasciencecourse.org/notes/data_collection/) | TBD
+3 |26-Aug | Data Collection and Scraping | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_2_data_collection.pdf), [Note](https://www.datasciencecourse.org/notes/data_collection/) | TBD
 4 |02-Sep | Relational Data | [Slide](http://www.datasciencecourse.org/slides/relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | TBD
 5 |09-Sep | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) | TBD
 6 |16-Sep | Matrices, Vectors, and Linear Algebra | [Slide](http://www.datasciencecourse.org/slides/matrices.pdf), [Note](http://www.datasciencecourse.org/notes/matrices/) | TBD
