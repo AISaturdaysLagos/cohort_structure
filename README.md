@@ -11,7 +11,7 @@ Additionally, participants are encouraged to work on a final project, exercising
 ## Selected Lectures
 Week |Date |  Topic | Resources | Instructors
 |---|---| ---| --- | --|
-0| 05-Aug |  Python Crash Course | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | TBD
+0| 05-Aug |  Python Crash Course | [Slide](), [Note]() | TBD
 1| 12-Aug |  Introduction to Numpy, Pandas and Sklearn |  | TBD
 2 |19-Aug | Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | TBD
 3 |26-Aug | Data Collection and Scraping | [Slide](http://www.datasciencecourse.org/slides/data_collection.pdf), [Note](http://www.datasciencecourse.org/notes/data_collection/) | TBD
