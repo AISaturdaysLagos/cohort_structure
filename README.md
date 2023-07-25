@@ -26,9 +26,9 @@ Week |Date |  Topic | Resources | Instructors
 12 |28-Oct | Basics of Probability | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_16_probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability) | TBD
 13 |04-Nov | Maximum Likelihood Estimation, Naive bayes | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_18_mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle) | TBD
 14 |11-Nov | Unsupervised Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_20_unsupervised.pdf), [Note](https://www.datasciencecourse.org/notes/unsupervised/) | TBD
-15 |11-Nov | Decision Trees, Interpretable Models | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_22_decision_trees.pdf) | TBD
-16 |18-Nov | Recommenders System| [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_21_recommender.pdf), [Note](https://www.datasciencecourse.org/notes/recommender/) | TBD
-17 |25-Nov | Introduction to Deep Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | TBD
+15 |18-Nov | Decision Trees, Interpretable Models | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_22_decision_trees.pdf) | TBD
+16 |25-Nov | Recommenders System| [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_21_recommender.pdf), [Note](https://www.datasciencecourse.org/notes/recommender/) | TBD
+17 |2-Dec | Introduction to Deep Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | TBD
 18 |16-Dec | Presentations  |  
 
 
