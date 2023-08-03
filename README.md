@@ -1,14 +1,39 @@
 # cohort8_structure
 
-## Overview
-In this cohort, we utilize learning resources from the [practical data science course](http://www.datasciencecourse.org/lectures/), with the goal of learning how to come up with practical solutions to data science problems, starting from data collection to model inference. 
+# Introduction
+For the past 7 cohorts (since January 6th 2018), we have offered free machine learning classes to more than 1000 Nigerians and we are excited to continue our long-standing tradition. This document will serve as a guideline for our students, as well as other communities looking to replicate the AI Saturdays Lagos model ❤️. Each cohort has a different flavor, so do check out our [Cohort 7](./cohort7/README.md) guideline as well.
 
-The cohort would last 18 weeks with 17 weeks of lectures and 11 weeks of lab work and a break on week 10. We would select relevant lectures from the [practical data science course](http://www.datasciencecourse.org/lectures/), study them carefully and use the learned concepts in the labs. 
+## What should I expect?
+- 17 weeks of Main class and 1 week break 😎
+- 11 practicals 
+- 1 Main project
+- (Optionally) Assignments to put your knowledge to test
+- Certificate of participation if all the requirements are fulfiled (more details below)
 
-Additionally, participants are encouraged to work on a final project, exercising skills acquired from tinkering with the labs.
+## It truly takes a village 
+We are extremely grateful to our selfless volunteers - class and practical instructors, lab instructors, mentors, and many more. Our community is truly fortunate to have such an amazing, talented, kind, and incredible group of people ☘️. 
+
+Are you interested in joining our next cohort? Please follow us on [our various socials media platforms](https://ai6lagos.notion.site/Social-Media-Pages-78c3a6c29aa249c6b9a9579c1d02a53c) to keep in touch ✨. 
+
+If you wish to support our work and the initiatives we undertake, we kindly invite you to consider making a donation on our [Patreon page](https://www.patreon.com/aisaturdayslagos). Your generosity will play a crucial role in furthering our mission and helping us make a positive impact in the African AI community.
+
+## Certificate Requirements
+- You are expected to have about 60% or more participation in class.  Participation will be monitored by taking attendance 
+- You are expected to have about 60% or more participation in Labs. Participation will be monitored by taking attendance 
+- You are expected to have atleast 30% in assignments
+- You are expected to have a 100% participation in final Project
+
+(These requirements are subject to change. Any update will be duly communicated)
+
+## Curriculum
+We will primarily be using the three fantastic courses listed below as a source of reference. However, each volunteer course instructor has full autonomy in choosing which materials to use to teach their classes.
+
+1. [CMU Data Science Course](http://www.datasciencecourse.org/lectures/) 
+2. [Machine Learning @ VU University Amsterdam](https://mlvu.github.io/)
+3. [Stanford Machine Learning](http://cs229.stanford.edu/syllabus-spring2021.html)
 
 
-## Selected Lectures
+## Lectures
 Week |Date |  Topic | Resources | Instructors | Topics Covered
 |---|---| ---| --- | --| -- |
 0| 05-Aug |  Python Refresher | [Note](https://www.kaggle.com/learn/python?utm_medium=social&utm_source=twitter.com&utm_campaign=new%20python%20course%20announcement) | [Steven Kolawole](https://stevenkolawole.github.io/) | Hello, Python; Functions and Getting Help; Booleans and Conditionals; Lists; Loops and List Comprehensions; Sorts; Strings and Dictionaries; Working with External Libraries; Mathematics with Python
@@ -34,7 +59,7 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 
 
 ## Labs
-S/N | Topic | 
+Week | Topic | 
 |---| ---|
 1| Python crash course |
 2| Introduction to numpy, pandas, sklearn |
@@ -48,9 +73,3 @@ S/N | Topic |
 10| Non-linear modeling |
 11| Neural Networks |
 
-
-
-
-
-## Final project
-For the final project, each team would attempt to solve a practical data science problem by emulating the steps used in the labs.
