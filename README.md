@@ -9,14 +9,14 @@ Additionally, participants are encouraged to work on a final project, exercising
 
 
 ## Selected Lectures
-Week |Date |  Topic | Resources | Instructors
-|---|---| ---| --- | --|
-0| 05-Aug |  Python Refresher | [Note](https://www.kaggle.com/learn/python?utm_medium=social&utm_source=twitter.com&utm_campaign=new%20python%20course%20announcement) | TBD
-1| 12-Aug |  Numerical Computing with Python and Numpy | [Note](https://jovian.com/aakashns/python-numerical-computing-with-numpy) | TBD
-2 |19-Aug | Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | TBD
-3 |26-Aug | Data Collection and Scraping | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_2_data_collection.pdf), [Note](https://www.datasciencecourse.org/notes/data_collection/) | TBD
-4 |02-Sep | Relational Data | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_4_relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | TBD
-5 |09-Sep | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) | TBD
+Week |Date |  Topic | Resources | Instructors | Topics Covered
+|---|---| ---| --- | --| -- |
+0| 05-Aug |  Python Refresher | [Note](https://www.kaggle.com/learn/python?utm_medium=social&utm_source=twitter.com&utm_campaign=new%20python%20course%20announcement) | [Steven Kolawole](https://stevenkolawole.github.io/) | Hello, Python; Functions and Getting Help; Booleans and Conditionals; Lists; Loops and List Comprehensions; Sorts; Strings and Dictionaries; Working with External Libraries; Mathematics with Python
+1| 12-Aug |  Numerical Computing with Python and Numpy | [Note](https://jovian.com/aakashns/python-numerical-computing-with-numpy) | [Khadijah Iddrisu](https://ie.linkedin.com/in/iddrisu-khadija) | Going from Python lists to Numpy arrays; Multi-dimensional Numpy arrays and their benefits; Arrray operations, broadcasting, indexing, and slicing; Working with CSV data files using Numpy; Working with pandas and sklearn
+2 |19-Aug | Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | [Emefa Duah](https://gh.linkedin.com/in/emefaduah) | What is data science; What is not data science; Data Science vs Machine Learning; (A few) data science examples; The skillset of data scientists; Data science pipeline
+3 |26-Aug | Data Collection and Scraping | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_2_data_collection.pdf), [Note](https://www.datasciencecourse.org/notes/data_collection/) | [Akintayo Jabar](https://www.linkedin.com/in/tayo-jabar/) | Data collection process; Common data formats and handling; Regular expression and parsing
+4 |02-Sep | Relational Data | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_4_relational_data.pdf), [Note](http://www.datasciencecourse.org/notes/relational_data/) | [Akintayo Jabar](https://www.linkedin.com/in/tayo-jabar/) | Overview of relational data; Entity relationships; Pandas and SQLite; Joins; SQLite examples; DB joins
+5 |09-Sep | Visualization and Data Exploration | [Slide](http://www.datasciencecourse.org/slides/visualization.pdf), [Note](http://www.datasciencecourse.org/notes/visualization/) | [Aseda Addai-Deseh](https://www.linkedin.com/in/aseda-addai-deseh/) | Basics of visualization; Data types and visualization types; Software plotting libraries
 6 |16-Sep | Matrices, Vectors, and Linear Algebra | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_6_matrices.pdf), [Note](http://www.datasciencecourse.org/notes/matrices/) | TBD
 7 |23-Sep | Free Text and Natural Language Processing | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_9_free_text.pdf), [Note](http://www.datasciencecourse.org/notes/free_text) | TBD
 8 |30-Sep | Introduction to Machine Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_10_ml_intro.pdf), [Note](http://www.datasciencecourse.org/notes/ml_intro/) |  TBD
