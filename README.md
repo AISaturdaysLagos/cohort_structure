@@ -58,7 +58,8 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 
 
 
-## Labs
+## Labs 
+(more details to follow)
 Week | Topic | 
 |---| ---|
 1| Python crash course |
@@ -72,4 +73,4 @@ Week | Topic |
 9| Linear classification |
 10| Non-linear modeling |
 11| Neural Networks |
-
+,
