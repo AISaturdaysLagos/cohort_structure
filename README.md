@@ -10,6 +10,13 @@ For the past 7 cohorts (since January 6th 2018), we have offered free machine le
 - Exercises to put your knowledge to test
 - Certificate of participation if all the requirements are fulfiled (more details below)
 
+## How can I access the classes?
+Our classes are streamed weekly and can be accessed online, at anytime - for free!
+
+[1] [Cohort 8 Youtube Playlist](https://www.youtube.com/playlist?list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI)
+
+[2] [Cohort 8 Course Materials](https://github.com/AISaturdaysLagos/cohort8_materials/tree/main)
+
 ## It truly takes a village 
 We are extremely grateful to our selfless volunteers - class and practical instructors, lab instructors, mentors, and many more. Our community is truly fortunate to have such an amazing, talented, kind, and incredible group of people ☘️. 
 
