@@ -5,9 +5,9 @@ For the past 7 cohorts (since January 6th 2018), we have offered free machine le
 
 ## What should I expect?
 - 17 weeks of Main class and 1 week break 😎
-- 11 practicals 
+- 10 practicals 
 - 1 Main project
-- (Optionally) Assignments to put your knowledge to test
+- Exercises to put your knowledge to test
 - Certificate of participation if all the requirements are fulfiled (more details below)
 
 ## It truly takes a village 
@@ -36,7 +36,7 @@ We will primarily be using the three fantastic courses listed below as a source 
 ## Lectures
 Week |Date |  Topic | Resources | Instructors | Topics Covered
 |---|---| ---| --- | --| -- |
-0| 05-Aug |  Python Refresher | [Note](https://www.kaggle.com/learn/python?utm_medium=social&utm_source=twitter.com&utm_campaign=new%20python%20course%20announcement) | [Steven Kolawole](https://stevenkolawole.github.io/) | Hello, Python; Functions and Getting Help; Booleans and Conditionals; Lists; Loops and List Comprehensions; Sorts; Strings and Dictionaries; Working with External Libraries; Mathematics with Python
+0| 05-Aug |  Python Refresher | [Note](https://colab.research.google.com/drive/1bsjgGyr_KldDRHW1w5guJLZmFjpzaE1z?usp=sharing) | [Steven Kolawole](https://stevenkolawole.github.io/) | Hello, Python; Functions and Getting Help; Booleans and Conditionals; Lists; Loops and List Comprehensions; Sorts; Strings and Dictionaries; Working with External Libraries; Mathematics with Python
 1| 12-Aug |  Numerical Computing with Python and Numpy | [Note](https://jovian.com/aakashns/python-numerical-computing-with-numpy) | [Khadijah Iddrisu](https://ie.linkedin.com/in/iddrisu-khadija) | Going from Python lists to Numpy arrays; Multi-dimensional Numpy arrays and their benefits; Arrray operations, broadcasting, indexing, and slicing; Working with CSV data files using Numpy; Working with pandas and sklearn
 2 |19-Aug | Introduction to Data Science | [Slide](http://www.datasciencecourse.org/slides/15388_S22_Lecture_1_intro.pdf), [Note](http://www.datasciencecourse.org/notes/intro/) | [Emefa Duah](https://gh.linkedin.com/in/emefaduah) | What is data science; What is not data science; Data Science vs Machine Learning; (A few) data science examples; The skillset of data scientists; Data science pipeline
 3 |26-Aug | Data Collection and Scraping | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_2_data_collection.pdf), [Note](https://www.datasciencecourse.org/notes/data_collection/) | [Akintayo Jabar](https://www.linkedin.com/in/tayo-jabar/) | Data collection process; Common data formats and handling; Regular expression and parsing
@@ -62,15 +62,14 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 (more details to follow)
 Week | Topic | 
 |---| ---|
-1| Python crash course |
-2| Introduction to numpy, pandas, sklearn |
-3| Introduction to Git and Github
-4| Data collection and scraping |
-5| Relational data and SQL |
-6| Data exploration and visualization |
-7| Text processing |
-8| Linear regression |
-9| Linear classification |
-10| Non-linear modeling |
-11| Neural Networks |
+1| Introduction to Git and Github
+2| Data manipulation with Pandas and building models with Sklearn |
+3| Data collection and scraping |
+4| Relational data and SQL |
+5| Data exploration and visualization |
+6| Text processing |
+7| Linear regression |
+8| Linear classification |
+9| Non-linear modeling |
+10| Neural Networks |
 ,
