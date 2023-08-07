@@ -67,15 +67,15 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 
 ## Labs 
 (more details to follow)
-Week | Topic | Tutor
-|---| ---|-- |
-1| Introduction to Git and Github
-2| Data manipulation with Pandas and building models with Sklearn |
-3| Data collection and scraping |
-4| Relational data and SQL | [Afolabi Animashaun]()
-5| Data exploration and visualization | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
-6| Text processing |
-7| Linear regression |
-8| Linear classification |
-9| Non-linear modeling |
-10| Neural Networks |
+Week | Date | Topic | Tutor
+|---| ---|-- | -- |
+2| 19-Aug | Introduction to Git and Github
+3| 26-Aug | Data collection and scraping |
+4| 02-Sept | Relational data and SQL | [Afolabi Animashaun]()
+5| 09-Sept | Data exploration and visualization | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
+7| 23-Sept | Text processing |
+9| 9-Oct | Linear regression and classification |
+11| 21-Oct | Non-linear Modeling |
+14| 11-Nov | Unsupervised Learning |
+16| 25-Nov | Recommenders System |
+17 | 2-Dec | Neural Networks |
