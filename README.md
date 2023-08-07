@@ -62,7 +62,7 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 16 |25-Nov | Recommenders System| [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_21_recommender.pdf), [Note](https://www.datasciencecourse.org/notes/recommender/) | [Foutse Yuehgoh](https://www.linkedin.com/in/foutse-yuehgoh-9105b184/) | Recommender systems; Collaborative filtering; User-user and item-item approaches; Matrix factorization; Examples
 17 |2-Dec | Introduction to Deep Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | [Femi Ogunbode](https://www.linkedin.com/in/femiogunbode/) | Recent history in machine learning; Machine learning with neural networks; Training neural networks; Specialized neural network architectures; Deep learning in data science; Brief overview of popular deep learning-based generative models
 18 | 9-Dec | **Break -- No Lecture and No Lab**
-19 |16-Dec | Presentations  |  
+19 |16-Dec | Project Presentations  |  
 
 
 
@@ -89,4 +89,4 @@ Week | Date | Topic | Tutor
 16| 25-Nov | Recommenders System |
 17 | 2-Dec | Neural Networks |
 18 | 9-Dec | **Break -- No Lecture and No Lab**
-19 | 16-Dec | Final Presentation
+19 | 16-Dec | Project Presentations
