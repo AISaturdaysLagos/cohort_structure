@@ -70,22 +70,23 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 (more details to follow)
 Week | Date | Topic | Tutor
 |---| ---|-- | -- |
-1| 12-Aug | No Lab
+0 | 05-Aug | **No Lab**
+1| 12-Aug | **No Lab**
 2| 19-Aug | Introduction to Git and Github
 3| 26-Aug | Data Collection and Scraping |
 4| 02-Sept | Relational Data and SQL | [Afolabi Animashaun]()
 5| 09-Sept | Data exploration and visualization | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
-6 | 16-Sept | No Lab
+6 | 16-Sept | **No Lab**
 7| 23-Sept | Text Processing |
-8 | 30-Sept | No Lab
+8 | 30-Sept | **No Lab**
 9| 9-Oct | Linear Regression and Classification |
 10 | 14-Oct | **Break -- No Lecture and  No Lab**
 11| 21-Oct | Non-linear Modeling |
-12 | 28-Oct | No Lab
-13 | 04-Nov | No Lab
+12 | 28-Oct | **No Lab**
+13 | 04-Nov | **No Lab**
 14| 11-Nov | Unsupervised Learning |
-15 | 18-Nov | No Lab
+15 | 18-Nov | **No Lab**
 16| 25-Nov | Recommenders System |
 17 | 2-Dec | Neural Networks |
-18 | 9-Dec | Break -- **No Lecture and No Lab**
+18 | 9-Dec | **Break -- No Lecture and No Lab**
 19 | 16-Dec | Final Presentation
