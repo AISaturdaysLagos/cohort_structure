@@ -53,7 +53,7 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 7 |23-Sep | Free Text and Natural Language Processing | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_9_free_text.pdf), [Note](http://www.datasciencecourse.org/notes/free_text) | [Wuraola Oyewusi](https://www.linkedin.com/in/wuraolaoyewusi/?originalSubdomain=uk) | Free text in data science; Bag of words and TFIDF; Tokenization; Embedding representation; Language models and N-gramsp Example motivation: ChatGPT
 8 |30-Sep | Introduction to Machine Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_10_ml_intro.pdf), [Note](http://www.datasciencecourse.org/notes/ml_intro/) |  [Allen Akinkunle](https://www.linkedin.com/in/allenkunle/?originalSubdomain=uk) | Least squares regression: a simple example; Machine learning notation; Linear regression revisited; Matrix / vector notation and analytic solutions; Finding good parameters; The gradient descent algorithm; Implementing linear regression
 9 |07-Oct | Linear Classification | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_12_linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/)| [Olumide Okubadejo](https://www.linkedin.com/in/olumide-okubadejo/) | Example motivation; Classification in machine learning; Example classification algorithms: Logistic regression and Support vector machines; Libraries for machine learning
-10 |14-Oct | **Break** |
+10 |14-Oct | **Break -- No Lecture and No Lab** |
 11 |21-Oct |  Nonlinear Modeling, Cross-Validation | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_14_nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) | Example motivation; Overfitting, generalization, and cross validation; Regularization; General nonlinear features; Kernels; Nonlinear classification
 12 |28-Oct | Basics of Probability | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_16_probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability) | [Emefa Duah](https://www.linkedin.com/in/emefaduah/?originalSubdomain=gh) | Probability in data science; Basic rules of probability; Some common distributions; Example application
 13 |04-Nov | Maximum Likelihood Estimation, Naive bayes | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_18_mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) | Maximum likelihood estimation; Naive Bayes; Machine learning and maximum likelihood"
@@ -61,7 +61,8 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 15 |18-Nov | Decision Trees, Interpretable Models | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_22_decision_trees.pdf)  | [Yetunde Sanni](https://www.linkedin.com/in/sayetunde/) | Decision Trees; Training (classification) decision trees; Interpretating predictions; Boosting; Examples
 16 |25-Nov | Recommenders System| [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_21_recommender.pdf), [Note](https://www.datasciencecourse.org/notes/recommender/) | [Foutse Yuehgoh](https://www.linkedin.com/in/foutse-yuehgoh-9105b184/) | Recommender systems; Collaborative filtering; User-user and item-item approaches; Matrix factorization; Examples
 17 |2-Dec | Introduction to Deep Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | [Femi Ogunbode](https://www.linkedin.com/in/femiogunbode/) | Recent history in machine learning; Machine learning with neural networks; Training neural networks; Specialized neural network architectures; Deep learning in data science; Brief overview of popular deep learning-based generative models
-18 |16-Dec | Presentations  |  
+18 | 9-Dec | **Break -- No Lecture and No Lab**
+19 |16-Dec | Presentations  |  
 
 
 
@@ -69,13 +70,22 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 (more details to follow)
 Week | Date | Topic | Tutor
 |---| ---|-- | -- |
+1| 12-Aug | No Lab
 2| 19-Aug | Introduction to Git and Github
-3| 26-Aug | Data collection and scraping |
-4| 02-Sept | Relational data and SQL | [Afolabi Animashaun]()
+3| 26-Aug | Data Collection and Scraping |
+4| 02-Sept | Relational Data and SQL | [Afolabi Animashaun]()
 5| 09-Sept | Data exploration and visualization | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
-7| 23-Sept | Text processing |
-9| 9-Oct | Linear regression and classification |
+6 | 16-Sept | No Lab
+7| 23-Sept | Text Processing |
+8 | 30-Sept | No Lab
+9| 9-Oct | Linear Regression and Classification |
+10 | 14-Oct | **Break -- No Lecture and  No Lab**
 11| 21-Oct | Non-linear Modeling |
+12 | 28-Oct | No Lab
+13 | 04-Nov | No Lab
 14| 11-Nov | Unsupervised Learning |
+15 | 18-Nov | No Lab
 16| 25-Nov | Recommenders System |
 17 | 2-Dec | Neural Networks |
+18 | 9-Dec | Break -- **No Lecture and No Lab**
+19 | 16-Dec | Final Presentation
