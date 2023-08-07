@@ -67,13 +67,13 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 
 ## Labs 
 (more details to follow)
-Week | Topic | 
-|---| ---|
+Week | Topic | Tutor
+|---| ---|-- |
 1| Introduction to Git and Github
 2| Data manipulation with Pandas and building models with Sklearn |
 3| Data collection and scraping |
-4| Relational data and SQL |
-5| Data exploration and visualization |
+4| Relational data and SQL | [Afolabi Animashaun]()
+5| Data exploration and visualization | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
 6| Text processing |
 7| Linear regression |
 8| Linear classification |
