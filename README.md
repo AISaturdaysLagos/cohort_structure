@@ -72,7 +72,7 @@ Week | Date | Topic | Tutor
 |---| ---|-- | -- |
 0 | 05-Aug | **No Lab**
 1| 12-Aug | **No Lab**
-2| 19-Aug | Introduction to Git and Github | [Sandra Oriji]([https://www.linkedin.com/in/oriji-sandra-91a4a3163)
+2| 19-Aug | Introduction to Git and Github | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163)
 3| 26-Aug | Data Collection and Scraping |
 4| 02-Sept | Relational Data and SQL | [Afolabi Animashaun]()
 5| 09-Sept | Data exploration and visualization | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
