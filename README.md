@@ -87,6 +87,6 @@ Week | Date | Topic | Tutor
 14| 11-Nov | Unsupervised Learning | [Joscha Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/)
 15 | 18-Nov | **No Lab**
 16| 25-Nov | Recommenders System | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/)
-17 | 2-Dec | Neural Networks | [Funmito](https://www.linkedin.com/in/funto-adeyemi-815b31109/)
+17 | 2-Dec | Neural Networks | [Funmito Adeyemi](https://www.linkedin.com/in/funto-adeyemi-815b31109/)
 18 | 9-Dec | **Break -- No Lecture and No Lab**
 19 | 16-Dec | Project Presentations
