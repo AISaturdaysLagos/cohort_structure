@@ -73,7 +73,7 @@ Week | Date | Topic | Tutor
 0 | 05-Aug | **No Lab**
 1| 12-Aug | **No Lab**
 2| 19-Aug | Introduction to Git and Github | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163)
-3| 26-Aug | Data Collection and Scraping |
+3| 26-Aug | Data Collection and Scraping | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/)
 4| 02-Sept | Relational Data and SQL | [Afolabi Animashaun]()
 5| 09-Sept | Data exploration and visualization | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
 6 | 16-Sept | **No Lab**
@@ -86,7 +86,7 @@ Week | Date | Topic | Tutor
 13 | 04-Nov | **No Lab**
 14| 11-Nov | Unsupervised Learning | [Joscha Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/)
 15 | 18-Nov | **No Lab**
-16| 25-Nov | Recommenders System |
+16| 25-Nov | Recommenders System | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/)
 17 | 2-Dec | Neural Networks |
 18 | 9-Dec | **Break -- No Lecture and No Lab**
 19 | 16-Dec | Project Presentations
