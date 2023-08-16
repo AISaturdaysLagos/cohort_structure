@@ -79,7 +79,7 @@ Week | Date | Topic | Tutor
 6 | 16-Sept | **No Lab**
 7| 23-Sept | Text Processing | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe)
 8 | 30-Sept | **No Lab**
-9| 9-Oct | Linear Regression and Classification |
+9| 7-Oct | Linear Regression and Classification |
 10 | 14-Oct | **Break -- No Lecture and  No Lab**
 11| 21-Oct | Non-linear Modeling |
 12 | 28-Oct | **No Lab**
