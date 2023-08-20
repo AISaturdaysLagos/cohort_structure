@@ -77,7 +77,7 @@ Week | Date | Topic | Resources | Tutor | Assisting Tutor | Topics Covered
 4| 02-Sept | Relational Data and SQL |  | [Afolabi Animashaun]() | Oluwaseun Ajayi
 5| 09-Sept | Data exploration and visualization | | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/) | Funmito Adeyemi
 6 | 16-Sept | **No Lab**
-7| 23-Sept | Text Processing | | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe)
+7| 23-Sept | Text Processing | | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe) | Funmito Adeyemi
 8 | 30-Sept | **No Lab**
 9| 7-Oct | Linear Regression and Classification | 
 10 | 14-Oct | **Break -- No Lecture and  No Lab**
