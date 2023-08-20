@@ -72,21 +72,21 @@ Week | Date | Topic | Resources | Tutor | Assisting Tutor | Topics Covered
 |---| ---|-- | -- | -- | -- | -- |
 0 | 05-Aug | **No Lab**
 1| 12-Aug | **No Lab**
-2| 19-Aug | Introduction to Git and Github | [class slide](https://docs.google.com/presentation/d/1gVCl6DLU56vsVIl0AU_mjAZe8_k_S5X47ocm0r2c4Mg/edit#slide=id.p) | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163) | Tejumade Afonja, Oluwaseun Ajayi | 
-3| 26-Aug | Data Collection and Scraping | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/)
-4| 02-Sept | Relational Data and SQL | [Afolabi Animashaun]()
-5| 09-Sept | Data exploration and visualization | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
+2| 19-Aug | Introduction to Git and Github | [class slide](https://docs.google.com/presentation/d/1gVCl6DLU56vsVIl0AU_mjAZe8_k_S5X47ocm0r2c4Mg/edit#slide=id.p) | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163) | Tejumade Afonja | Introduction to GitHub and Git; Tools to use; How to start using Git and GitHub; Create your first Repository on GitHub
+3| 26-Aug | Data Collection and Scraping | | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) | Oluwaseun Ajayi
+4| 02-Sept | Relational Data and SQL |  | [Afolabi Animashaun]() | Oluwaseun Ajayi
+5| 09-Sept | Data exploration and visualization | | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/) | Funmito Adeyemi
 6 | 16-Sept | **No Lab**
-7| 23-Sept | Text Processing | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe)
+7| 23-Sept | Text Processing | | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe)
 8 | 30-Sept | **No Lab**
-9| 7-Oct | Linear Regression and Classification |
+9| 7-Oct | Linear Regression and Classification | 
 10 | 14-Oct | **Break -- No Lecture and  No Lab**
-11| 21-Oct | Non-linear Modeling | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/)
+11| 21-Oct | Non-linear Modeling | | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) | Ejiro Onose
 12 | 28-Oct | **No Lab**
 13 | 04-Nov | **No Lab**
-14| 11-Nov | Unsupervised Learning | [Joscha Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/)
+14| 11-Nov | Unsupervised Learning | |  [Joscha Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/) | Ejiro Onose
 15 | 18-Nov | **No Lab**
-16| 25-Nov | Recommenders System | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/)
-17 | 2-Dec | Neural Networks | [Funmito Adeyemi](https://www.linkedin.com/in/funto-adeyemi-815b31109/)
+16| 25-Nov | Recommenders System |  | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) | Joscha Cüppers
+17 | 2-Dec | Neural Networks |  | [Funmito Adeyemi](https://www.linkedin.com/in/funto-adeyemi-815b31109/) | Afolabi Animashaun
 18 | 9-Dec | **Break -- No Lecture and No Lab**
 19 | 16-Dec | Project Presentations
