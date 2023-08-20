@@ -92,5 +92,11 @@ Week | Date | Topic | Resources | Tutor | Assisting Tutor | Topics Covered
 19 | 16-Dec | Project Presentations
 
 
+## Assignments 
+Week | Date | Topic | Link 
+|---| ---|-- | -- 
+2| 19-Aug | Introduction to Git and Github | **No Assignment**
+
+
 ## Student Grouping and Mentors Assignment
 (more details to follow)
