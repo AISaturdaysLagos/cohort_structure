@@ -90,3 +90,7 @@ Week | Date | Topic | Resources | Tutor | Assisting Tutor | Topics Covered
 17 | 2-Dec | Neural Networks |  | [Funmito Adeyemi](https://www.linkedin.com/in/funto-adeyemi-815b31109/) | Afolabi Animashaun
 18 | 9-Dec | **Break -- No Lecture and No Lab**
 19 | 16-Dec | Project Presentations
+
+
+## Student Grouping and Mentors Assignment
+(more details to follow)
