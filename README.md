@@ -73,7 +73,7 @@ Week | Date | Topic | Resources | Tutor | Assisting Tutor | Topics Covered
 0 | 05-Aug | **No Lab**
 1| 12-Aug | **No Lab**
 2| 19-Aug | Introduction to Git and Github | [Class Slide](https://docs.google.com/presentation/d/1gVCl6DLU56vsVIl0AU_mjAZe8_k_S5X47ocm0r2c4Mg/edit#slide=id.p) | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163) | Tejumade Afonja | Introduction to GitHub and Git; Tools to use; How to start using Git and GitHub; Create your first Repository on GitHub
-3| 26-Aug | Data Collection and Scraping | | [Class Note](https://colab.research.google.com/drive/1x6UXAeMbBQCgzNK5JYlxsxqDjPpZqaYx) [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) | Oluwaseun Ajayi
+3| 26-Aug | Data Collection and Scraping | [Class Note](https://colab.research.google.com/drive/1x6UXAeMbBQCgzNK5JYlxsxqDjPpZqaYx) | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) | Oluwaseun Ajayi
 4| 02-Sept | Relational Data and SQL | [Class Note](https://colab.research.google.com/drive/1E5JgkLtvJxCA-c8qUiv8CPZ7Q5zdhaou?usp=sharing) | [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun/) | Oluwaseun Ajayi
 5| 09-Sept | Data exploration and visualization | | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/) | Funmito Adeyemi
 6 | 16-Sept | **No Lab**
