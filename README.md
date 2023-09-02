@@ -93,9 +93,10 @@ Week | Date | Topic | Resources | Tutor | Assisting Tutor | Topics Covered
 
 
 ## Assignments 
-Week | Date | Topic | Link 
-|---| ---|-- | -- 
+Week | Date | Topic | Links | Deadline
+|---| ---|-- | -- | --
 2| 19-Aug | Introduction to Git and Github | **No Assignment**
+3| 26-Aug | Data Collection and Scraping | [Assignment](https://colab.research.google.com/drive/1aXn1IdHOSlKTwu7MzrW-Lo7lOSahByUp#scrollTo=79m0M2XEjrgb), [Submission](https://docs.google.com/forms/d/e/1FAIpQLSedbyWM2CnOMUsOlvykp0mdu0QsaCZCVgJCBsb-1SUg2kMr8g/viewform) | 9th September 2023
 
 
 ## Student Grouping and Mentors Assignment
