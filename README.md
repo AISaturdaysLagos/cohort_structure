@@ -69,7 +69,7 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 ## Labs 
 (more details to follow)
 Week | Date | Topic | Resources | Tutor | Assisting Tutor 
-|---| ---|-- | -- | -- | -- | -- |
+|---| ---|-- | -- | -- | -- 
 0 | 05-Aug | **No Lab**
 1| 12-Aug | **No Lab**
 2| 19-Aug | Introduction to Git and Github | [Class Slide](https://docs.google.com/presentation/d/1gVCl6DLU56vsVIl0AU_mjAZe8_k_S5X47ocm0r2c4Mg/edit#slide=id.p) | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163) | Tejumade Afonja 
