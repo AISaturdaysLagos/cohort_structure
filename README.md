@@ -76,7 +76,8 @@ Week | Date | Topic | Resources | Tutor | Assisting Tutor
 3| 26-Aug | Data Collection and Scraping | [Class Note](https://colab.research.google.com/drive/1x6UXAeMbBQCgzNK5JYlxsxqDjPpZqaYx) | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) | Oluwaseun Ajayi
 4| 02-Sept | Relational Data and SQL | [Class Note](https://colab.research.google.com/drive/1E5JgkLtvJxCA-c8qUiv8CPZ7Q5zdhaou?usp=sharing) | [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun/) | Oluwaseun Ajayi
 5 | 09-Sept | **Lab Postponed to Next Week**
-6| 16-Sept | Data exploration and visualization | [Class Note](https://colab.research.google.com/drive/1vvIqAg3wVAUmZKIp9hAClyE874poOTeO?usp=sharing) | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/) | Funmito Adeyemi
+5 | 16-Sept | Data exploration and visualization | [Class Note](https://colab.research.google.com/drive/1vvIqAg3wVAUmZKIp9hAClyE874poOTeO?usp=sharing) | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/) | Funmito Adeyemi
+6| 16-Sept | Linear Algebra (Lab introduced during Lectures) | [Class Note]([https://colab.research.google.com/drive/1vvIqAg3wVAUmZKIp9hAClyE874poOTeO?usp=sharing](https://colab.research.google.com/drive/1uazxRDRM3IAADehmqJ_YwC4S1J8gjgW8)) | [Kenechi Dukor]([https://www.linkedin.com/in/oluwaseun-a-ajayi/](https://www.linkedin.com/in/kenechidukor)) | Fortune Adekogbe
 7| 23-Sept | Text Processing | | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe) | Funmito Adeyemi
 8 | 30-Sept | **No Lab**
 9| 7-Oct | Linear Regression and Classification | | [Lawrence Francis](https://www.linkedin.com/in/ldfrancis) | Afolabi Animashaun | 
