@@ -105,7 +105,7 @@ N/A | Release Date | Week-Topic | Links | Deadline
 
  Team Name       | Members                                                                                             | Mentor
 |-----------------|-----------------------------------------------------------------------------------------------------|---------------------------------|
- Ransome-Kuti    | Omoniyi Akinpelumi, Kosisochukwu Allison, Samuel Ephraim, Okosa Uche,Ipadeola Ladipo, Christopher Adai, Samuel Oyeneye |  Tejumade Afonja, Afolabi Animashaun
+ Solo-Ransome-Kuti    | Kosisochukwu Allison, Samuel Ephraim, Okosa Uche,Ipadeola Ladipo, Christopher Adai, Samuel Oyeneye |  Tejumade Afonja, Afolabi Animashaun
  Sankara         | Olugbade Ifeoluwa, Ogbobe Charles, Ehimwenman Edemakhiota, Moshood Sanusi, Muhammad Yahya           | David Onyeali
  Johnson-Sirleaf | Oluwafemi Akinode, Buraimoh Glory, Dolamu Oludare, Chinedu Oguazu, Usman  Daudu                     | Olawale Abimbola
  Maathai         | Jack Oraro, Oyelayo Seye, Adenike Ayodeji, Ayooluwa Jesuniyi, Lucky Nkwocha, Elijah Mesagan         | Foutse Yuehgoh
