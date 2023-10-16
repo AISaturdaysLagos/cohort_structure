@@ -103,20 +103,20 @@ N/A | Release Date | Week-Topic | Links | Deadline
 
 ## Student Grouping and Mentors Assignment
 
- Team Name       | Members                                                                                                                | Mentor
-|-----------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------|
+ Team Name       | Members                                                                                             | Mentor
+|-----------------|-----------------------------------------------------------------------------------------------------|---------------------------------|
  Ransome-Kuti    | Omoniyi Akinpelumi, Kosisochukwu Allison, Samuel Ephraim, Okosa Uche,Ipadeola Ladipo, Christopher Adai, Samuel Oyeneye |  Tejumade Afonja, Afolabi Animashaun
- Sankara         | Olugbade Ifeoluwa, Ogbobe Charles, Ehimwenman Edemakhiota, Moshood Sanusi, Muhammad Yahya                              | David Onyeali
- Johnson-Sirleaf | Oluwafemi Akinode, Buraimoh Glory, Dolamu Oludare, Chinedu Oguazu, Usman  Daudu                                        | Olawale Abimbola
- Maathai         | Jack Oraro, Oyelayo Seye, Adenike Ayodeji, Ayooluwa Jesuniyi, Lucky Nkwocha, Elijah Mesagan                            | Foutse Yuehgoh
- Nkrumah         | Samuel Ekuma,Rapheal Alemoh,Chinelo Okafor,Chisom Nenna, Oluwafunto Daramola                                           | Olumide Okubadejo
- Mandela         | Peter Agida, Folashade Akintola, Damilola Akin-Adamu, Oluwapolore Oyeniji, Abdul-lateef Asafa, Yetunde Afolabi         | Joscha  Cüppers
- Ahmed-Ibrahim   | Peter Oni, Daniel Eze, Oluwapelumi Olaniyi, Joanna Yadeka, Elisha Babalola                                             | Emefa Duah
- Nyerere         | Temitope Ajibade, Kelvin Obi, Oluwabukola Ogunbunmi, Muhammad Gimba, Eniola Adetunji                                   | Femi Ogunbode
- Kapwepwe        | Daniel Otulagun, Olushola Yusuf, Olatunde Ogunboyejo, Sarah Akinkunmi, Iyanu Gbiri                                     | Orevaoghene Ahia
- Machel          | Olorundara Akojede, Tope Rufai, Anuoluwapo Ogunrinde, Jamiu Ahmed, Bilikis Olanrewaju                                  | Kenechi Dukor
- Anomah-Ngu      | Mofiyinfoluwa Aladesuyi, Jedaiah Akimsah, Taiwo Olorunnishola, Victor Bassey, Mukhtar Abdulquadir                      | Akintayo Jabar
- Lumumba         | Ayorinde Alase, Gamaliel Okudo, Nurudeen Alase, Precious Ita, Chitom Uzokwe                                            | Oluwafemi Azeez
- Bourguiba       | Monsurat Ariyo, Ayodeji Akande, Waris Akorede, Caleb Balogun, Martins Joseph, Bala  Mairiga Abduljalil                 | Fortune Adekogbe
- Selassie        | Ebunoluwa Amoo,Ayodeji Adesegun,Funbi Bolarinwa,Abraham Ugwa,Oyindamola Olatunji                                       | Oluwaseun Ajayi
- Elnadi          | Sandra Onyinyechi, Basil Makama, Akorede Salaam, Joshua Michael, Etietop Udofia                                        | Sandra Onyinyechi
+ Sankara         | Olugbade Ifeoluwa, Ogbobe Charles, Ehimwenman Edemakhiota, Moshood Sanusi, Muhammad Yahya           | David Onyeali
+ Johnson-Sirleaf | Oluwafemi Akinode, Buraimoh Glory, Dolamu Oludare, Chinedu Oguazu, Usman  Daudu                     | Olawale Abimbola
+ Maathai         | Jack Oraro, Oyelayo Seye, Adenike Ayodeji, Ayooluwa Jesuniyi, Lucky Nkwocha, Elijah Mesagan         | Foutse Yuehgoh
+ Nkrumah         | Samuel Ekuma,Rapheal Alemoh,Chinelo Okafor,Chisom Nenna, Oluwafunto Daramola                        | Olumide Okubadejo
+ Mandela         | Peter Agida, Folashade Akintola, Damilola Akin-Adamu, Oluwapolore Oyeniji, Abdul-lateef Asafa, Yetunde Afolabi | Joscha  Cüppers
+ Ahmed-Ibrahim   | Peter Oni, Daniel Eze, Oluwapelumi Olaniyi, Joanna Yadeka, Elisha Babalola                          | Emefa Duah
+ Nyerere         | Temitope Ajibade, Kelvin Obi, Oluwabukola Ogunbunmi, Muhammad Gimba, Eniola Adetunji                | Femi Ogunbode
+ Kapwepwe        | Daniel Otulagun, Olushola Yusuf, Olatunde Ogunboyejo, Sarah Akinkunmi, Iyanu Gbiri                  | Orevaoghene Ahia
+ Machel          | Olorundara Akojede, Tope Rufai, Anuoluwapo Ogunrinde, Jamiu Ahmed, Bilikis Olanrewaju               | Kenechi Dukor
+ Anomah-Ngu      | Mofiyinfoluwa Aladesuyi, Jedaiah Akimsah, Taiwo Olorunnishola, Victor Bassey, Mukhtar Abdulquadir   | Akintayo Jabar
+ Lumumba         | Ayorinde Alase, Gamaliel Okudo, Nurudeen Alase, Precious Ita, Chitom Uzokwe                         | Oluwafemi Azeez
+ Bourguiba       | Monsurat Ariyo, Ayodeji Akande, Waris Akorede, Caleb Balogun, Martins Joseph, Bala  Mairiga Abduljalil | Fortune Adekogbe
+ Selassie        | Ebunoluwa Amoo,Ayodeji Adesegun,Funbi Bolarinwa,Abraham Ugwa,Oyindamola Olatunji                    | Oluwaseun Ajayi
+ Elnadi          | Basil Makama, Akorede Salaam, Joshua Michael, Etietop Udofia                                        | Sandra Onyinyechi
