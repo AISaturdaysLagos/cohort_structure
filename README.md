@@ -101,13 +101,18 @@ N/A | Release Date | Week-Topic | Links | Deadline
 3| 27-Sept | 05-Data Exploration and Visualization | [Assignment](https://colab.research.google.com/drive/16ez4TCJAlDKfD36x5QALpReg7eCglUm9?usp=sharing), [Submission](https://docs.google.com/forms/d/e/1FAIpQLSdLgSBtJ73muCvhgR4rWtkM1rCVSOMeWx-RFTs_CCPrcDwSvg/viewform) | 8th October 2023
 
 
-## Student Grouping and Mentors Assignment
+
 
 2 / 2
+## Project
+As a prerequisite for successfully concluding this cohort, participants are presented with two structural options based on prefrence. They may choose to engage in a collaborative group project or undertake an individual project. The primary objective of this initiative is to afford participants the opportunity to apply their theoretical knowledge gained throughout the cohort in a practical setting. Throughout the project engagement, participants will receive guidance from industry experts in Artificial Intelligence. These mentors will play a pivotal role in providing support and direction, ensuring the successful completion of the projects. Notably, there are currently 15 groups, each named after prominent African world leaders, symbolizing their significant contributions and advancements.
 
-As a prerequisite for successfully concluding this cohort, participants are presented with two structural options. They may choose to engage in a collaborative group project or undertake an individual project. The primary objective of this initiative is to afford participants the opportunity to apply their theoretical knowledge gained throughout the cohort in a practical setting. Throughout the project engagement, participants will receive guidance from industry experts in Artificial Intelligence. These mentors will play a pivotal role in providing support and direction, ensuring the successful completion of the projects.
-
-Team Name       | Members                                                                                             | Mentor
+### Project Timelime
+**Project Proposal Deadline:** October 15, 2023
+**Project Submission Deadline:** December 10, 2023
+**Presentation Day:** December 16, 2023
+### Student Grouping and Mentors Assignment
+Team Name       | Members                                                                                             | Mentor|
 |-----------------|-----------------------------------------------------------------------------------------------------|---------------------------------|
  Ransome-Kuti    | Omoniyi Akinpelumi, Kosisochukwu Allison, Samuel Ephraim,Ipadeola Ladipo, Christopher Adai, Samuel Oyeneye |  Tejumade Afonja, Afolabi Animashaun
  Sankara         | Olugbade Ifeoluwa, Ogbobe Charles, Ehimwenman Edemakhiota, Moshood Sanusi, Muhammad Yahya           | David Onyeali
