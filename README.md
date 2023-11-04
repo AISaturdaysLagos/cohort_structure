@@ -109,8 +109,11 @@ As a prerequisite for successfully concluding this cohort, participants are pres
 
 ### Project Timelime
 **Project Proposal Deadline:** October 15, 2023
+
 **Project Submission Deadline:** December 10, 2023
+
 **Presentation Day:** December 16, 2023
+
 ### Student Grouping and Mentors Assignment
 Team Name       | Members                                                                                             | Mentor|
 |-----------------|-----------------------------------------------------------------------------------------------------|---------------------------------|
