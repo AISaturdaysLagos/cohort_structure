@@ -103,7 +103,11 @@ N/A | Release Date | Week-Topic | Links | Deadline
 
 ## Student Grouping and Mentors Assignment
 
- Team Name       | Members                                                                                             | Mentor
+2 / 2
+
+As a prerequisite for successfully concluding this cohort, participants are presented with two structural options. They may choose to engage in a collaborative group project or undertake an individual project. The primary objective of this initiative is to afford participants the opportunity to apply their theoretical knowledge gained throughout the cohort in a practical setting. Throughout the project engagement, participants will receive guidance from industry experts specializing in artificial intelligence. These mentors will play a pivotal role in providing support and direction, ensuring the successful completion of the projects.
+
+Team Name       | Members                                                                                             | Mentor
 |-----------------|-----------------------------------------------------------------------------------------------------|---------------------------------|
  Ransome-Kuti    | Omoniyi Akinpelumi, Kosisochukwu Allison, Samuel Ephraim, Okosa Uche,Ipadeola Ladipo, Christopher Adai, Samuel Oyeneye |  Tejumade Afonja, Afolabi Animashaun
  Sankara         | Olugbade Ifeoluwa, Ogbobe Charles, Ehimwenman Edemakhiota, Moshood Sanusi, Muhammad Yahya           | David Onyeali
