@@ -72,7 +72,7 @@ Week | Date | Topic | Resources | Tutor
 |---| ---|-- | -- | -- 
 0 | 05-Aug | `**No Lab**`
 1| 12-Aug | `**No Lab**`
-2| 19-Aug | Introduction to Git and Github | [Slide](https://docs.google.com/presentation/d/1gVCl6DLU56vsVIl0AU_mjAZe8_k_S5X47ocm0r2c4Mg/edit#slide=id.p), [Youtube](https://www.youtube.com/watch?v=lg7a9VXN198&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=5&t=24s) | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163) 
+2| 19-Aug | Introduction to Git and Github | [Slide]([https://docs.google.com/presentation/d/1gVCl6DLU56vsVIl0AU_mjAZe8_k_S5X47ocm0r2c4Mg/edit#slide=id.p](https://docs.google.com/presentation/d/e/2PACX-1vSSsaqYfElXQullRk5ESL_Kt1dMj2kTfUzCYjM4PMQ3xqKj66W_Jz4LYXQESY1sgQ/pub?start=false&loop=false&delayms=3000)), [Youtube](https://www.youtube.com/watch?v=lg7a9VXN198&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=5&t=24s) | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163) 
 3| 26-Aug | Data Collection and Scraping | [Notebook](https://colab.research.google.com/drive/1x6UXAeMbBQCgzNK5JYlxsxqDjPpZqaYx), [Youtube](https://www.youtube.com/watch?v=w-2yIoJpxq4&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=7) | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) 
 4| 02-Sept | Relational Data and SQL | [Notebook](https://colab.research.google.com/drive/1E5JgkLtvJxCA-c8qUiv8CPZ7Q5zdhaou?usp=sharing), [Youtube](https://www.youtube.com/watch?v=-m82YkAjV4Q&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=9) | [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun/) 
 5 | 09-Sept | `Lab Postponed to Next Week`
