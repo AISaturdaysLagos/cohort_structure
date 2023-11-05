@@ -53,7 +53,7 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 7 |23-Sep | Free Text and Natural Language Processing | [Slide](https://onedrive.live.com/view.aspx?resid=4AEDE93769DB52B4!1735&ithint=file%2cpptx&wdo=2&authkey=!ADjVz0-BgKYOuF4)| [Wuraola Oyewusi](https://www.linkedin.com/in/wuraolaoyewusi/?originalSubdomain=uk) | Free text in data science; Bag of words and TFIDF; Tokenization; Embedding representation; Language models and N-gramsp Example motivation: ChatGPT
 8 |30-Sep | Introduction to Machine Learning | [Slide](https://drive.google.com/file/d/1abBmRN-y7WHwqPxnovZOZ3nYeyr-4pTl/view) |  [Allen Akinkunle](https://www.linkedin.com/in/allenkunle/?originalSubdomain=uk) | Least squares regression: a simple example; Machine learning notation; Linear regression revisited; Matrix / vector notation and analytic solutions; Finding good parameters; The gradient descent algorithm; Implementing linear regression
 9 |07-Oct | Linear Classification | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_12_linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/)| [Olumide Okubadejo](https://www.linkedin.com/in/olumide-okubadejo/) | Example motivation; Classification in machine learning; Example classification algorithms: Logistic regression and Support vector machines; Libraries for machine learning
-10 |14-Oct | **Break -- No Lecture and No Lab** |
+10 |14-Oct | `**Break -- No Lecture and No Lab**` |
 11 |21-Oct |  Nonlinear Modeling, Cross-Validation | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_14_nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) | Example motivation; Overfitting, generalization, and cross validation; Regularization; General nonlinear features; Kernels; Nonlinear classification
 12 |28-Oct | Basics of Probability | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_16_probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability) | [Emefa Duah](https://www.linkedin.com/in/emefaduah/?originalSubdomain=gh) | Probability in data science; Basic rules of probability; Some common distributions; Example application
 13 |04-Nov | Maximum Likelihood Estimation, Naive bayes | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_18_mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) | Maximum likelihood estimation; Naive Bayes; Machine learning and maximum likelihood"
@@ -68,28 +68,28 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 
 ## Labs 
 (more details to follow)
-Week | Date | Topic | Resources | Tutor | Assisting Tutor 
+Week | Date | Topic | Resources | Tutor 
 |---| ---|-- | -- | -- | -- 
-0 | 05-Aug | **No Lab**
-1| 12-Aug | **No Lab**
+0 | 05-Aug | `**No Lab**`
+1| 12-Aug | `**No Lab**`
 2| 19-Aug | Introduction to Git and Github | [Slide](https://docs.google.com/presentation/d/1gVCl6DLU56vsVIl0AU_mjAZe8_k_S5X47ocm0r2c4Mg/edit#slide=id.p) | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163) 
 3| 26-Aug | Data Collection and Scraping | [Notebook](https://colab.research.google.com/drive/1x6UXAeMbBQCgzNK5JYlxsxqDjPpZqaYx) | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) 
 4| 02-Sept | Relational Data and SQL | [Notebook](https://colab.research.google.com/drive/1E5JgkLtvJxCA-c8qUiv8CPZ7Q5zdhaou?usp=sharing) | [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun/) 
-5 | 09-Sept | **Lab Postponed to Next Week**
+5 | 09-Sept | `**Lab Postponed to Next Week**`
 5 | 16-Sept | Data exploration and visualization | [Notebook](https://colab.research.google.com/drive/1vvIqAg3wVAUmZKIp9hAClyE874poOTeO?usp=sharing) | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
-6| 16-Sept | Linear Algebra (Lab introduced during Lectures) | [Notebook](https://colab.research.google.com/drive/1rHlqvVSSFBwImaB4vVO7FFzxq_jnQ_Pu?usp=sharing#scrollTo=gs-xWNQv12vp) | [Kenechi Dukor](https://www.linkedin.com/in/kenechidukor) | Fortune Adekogbe
+6| 16-Sept | Linear Algebra (Lab introduced during Lectures) | [Notebook](https://colab.research.google.com/drive/1rHlqvVSSFBwImaB4vVO7FFzxq_jnQ_Pu?usp=sharing#scrollTo=gs-xWNQv12vp) | [Kenechi Dukor](https://www.linkedin.com/in/kenechidukor) 
 7| 23-Sept | Text Processing | [Notebook](https://colab.research.google.com/drive/1VZEjhswmICC1IIiQcqTJ9F2Q6FugaIoR?usp=sharing) | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe) 
-8 | 30-Sept | **No Lab**
+8 | 30-Sept | `**No Lab**`
 9| 7-Oct | Linear Regression and Classification | | [Lawrence Francis](https://www.linkedin.com/in/ldfrancis) 
 10 | 14-Oct | **Break -- No Lecture and  No Lab**
 11| 21-Oct | Non-linear Modeling | | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
-12 | 28-Oct | **No Lab**
-13 | 04-Nov | **No Lab**
+12 | 28-Oct | `**No Lab**`
+13 | 04-Nov | `**No Lab**`
 14| 11-Nov | Unsupervised Learning | |  [Joscha Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/) 
-15 | 18-Nov | **No Lab**
+15 | 18-Nov | `**No Lab**`
 16| 25-Nov | Recommenders System |  | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) 
 17 | 2-Dec | Neural Networks |  | [Funmito Adeyemi](https://www.linkedin.com/in/funto-adeyemi-815b31109/) 
-18 | 9-Dec | **Break -- No Lecture and No Lab**
+18 | 9-Dec | `**Break -- No Lecture and No Lab**`
 19 | 16-Dec | Project Presentations
 
 
