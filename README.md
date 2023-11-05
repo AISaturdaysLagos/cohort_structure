@@ -53,7 +53,7 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 7 |23-Sep | Free Text and Natural Language Processing | [Slide](https://onedrive.live.com/view.aspx?resid=4AEDE93769DB52B4!1735&ithint=file%2cpptx&wdo=2&authkey=!ADjVz0-BgKYOuF4)| [Wuraola Oyewusi](https://www.linkedin.com/in/wuraolaoyewusi/?originalSubdomain=uk) | Free text in data science; Bag of words and TFIDF; Tokenization; Embedding representation; Language models and N-gramsp Example motivation: ChatGPT
 8 |30-Sep | Introduction to Machine Learning | [Slide](https://drive.google.com/file/d/1abBmRN-y7WHwqPxnovZOZ3nYeyr-4pTl/view) |  [Allen Akinkunle](https://www.linkedin.com/in/allenkunle/?originalSubdomain=uk) | Least squares regression: a simple example; Machine learning notation; Linear regression revisited; Matrix / vector notation and analytic solutions; Finding good parameters; The gradient descent algorithm; Implementing linear regression
 9 |07-Oct | Linear Classification | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_12_linear_classification.pdf), [Note](http://www.datasciencecourse.org/notes/linear_classification/)| [Olumide Okubadejo](https://www.linkedin.com/in/olumide-okubadejo/) | Example motivation; Classification in machine learning; Example classification algorithms: Logistic regression and Support vector machines; Libraries for machine learning
-10 |14-Oct | `**Break -- No Lecture and No Lab**` |
+10 |14-Oct | `**No Lecture and No Lab**` |
 11 |21-Oct |  Nonlinear Modeling, Cross-Validation | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_14_nonlinear_modeling.pdf), [Note](http://www.datasciencecourse.org/notes/nonlinear_modeling) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) | Example motivation; Overfitting, generalization, and cross validation; Regularization; General nonlinear features; Kernels; Nonlinear classification
 12 |28-Oct | Basics of Probability | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_16_probability.pdf), [Note](http://www.datasciencecourse.org/notes/probability) | [Emefa Duah](https://www.linkedin.com/in/emefaduah/?originalSubdomain=gh) | Probability in data science; Basic rules of probability; Some common distributions; Example application
 13 |04-Nov | Maximum Likelihood Estimation, Naive bayes | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_18_mle.pdf), [Note](http://www.datasciencecourse.org/notes/mle) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) | Maximum likelihood estimation; Naive Bayes; Machine learning and maximum likelihood"
@@ -61,7 +61,7 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 15 |18-Nov | Decision Trees, Interpretable Models | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_22_decision_trees.pdf)  | [Yetunde Sanni](https://www.linkedin.com/in/sayetunde/) | Decision Trees; Training (classification) decision trees; Interpretating predictions; Boosting; Examples
 16 |25-Nov | Recommenders System| [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_21_recommender.pdf), [Note](https://www.datasciencecourse.org/notes/recommender/) | [Foutse Yuehgoh](https://www.linkedin.com/in/foutse-yuehgoh-9105b184/) | Recommender systems; Collaborative filtering; User-user and item-item approaches; Matrix factorization; Examples
 17 |2-Dec | Introduction to Deep Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | [Femi Ogunbode](https://www.linkedin.com/in/femiogunbode/) | Recent history in machine learning; Machine learning with neural networks; Training neural networks; Specialized neural network architectures; Deep learning in data science; Brief overview of popular deep learning-based generative models
-18 | 9-Dec | **Break -- No Lecture and No Lab**
+18 | 9-Dec | `**No Lecture and No Lab**`
 19 |16-Dec | Project Presentations  |  
 
 
@@ -69,19 +69,19 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 ## Labs 
 (more details to follow)
 Week | Date | Topic | Resources | Tutor 
-|---| ---|-- | -- | -- | -- 
+|---| ---|-- | -- | -- 
 0 | 05-Aug | `**No Lab**`
 1| 12-Aug | `**No Lab**`
 2| 19-Aug | Introduction to Git and Github | [Slide](https://docs.google.com/presentation/d/1gVCl6DLU56vsVIl0AU_mjAZe8_k_S5X47ocm0r2c4Mg/edit#slide=id.p) | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163) 
 3| 26-Aug | Data Collection and Scraping | [Notebook](https://colab.research.google.com/drive/1x6UXAeMbBQCgzNK5JYlxsxqDjPpZqaYx) | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) 
 4| 02-Sept | Relational Data and SQL | [Notebook](https://colab.research.google.com/drive/1E5JgkLtvJxCA-c8qUiv8CPZ7Q5zdhaou?usp=sharing) | [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun/) 
-5 | 09-Sept | `**Lab Postponed to Next Week**`
+5 | 09-Sept | z**Lab Postponed to Next Week**`
 5 | 16-Sept | Data exploration and visualization | [Notebook](https://colab.research.google.com/drive/1vvIqAg3wVAUmZKIp9hAClyE874poOTeO?usp=sharing) | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
 6| 16-Sept | Linear Algebra (Lab introduced during Lectures) | [Notebook](https://colab.research.google.com/drive/1rHlqvVSSFBwImaB4vVO7FFzxq_jnQ_Pu?usp=sharing#scrollTo=gs-xWNQv12vp) | [Kenechi Dukor](https://www.linkedin.com/in/kenechidukor) 
 7| 23-Sept | Text Processing | [Notebook](https://colab.research.google.com/drive/1VZEjhswmICC1IIiQcqTJ9F2Q6FugaIoR?usp=sharing) | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe) 
 8 | 30-Sept | `**No Lab**`
 9| 7-Oct | Linear Regression and Classification | | [Lawrence Francis](https://www.linkedin.com/in/ldfrancis) 
-10 | 14-Oct | **Break -- No Lecture and  No Lab**
+10 | 14-Oct | `**No Lecture and  No Lab**`
 11| 21-Oct | Non-linear Modeling | | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
 12 | 28-Oct | `**No Lab**`
 13 | 04-Nov | `**No Lab**`
@@ -89,7 +89,7 @@ Week | Date | Topic | Resources | Tutor
 15 | 18-Nov | `**No Lab**`
 16| 25-Nov | Recommenders System |  | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) 
 17 | 2-Dec | Neural Networks |  | [Funmito Adeyemi](https://www.linkedin.com/in/funto-adeyemi-815b31109/) 
-18 | 9-Dec | `**Break -- No Lecture and No Lab**`
+18 | 9-Dec | `**No Lecture and No Lab**`
 19 | 16-Dec | Project Presentations
 
 
@@ -104,28 +104,30 @@ N/A | Release Date | Week-Topic | Links | Deadline
 As a prerequisite for successfully concluding this cohort, participants are presented with two structural options based on prefrence. They may choose to engage in a collaborative group project or undertake an individual project. The primary objective of this initiative is to afford participants the opportunity to apply their theoretical knowledge gained throughout the cohort in a practical setting. Throughout the project engagement, participants will receive guidance from industry experts in Artificial Intelligence. These mentors will play a pivotal role in providing support and direction, ensuring the successful completion of the projects. Notably, there are currently 15 groups, each named after prominent African world leaders, symbolizing their significant contributions and advancements. The `Solo-Ransome-Kuti` group members are embarking on individually-led projects.
 
 ### Project Timelime
-**Project Proposal Deadline:** October 15, 2023
+> Project Proposal Deadline: October 15, 2023
 
-**Project Submission Deadline:** December 10, 2023
+> Project Submission Deadline: December 10, 2023
 
-**Presentation Day:** December 16, 2023
+> Presentation Day: December 16, 2023
 
-### Student Grouping and Mentors Assignment
-Team Name       | Members                                                                                             | Mentor|
-|-----------------|-----------------------------------------------------------------------------------------------------|---------------------------------|
- Solo-Ransome-Kuti    | Samuel Ephraim, Ipadeola Ladipo, Samuel Oyeneye |  [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/)
- Solo-Ransome-Kuti    | Kosisochukwu Allison, Christopher Adai |  [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun)
- Sankara         | Olugbade Ifeoluwa, Ogbobe Charles, Ehimwenman Edemakhiota, Moshood Sanusi, Muhammad Yahya           | [David Onyeali](https://www.linkedin.com/in/david-onyeali/?originalSubdomain=ng)
- Johnson-Sirleaf | Oluwafemi Akinode, Buraimoh Glory, Dolamu Oludare, Chinedu Oguazu, Usman  Daudu                     | [Olawale Abimbola](https://www.linkedin.com/in/bimbolawale/)
- Maathai         | Jack Oraro, Oyelayo Seye, Adenike Ayodeji, Ayooluwa Jesuniyi, Lucky Nkwocha, Elijah Mesagan         | [Foutse Yuehgoh](https://www.linkedin.com/in/foutse-yuehgoh-9105b184/)
- Nkrumah         | Samuel Ekuma,Rapheal Alemoh,Chinelo Okafor,Chisom Nenna, Oluwafunto Daramola                        | [Olumide Okubadejo](https://www.linkedin.com/in/olumide-okubadejo/)
- Mandela         | Peter Agida, Folashade Akintola, Damilola Akin-Adamu, Oluwapolore Oyeniji, Abdul-lateef Asafa, Yetunde Afolabi | [Joscha  Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/)
- Ahmed-Ibrahim   | Peter Oni, Daniel Eze, Oluwapelumi Olaniyi, Joanna Yadeka, Elisha Babalola                          | [Emefa Duah](https://www.linkedin.com/in/emefaduah/)
- Nyerere         | Temitope Ajibade, Kelvin Obi, Oluwabukola Ogunbunmi, Muhammad Gimba, Eniola Adetunji                | [Femi Ogunbode](https://www.linkedin.com/in/femiogunbode/)
- Kapwepwe        | Daniel Otulagun, Olushola Yusuf, Olatunde Ogunboyejo, Sarah Akinkunmi, Iyanu Gbiri                  | [Orevaoghene Ahia](https://www.linkedin.com/in/orevaoghene-ahia/)
- Machel          | Olorundara Akojede, Tope Rufai, Anuoluwapo Ogunrinde, Jamiu Ahmed, Bilikis Olanrewaju               | [Kenechi Dukor](https://www.linkedin.com/in/kenechidukor/)
- Anomah-Ngu      | Mofiyinfoluwa Aladesuyi, Jedaiah Akimsah, Taiwo Olorunnishola, Victor Bassey, Mukhtar Abdulquadir   | [Akintayo Jabar](https://www.linkedin.com/in/tayo-jabar/)
- Lumumba         | Ayorinde Alase, Gamaliel Okudo, Nurudeen Alase, Precious Ita, Chitom Uzokwe                         | [Oluwafemi Azeez](https://www.linkedin.com/in/azeez-oluwafemi/)
- Bourguiba       | Monsurat Ariyo, Ayodeji Akande, Waris Akorede, Caleb Balogun, Martins Joseph, Bala  Mairiga Abduljalil | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe/)
- Selassie        | Ebunoluwa Amoo,Ayodeji Adesegun,Funbi Bolarinwa,Abraham Ugwa,Oyindamola Olatunji                    | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
- Elnadi          | Basil Makama, Okosa Uche,Akorede Salaam, Joshua Michael, Etietop Udofia, Okosa Uche                 | [Sandra Onyinyechi](https://www.linkedin.com/in/oriji-sandra-91a4a3163/)
+### Scholars Grouping and Mentors Assignment
+Team Name       | Members| Resources | Mentor
+|-----|--|--|--|
+ Solo-Ransome-Kuti    | Ipadeola Ladipo| [Proposal]() |  [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/)
+ Solo-Ransome-Kuti    | Samuel Oyeneye | [Proposal]() |  [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/)
+ Solo-Ransome-Kuti    | Kosisochukwu Allison| [Proposal]()  |  [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun)
+  Solo-Ransome-Kuti    | Christopher Adai  | [Proposal]() |  [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun)
+ Sankara         | Olugbade Ifeoluwa, Ogbobe Charles, Ehimwenman Edemakhiota, Moshood Sanusi, Muhammad Yahya | [Proposal]()           | [David Onyeali](https://www.linkedin.com/in/david-onyeali/?originalSubdomain=ng)
+ Johnson-Sirleaf | Oluwafemi Akinode, Buraimoh Glory, Dolamu Oludare, Chinedu Oguazu, Usman  Daudu     | [Proposal]()                | [Olawale Abimbola](https://www.linkedin.com/in/bimbolawale/)
+ Maathai         | Jack Oraro, Oyelayo Seye, Adenike Ayodeji, Ayooluwa Jesuniyi, Lucky Nkwocha, Elijah Mesagan | [Proposal]()        | [Foutse Yuehgoh](https://www.linkedin.com/in/foutse-yuehgoh-9105b184/)
+ Nkrumah         | Samuel Ekuma,Rapheal Alemoh,Chinelo Okafor,Chisom Nenna, Oluwafunto Daramola    | [Proposal]()                    | [Olumide Okubadejo](https://www.linkedin.com/in/olumide-okubadejo/)
+ Mandela         | Peter Agida, Folashade Akintola, Damilola Akin-Adamu, Oluwapolore Oyeniji, Abdul-lateef Asafa, Yetunde Afolabi | [Proposal]() | [Joscha  Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/)
+ Ahmed-Ibrahim   | Peter Oni, Daniel Eze, Oluwapelumi Olaniyi, Joanna Yadeka, Elisha Babalola            | [Proposal]()              | [Emefa Duah](https://www.linkedin.com/in/emefaduah/)
+ Nyerere         | Temitope Ajibade, Kelvin Obi, Oluwabukola Ogunbunmi, Muhammad Gimba, Eniola Adetunji       | [Proposal]()         | [Femi Ogunbode](https://www.linkedin.com/in/femiogunbode/)
+ Kapwepwe        | Daniel Otulagun, Olushola Yusuf, Olatunde Ogunboyejo, Sarah Akinkunmi, Iyanu Gbiri       | [Proposal]()           | [Orevaoghene Ahia](https://www.linkedin.com/in/orevaoghene-ahia/)
+ Machel          | Olorundara Akojede, Tope Rufai, Anuoluwapo Ogunrinde, Jamiu Ahmed, Bilikis Olanrewaju     | [Proposal]()          | [Kenechi Dukor](https://www.linkedin.com/in/kenechidukor/)
+ Anomah-Ngu      | Mofiyinfoluwa Aladesuyi, Jedaiah Akimsah, Taiwo Olorunnishola, Victor Bassey, Mukhtar Abdulquadir | [Proposal]()  | [Akintayo Jabar](https://www.linkedin.com/in/tayo-jabar/)
+ Lumumba         | Ayorinde Alase, Gamaliel Okudo, Nurudeen Alase, Precious Ita, Chitom Uzokwe            | [Proposal]()             | [Oluwafemi Azeez](https://www.linkedin.com/in/azeez-oluwafemi/)
+ Bourguiba       | Monsurat Ariyo, Ayodeji Akande, Waris Akorede, Caleb Balogun, Martins Joseph, Bala  Mairiga Abduljalil | [Proposal]() | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe/)
+ Selassie        | Ebunoluwa Amoo,Ayodeji Adesegun,Funbi Bolarinwa,Abraham Ugwa,Oyindamola Olatunji     | [Proposal]()               | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
+ Elnadi          | Basil Makama, Okosa Uche,Akorede Salaam, Joshua Michael, Etietop Udofia, Okosa Uche    | [Proposal]()             | [Sandra Onyinyechi](https://www.linkedin.com/in/oriji-sandra-91a4a3163/)
