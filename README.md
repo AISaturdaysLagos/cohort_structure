@@ -75,8 +75,8 @@ Week | Date | Topic | Resources | Tutor
 2| 19-Aug | Introduction to Git and Github | [Slide](https://docs.google.com/presentation/d/1gVCl6DLU56vsVIl0AU_mjAZe8_k_S5X47ocm0r2c4Mg/edit#slide=id.p) | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163) 
 3| 26-Aug | Data Collection and Scraping | [Notebook](https://colab.research.google.com/drive/1x6UXAeMbBQCgzNK5JYlxsxqDjPpZqaYx) | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) 
 4| 02-Sept | Relational Data and SQL | [Notebook](https://colab.research.google.com/drive/1E5JgkLtvJxCA-c8qUiv8CPZ7Q5zdhaou?usp=sharing) | [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun/) 
-5 | 09-Sept | z**Lab Postponed to Next Week**`
-5 | 16-Sept | Data exploration and visualization | [Notebook](https://colab.research.google.com/drive/1vvIqAg3wVAUmZKIp9hAClyE874poOTeO?usp=sharing) | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
+5 | 09-Sept | `Lab Postponed to Next Week`
+6 | 16-Sept | Data exploration and visualization | [Notebook](https://colab.research.google.com/drive/1vvIqAg3wVAUmZKIp9hAClyE874poOTeO?usp=sharing) | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
 6| 16-Sept | Linear Algebra (Lab introduced during Lectures) | [Notebook](https://colab.research.google.com/drive/1rHlqvVSSFBwImaB4vVO7FFzxq_jnQ_Pu?usp=sharing#scrollTo=gs-xWNQv12vp) | [Kenechi Dukor](https://www.linkedin.com/in/kenechidukor) 
 7| 23-Sept | Text Processing | [Notebook](https://colab.research.google.com/drive/1VZEjhswmICC1IIiQcqTJ9F2Q6FugaIoR?usp=sharing) | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe) 
 8 | 30-Sept | `**No Lab**`
