@@ -101,5 +101,34 @@ N/A | Release Date | Week-Topic | Links | Deadline
 3| 27-Sept | 05-Data Exploration and Visualization | [Assignment](https://colab.research.google.com/drive/16ez4TCJAlDKfD36x5QALpReg7eCglUm9?usp=sharing), [Submission](https://docs.google.com/forms/d/e/1FAIpQLSdLgSBtJ73muCvhgR4rWtkM1rCVSOMeWx-RFTs_CCPrcDwSvg/viewform) | 8th October 2023
 
 
-## Student Grouping and Mentors Assignment
-(more details to follow)
+
+
+2 / 2
+## Project
+As a prerequisite for successfully concluding this cohort, participants are presented with two structural options based on prefrence. They may choose to engage in a collaborative group project or undertake an individual project. The primary objective of this initiative is to afford participants the opportunity to apply their theoretical knowledge gained throughout the cohort in a practical setting. Throughout the project engagement, participants will receive guidance from industry experts in Artificial Intelligence. These mentors will play a pivotal role in providing support and direction, ensuring the successful completion of the projects. Notably, there are currently 15 groups, each named after prominent African world leaders, symbolizing their significant contributions and advancements.
+
+### Project Timelime
+**Project Proposal Deadline:** October 15, 2023
+
+**Project Submission Deadline:** December 10, 2023
+
+**Presentation Day:** December 16, 2023
+
+### Student Grouping and Mentors Assignment
+Team Name       | Members                                                                                             | Mentor|
+|-----------------|-----------------------------------------------------------------------------------------------------|---------------------------------|
+ Solo-Ransome-Kuti    | Kosisochukwu Allison, Samuel Ephraim, Okosa Uche,Ipadeola Ladipo, Christopher Adai, Samuel Oyeneye |  Tejumade Afonja, Afolabi Animashaun
+ Sankara         | Olugbade Ifeoluwa, Ogbobe Charles, Ehimwenman Edemakhiota, Moshood Sanusi, Muhammad Yahya           | David Onyeali
+ Johnson-Sirleaf | Oluwafemi Akinode, Buraimoh Glory, Dolamu Oludare, Chinedu Oguazu, Usman  Daudu                     | Olawale Abimbola
+ Maathai         | Jack Oraro, Oyelayo Seye, Adenike Ayodeji, Ayooluwa Jesuniyi, Lucky Nkwocha, Elijah Mesagan         | Foutse Yuehgoh
+ Nkrumah         | Samuel Ekuma,Rapheal Alemoh,Chinelo Okafor,Chisom Nenna, Oluwafunto Daramola                        | Olumide Okubadejo
+ Mandela         | Peter Agida, Folashade Akintola, Damilola Akin-Adamu, Oluwapolore Oyeniji, Abdul-lateef Asafa, Yetunde Afolabi | Joscha  Cüppers
+ Ahmed-Ibrahim   | Peter Oni, Daniel Eze, Oluwapelumi Olaniyi, Joanna Yadeka, Elisha Babalola                          | Emefa Duah
+ Nyerere         | Temitope Ajibade, Kelvin Obi, Oluwabukola Ogunbunmi, Muhammad Gimba, Eniola Adetunji                | Femi Ogunbode
+ Kapwepwe        | Daniel Otulagun, Olushola Yusuf, Olatunde Ogunboyejo, Sarah Akinkunmi, Iyanu Gbiri                  | Orevaoghene Ahia
+ Machel          | Olorundara Akojede, Tope Rufai, Anuoluwapo Ogunrinde, Jamiu Ahmed, Bilikis Olanrewaju               | Kenechi Dukor
+ Anomah-Ngu      | Mofiyinfoluwa Aladesuyi, Jedaiah Akimsah, Taiwo Olorunnishola, Victor Bassey, Mukhtar Abdulquadir   | Akintayo Jabar
+ Lumumba         | Ayorinde Alase, Gamaliel Okudo, Nurudeen Alase, Precious Ita, Chitom Uzokwe                         | Oluwafemi Azeez
+ Bourguiba       | Monsurat Ariyo, Ayodeji Akande, Waris Akorede, Caleb Balogun, Martins Joseph, Bala  Mairiga Abduljalil | Fortune Adekogbe
+ Selassie        | Ebunoluwa Amoo,Ayodeji Adesegun,Funbi Bolarinwa,Abraham Ugwa,Oyindamola Olatunji                    | Oluwaseun Ajayi
+ Elnadi          | Basil Makama, Okosa Uche,Akorede Salaam, Joshua Michael, Etietop Udofia                                        | Sandra Onyinyechi
