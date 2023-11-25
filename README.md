@@ -80,10 +80,10 @@ Week | Date | Topic | Resources | Tutor
 8 | 30-Sept | `**No Lab**`
 9| 7-Oct | Linear Regression and Classification | [Notebook](https://colab.research.google.com/drive/17FXbveD3FF7QRAr7lu1skVGKQamTebnj?usp=sharing), [Youtube](https://www.youtube.com/watch?v=zE6ocS55m2o&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=17&t=23s) | [Lawrence Francis](https://www.linkedin.com/in/ldfrancis) 
 10 | 14-Oct | `**No Lecture and  No Lab**`
-11| 21-Oct | Non-linear Modeling | [Notebook](https://drive.google.com/file/d/1JLHFzbHBnS4f449y_7rUv27lPNZjJehz/view?usp=sharing), [Youtube](https://www.youtube.com/watch?v=dGReAclSg6k&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=19&t=3470s) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
+11| 21-Oct | Non-linear Modeling | [Notebook](https://github.com/AISaturdaysLagos/cohort8_materials/tree/main/Labs/11.Non_Linear_Modeling), [Youtube](https://www.youtube.com/watch?v=dGReAclSg6k&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=19&t=3470s) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
 12 | 28-Oct | `**No Lab**`
 13 | 04-Nov | `**No Lab**`
-14| 11-Nov | Unsupervised Learning |[Notebook](), [Youtube](https://www.youtube.com/watch?v=yVPNQYLnFMA&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=22&t=1s)|  [Joscha Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/) 
+14| 11-Nov | Unsupervised Learning |[Notebook](https://github.com/AISaturdaysLagos/cohort8_materials/tree/main/Labs/14.Unsupervised_Learning), [Youtube](https://www.youtube.com/watch?v=yVPNQYLnFMA&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=22&t=1s)|  [Joscha Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/) 
 15 | 18-Nov | `**No Lab**`
 16| 25-Nov | Recommendation Systems |  | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) 
 17 | 2-Dec | Neural Networks |  | [Funmito Adeyemi](https://www.linkedin.com/in/funto-adeyemi-815b31109/) 
