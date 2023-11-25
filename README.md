@@ -59,7 +59,7 @@ Week |Date |  Topic | Resources | Instructors | Topics Covered
 13 |04-Nov | Maximum Likelihood Estimation, Naive bayes | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vSXYIcVOiWWCuUOjX_kyQHxCvheKjvx8rWWmPkNVeAkphXABRsMeNJGH5vzffZCsA/pub?start=false&loop=false&delayms=3000&slide=id.p1), [Youtube](https://www.youtube.com/watch?v=n4UGCtfE_XU) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) | Maximum likelihood estimation; Naive Bayes; Spam classification with Naive Bayes
 14 |11-Nov | Unsupervised Learning | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vSdXij7zTm2sQ7U_Mpsm1GXEvSLnkyvTYK6p8FdqgOogPjkMet_5jn4HWLR0fGQOg/pub?start=false&loop=false&delayms=3000), [Youtube](https://youtube.com/live/G4GfyzGz84Q) | [Deborah Kanubala](https://www.linkedin.com/in/kanubalad/) | Unsupervised learning; K-means; Principal Component Analysis
 15 |18-Nov | Decision Trees, Interpretable Models | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vRLh19txOLLDF6wsI2050-7v1P1011RrRWFSJYVPpyMvumexLVeK7hclKLTB7avIg/pub?start=false&loop=false&delayms=3000), [Youtube](https://youtube.com/live/A5SyFhsbMFM) | [Oluwatoyin Yetunde Sanni](https://www.linkedin.com/in/sayetunde/) | Decision Trees; Training (classification) decision trees; Interpretating predictions; Boosting; Examples
-16 |25-Nov | Recommenders System| [Slide](https://docs.google.com/presentation/d/e/2PACX-1vRiYkTOA1UmCttpZLDPtJODEC7jVeejOFNO2a-2GwbxOroKavafE-LXMA4BoZzlmA/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=Zj1kbmSqpYQ) | [Foutse Yuehgoh](https://www.linkedin.com/in/foutse-yuehgoh-9105b184/) | Recommender systems; Collaborative filtering; User-user and item-item approaches; Matrix factorization; Examples
+16 |25-Nov | Recommenders System| [Slide](https://docs.google.com/presentation/d/e/2PACX-1vRiYkTOA1UmCttpZLDPtJODEC7jVeejOFNO2a-2GwbxOroKavafE-LXMA4BoZzlmA/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=Zj1kbmSqpYQ) | [Foutse Yuehgoh](https://www.linkedin.com/in/foutse-yuehgoh-9105b184/) | Recommendation systems; Collaborative filtering; User-user and item-item approaches; Matrix factorization; Examples
 17 |2-Dec | Introduction to Deep Learning | [Slide](https://www.datasciencecourse.org/slides/15388_S22_Lecture_23_deep_learning_preview.pdf) | [Femi Ogunbode](https://www.linkedin.com/in/femiogunbode/) | Recent history in machine learning; Machine learning with neural networks; Training neural networks; Specialized neural network architectures; Deep learning in data science; Brief overview of popular deep learning-based generative models
 18 | 9-Dec | `**No Lecture and No Lab**`
 19 |16-Dec | Project Presentations  |  
@@ -85,7 +85,7 @@ Week | Date | Topic | Resources | Tutor
 13 | 04-Nov | `**No Lab**`
 14| 11-Nov | Unsupervised Learning |[Notebook](), [Youtube](https://www.youtube.com/watch?v=yVPNQYLnFMA&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=22&t=1s)|  [Joscha Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/) 
 15 | 18-Nov | `**No Lab**`
-16| 25-Nov | Recommenders System |  | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) 
+16| 25-Nov | Recommendation Systems |  | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) 
 17 | 2-Dec | Neural Networks |  | [Funmito Adeyemi](https://www.linkedin.com/in/funto-adeyemi-815b31109/) 
 18 | 9-Dec | `**No Lecture and No Lab**`
 19 | 16-Dec | Project Presentations
