@@ -98,7 +98,7 @@ N/A | Release Date | Week-Topic | Links | Deadline
 4| 15-Oct | 07-Free Text and NLP | [Assignment](https://colab.research.google.com/drive/1R1V9M1zW-5eKydzRbBZsA3cAa34Kam5y?usp=sharing), [Submission](https://docs.google.com/forms/d/e/1FAIpQLSfypzcScDTQZkDCdpwpzbRKSy0E7QQ7LoJ5LDpJjeIkkh7z8A/viewform) | 29th October 2023
 5| 25-Nov | 11-Nonlinear Modeling | [Assignment](https://colab.research.google.com/drive/1voPbGhe1cW9at9SNMTudwEY7NTBbdMAD?usp=sharing), [Submission](https://docs.google.com/forms/d/e/1FAIpQLSe2mRGDweo-k9--R4fEePqgXJ6syZhLVuj0W0geVjmh7xmJKg/viewform) | 10th December 2023
 
-## Project
+## Project and Mentorship
 As a prerequisite for successfully concluding this cohort, participants are presented with two structural options based on prefrence. They may choose to engage in a collaborative group project or undertake an individual project. The primary objective of this initiative is to afford participants the opportunity to apply their theoretical knowledge gained throughout the cohort in a practical setting. Throughout the project engagement, participants will receive guidance from industry experts in Artificial Intelligence. These mentors will play a pivotal role in providing support and direction, ensuring the successful completion of the projects. Notably, there are currently 15 groups, each named after prominent African world leaders, symbolizing their significant contributions and advancements. The `Solo-Ransome-Kuti` group members are embarking on individually-led projects.
 
 ### Project Timelime
@@ -108,7 +108,7 @@ As a prerequisite for successfully concluding this cohort, participants are pres
 
 > Presentation Day: December 16, 2023
 
-### Scholars Grouping and Mentors Assignment
+
 Team Name       | Project | Members| Resources | Mentor
 |-----|--| --|--|--|
  Solo-Ransome-Kuti-Ladipo    | NSL-2-Audio: Nigerian Sign Language to Audio | Ipadeola Ladipo| [Github](https://github.com/AISaturdaysLagos/Cohort8-Ransome-Kuti-Ladipo/tree/main) |  [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/)
