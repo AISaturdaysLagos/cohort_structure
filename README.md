@@ -110,7 +110,7 @@ As a prerequisite for successfully concluding this cohort, participants are pres
 
 ### Scholars Grouping and Mentors Assignment
 Team Name       | Project | Members| Resources | Mentor
-|-----|--|--|--|
+|-----|-- | --|--|--|
  Solo-Ransome-Kuti    | | Ipadeola Ladipo| [Github](https://github.com/AISaturdaysLagos/Cohort8-Ransome-Kuti-Ladipo/tree/main) |  [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/)
  Solo-Ransome-Kuti    | | Samuel Oyeneye | [Github](https://github.com/AISaturdaysLagos/Cohort8-ransome-kuti-oyeneye) |  [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/)
   Solo-Ransome-Kuti   | | Christopher Adai  | [Github](https://github.com/AISaturdaysLagos/Cohort8-ransome-kuti-Adai) |  [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun)
