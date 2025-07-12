@@ -1,130 +1,163 @@
-# cohort8_structure
+![image](assets/ai6lagos_banner.png)
+# AI Saturdays Lagos C9 - Flipped
 
-# Introduction
-For the past 7 cohorts (since January 6th 2018), we have offered free machine learning classes to more than 1000 Nigerians and we are excited to continue our long-standing tradition. This document will serve as a guideline for our students, as well as other communities looking to replicate the AI Saturdays Lagos model ❤️. Each cohort has a different flavor, so do check out our [Cohort 7](./cohort7/README.md) guideline as well.
+The **Machine Learning (ML) Flipped Cohort** is a structured, community-driven Data Science and Machine Learning learning 12 weeks cohort designed for beginners. The goal is to equip individuals with foundational to intermediate ML knowledge using a flipped classroom model where learners independently consume pre-recorded content during the week, then attend a weekly community to discuss, explore and ask questions about what they’ve learned.
 
-## What should I expect?
-- 17 weeks of Main class and 1 week break 😎
-- 10 practicals 
-- 1 Main project
-- Exercises to put your knowledge to test
-- Certificate of participation if all the requirements are fulfiled (more details below)
+We follow a **flipped classroom model** where:
+- Participants watch curated **pre-recorded lectures** and complete labs during the week.
+- Every Saturday, attend a **community call** to engage with one of the organizers.
 
-## How can I access the classes?
-Our classes are streamed weekly and can be accessed online, at anytime - for free!
+## What to Expect
+Each week you will be:
+- Assigned selected videos (from a curated playlist of lectures and labs)
+- Receive supporting materials like Jupyter notebooks, slides, and assessments
+- Join a **live Zoom session** on weekends to engage with instructors and peers
+- Interact daily on **Discord** for Q&A, collaboration, and accountability
 
-[1] [Cohort 8 Youtube Playlist](https://www.youtube.com/playlist?list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI)
-
-[2] [Cohort 8 Course Materials](https://github.com/AISaturdaysLagos/cohort8_materials/tree/main)
-
-## It truly takes a village 
-We are extremely grateful to our selfless volunteers - class and practical instructors, lab instructors, mentors, and many more. Our community is truly fortunate to have such an amazing, talented, kind, and incredible group of people ☘️. 
-
-Are you interested in joining our next cohort? Please follow us on [our various socials media platforms](https://ai6lagos.notion.site/Social-Media-Pages-78c3a6c29aa249c6b9a9579c1d02a53c) to keep in touch ✨. 
-
-If you wish to support our work and the initiatives we undertake, we kindly invite you to consider making a donation on our [Patreon page](https://www.patreon.com/aisaturdayslagos). Your generosity will play a crucial role in furthering our mission and helping us make a positive impact in the African AI community.
-
-## Certificate Requirements
-- You are expected to have about 60% or more participation in class.  Participation will be monitored by taking attendance 
-- You are expected to have about 60% or more participation in Labs. Participation will be monitored by taking attendance 
-- You are expected to have atleast 30% in assignments
-- You are expected to have a 100% participation in final Project
-
-## Curriculum
-We will primarily be using the three fantastic courses listed below as a source of reference. However, each volunteer course instructor has full autonomy in choosing which materials to use to teach their classes.
-
-1. [CMU Data Science Course](http://www.datasciencecourse.org/lectures/) 
-2. [Machine Learning @ VU University Amsterdam](https://mlvu.github.io/)
-3. [Stanford Machine Learning](http://cs229.stanford.edu/syllabus-spring2021.html)
+By the end of the cohort, you will:
+- Participate in **capstone projects** and present your solution to  demonstrate real-world understanding
+- Earn a certificate if all conditions are met (see below)
 
 
-## Lectures
-Week |Date |  Topic | Resources | Instructors | Topics Covered
-|---|---| ---| --- | --| -- |
-0| 05-Aug |  Python Refresher | [Notebook](https://drive.google.com/file/d/1eX7_L7MXEJnsmqgTYMAsYn7VPb12DyoZ/view?usp=sharing), [Youtube](https://www.youtube.com/watch?v=6n6mgPKWDLc&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=2&t=832s) | [Steven Kolawole](https://stevenkolawole.github.io/) | Hello, Python; Functions and Getting Help; Booleans and Conditionals; Lists; Loops and List Comprehensions; Sorts; Strings and Dictionaries; Working with External Libraries; Mathematics with Python
-1| 12-Aug |  Numerical Computing with Python and Numpy | [Notebook](https://drive.google.com/file/d/10WggieiU_AZ7Is7mQJu2uoaPtqX2tdwF/view?usp=sharing), [Youtube](https://www.youtube.com/watch?v=X21ONcMEhGg&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=3&t=13s) | [Khadija Iddrisu](https://ie.linkedin.com/in/iddrisu-khadija) | Going from Python lists to Numpy arrays; Multi-dimensional Numpy arrays and their benefits; Arrray operations, broadcasting, indexing, and slicing; Working with CSV data files using Numpy; Working with pandas and sklearn
-2 |19-Aug | Introduction to Data Science | [Slide](https://drive.google.com/file/d/1Oka9vKS0UrYQ8tFOXnjdTCEX8Wxp7s1L/view), [Youtube](https://www.youtube.com/watch?v=qS06KyI49q0&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=4) | [Emefa Duah](https://gh.linkedin.com/in/emefaduah) | What is data science; What is not data science; Data Science vs Machine Learning; (A few) data science examples; The skillset of data scientists; Data science pipeline
-3 |26-Aug | Data Collection and Scraping | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vQbpgl2nbHwqDCueVVYr5AztWGtiy5L3hjcPzw1_Ue_8aV9RH47mQVdx3ppyxVfuQ/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=PJEuMJTFt8Y&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=6&t=7s) | [Akintayo Jabar](https://www.linkedin.com/in/tayo-jabar/) | Data collection process; Common data formats and handling; Regular expression and parsing
-4 |02-Sep | Relational Data | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vS8mADD20oIArl342c_iob4fnxO66kgvOky_9RDhHGKwikRbbeC_9ItWBky8QkkUA/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=EsRb1MjkfKA&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=8) | [Akintayo Jabar](https://www.linkedin.com/in/tayo-jabar/) | Overview of relational data; Entity relationships; Pandas and SQLite; Joins; SQLite examples; DB joins
-5 |09-Sep | Visualization and Data Exploration |[Slide](https://docs.google.com/presentation/d/e/2PACX-1vQSEmEKIACb0uJhKZMG6qnzvk2IGRA78o9yonx3M6syO0ZIG5IG1-188fAbNltBag/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=SvnHCesCHdw&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=10) | [Aseda Addai-Deseh](https://www.linkedin.com/in/aseda-addai-deseh/) | Basics of visualization; Data types and visualization types; Software plotting libraries
-6 |16-Sep | Linear Algebra | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vQZhjofwXlAENMgwCK0xe3fXkg0PW1TELmS5ZGeaAhParqlYWJmG_tUcRaHshL3Ww/pub?start=false&loop=false&delayms=3000), [Notebook](https://drive.google.com/file/d/1Jy3pSrHwzD-9sf8WwwhRG1L_CQ9-WsCR/view?usp=sharing), [Youtube](https://www.youtube.com/watch?v=-fsbqJOqkA4&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=12&t=2s)| [Kenechi Dukor](https://www.linkedin.com/in/kenechidukor) | Matrices and vectors; Basics of linear algebra; Solving linear equations; Libraries for matrices and vectors; Sparse matrices
-7 |23-Sep | Free Text and Natural Language Processing | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vTH-AFrXZR8sWxVKH4aauTZIN7YTXFNKktsRSA4agAoUGhl_-EsaYqITrrQXqc3sg/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=FL0RhtpxB10&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=13&t=2s)| [Wuraola Oyewusi](https://www.linkedin.com/in/wuraolaoyewusi/?originalSubdomain=uk) | Free text in data science; Bag of words and TFIDF; Tokenization; Embedding representation; Language models and N-gramsp Example motivation: ChatGPT
-8 |30-Sep | Introduction to Machine Learning | [Slide](https://drive.google.com/file/d/1abBmRN-y7WHwqPxnovZOZ3nYeyr-4pTl/view?usp=sharing), [Youtube](https://www.youtube.com/watch?v=zvrk2Zgnx00&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=15&t=4474s) |  [Allen Akinkunle](https://www.linkedin.com/in/allenkunle/?originalSubdomain=uk) | Least squares regression: a simple example; Machine learning notation; Linear regression revisited; Matrix / vector notation and analytic solutions; Finding good parameters; The gradient descent algorithm; Implementing linear regression
-9 |07-Oct | Linear Classification | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vT_cRs8vMzlsl7iS3DVLj1n7V9W2wY77YqDaCoF3yfY8vlHkbue9_CuT9ui_QEi5Q/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=e6MH18rDiOw&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=16&t=2389s)| [Olumide Okubadejo](https://www.linkedin.com/in/olumide-okubadejo/) | Example motivation; Classification in machine learning; Example classification algorithms: Logistic regression and Support vector machines; Libraries for machine learning
-10 |14-Oct | `**No Lecture and No Lab**` |
-11 |21-Oct |  Nonlinear Modeling, Cross-Validation | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vRc3D1tUEVS2z0swhmYUf98R-ikPZRnYFHHNIbORCSRVCq3SVsg7JMk1TexsS2vqA/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=e7xijpA_bN0&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=18&t=10s) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) | Example motivation; Overfitting, generalization, and cross validation; Regularization; General nonlinear features; Kernels; Nonlinear classification
-12 |28-Oct | Basics of Probability | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vTLBQ6aAox14XL5rIhMDZ61R1nJH1LT0qyxke3sMeXeOH_Z9nCi3CokLidPdHTgig/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=zAw5ryt8YOA) | [Emefa Duah](https://www.linkedin.com/in/emefaduah/?originalSubdomain=gh) | Probability in data science; Basic rules of probability; Some common distributions; Example application
-13 |04-Nov | Maximum Likelihood Estimation, Naive bayes | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vSXYIcVOiWWCuUOjX_kyQHxCvheKjvx8rWWmPkNVeAkphXABRsMeNJGH5vzffZCsA/pub?start=false&loop=false&delayms=3000&slide=id.p1), [Youtube](https://www.youtube.com/watch?v=n4UGCtfE_XU) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) | Maximum likelihood estimation; Naive Bayes; Spam classification with Naive Bayes
-14 |11-Nov | Unsupervised Learning | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vSdXij7zTm2sQ7U_Mpsm1GXEvSLnkyvTYK6p8FdqgOogPjkMet_5jn4HWLR0fGQOg/pub?start=false&loop=false&delayms=3000), [Youtube](https://youtube.com/live/G4GfyzGz84Q) | [Deborah Kanubala](https://www.linkedin.com/in/kanubalad/) | Unsupervised learning; K-means; Principal Component Analysis
-15 |18-Nov | Decision Trees, Interpretable Models | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vRLh19txOLLDF6wsI2050-7v1P1011RrRWFSJYVPpyMvumexLVeK7hclKLTB7avIg/pub?start=false&loop=false&delayms=3000), [Youtube](https://youtube.com/live/A5SyFhsbMFM) | [Oluwatoyin Yetunde Sanni](https://www.linkedin.com/in/sayetunde/) | Decision Trees; Training (classification) decision trees; Interpretating predictions; Boosting; Examples
-16 |25-Nov | Recommendation Systems| [Slide](https://docs.google.com/presentation/d/e/2PACX-1vRiYkTOA1UmCttpZLDPtJODEC7jVeejOFNO2a-2GwbxOroKavafE-LXMA4BoZzlmA/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=Zj1kbmSqpYQ) | [Foutse Yuehgoh](https://www.linkedin.com/in/foutse-yuehgoh-9105b184/) | Recommendation systems; Collaborative filtering; User-user and item-item approaches; Matrix factorization; Examples
-17 |2-Dec | Introduction to Deep Learning | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vSBVQoTdoApa4VYH6qC-3j3w4VLBgUkcTIuzeN39C9X1j_-ZVx-D_B_RDq3Fhqf-A/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=iFgmIgY5p1s&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=25&t=8s) | [Femi Ogunbode](https://www.linkedin.com/in/femiogunbode/) | Recent history in machine learning; Machine learning with neural networks; Training neural networks; Specialized neural network architectures; Deep learning in data science; Brief overview of popular deep learning-based generative models
-18 | 9-Dec | `**No Lecture and No Lab**`
-19 |16-Dec | Project Presentations  |  
+## Who is This For?
+
+This cohort is ideal for:
+- Students and recent graduates exploring data science or ML
+- Career switchers with programming experience aiming to enter ML roles
+- Self-learners seeking structure, mentorship, and a community
+- You!
+
+**Prerequisite**: Basic Python knowledge is expected  
+> We’ll provide beginner-friendly Python resources during Week 1 for anyone needing a refresher.
+
+## Program Duration
+
+The cohort will run for **10–12 weeks**, broken down into:
+
+- 10 weeks of structured learning
+- A capstone project
+
+**Important Dates**
+- Cohort Start Date: July 26, 2025
+- Cohort End Date: October 18, 2025
+
+
+## Weekly Format
+
+Each week will follow this schedule:
+
+- **Sundays**: Email regarding the videos, labs, notebooks and slides for the week will be sent to participants
+- **Saturdays**: Complete and Submit Assessments 9:00 AM WAT on Saturdays
+- **Saturdays**: Attend a 2-hour community discussion via Zoom (10-12 PM WAT)
+
+> There will be an onboarding session on July 26th, at **10:00 AM WAT**.  
+
+
+## Cohort Overview
+
+| **Week** | **Dates**       | **Topics**                                                                                        | **Lectures**                                                                     | **Labs**                                                                   | **Assessment** | **Suggested Weekly Schedule**                                                                         |
+| -------- | --------------- | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
+| 0        | Jul 26         | **Onboarding & Kickoff**         | - | - |- |-                                                                         |
+| 1        | Jul 27 – Aug 2  | **Python & Numerical Computing**                         |☘️Python Refresher: [Lecture Video](https://www.youtube.com/watch?v=-nUIV5TOnl4) , [Lecture Notebook](https://drive.google.com/file/d/1eX7_L7MXEJnsmqgTYMAsYn7VPb12DyoZ/view)<br><br>☘️Numerical Computing with Python and Numpy: [Lecture Video](https://www.youtube.com/watch?v=JKQU_zSaKys), [Lecture Notebook](https://drive.google.com/file/d/10WggieiU_AZ7Is7mQJu2uoaPtqX2tdwF/view)                             | -                                                                          | TBD            | **Mon**: Python Refresher Lecture<br><br>**Wed**: NumPy Lecture                   |
+| 2        | Aug 3 – Aug 9   | **Data Science Foundations**| ☘️Introduction to Data Science: [Lecture Video](https://www.youtube.com/watch?v=gbU5QQ29OwM), [Lecture Slides](https://drive.google.com/file/d/1Oka9vKS0UrYQ8tFOXnjdTCEX8Wxp7s1L/view)<br><br>☘️Data Collection and Scraping: [Lecture Video](https://www.youtube.com/watch?v=etIQ7sO0Tek), [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vQbpgl2nbHwqDCueVVYr5AztWGtiy5L3hjcPzw1_Ue_8aV9RH47mQVdx3ppyxVfuQ/pub?start=false&loop=false&delayms=3000&slide=id.p1) | 🍒Introduction to Git and Github: [Lab Video](https://www.youtube.com/watch?v=lzWE8WPXQGE), [Lab Slides](https://docs.google.com/presentation/d/e/2PACX-1vSSsaqYfElXQullRk5ESL_Kt1dMj2kTfUzCYjM4PMQ3xqKj66W_Jz4LYXQESY1sgQ/pub?start=false&loop=false&delayms=3000&slide=id.p1)<br><br>🍒Data Collection and Scraping: [Lab Video](https://www.youtube.com/watch?v=2ibGxJdRlsw), [Lab Notebook](https://drive.google.com/file/d/1u5lXsrUrJ6-l-hnwQK9VgSC0XYS0Mc8B/view)  | TBD            | **Mon**: Intro to DS Lecture<br><br>**Tue**: Intro + Git/GitHub Lab<br><br>**Wed**: Data Collection Lecture<br><br>**Thur**: Data Collection Lab                |
+| 3        | Aug 10 – Aug 16 | **Databases, SQL & Exploratory Data Analysis**                                                        | ☘️Relational Data: [Lecture Video](https://www.youtube.com/watch?v=vTIbjzcbehE),  [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vS8mADD20oIArl342c_iob4fnxO66kgvOky_9RDhHGKwikRbbeC_9ItWBky8QkkUA/pub?start=false&loop=false&delayms=3000) <br><br>☘️ Visualization and Data Exploration: [Lecture Video](https://www.youtube.com/watch?v=fFpM0KOTu6w), [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vQSEmEKIACb0uJhKZMG6qnzvk2IGRA78o9yonx3M6syO0ZIG5IG1-188fAbNltBag/pub?start=false&loop=false&delayms=3000&slide=id.p1)                                               | 🍒Relational Data and SQL: [Lab Video](https://www.youtube.com/watch?v=a0T7i4DiqNc), [Lab Notebook](https://drive.google.com/file/d/1lH5CIzCgaqBvgyh0WekYe9on9mRS-wnr/view)<br><br>🍒Data Exploration and Visualization: [Lab Video](https://drive.google.com/file/d/1QrnwD7C3S9jVAuVk6MsvF6kZVD8EMZ10/view), [Lab Notebook](https://drive.google.com/file/d/1QrnwD7C3S9jVAuVk6MsvF6kZVD8EMZ10/view)                                              | TBD            | **Mon**: Relational data Lecture<br><br>**Tue**: Relational data Lab<br><br>**Wed**: Data Exploration Lecture <br><br>**Thur**: Data Exploration Lab                             |
+| 4        | Aug 17 – Aug 23 | **Math for ML**| ☘️Linear Algebra: [Lecture Video](https://www.youtube.com/watch?v=tClanqLla9o), [Lecture Notebook](https://drive.google.com/file/d/1Jy3pSrHwzD-9sf8WwwhRG1L_CQ9-WsCR/view), [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vQZhjofwXlAENMgwCK0xe3fXkg0PW1TELmS5ZGeaAhParqlYWJmG_tUcRaHshL3Ww/pub?start=false&loop=false&delayms=3000&slide=id.p1)                                            | -                                              | TBD            | **Mon:** Linear Algebra Lecture<br><br>**Wed**: Linear Algebra Notebook                                 |
+| 5        | Aug 24 – Aug 30 | **Text Processing**                                        |  ☘️ Free Text and Natural Language Processing: Lecture Video, [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vTH-AFrXZR8sWxVKH4aauTZIN7YTXFNKktsRSA4agAoUGhl_-EsaYqITrrQXqc3sg/pub?start=false&loop=false&delayms=3000&slide=id.p1)          | 🍒Text Processing: Lab Video, [Lab Notebook](https://drive.google.com/file/d/1ywoAi4t_85q24A3DSdZzBQ96ezhdEkO8/view)                                                                          |             | **Mon**: Free Text & NLP Lecture <br><br>**Wed**: Text Processing Lab                    |
+|  |  | | **Capstone Group Project 1 Submission** 
+| 6        | Aug 31 – Sep 6  | **Linear Regression & Classification Models**                    | ☘️Introduction to Machine Learning & Linear Regression: Lecture Video, [Lecture Slides](https://drive.google.com/file/d/1abBmRN-y7WHwqPxnovZOZ3nYeyr-4pTl/view)<br><br>☘️Linear Classification: Lecture Video, [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vT_cRs8vMzlsl7iS3DVLj1n7V9W2wY77YqDaCoF3yfY8vlHkbue9_CuT9ui_QEi5Q/pub?start=false&loop=false&delayms=3000&slide=id.p1)           | 🍒Linear Regression and Classification: Lab Video, [Lab Notebook](https://colab.research.google.com/drive/17FXbveD3FF7QRAr7lu1skVGKQamTebnj?usp=sharing) | TBD            | **Mon**: Introduction to ML Lecture <br><br>**Wed**: Linear Classification Lecture <br><br>**Thur** Linear Regression & Classification Lab |
+| 7        | Sep 7 – Sep 13  | **Non-Linear Modeling & Interpretable ML**| ☘️Nonlinear Modeling, Cross-Validation: Lecture Video, [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vRc3D1tUEVS2z0swhmYUf98R-ikPZRnYFHHNIbORCSRVCq3SVsg7JMk1TexsS2vqA/pub?start=false&loop=false&delayms=3000&slide=id.p1)<br><br>☘️Decision Trees, Interpretable Models: Lecture Video, [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vRLh19txOLLDF6wsI2050-7v1P1011RrRWFSJYVPpyMvumexLVeK7hclKLTB7avIg/pub?start=false&loop=false&delayms=3000&slide=id.p1)             | 🍒Nonlinear Modeling: Lab Video, [Lab Notebook](https://github.com/AISaturdaysLagos/cohort8_materials/tree/main/Labs/11.Non_Linear_Modeling)                                    | TBD            | **Mon**: Nonlinear Modeling Lecture<br><br>**Tue**: Nonlinear Modeling Lab<br><br>**Wed**: Decision Trees Lecture                  |
+| 8        | Sep 14 – Sep 20 | **Probabilistic Models**             |☘️Basics of Probability: Lecture Video, [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vTLBQ6aAox14XL5rIhMDZ61R1nJH1LT0qyxke3sMeXeOH_Z9nCi3CokLidPdHTgig/pub?start=false&loop=false&delayms=3000&slide=id.p1)<br><br>☘️Maximum Likelihood Estimation, Naive bayes: Lecture Video, [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vSXYIcVOiWWCuUOjX_kyQHxCvheKjvx8rWWmPkNVeAkphXABRsMeNJGH5vzffZCsA/pub?start=false&loop=false&delayms=3000&slide=id.p1)                     | -                                                                          | TBD            | **Mon**: Basics of Probability Lecture<br><br>**Wed**: MLE, Naive Bayes Lecture           |
+| 9        | Sep 21 – Sep 27 | **Unsupervised Learning & Recommendation Systems**|☘️Unsupervised Learning: Lecture Video, [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vSdXij7zTm2sQ7U_Mpsm1GXEvSLnkyvTYK6p8FdqgOogPjkMet_5jn4HWLR0fGQOg/pub?start=false&loop=false&delayms=3000&slide=id.p1)<br><br>☘️Recommendation Systems: Lecture Video, [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vRiYkTOA1UmCttpZLDPtJODEC7jVeejOFNO2a-2GwbxOroKavafE-LXMA4BoZzlmA/pub?start=false&loop=false&delayms=3000)     | 🍒Unsupervised Learning: Lab Video, [Lab Notebook](https://github.com/AISaturdaysLagos/cohort8_materials/tree/main/Labs/14.Unsupervised_Learning)<br><br>🍒Recommendation Systems: [Lab Notebook](https://github.com/AISaturdaysLagos/cohort8_materials/blob/main/Labs/16.Recommenders_System/AI6_Lagos_Week_16_Recommender_System.ipynb)          | TBD            | **Mon**: Unsupervised Learning Lecture<br><br>**Tue**: Unsupervised Learning Lab<br><br>**Wed**: Recommendation Systems Lecture <br><br>**Thur**: Recommendation Systems Lab    |
+| 10       | Sep 28 – Oct 4  | **Deep Learning Basics**| ☘️Introduction to Deep Learning: Lecture Video, [Lecture Slides](https://docs.google.com/presentation/d/e/2PACX-1vSBVQoTdoApa4VYH6qC-3j3w4VLBgUkcTIuzeN39C9X1j_-ZVx-D_B_RDq3Fhqf-A/pub?start=false&loop=false&delayms=3000&slide=id.p1)                                           |🍒Neural Networks: Lab Video, [Lab Notebook](https://github.com/AISaturdaysLagos/cohort8_materials/blob/Feekah/Wk17_Neural-Networks/Labs/17.Neural_Networks/Wk17_NeuralNetworks_Notebook.ipynb)                                                                          | TBD            | **Mon**: Deep Learning Lecture<br><br>**Wed**: Neural Network Lab                                             |
+| | | | **Capstone Project 2 Submission**
+|12 |Oct 18 | **Project Presentations** | - | - |- |- 
+| | | |
+
+##  Assessments
+
+- Submitted via **Google Forms**
+- Deadline: **1 hour before** the community call on Saturdays
+- Reviewed live during the discussion
+
+### Assessment Grading
+> TBD 
+
+
+## Certification Requirements
+
+To receive a Certificate of Completion:
+
+- **60% minimum attendance** at community calls (tracked via Google Forms)
+- **40% average assessment score**
+- **100% participation** in the final project (submission required)
+
+## Tools & Platforms
+
+| Tool        | Purpose                                                        | Link                                                                 |
+|-------------|----------------------------------------------------------------|----------------------------------------------------------------------|
+| GitHub      | All materials, assignments, and resources                      | [Cohort Repository](https://github.com/AISaturdaysLagos/flipped_cohort_structure/tree/main) |
+| Gmail Group | Announcements & Notifications                                 | [AI6 Lagos Group](https://groups.google.com/g/ai6lagos)              |
+| Zoom        | Weekly community sessions & project demos                      | Link shared weekly                                                  |
+| Discord     | Daily interaction, Q&A, accountability & support               | [Join Discord](https://discord.gg/HG5kE64dNr)                              |
+| YouTube     | Pre-recorded lectures & community session recordings           | [Pre-recorded Lectures & Lab](https://www.youtube.com/playlist?list=PLD0HH4Qq3rccNiAM7n2hQ22yQ4ICCX5Q0), [C9 - Community Sessions]()|
+
+## Capstone Projects
+
+TBD
+
+
+## Additional Learning Resources
+
+You are encouraged to explore the following:
+
+- [ML Zoomcamp – DataTalksClub](https://github.com/DataTalksClub/machine-learning-zoomcamp)
+- [CMU Data Science Course](https://www.datasciencecourse.org/)
+- [Stanford ML Course – Andrew Ng](https://www.coursera.org/learn/machine-learning)
+- [Machine Learning @ VU Amsterdam](https://mlvu.github.io/)
+
+
+## 🙏 Acknowledgements
+
+This cohort is built on the foundation laid by the incredible work from **[Cohort 8 (C8)](https://github.com/AISaturdaysLagos/cohort_structure/tree/main/cohort8)** — its lectures, labs, and community contributions. We are deeply grateful to the **selfless volunteers** who made it all possible: class instructors, lab facilitators, mentors, and countless others who gave their time and expertise.
+
+Our community is fortunate to be supported by such a generous, talented, and inspiring group of individuals. Thank you for your continued impact. 
+
+#### ✨ C8 Instructors (Alphabetical Order)
+* Afolabi Animashaun
+* Akintayo Jabar
+* Allen Akinkunle
+* Aseda Addai-Deseh
+* Deborah Kanubala
+* Ejiro Onose
+* Emefa Duah
+* Femi Ogunbode
+* Fortune Adekogbe
+* Foutse Yuehgoh
+* Funmito Adeyemi
+* Joscha Cüppers
+* Khadija Iddrisu
+* Kenechi Dukor
+* Lawrence Francis
+* Olumide Okubadejo
+* Oluwaseun Ajayi
+* Oluwatoyin Yetunde Sanni
+* Sandra Oriji
+* Steven Kolawole
+* Tejumade Afonja
+* Wuraola Oyewusi
+
+
+## ☘️ C9 Organizing Team (Alphabetical Order)
+This effort is brought to you by our amazing team of volunteers — thank you for your time, dedication, and leadership.
+
+- Adetola Adetunji
+- Jesuyanmife Egbewale (*cohort lead*)
+- Ibrahim Gana
+- Kenechi Dukor
+- Oluwafemi Azeez
+- Sharon Alawode
+- Simon Ubi
+- Tejumade Afonja
 
 
 
-## Labs 
-Week | Date | Topic | Resources | Tutor 
-|---| ---|-- | -- | -- 
-0 | 05-Aug | `**No Lab**`
-1| 12-Aug | `**No Lab**`
-2| 19-Aug | Introduction to Git and Github | [Slide](https://docs.google.com/presentation/d/e/2PACX-1vSSsaqYfElXQullRk5ESL_Kt1dMj2kTfUzCYjM4PMQ3xqKj66W_Jz4LYXQESY1sgQ/pub?start=false&loop=false&delayms=3000), [Youtube](https://www.youtube.com/watch?v=lg7a9VXN198&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=5&t=24s) | [Sandra Oriji](https://www.linkedin.com/in/oriji-sandra-91a4a3163) 
-3| 26-Aug | Data Collection and Scraping | [Notebook](https://drive.google.com/file/d/1u5lXsrUrJ6-l-hnwQK9VgSC0XYS0Mc8B/view?usp=sharing), [Youtube](https://www.youtube.com/watch?v=w-2yIoJpxq4&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=7) | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) 
-4| 02-Sept | Relational Data and SQL | [Notebook](https://drive.google.com/file/d/1lH5CIzCgaqBvgyh0WekYe9on9mRS-wnr/view?usp=sharing), [Youtube](https://www.youtube.com/watch?v=-m82YkAjV4Q&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=9) | [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun/) 
-5 | 09-Sept | `Lab Postponed to Next Week`
-6 | 16-Sept | Data exploration and visualization | [Notebook](https://drive.google.com/file/d/1QrnwD7C3S9jVAuVk6MsvF6kZVD8EMZ10/view?usp=sharing), [Youtube](https://www.youtube.com/watch?v=MbHrwIU2nWg&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=11) | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
-7| 23-Sept | Text Processing | [Notebook](https://drive.google.com/file/d/1ywoAi4t_85q24A3DSdZzBQ96ezhdEkO8/view?usp=sharing), [Youtube](https://www.youtube.com/watch?v=zelgAhV-ua4&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=14) | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe) 
-8 | 30-Sept | `**No Lab**`
-9| 7-Oct | Linear Regression and Classification | [Notebook](https://colab.research.google.com/drive/17FXbveD3FF7QRAr7lu1skVGKQamTebnj?usp=sharing), [Youtube](https://www.youtube.com/watch?v=zE6ocS55m2o&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=17&t=23s) | [Lawrence Francis](https://www.linkedin.com/in/ldfrancis) 
-10 | 14-Oct | `**No Lecture and  No Lab**`
-11| 21-Oct | Non-linear Modeling | [Notebook](https://github.com/AISaturdaysLagos/cohort8_materials/tree/main/Labs/11.Non_Linear_Modeling), [Youtube](https://www.youtube.com/watch?v=dGReAclSg6k&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=19&t=3470s) | [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/) 
-12 | 28-Oct | `**No Lab**`
-13 | 04-Nov | `**No Lab**`
-14| 11-Nov | Unsupervised Learning |[Notebook](https://github.com/AISaturdaysLagos/cohort8_materials/tree/main/Labs/14.Unsupervised_Learning), [Youtube](https://www.youtube.com/watch?v=yVPNQYLnFMA&list=PLD0HH4Qq3rceefnTGs9vD2y32SeQpjmPI&index=22&t=1s)|  [Joscha Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/) 
-15 | 18-Nov | `**No Lab**`
-16| 25-Nov | Recommendation Systems | [Notebook](https://github.com/AISaturdaysLagos/cohort8_materials/tree/main/Labs/16.Recommenders_System), `**Lab Cancelled due to technical difficulties**` | [Ejiro Onose](https://www.linkedin.com/in/ejiro-onose/) 
-17 | 2-Dec | Neural Networks |[Notebook](https://github.com/AISaturdaysLagos/cohort8_materials/tree/Feekah/Wk17_Neural-Networks/Labs/17.Neural_Networks), [Youtube](https://youtube.com/live/kJ1wNCURXHU)  | [Funmito Adeyemi](https://www.linkedin.com/in/funto-adeyemi-815b31109/) 
-18 | 9-Dec | `**No Lecture and No Lab**`
-19 | 16-Dec | Project Presentations
-
-
-## Assignments 
-N/A | Release Date | Week-Topic | Links | Deadline
-|---| ---|-- | -- | --
-1| 03-Sept | 03-Data Collection and Scraping | [Assignment](https://colab.research.google.com/drive/1aXn1IdHOSlKTwu7MzrW-Lo7lOSahByUp#scrollTo=79m0M2XEjrgb), [Submission](https://docs.google.com/forms/d/e/1FAIpQLSedbyWM2CnOMUsOlvykp0mdu0QsaCZCVgJCBsb-1SUg2kMr8g/viewform) | 9th September 2023
-2| 11-Sept | 04-Relational Data and SQL | [Assignment](https://colab.research.google.com/drive/16YoydRS5tdSy5nXIctAoTcuiy1FgDyZu?usp=sharing), [Submission](https://forms.gle/bP4M8SX5X4rbJXs46) | 17th September 2023
-3| 27-Sept | 05-Data Exploration and Visualization | [Assignment](https://colab.research.google.com/drive/16ez4TCJAlDKfD36x5QALpReg7eCglUm9?usp=sharing), [Submission](https://docs.google.com/forms/d/e/1FAIpQLSdLgSBtJ73muCvhgR4rWtkM1rCVSOMeWx-RFTs_CCPrcDwSvg/viewform) | 8th October 2023
-4| 15-Oct | 07-Free Text and NLP | [Assignment](https://colab.research.google.com/drive/1R1V9M1zW-5eKydzRbBZsA3cAa34Kam5y?usp=sharing), [Submission](https://docs.google.com/forms/d/e/1FAIpQLSfypzcScDTQZkDCdpwpzbRKSy0E7QQ7LoJ5LDpJjeIkkh7z8A/viewform) | 29th October 2023
-5| 25-Nov | 11-Nonlinear Modeling | [Assignment](https://colab.research.google.com/drive/1voPbGhe1cW9at9SNMTudwEY7NTBbdMAD?usp=sharing), [Submission](https://docs.google.com/forms/d/e/1FAIpQLSe2mRGDweo-k9--R4fEePqgXJ6syZhLVuj0W0geVjmh7xmJKg/viewform) | 10th December 2023
-
-## Project and Mentorship
-As a prerequisite for successfully concluding this cohort, participants are presented with two structural options based on prefrence. They may choose to engage in a collaborative group project or undertake an individual project. The primary objective of this initiative is to afford participants the opportunity to apply their theoretical knowledge gained throughout the cohort in a practical setting. Throughout the project engagement, participants will receive guidance from industry experts in Artificial Intelligence. These mentors will play a pivotal role in providing support and direction, ensuring the successful completion of the projects. Notably, there are currently 15 groups, each named after prominent African world leaders, symbolizing their significant contributions and advancements. The `Solo-Ransome-Kuti` group members are embarking on individually-led projects.
-
-### Project Timelime
-> Project Proposal Deadline: October 15, 2023
-
-> Project Submission Deadline: December 10, 2023
-
-> Presentation Day: December 16, 2023
-
-
-Team Name       | Project | Members| Resources | Mentor
-|-----|--| --|--|--|
- Solo-Ransome-Kuti-Ladipo    | NSL-2-Audio: Nigerian Sign Language to Audio | Ipadeola Ladipo| [Github](https://github.com/AISaturdaysLagos/Cohort8-Ransome-Kuti-Ladipo/tree/main) |  [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/)
- Solo-Ransome-Kuti-Oyeneye    | Adaptive Melodies: A User-Shift Preference Music Recommendation System | Samuel Oyeneye | [Github](https://github.com/AISaturdaysLagos/Cohort8-ransome-kuti-oyeneye) |  [Tejumade Afonja](https://www.linkedin.com/in/tejumadeafonja/)
-  Solo-Ransome-Kuti-Adai   | Predicting Credit Card Approvals | Christopher Adai  | [Github](https://github.com/AISaturdaysLagos/Cohort8-ransome-kuti-Adai) |  [Afolabi Animashaun](https://www.linkedin.com/in/folabi-animashaun)
- Sankara         | MovieSense: Movie Recommender System | Olugbade Ifeoluwa, Ogbobe Charles, Ehimwenman Edemakhiota, -Moshood Sanusi, -Muhammad Yahya | [Github](https://github.com/AISaturdaysLagos/Cohort8-sankara)           | [David Onyeali](https://www.linkedin.com/in/david-onyeali/?originalSubdomain=ng)
- Johnson-Sirleaf | Machine Learning Approach to Predicting Diabetes Risk | Buraimoh Glory, Dolamu Oludare, Chinedu Oguazu, Usman  Daudu, -Oluwafemi Akinode   | [Github](https://github.com/AISaturdaysLagos/Cohort8-Johnson-Sirleaf/tree/main)                | [Olawale Abimbola](https://www.linkedin.com/in/bimbolawale/)
- Maathai         | Customer Churn Prediction | Jack Oraro, Oyelayo Seye, Adenike Ayodeji, Ayooluwa Jesuniyi, -Elijah Mesagan, -Lucky Nkwocha | [Github](https://github.com/AISaturdaysLagos/Cohort8-Maathai)        | [Foutse Yuehgoh](https://www.linkedin.com/in/foutse-yuehgoh-9105b184/)
- Nkrumah         | Sentiment Analysis on Social Media | Samuel Ekuma,Rapheal Alemoh, Chinelo Okafor, -Chisom Nenna, -Oluwafunto Daramola    | [Github](https://github.com/AISaturdaysLagos/Cohort8-nkrumah)                    | [Olumide Okubadejo](https://www.linkedin.com/in/olumide-okubadejo/)
- Mandela         | Air Quality Monitoring and Anomaly Detection System | Peter Agida, Damilola Akin-Adamu, Oluwapolore Oyeniji, Abdul-lateef Asafa, Yetunde Afolabi, -Folashade Akintola | [Github](https://github.com/AISaturdaysLagos/Cohort8-mandela) | [Joscha  Cüppers](https://www.linkedin.com/in/joscha-c%C3%BCppers-33aa13244/)
- Ahmed-Ibrahim   | Building Prices Prediction Model | Peter Oni, Daniel Eze, Oluwapelumi Olaniyi, Joanna Yadeka, Elisha Babalola           | [Github](https://github.com/AISaturdaysLagos/Cohort8-ahmed-ibrahim)              | [Emefa Duah](https://www.linkedin.com/in/emefaduah/)
- Kapwepwe        | Analysing Reviews of Hotels and Restaurants in Nigeria to Determine Customer Sentiment | Daniel Otulagun, Olatunde Ogunboyejo, Sarah Akinkunmi, -Iyanu Gbiri, -Olushola Yusuf      | [Github](https://github.com/AISaturdaysLagos/Cohort8-Kapwepwe)           | [Orevaoghene Ahia](https://www.linkedin.com/in/orevaoghene-ahia/)
- Anomah-Ngu      | Handwritten Digits Recognition Model | Mofiyinfoluwa Aladesuyi, Jedaiah Akimsah, Taiwo Olorunnishola, Victor Bassey, Mukhtar Abdulquadir | [Github](https://github.com/AISaturdaysLagos/Cohort8-anomah-ngu)  | [Akintayo Jabar](https://www.linkedin.com/in/tayo-jabar/)
- Bourguiba       | Implementation of Medical FAQ Chatbot | Monsurat Ariyo, Ayodeji Akande, Caleb Balogun, Martins Joseph, Bala  Mairiga Abduljalil, -Waris Akorede | [Github](https://github.com/AISaturdaysLagos/Cohort8-Bourguiba) | [Fortune Adekogbe](https://www.linkedin.com/in/fortune-adekogbe/)
- Elnadi          | Flood Chat | Etietop Udofia, -Basil Makama, -Okosa Uche, -Akorede Salaam, -Joshua Michael, -Okosa Uche    | [Github](https://github.com/AISaturdaysLagos/Cohort8-Elnadi)             | [Sandra Onyinyechi](https://www.linkedin.com/in/oriji-sandra-91a4a3163/)
- Selassie        | Diabetic Risk Prediction using Random Forest and Logistic Regression | Ebunoluwa Amoo, Ayodeji Adesegun, Funbi Bolarinwa, Abraham Ugwa, Oyindamola Olatunji     | [Github](https://github.com/AISaturdaysLagos/Cohort8-Selassie)               | [Oluwaseun Ajayi](https://www.linkedin.com/in/oluwaseun-a-ajayi/)
- Lumumba         | - | Ayorinde Alase, Gamaliel Okudo, Nurudeen Alase, Precious Ita, Chitom Uzokwe            | [Github](https://github.com/AISaturdaysLagos/Cohort8-lumumba)             | [Oluwafemi Azeez](https://www.linkedin.com/in/azeez-oluwafemi/)
- Nyerere         | - | Temitope Ajibade, Kelvin Obi, Oluwabukola Ogunbunmi, Muhammad Gimba, Eniola Adetunji       | [Github](https://github.com/AISaturdaysLagos/Cohort8-nyerere)         | [Femi Ogunbode](https://www.linkedin.com/in/femiogunbode/)
- Machel          | - | Olorundara Akojede, Tope Rufai, Anuoluwapo Ogunrinde, Jamiu Ahmed, Bilikis Olanrewaju     | [Github](https://github.com/AISaturdaysLagos/Cohort8-machel)          | [Kenechi Dukor](https://www.linkedin.com/in/kenechidukor/)
