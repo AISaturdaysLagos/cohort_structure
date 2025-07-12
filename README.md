@@ -35,7 +35,7 @@ This cohort is ideal for:
 The cohort will run for **10–12 weeks**, broken down into:
 
 - 10 weeks of structured learning
-- A capstone project
+- Capstone projects
 
 **Important Dates**
 - Cohort Start Date: July 26, 2025
