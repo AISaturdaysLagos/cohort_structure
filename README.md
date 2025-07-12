@@ -151,8 +151,8 @@ Our community is fortunate to be supported by such a generous, talented, and ins
 This effort is brought to you by our amazing team of volunteers — thank you for your time, dedication, and leadership.
 
 - Adetola Adetunji
-- Jesuyanmife Egbewale (*cohort lead*)
 - Ibrahim Gana
+- Jesuyanmife Egbewale (*cohort lead*)
 - Kenechi Dukor
 - Oluwafemi Azeez
 - Sharon Alawode
