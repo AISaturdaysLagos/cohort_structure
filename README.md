@@ -41,6 +41,15 @@ The cohort will run for **10–12 weeks**, broken down into:
 - Cohort Start Date: July 26, 2025
 - Cohort End Date: October 18, 2025
 
+## Tools & Platforms
+
+| Tool        | Purpose                                                        | Link                                                                 |
+|-------------|----------------------------------------------------------------|----------------------------------------------------------------------|
+| GitHub      | All materials, assignments, and resources                      | [Cohort Repository](https://github.com/AISaturdaysLagos/flipped_cohort_structure/tree/main) |
+| Gmail Group | Announcements & Notifications                                 | [AI6 Lagos Group](https://groups.google.com/g/ai6lagos)              |
+| Zoom        | Weekly community sessions & project demos                      | Link shared weekly                                                  |
+| Discord     | Daily interaction, Q&A, accountability & support               | [Join Discord](https://discord.gg/HG5kE64dNr)                              |
+| YouTube     | Pre-recorded lectures & community session recordings           | [Pre-recorded Lectures & Lab](https://www.youtube.com/playlist?list=PLD0HH4Qq3rccNiAM7n2hQ22yQ4ICCX5Q0), [C9 - Weekly Community Sessions](https://www.youtube.com/playlist?list=PLD0HH4Qq3rccVMpm085twerpws37WJEpk)|
 
 ## Weekly Format
 
@@ -80,7 +89,7 @@ Each week will follow this schedule:
 - Reviewed live during the discussion
 
 ### Assessment Grading
-> TBD 
+> TBD
 
 
 ## Certification Requirements
@@ -90,16 +99,6 @@ To receive a Certificate of Completion:
 - **60% minimum attendance** at community calls (tracked via Google Forms)
 - **40% average assessment score**
 - **100% participation** in the final project (submission required)
-
-## Tools & Platforms
-
-| Tool        | Purpose                                                        | Link                                                                 |
-|-------------|----------------------------------------------------------------|----------------------------------------------------------------------|
-| GitHub      | All materials, assignments, and resources                      | [Cohort Repository](https://github.com/AISaturdaysLagos/flipped_cohort_structure/tree/main) |
-| Gmail Group | Announcements & Notifications                                 | [AI6 Lagos Group](https://groups.google.com/g/ai6lagos)              |
-| Zoom        | Weekly community sessions & project demos                      | Link shared weekly                                                  |
-| Discord     | Daily interaction, Q&A, accountability & support               | [Join Discord](https://discord.gg/HG5kE64dNr)                              |
-| YouTube     | Pre-recorded lectures & community session recordings           | [Pre-recorded Lectures & Lab](https://www.youtube.com/playlist?list=PLD0HH4Qq3rccNiAM7n2hQ22yQ4ICCX5Q0), [C9 - Community Sessions]()|
 
 ## Capstone Projects
 
