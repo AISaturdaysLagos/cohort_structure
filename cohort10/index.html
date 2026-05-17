@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TRI AI Saturdays · Cohort 10</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --green: #0a4d3c;
+      --green-mid: #0f6b52;
+      --green-light: #17906d;
+      --accent: #f5a623;
+      --accent-warm: #e8892b;
+      --cream: #fdf6eb;
+      --off-white: #f9f3e8;
+      --text: #1a1a18;
+      --text-muted: #5a5a52;
+      --border: #d9ccb8;
+      --card-bg: #ffffff;
+      --badge-1: #dff0ea;
+      --badge-1-text: #0a4d3c;
+      --badge-2: #fdecd3;
+      --badge-2-text: #7a3d00;
+      --badge-3: #e8e4ff;
+      --badge-3-text: #3a2580;
+      --badge-4: #fde8e8;
+      --badge-4-text: #7a1010;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--green);
+      color: #fff;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
+    .logo {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-dot {
+      width: 10px; height: 10px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: inline-block;
+    }
+    nav { display: flex; gap: 1.5rem; }
+    nav a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--green);
+      color: #fff;
+      padding: 4rem 2rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -80px;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      background: rgba(245,166,35,0.08);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; left: 10%;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,166,35,0.15);
+      border: 1px solid rgba(245,166,35,0.3);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.72);
+      max-width: 580px;
+      margin-bottom: 2rem;
+    }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .meta-chip {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .meta-chip strong { color: #fff; }
+    .meta-chip span { color: rgba(255,255,255,0.6); }
+
+    /* ── LAYOUT ── */
+    .page-body {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      position: sticky;
+      top: 76px;
+    }
+    .sidebar-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    .sidebar-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+    }
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 9px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.84rem;
+      font-weight: 500;
+      transition: background 0.15s, color 0.15s;
+      cursor: pointer;
+    }
+    .sidebar-link:hover, .sidebar-link.active {
+      background: var(--badge-1);
+      color: var(--green);
+    }
+    .sidebar-link .num {
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: var(--off-white);
+      color: var(--text-muted);
+      width: 20px; height: 20px;
+      display: grid; place-items: center;
+      border-radius: 5px;
+      flex-shrink: 0;
+    }
+    .sidebar-link.active .num {
+      background: var(--green-light);
+      color: #fff;
+    }
+    .cert-box {
+      background: linear-gradient(135deg, var(--green), var(--green-mid));
+      color: #fff;
+      border-radius: 14px;
+      padding: 1.2rem;
+    }
+    .cert-box h4 {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .cert-box ul {
+      list-style: none;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .cert-box ul li::before {
+      content: '✓ ';
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* ── MAIN CONTENT ── */
+    .main-content {}
+
+    /* ── SECTION HEADER ── */
+    .section-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── MILESTONES ── */
+    .milestones {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    .milestone-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      border-top: 3px solid var(--green-light);
+    }
+    .milestone-card .date {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--green);
+      margin-bottom: 3px;
+    }
+    .milestone-card .label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ── COURSE BLOCK ── */
+    .course-block {
+      margin-bottom: 2.5rem;
+    }
+    .course-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 1rem 1.3rem;
+      border-radius: 12px 12px 0 0;
+      border: 1px solid var(--border);
+      border-bottom: none;
+      background: var(--off-white);
+    }
+    .course-num {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--green);
+      color: #fff;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .course-header h3 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: -0.01em;
+    }
+    .course-weeks { color: var(--text-muted); font-size: 0.82rem; margin-left: auto; }
+    .course-outcomes {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-bottom: none;
+      padding: 0.8rem 1.3rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .course-outcomes ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .course-outcomes ul li::before { content: '→ '; color: var(--green-light); font-weight: 700; }
+
+    /* ── WEEK CARD ── */
+    .week-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: none;
+      transition: box-shadow 0.2s;
+    }
+    .week-card:last-child {
+      border-radius: 0 0 12px 12px;
+    }
+    .week-card:hover { box-shadow: 0 4px 18px rgba(0,0,0,0.07); }
+
+    .week-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.3rem;
+      cursor: pointer;
+      user-select: none;
+      gap: 12px;
+    }
+    .week-header:hover { background: #fdf9f4; }
+
+    .week-badge {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.72rem;
+      color: var(--green);
+      background: var(--badge-1);
+      padding: 3px 9px;
+      border-radius: 5px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .week-badge.break { background: var(--badge-2); color: var(--badge-2-text); }
+
+    .week-title-group { flex: 1; }
+    .week-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+    .week-date {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    .week-instructors {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .instructor-chip {
+      font-size: 0.72rem;
+      font-weight: 500;
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      padding: 2px 8px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    .chevron {
+      color: var(--text-muted);
+      font-size: 1rem;
+      transition: transform 0.25s;
+      flex-shrink: 0;
+    }
+    .week-card.open .chevron { transform: rotate(180deg); }
+
+    /* ── WEEK BODY ── */
+    .week-body {
+      display: none;
+      padding: 0 1.3rem 1.3rem;
+      border-top: 1px solid var(--border);
+      margin-top: 0;
+    }
+    .week-card.open .week-body { display: block; }
+
+    .sessions-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+      margin: 1rem 0 1rem;
+    }
+    .session-box {
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.82rem;
+    }
+    .session-box.lecture {
+      background: var(--badge-1);
+      border: 1px solid #b8ddd2;
+    }
+    .session-box.lab {
+      background: var(--badge-2);
+      border: 1px solid #f0d0a0;
+    }
+    .session-box .sess-label {
+      font-weight: 700;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .session-box.lecture .sess-label { color: var(--green); }
+    .session-box.lab .sess-label { color: #7a3d00; }
+    .session-box .sess-detail { color: var(--text-muted); line-height: 1.5; }
+
+    .lessons-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.6rem;
+    }
+    .lesson-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .lesson-list li {
+      font-size: 0.84rem;
+      display: flex;
+      align-items: baseline;
+      gap: 7px;
+      line-height: 1.45;
+    }
+    .lesson-list li::before {
+      content: '·';
+      color: var(--green-light);
+      font-size: 1.2rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .lesson-list li.lab-item::before { content: '⚗'; font-size: 0.75rem; }
+    .lesson-list li.check-item::before { content: '✓'; color: var(--accent-warm); font-size: 0.8rem; }
+    .lesson-list a {
+      color: var(--green-mid);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--green-light);
+    }
+    .lesson-list a:hover { color: var(--green); border-bottom-style: solid; }
+
+    /* ── DELIVERABLE TAGS ── */
+    .deliverables-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 0.8rem;
+    }
+    .del-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .del-tag.challenge { background: var(--badge-3); color: var(--badge-3-text); }
+    .del-tag.lab-del { background: var(--badge-4); color: var(--badge-4-text); }
+
+    /* ── SPECIAL WEEK (break/project/demo) ── */
+    .special-week {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: none;
+      border-radius: 0 0 12px 12px;
+      padding: 1.2rem 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .special-week .icon { font-size: 1.4rem; }
+    .special-week .info h4 {
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    .special-week .info p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ── CAPSTONE ── */
+    .capstone-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.4rem;
+      margin-bottom: 2.5rem;
+    }
+    .capstone-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .cap-item {
+      background: var(--off-white);
+      border-radius: 9px;
+      padding: 0.9rem 1rem;
+      font-size: 0.84rem;
+    }
+    .cap-item h5 {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+    .cap-item ul { list-style: none; }
+    .cap-item ul li { line-height: 1.7; color: var(--text-muted); }
+    .cap-item ul li::before { content: '– '; color: var(--accent-warm); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 820px) {
+      .page-body { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      nav { display: none; }
+      .sessions-row { grid-template-columns: 1fr; }
+      .capstone-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--green);
+      color: rgba(255,255,255,0.6);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.82rem;
+    }
+    footer strong { color: var(--accent); }
+
+    /* ── HERO STATS ── */
+    .hero-stats {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+      margin-top: 2rem;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 14px;
+      padding: 1.2rem 1.8rem;
+    }
+    .hero-stat {
+      flex: 0 0 auto;
+      text-align: center;
+      padding: 0 1.4rem;
+    }
+    .hero-stat:first-child { padding-left: 0; }
+    .hero-stat:last-child { padding-right: 0; }
+    .hero-stat-number {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 2rem;
+      color: #fff;
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .hero-stat-number span {
+      color: var(--accent);
+      font-size: 1.4rem;
+    }
+    .hero-stat-label {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.55);
+      margin-top: 4px;
+      font-weight: 500;
+    }
+    .hero-stat-divider {
+      width: 1px;
+      height: 36px;
+      background: rgba(255,255,255,0.15);
+      flex-shrink: 0;
+    }
+
+    /* scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      TRI AI Saturdays · Cohort 10
+    </div>
+    <nav>
+      <a href="#curriculum">Curriculum</a>
+      <a href="#capstone">Capstone</a>
+      <a href="#challenges">Challenges</a>
+      <a href="#cert">Certificate</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">🌍 Google DeepMind AI Research Foundation Course</div>
+    <h1>TRI AI Saturdays<br/><span>Cohort 10</span></h1>
+    <p class="hero-sub">A 16-week hands-on program taking you from language model fundamentals to building your own Small Language Model — grounded in real-world problem solving.</p>
+    <div class="hero-meta">
+      <div class="meta-chip"><strong>Start:</strong><span>May 31, 2026</span></div>
+      <div class="meta-chip"><strong>End:</strong><span>Sep 19, 2026</span></div>
+      <div class="meta-chip"><strong>Sessions:</strong><span>Saturdays (Lecture) · Wednesdays (Lab)</span></div>
+      <div class="meta-chip"><strong>Format:</strong><span>Online + Satellite Classes</span></div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-number">2,800<span>+</span></div>
+        <div class="hero-stat-label">Registered participants</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-number">80<span>+</span></div>
+        <div class="hero-stat-label">Countries represented</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-number">16</div>
+        <div class="hero-stat-label">Weeks of learning</div>
+      </div>
+      <div class="hero-stat-divider"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-number">4</div>
+        <div class="hero-stat-label">Courses covered</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Jump to Week</div>
+      <a class="sidebar-link" onclick="jumpTo('week1')"><span class="num">1</span> Intro to Language Modeling</a>
+      <a class="sidebar-link" onclick="jumpTo('week2')"><span class="num">2</span> Ngrams → Transformers</a>
+      <a class="sidebar-link" onclick="jumpTo('week3')"><span class="num">3</span> Training a Language Model</a>
+      <a class="sidebar-link" onclick="jumpTo('week4')"><span class="num">4</span> Text Preprocessing</a>
+      <a class="sidebar-link" onclick="jumpTo('week5')"><span class="num">5</span> Tokenization</a>
+      <a class="sidebar-link" onclick="jumpTo('week6')"><span class="num">6</span> Embeddings</a>
+      <a class="sidebar-link" onclick="jumpTo('week7')"><span class="num">7</span> Break</a>
+      <a class="sidebar-link" onclick="jumpTo('week8')"><span class="num">8</span> Intro to Neural Networks</a>
+      <a class="sidebar-link" onclick="jumpTo('week9')"><span class="num">9</span> Multi-layer Perceptron</a>
+      <a class="sidebar-link" onclick="jumpTo('week10')"><span class="num">10</span> Gradients & Backprop</a>
+      <a class="sidebar-link" onclick="jumpTo('week11')"><span class="num">11</span> Modern LLM Architecture</a>
+      <a class="sidebar-link" onclick="jumpTo('week12')"><span class="num">12</span> Attention Mechanism</a>
+      <a class="sidebar-link" onclick="jumpTo('week13')"><span class="num">13</span> Positional Embeddings</a>
+      <a class="sidebar-link" onclick="jumpTo('week14')"><span class="num">14</span> Transformer Block</a>
+      <a class="sidebar-link" onclick="jumpTo('week15')"><span class="num">15</span> Project Week</a>
+      <a class="sidebar-link" onclick="jumpTo('week16')"><span class="num">16</span> Demo Day 🎉</a>
+    </div>
+
+    <div class="cert-box">
+      <h4>🏅 Certificate Requirements</h4>
+      <ul>
+        <li>≥ 60% lecture attendance</li>
+        <li>Complete SLM training lab</li>
+        <li>All 4 cohort challenges</li>
+        <li>Final capstone project</li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- MILESTONES -->
+    <div style="margin-bottom: 2.5rem;" id="curriculum">
+      <div class="section-label">Programme</div>
+      <div class="section-title">Key Milestones</div>
+      <div class="milestones">
+        <div class="milestone-card">
+          <div class="date">May 31, 2026</div>
+          <div class="label">Cohort Starts</div>
+        </div>
+        <!-- <div class="milestone-card">
+          <div class="date">Jul 4, 2026</div>
+          <div class="label">In-person Class — Lagos</div>
+        </div> -->
+        <div class="milestone-card">
+          <div class="date">Sep 6–12, 2026</div>
+          <div class="label">Project Week</div>
+        </div>
+        <div class="milestone-card">
+          <div class="date">Sep 19, 2026</div>
+          <div class="label">Demo Day 🎉</div>
+        </div>
+        <div class="milestone-card">
+          <div class="date">Oct, 2026</div>
+          <div class="label">Cohort 11 Begins</div>
+        </div>
+        <div class="milestone-card">
+          <div class="date">Q1 2027</div>
+          <div class="label">Post-cohort Hackathon</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ COURSE 1 ═══ -->
+    <div class="course-block">
+      <div class="course-header">
+        <span class="course-num">Course 1</span>
+        <h3>Foundations of Language Modeling</h3>
+        <span class="course-weeks">Weeks 1–3</span>
+      </div>
+      <div class="course-outcomes">
+        <ul>
+          <li>Understand the ML development pipeline and strengths/limitations of language models</li>
+          <li>Compare n-gram and transformer models through hands-on coding</li>
+          <li>Define a community problem to tackle with machine learning</li>
+        </ul>
+      </div>
+
+      <!-- Week 1 -->
+      <div class="week-card" id="week1">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 1</span>
+          <div class="week-title-group">
+            <div class="week-title">Introduction to Language Modeling</div>
+            <div class="week-date">Lecture: Sat, June 6, 2026 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Tejumade Afonja</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="lessons-title">Lessons &amp; Labs <span style="font-weight:400;color:var(--text-muted)">— est. 46 min</span></div>
+          <ul class="lesson-list">
+            <li><a href="#">The power of language models</a></li>
+            <li><a href="#">Predict the next word</a></li>
+            <li><a href="#">The role of probabilities in language models</a></li>
+            <li class="lab-item"><a href="#">Lab: Create your own probability distribution</a></li>
+            <li><a href="#">Reflect on your findings</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 1</a></li>
+            <li><a href="#">Learning objectives</a></li>
+            <li><a href="#">How to get the most out of this course</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Week 2 -->
+      <div class="week-card" id="week2">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 2</span>
+          <div class="week-title-group">
+            <div class="week-title">From N-grams to Transformers</div>
+            <div class="week-date">Lab: Wed, June 10 · Lecture: Sat, June 13 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Lab: Tejumade Afonja</span>
+            <span class="instructor-chip">Lecture: Tobias Lorenz</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab">
+              <div class="sess-label">🧪 Lab Session</div>
+              <div class="sess-detail">Wed, June 10 · 7–9pm WAT<br/>Instructor: Tejumade Afonja</div>
+            </div>
+            <div class="session-box lecture">
+              <div class="sess-label">📖 Lecture</div>
+              <div class="sess-detail">Sat, June 13 · 11am–1pm WAT<br/>Instructor: Tobias Lorenz</div>
+            </div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs <span style="font-weight:400;color:var(--text-muted)">— est. 2 hr 6 min</span></div>
+          <ul class="lesson-list">
+            <li><a href="#">N-grams</a></li>
+            <li class="lab-item"><a href="#">Lab: Experiment with N-grams</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 2</a></li>
+            <li><a href="#">The limitations of N-grams</a></li>
+            <li class="lab-item"><a href="#">Lab: Compare N-gram and Transformer language models</a></li>
+            <li><a href="#">AlphaFold: the power of machine learning</a></li>
+            <li><a href="#">Weighing values: culture and ethics in the trolley problem</a></li>
+            <li><a href="#">Applying a local ethical lens to the trolley problem</a></li>
+            <li><a href="#">Core aspects of Ubuntu</a></li>
+            <li><a href="#">Develop a local value framework</a></li>
+            <li><a href="#">Anatomy of a language model</a></li>
+            <li><a href="#">What does it mean to train a model?</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 3</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Week 3 -->
+      <div class="week-card" id="week3">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 3</span>
+          <div class="week-title-group">
+            <div class="week-title">Training a Language Model</div>
+            <div class="week-date">Lab: Wed, June 17 · Lecture: Sat, June 20 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Oduguwa Damilola</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab">
+              <div class="sess-label">🧪 Lab Session</div>
+              <div class="sess-detail">Wed, June 17 · 7–9pm WAT</div>
+            </div>
+            <div class="session-box lecture">
+              <div class="sess-label">📖 Lecture</div>
+              <div class="sess-detail">Sat, June 20 · 11am–1pm WAT</div>
+            </div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs <span style="font-weight:400;color:var(--text-muted)">— est. 2 hr 24 min</span></div>
+          <ul class="lesson-list">
+            <li><a href="#">Machine learning development pipeline</a></li>
+            <li class="lab-item"><a href="#">Lab: Prepare the dataset for training an SLM</a></li>
+            <li class="lab-item"><a href="#">Lab: Train your own Small Language Model (SLM)</a></li>
+            <li><a href="#">Evaluating a model</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 4</a></li>
+            <li><a href="#">Anticipating benefits</a></li>
+            <li><a href="#">Challenge: Develop your problem statement</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 5</a></li>
+            <li><a href="#">Summary &amp; Looking forward</a></li>
+            <li><a href="#">Additional resources &amp; Glossary</a></li>
+          </ul>
+          <div class="deliverables-row">
+            <span class="del-tag challenge">🏆 Challenge 1: Develop your problem statement</span>
+            <span class="del-tag lab-del">⚗ Lab: Train your own SLM</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- /course 1 -->
+
+    <!-- ═══ COURSE 2 ═══ -->
+    <div class="course-block">
+      <div class="course-header">
+        <span class="course-num">Course 2</span>
+        <h3>Text Data: Tokenization &amp; Embeddings</h3>
+        <span class="course-weeks">Weeks 4–6</span>
+      </div>
+      <div class="course-outcomes">
+        <ul>
+          <li>Learn to prepare, structure, and represent text data for language models</li>
+          <li>Investigate tokenization strategies (character, word, subword/BPE) and embeddings</li>
+          <li>Design a dataset ethically using data cards</li>
+        </ul>
+      </div>
+
+      <!-- Week 4 -->
+      <div class="week-card" id="week4">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 4</span>
+          <div class="week-title-group">
+            <div class="week-title">Introduction to Text &amp; Data Preprocessing</div>
+            <div class="week-date">Lab: Wed, June 24 · Lecture: Sat, June 27 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Foutse Yuehgoh</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab"><div class="sess-label">🧪 Lab</div><div class="sess-detail">Wed, June 24 · 7–9pm WAT</div></div>
+            <div class="session-box lecture"><div class="sess-label">📖 Lecture</div><div class="sess-detail">Sat, June 27 · 11am–1pm WAT</div></div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs <span style="font-weight:400;color:var(--text-muted)">— est. 2 hr 47 min</span></div>
+          <ul class="lesson-list">
+            <li><a href="#">Teaching a machine the soul of your language</a></li>
+            <li><a href="#">A world of text: types and sources</a></li>
+            <li><a href="#">Exploring raw data</a></li>
+            <li class="lab-item"><a href="#">Lab: Preprocess data</a></li>
+            <li><a href="#">Harnessing the potential of low-resource languages</a></li>
+            <li><a href="#">Data resources &amp; Who owns the data?</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 1</a></li>
+            <li><a href="#">Class activity: Why document data?</a></li>
+            <li><a href="#">Challenge: Build a dataset ethically with a Data Card</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 4</a></li>
+          </ul>
+          <div class="deliverables-row">
+            <span class="del-tag challenge">🏆 Challenge 2: Build a dataset ethically with a Data Card</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 5 -->
+      <div class="week-card" id="week5">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 5</span>
+          <div class="week-title-group">
+            <div class="week-title">Tokenization</div>
+            <!-- <div class="week-date">Lab: Wed, July 1 · Lecture: Sat, July 4 · 11am–1pm WAT <span style="color:var(--accent-warm);font-size:0.75rem;font-weight:600"> ★ In-person Lagos</span></div> -->
+             <div class="week-date">Lab: Wed, July 1 · Lecture: Sat, July 4 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Lecture: Abdulsamad Baruwa</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab"><div class="sess-label">🧪 Lab</div><div class="sess-detail">Wed, July 1 · 7–9pm WAT<br/>Abdulsamad Baruwa</div></div>
+            <div class="session-box lecture"><div class="sess-label">📖 Lecture</div><div class="sess-detail">Sat, July 4 · 11am–1pm WAT<br/>Abdulsamad Baruwao<br/><strong style="color:var(--accent-warm)">★ In-person: Lagos</strong></div></div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs <span style="font-weight:400;color:var(--text-muted)">— est. 1 hr 58 min</span></div>
+          <ul class="lesson-list">
+            <li><a href="#">What is tokenization?</a></li>
+            <li class="lab-item"><a href="#">Lab: Tokenize texts into characters and words</a></li>
+            <li class="lab-item"><a href="#">Lab: Tokenize texts into subword tokens</a></li>
+            <li><a href="#">Subword tokenization</a></li>
+            <li class="lab-item"><a href="#">Lab: Implement a BPE tokenizer</a></li>
+            <li><a href="#">Whose voice is missing?</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 2</a></li>
+          </ul>
+          <div class="deliverables-row">
+            <span class="del-tag lab-del">⚗ Lab: Implement a BPE Tokenizer</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 6 -->
+      <div class="week-card" id="week6">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 6</span>
+          <div class="week-title-group">
+            <div class="week-title">Embeddings</div>
+            <div class="week-date">Lab: Wed, July 8 · Lecture: Sat, July 11 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Kaletsidik Mekonnen</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab"><div class="sess-label">🧪 Lab</div><div class="sess-detail">Wed, July 8 · 7–9pm WAT</div></div>
+            <div class="session-box lecture"><div class="sess-label">📖 Lecture</div><div class="sess-detail">Sat, July 11 · 11am–1pm WAT</div></div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs</div>
+          <ul class="lesson-list">
+            <li><a href="#">What are embeddings?</a></li>
+            <li><a href="#">Design your own embeddings</a></li>
+            <li><a href="#">Desired properties of embeddings</a></li>
+            <li class="lab-item"><a href="#">Lab: Experiment with embeddings</a></li>
+            <li class="lab-item"><a href="#">Lab: Train an SLM with your BPE tokenizer</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 3</a></li>
+            <li><a href="#">Summary, Resources &amp; Glossary</a></li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /course 2 -->
+
+    <!-- BREAK WEEK 7 -->
+    <div class="course-block">
+      <div class="course-header" style="border-radius:12px 12px 0 0;">
+        <span class="course-num" style="background:#9e8a6e;">Break</span>
+        <h3>Mid-Cohort Break</h3>
+        <span class="course-weeks">Week 7</span>
+      </div>
+      <div class="special-week" id="week7">
+        <div class="icon">☀️</div>
+        <div class="info">
+          <h4>Rest &amp; Catch-up Week</h4>
+          <p>No scheduled sessions. Use this time to review materials, work on your team project, or get ahead on challenge submissions.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ COURSE 3 ═══ -->
+    <div class="course-block">
+      <div class="course-header">
+        <span class="course-num">Course 3</span>
+        <h3>Neural Networks &amp; Training</h3>
+        <span class="course-weeks">Weeks 8–10</span>
+      </div>
+      <div class="course-outcomes">
+        <ul>
+          <li>Implement and evaluate the multilayer perceptron (MLP)</li>
+          <li>Understand backpropagation, gradients, and stochastic gradient descent</li>
+          <li>Spot and mitigate overfitting/underfitting in practice</li>
+        </ul>
+      </div>
+
+      <!-- Week 8 -->
+      <div class="week-card" id="week8">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 8</span>
+          <div class="week-title-group">
+            <div class="week-title">Introduction to Neural Networks</div>
+            <div class="week-date">Lab: Wed, July 22 · Lecture: Sat, July 25 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Timi Owolabi</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab"><div class="sess-label">🧪 Lab</div><div class="sess-detail">Wed, July 22 · 7–9pm WAT</div></div>
+            <div class="session-box lecture"><div class="sess-label">📖 Lecture</div><div class="sess-detail">Sat, July 25 · 11am–1pm WAT</div></div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs</div>
+          <ul class="lesson-list">
+            <li><a href="#">The deep learning revolution</a></li>
+            <li><a href="#">Signal and noise</a></li>
+            <li class="lab-item"><a href="#">Lab: Distinguish between signal and noise</a></li>
+            <li><a href="#">Generalization and the bias-variance trade-off</a></li>
+            <li><a href="#">Training and test splits</a></li>
+            <li><a href="#">Predicting cyclones with AI weather models</a></li>
+            <li><a href="#">Anticipating risks</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 1</a></li>
+            <li><a href="#">The multilayer perceptron (MLP)</a></li>
+            <li class="lab-item"><a href="#">Lab: Make predictions with a single-layer neural network</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Week 9 -->
+      <div class="week-card" id="week9">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 9</span>
+          <div class="week-title-group">
+            <div class="week-title">Modeling Complex Data with MLP</div>
+            <div class="week-date">Lab: Wed, July 29 · Lecture: Sat, Aug 1 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Chimdi Walter Ndubuisi</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab"><div class="sess-label">🧪 Lab</div><div class="sess-detail">Wed, July 29 · 7–9pm WAT</div></div>
+            <div class="session-box lecture"><div class="sess-label">📖 Lecture</div><div class="sess-detail">Sat, Aug 1 · 11am–1pm WAT</div></div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs</div>
+          <ul class="lesson-list">
+            <li class="lab-item"><a href="#">Lab: Separate more complex data</a></li>
+            <li><a href="#">Modeling data that is not linearly separable</a></li>
+            <li class="lab-item"><a href="#">Lab: Design your own MLP</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 2</a></li>
+            <li class="lab-item"><a href="#">Lab: Tune hyperparameters</a></li>
+            <li><a href="#">Methods to mitigate overfitting</a></li>
+            <li class="lab-item"><a href="#">Lab: Mitigate overfitting</a></li>
+            <li><a href="#">Why is a validation dataset needed?</a></li>
+            <li><a href="#">Alignment and safety</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 3</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Week 10 -->
+      <div class="week-card" id="week10">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 10</span>
+          <div class="week-title-group">
+            <div class="week-title">Gradients &amp; Backpropagation</div>
+            <div class="week-date">Lab: Wed, Aug 5 · Lecture: Sat, Aug 8 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Fortune Adekogbe</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab"><div class="sess-label">🧪 Lab</div><div class="sess-detail">Wed, Aug 5 · 7–9pm WAT</div></div>
+            <div class="session-box lecture"><div class="sess-label">📖 Lecture</div><div class="sess-detail">Sat, Aug 8 · 11am–1pm WAT</div></div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs</div>
+          <ul class="lesson-list">
+            <li><a href="#">Gradients</a></li>
+            <li class="lab-item"><a href="#">Lab: Gradients</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 4</a></li>
+            <li><a href="#">Backpropagation</a></li>
+            <li><a href="#">Stochastic gradient descent (SGD)</a></li>
+            <li class="lab-item"><a href="#">Lab: Train your model with Keras</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 5</a></li>
+            <li><a href="#">Anticipating social impacts</a></li>
+            <li><a href="#">Challenge: Create an impact statement card</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 6</a></li>
+            <li><a href="#">Summary, Resources &amp; Glossary</a></li>
+          </ul>
+          <div class="deliverables-row">
+            <span class="del-tag challenge">🏆 Challenge 3: Create an impact statement card</span>
+            <span class="del-tag lab-del">⚗ Lab: Train your model with Keras</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- /course 3 -->
+
+    <!-- ═══ COURSE 4 ═══ -->
+    <div class="course-block">
+      <div class="course-header">
+        <span class="course-num">Course 4</span>
+        <h3>Transformer Architecture</h3>
+        <span class="course-weeks">Weeks 11–14</span>
+      </div>
+      <div class="course-outcomes">
+        <ul>
+          <li>Explore the attention mechanism, masked attention, and multi-head attention</li>
+          <li>Understand positional embeddings, layer normalization, and transformer blocks</li>
+          <li>Build neural networks suited to language modeling</li>
+        </ul>
+      </div>
+
+      <!-- Week 11 -->
+      <div class="week-card" id="week11">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 11</span>
+          <div class="week-title-group">
+            <div class="week-title">Architecture of Modern Large Language Models</div>
+            <div class="week-date">Lab: Wed, Aug 12 · Lecture: Sat, Aug 15 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Lab: Josiah Isong</span>
+            <span class="instructor-chip">Lecture: Olumide Okubadejo</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab"><div class="sess-label">🧪 Lab</div><div class="sess-detail">Wed, Aug 12 · 7–9pm WAT<br/>Josiah Isong</div></div>
+            <div class="session-box lecture"><div class="sess-label">📖 Lecture</div><div class="sess-detail">Sat, Aug 15 · 11am–1pm WAT<br/>Olumide Okubadejo</div></div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs</div>
+          <ul class="lesson-list">
+            <li><a href="#">The architecture of modern large language models</a></li>
+            <li><a href="#">What drives predictions?</a></li>
+            <li class="lab-item"><a href="#">Lab: Visualizing attention weights</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 1</a></li>
+            <li><a href="#">Transformer architecture</a></li>
+            <li><a href="#">Computing attention weights</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Week 12 -->
+      <div class="week-card" id="week12">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 12</span>
+          <div class="week-title-group">
+            <div class="week-title">The Attention Mechanism</div>
+            <div class="week-date">Lab: Wed, Aug 19 · Lecture: Sat, Aug 22 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Blessed Guda</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab"><div class="sess-label">🧪 Lab</div><div class="sess-detail">Wed, Aug 19 · 7–9pm WAT</div></div>
+            <div class="session-box lecture"><div class="sess-label">📖 Lecture</div><div class="sess-detail">Sat, Aug 22 · 11am–1pm WAT</div></div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs</div>
+          <ul class="lesson-list">
+            <li><a href="#">The attention mechanism</a></li>
+            <li class="lab-item"><a href="#">Lab: Implement the attention mechanism</a></li>
+            <li><a href="#">Masked attention</a></li>
+            <li><a href="#">Multi-head attention</a></li>
+            <li class="lab-item"><a href="#">Lab: Implement masked multi-head attention</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 2</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Week 13 -->
+      <div class="week-card" id="week13">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 13</span>
+          <div class="week-title-group">
+            <div class="week-title">Positional Embeddings &amp; Mapping Stakeholder Values</div>
+            <div class="week-date">Lab: Wed, Aug 26 · Lecture: Sat, Aug 29 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Aminu Hamza Nababa</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab"><div class="sess-label">🧪 Lab</div><div class="sess-detail">Wed, Aug 26 · 7–9pm WAT</div></div>
+            <div class="session-box lecture"><div class="sess-label">📖 Lecture</div><div class="sess-detail">Sat, Aug 29 · 11am–1pm WAT</div></div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs</div>
+          <ul class="lesson-list">
+            <li><a href="#">Positional embeddings</a></li>
+            <li class="lab-item"><a href="#">Lab: Positional embeddings</a></li>
+            <li><a href="#">Sinusoidal and rotary positional embeddings</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 4</a></li>
+            <li><a href="#">Community values and meaning in an automated world</a></li>
+            <li><a href="#">Why engagement matters: Gendered chatbots in Nigerian banks</a></li>
+            <li><a href="#">Mapping stakeholders and social values</a></li>
+            <li><a href="#">Challenge: Design a mini-engagement plan</a></li>
+          </ul>
+          <div class="deliverables-row">
+            <span class="del-tag challenge">🏆 Challenge 4: Design a mini-engagement plan</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Week 14 -->
+      <div class="week-card" id="week14">
+        <div class="week-header" onclick="toggleWeek(this)">
+          <span class="week-badge">Week 14</span>
+          <div class="week-title-group">
+            <div class="week-title">Putting it all together: Transformer Block, MLP &amp; Layer Normalization</div>
+            <div class="week-date">Lab: Wed, Sep 2 · Lecture: Sat, Sep 5 · 11am–1pm WAT</div>
+          </div>
+          <div class="week-instructors">
+            <span class="instructor-chip">Lab: Josiah Isong</span>
+            <span class="instructor-chip">Lecture: Olumide Okubadejo</span>
+          </div>
+          <div class="chevron">▼</div>
+        </div>
+        <div class="week-body">
+          <div class="sessions-row">
+            <div class="session-box lab"><div class="sess-label">🧪 Lab</div><div class="sess-detail">Wed, Sep 2 · 7–9pm WAT<br/>Josiah Isong</div></div>
+            <div class="session-box lecture"><div class="sess-label">📖 Lecture</div><div class="sess-detail">Sat, Sep 5 · 11am–1pm WAT<br/>Olumide Okubadejo</div></div>
+          </div>
+          <div class="lessons-title">Lessons &amp; Labs</div>
+          <ul class="lesson-list">
+            <li><a href="#">Transformer blocks</a></li>
+            <li><a href="#">Multi-layer perceptron (in transformers)</a></li>
+            <li><a href="#">Layer normalization</a></li>
+            <li class="lab-item"><a href="#">Lab: Trainable parameters in the transformer model</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 3</a></li>
+            <li><a href="#">Pros and cons of transformers</a></li>
+            <li><a href="#">Decoding and generation</a></li>
+            <li class="check-item"><a href="#">Knowledge Check 5</a></li>
+            <li><a href="#">Summary, Resources &amp; Glossary</a></li>
+          </ul>
+          <div class="deliverables-row">
+            <span class="del-tag lab-del">⚗ Lab: Implement masked multi-head attention</span>
+          </div>
+        </div>
+      </div>
+    </div><!-- /course 4 -->
+
+    <!-- Project Week -->
+    <div class="course-block">
+      <div class="course-header" style="border-radius:12px 12px 0 0; background: linear-gradient(90deg, #0a4d3c 0%, #17906d 100%); border-color: var(--green-light); color:#fff;">
+        <span class="course-num" style="background: var(--accent); color: #1a1a18;">Week 15</span>
+        <h3 style="color:#fff;">Project Week</h3>
+        <span class="course-weeks" style="color:rgba(255,255,255,0.65);">Sep 6–12, 2026</span>
+      </div>
+      <div class="special-week" id="week15" style="border-radius: 0 0 12px 12px;">
+        <div class="icon">🛠️</div>
+        <div class="info">
+          <h4>Final project sprint — no lectures</h4>
+          <p>Teams finalize their Jupyter Notebook, presentation slides, and demo. Mentors available for check-ins. Challenge Lab: Train A Small Language Model closes this week.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demo Day -->
+    <div class="course-block">
+      <div class="course-header" style="border-radius:12px 12px 0 0; background: var(--accent); border-color: var(--accent-warm);">
+        <span class="course-num" style="background: var(--green); color:#fff;">Week 16</span>
+        <h3 style="color: var(--green);">🎉 Demo Day</h3>
+        <span class="course-weeks" style="color: var(--green-mid);">September 19, 2026</span>
+      </div>
+      <div class="special-week" id="week16" style="border-radius: 0 0 12px 12px; border-color: var(--accent-warm);">
+        <div class="icon">🚀</div>
+        <div class="info">
+          <h4>Online Demo Day — September 19, 2026</h4>
+          <p>Each team presents their problem &amp; motivation, dataset &amp; model, ethical considerations, and results. Top teams receive prizes. Format: Remote (Online).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ CAPSTONE ═══ -->
+    <div id="capstone" style="margin-bottom: 2.5rem;">
+      <div class="section-label">Projects</div>
+      <div class="section-title">Capstone Project</div>
+      <div class="capstone-box" style="border: 2px dashed var(--border); background: var(--off-white);">
+        <div style="display:flex; align-items:center; gap:10px; margin-bottom:0.6rem;">
+          <span style="font-size:1.4rem;">🔧</span>
+          <span style="font-family:'Syne',sans-serif; font-weight:700; font-size:0.95rem;">Details coming soon</span>
+        </div>
+        <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+          Full capstone project guidelines — including team structure, deliverables, project requirements, and mentor details — will be published here once finalised. Check back soon!
+        </p>
+      </div>
+    </div>
+
+    <!-- ═══ CHALLENGES ═══ -->
+    <div id="challenges" style="margin-bottom: 2.5rem;">
+      <div class="section-label">Weekly Deliverables</div>
+      <div class="section-title">Cohort Challenges &amp; Labs</div>
+      <div class="capstone-box">
+        <p style="font-size:0.87rem; color:var(--text-muted); margin-bottom:1rem;">Four challenges run alongside the weekly curriculum, each tied to a course. A final challenge lab caps the course technical work before Demo Day.</p>
+        <div class="capstone-grid">
+          <div class="cap-item">
+            <h5>All 4 Cohort Challenges</h5>
+            <ul>
+              <li><strong>Challenge 1</strong> — Develop your problem statement</li>
+              <li><strong>Challenge 2</strong> — Build a dataset with a Data Card</li>
+              <li><strong>Challenge 3</strong> — Create an impact statement card</li>
+              <li><strong>Challenge 4</strong> — Design a mini-engagement plan</li>
+            </ul>
+            <h5 style="margin-top:0.9rem;">Final Challenge Lab</h5>
+            <ul>
+              <li>Train A Small Language Model</li>
+            </ul>
+          </div>
+          <div class="cap-item">
+            <h5>Submission Deadlines</h5>
+            <ul>
+              <li>Challenge 1 closes → <strong>Week 5</strong></li>
+              <li>Challenge 2 closes → <strong>Week 7</strong></li>
+              <li>Challenge 3 closes → <strong>Week 9</strong></li>
+              <li>Challenge 4 closes → <strong>Week 11</strong></li>
+              <li>Project Leaderboard opens → <strong>Week 8</strong></li>
+              <li>Project Leaderboard closes → <strong>Week 14</strong></li>
+              <li>Challenge Lab closes → <strong>Week 14</strong></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTIFICATE -->
+    <div id="cert">
+      <div class="section-label">Completion</div>
+      <div class="section-title">Certificate Requirements</div>
+      <div class="capstone-box" style="background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%); border-color: var(--green-light); color:#fff;">
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem;">
+          <div>
+            <p style="font-size:0.8rem; color:rgba(255,255,255,0.65); font-weight:600; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.6rem;">Required</p>
+            <ul style="list-style:none; font-size:0.87rem; color:rgba(255,255,255,0.88); display:flex; flex-direction:column; gap:6px;">
+              <li>✅ At least 60% lecture attendance</li>
+              <li>✅ Complete the "Train A Small Language Model" lab</li>
+              <li>✅ Submit all four cohort challenges (as a team)</li>
+              <li>✅ Complete the final capstone project (as a team)</li>
+            </ul>
+          </div>
+          <div>
+            <p style="font-size:0.8rem; color:rgba(255,255,255,0.65); font-weight:600; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:0.6rem;">Strongly Encouraged</p>
+            <ul style="list-style:none; font-size:0.87rem; color:rgba(255,255,255,0.7); display:flex; flex-direction:column; gap:6px;">
+              <li>⭐ Attend tutorial sessions regularly</li>
+              <li>⭐ Engage in discussions &amp; community activities</li>
+              <li>⭐ Contribute actively to your team project</li>
+              <li>⭐ Complete weekly materials on Google Cloud Skills Boost</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>TRI AI Saturdays · Cohort 10</strong> &nbsp;·&nbsp; Google DeepMind AI Research Foundation Course &nbsp;·&nbsp; May 31 – Sep 19, 2026</p>
+  <p style="margin-top:6px;">Built with ❤️ by the TRI AI Saturdays community &nbsp;·&nbsp; All sessions online + satellite classes</p>
+</footer>
+
+<script>
+  function toggleWeek(header) {
+    const card = header.parentElement;
+    card.classList.toggle('open');
+  }
+
+  function jumpTo(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    // open if it's a week card
+    const card = el.classList.contains('week-card') ? el : null;
+    if (card && !card.classList.contains('open')) {
+      card.classList.add('open');
+    }
+    setTimeout(() => {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
+    // highlight sidebar link
+    document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+    event.currentTarget.classList.add('active');
+  }
+
+  // Open week 1 by default
+  document.addEventListener('DOMContentLoaded', () => {
+    const first = document.getElementById('week1');
+    if (first) first.classList.add('open');
+  });
+</script>
+</body>
+</html>
