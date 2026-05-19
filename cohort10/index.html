@@ -4,11 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cohort 10 · TRI AI Saturdays</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;800&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;800&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
   <style>
-    
-
     :root {
       --bg:          #0a0a0a;
       --bg-1:        #111111;
@@ -36,7 +34,7 @@
       --border:      rgba(0,0,0,0.08);
       --border-md:   rgba(0,0,0,0.14);
       --text:        #0a0a0a;
-      --text-2:      rgba(10,10,10,0.65);
+      --text-2:      rgba(10,10,10,0.8);
       --text-3:      rgba(10,10,10,0.42);
       --orange:      #e05508;
       --orange-dim:  rgba(224,85,8,0.08);
@@ -49,7 +47,7 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { transition: background 0.2s, color 0.2s; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; font-size: 16px; transition: background 0.2s, color 0.2s; }
+    body { font-family: "Plus Jakarta Sans", Inter, system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; font-size: 16px; transition: background 0.2s, color 0.2s; }
 
     /* THEME TOGGLE */
     .theme-toggle {
@@ -78,17 +76,41 @@
     .hero { max-width: 1160px; margin: 0 auto; padding: 4.5rem 2rem 4rem; position: relative; z-index: 1; }
     .hero-breadcrumb { font-size: 0.73rem; color: rgba(229,229,229,0.42); margin-bottom: 1.4rem; }
     .hero-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FE6612; border: 1px solid rgba(254,102,18,0.3); background: rgba(254,102,18,0.1); padding: 4px 14px; border-radius: 20px; margin-bottom: 1.3rem; }
-    .hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1.02; letter-spacing: -0.04em; color: #E5E5E5; margin-bottom: 1rem; max-width: 700px; }
+    .hero h1 { font-family: "Plus Jakarta Sans", Inter, system-ui, -apple-system, sans-serifs; font-weight: 800; font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1.02; letter-spacing: -0.04em; color: #E5E5E5; margin-bottom: 1rem; max-width: 700px; }
     .hero-desc { font-size: 1rem; color: rgba(229,229,229,0.68); max-width: 560px; margin-bottom: 2rem; line-height: 1.65; }
     .hero-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.5rem; }
     .chip { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 7px; padding: 6px 12px; font-size: 0.79rem; color: rgba(229,229,229,0.68); }
     .chip strong { color: #E5E5E5; font-weight: 600; }
-    .hero-stats { display: inline-flex; align-items: stretch; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; }
+    .hero-stats { display: inline-flex; align-items: stretch; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;}
     .hero-stat { padding: 1.1rem 1.8rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
     .hero-stat:last-child { border-right: none; }
-    .stat-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.85rem; letter-spacing: -0.04em; color: #E5E5E5; line-height: 1; }
+    .stat-num { font-family: "Plus Jakarta Sans", Inter, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 1.85rem; letter-spacing: -0.04em; color: #E5E5E5; line-height: 1; }
     .stat-num sup { font-size: 1rem; color: #FE6612; vertical-align: super; }
     .stat-label { font-size: 0.7rem; color: rgba(229,229,229,0.48); margin-top: 5px; white-space: nowrap; }
+
+    /* ── HAMBURGER / MOBILE NAV ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px 6px;
+      margin-left: 4px;
+      flex-shrink: 0;
+    }
+    .hamburger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: rgba(229,229,229,0.75);
+      border-radius: 2px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(4px, 4px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; width: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(4px, -4px); }
     @media (max-width: 600px) { .hero-stats { flex-wrap: wrap; } .hero-stat { border-bottom: 1px solid rgba(255,255,255,0.08); border-right: none; } }
     .hero-rule { height: 1px; background: linear-gradient(90deg, #FE6612 0%, rgba(254,102,18,0.2) 40%, transparent 100%); }
 
@@ -111,7 +133,7 @@
 
     /* ── SECTION LABELS ── */
     .sec-eyebrow { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.3rem; }
-    .sec-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.03em; margin-bottom: 1.4rem; padding-left: 0.8rem; border-left: 3px solid var(--orange); }
+    .sec-title { font-family: "Plus Jakarta Sans", Inter, system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.03em; margin-bottom: 1.4rem; padding-left: 0.8rem; border-left: 3px solid var(--orange); }
 
     /* SECTION SEPARATOR */
     .section-sep { padding-top: 2.5rem; margin-top: 1.5rem; border-top: 1px solid var(--border-md); }
@@ -120,7 +142,7 @@
     .milestones { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1px; border: 1px solid var(--border-md); border-radius: 10px; overflow: hidden; margin-bottom: 3rem; background: var(--border-md); }
     .mc { background: var(--bg-1); padding: 1rem 1.1rem; transition: background 0.12s; }
     .mc:hover { background: var(--bg-2); }
-    .mc-date { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.8rem; color: var(--orange); margin-bottom: 3px; }
+    .mc-date { font-family: "Plus Jakarta Sans", Inter, system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 0.8rem; color: var(--orange); margin-bottom: 3px; }
     .mc-label { font-size: 0.85rem; color: var(--text-2); line-height: 1.4; }
 
     /* COURSE BLOCKS */
@@ -200,16 +222,16 @@
     .cert-enc ul li::before { content: '→'; color: var(--text-3); flex-shrink: 0; }
 
     /* FOOTER */
-    footer { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.07); }
+    footer { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.07);  }
     .footer-inner { max-width: 1160px; margin: 0 auto; padding: 2.5rem 2rem; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
     @media (max-width: 820px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
-    .footer-brand p { font-size: 0.77rem; color: rgba(229,229,229,0.38); line-height: 1.65; max-width: 240px; margin-top: 0.6rem; }
+    .footer-brand p { font-size: 0.77rem; color: rgba(229,229,229,0.8); line-height: 1.65; max-width: 240px; margin-top: 0.6rem; }
     .footer-col h5 { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(229,229,229,0.38); margin-bottom: 0.8rem; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
-    .footer-col ul li a { font-size: 0.79rem; color: rgba(229,229,229,0.55); text-decoration: none; transition: color 0.12s; }
+    .footer-col ul li a { font-size: 0.79rem; color: rgba(229,229,229,0.8); text-decoration: none; transition: color 0.12s; }
     .footer-col ul li a:hover { color: #FE6612; }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 1.2rem 2rem; max-width: 1160px; margin: 0 auto; font-size: 0.71rem; color: rgba(229,229,229,0.28); display: flex; justify-content: space-between; align-items: center; }
-    .footer-bottom a { color: rgba(229,229,229,0.28); text-decoration: none; margin: 0 6px; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 1.2rem 2rem; max-width: 1160px; margin: 0 auto; font-size: 0.71rem; color: rgba(229,229,229,0.8); display: flex; justify-content: space-between; align-items: center; }
+    .footer-bottom a { color: rgba(229,229,229,0.8); text-decoration: none; margin: 0 6px; }
     .footer-bottom a:hover { color: #FE6612; }
 
     /* PARTNERS */
@@ -231,12 +253,38 @@
     .person-link:hover { color: var(--orange); }
 
     /* MOBILE */
+
     @media (max-width: 720px) {
       .header-inner { padding: 0 1rem; }
       nav a { font-size: 0.75rem; padding: 4px 7px; }
       .hero { padding: 2.5rem 1rem 2rem; }
       .page-body { padding: 1.5rem 1rem 4rem; }
+      /* Hide inline nav links, show hamburger */
+      .nav-links { display: none !important; }
+      .nav-links.open {
+        display: flex !important;
+        position: absolute;
+        top: 64px; left: 0; right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        background: #111111;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding: 0.5rem;
+        gap: 1px;
+        z-index: 200;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      }
+      .nav-links.open a {
+        display: block;
+        color: rgba(229,229,229,0.75) !important;
+        font-size: 0.9rem;
+        padding: 10px 14px;
+        border-radius: 7px;
+      }
+      .nav-links.open a:hover { background: rgba(255,255,255,0.07); color: #E5E5E5 !important; }
+      .hamburger { display: flex; }
     }
+
     @media (max-width: 600px) {
       .hero-chips { gap: 0.4rem; }
       .chip { font-size: 0.74rem; padding: 5px 10px; }
@@ -260,21 +308,109 @@
       .stat-num { font-size: 1.5rem; }
       .hero-stat { padding: 0.9rem 1.1rem; }
     }
+
+    .linkedin-icon { font-size: 14px; color: #0A66C2; text-decoration: none; transition: color 0.2s; }
+    .linkedin-icon:hover { color: #004182; }
+    [data-theme="light"] .linkedin-icon { color: #0A66C2; }
+
+
+    /* HERO OUTCOME LINE */
+    .hero-outcome {
+      font-size: 0.88rem;
+      color: rgba(229,229,229,0.6);
+      margin-top: -1rem;
+      margin-bottom: 2rem;
+      max-width: 560px;
+    }
+
+    /* QUICK-START STRIP */
+    .quickstart-outer {
+      background: var(--bg-1);
+      border-bottom: 1px solid var(--border-md);
+    }
+    .quickstart-inner {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 1.1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .qs-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--orange);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .qs-steps {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+    .qs-step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .qs-num {
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+    .qs-text { display: flex; flex-direction: column; gap: 1px; }
+    .qs-text strong { font-size: 0.82rem; color: var(--text); font-weight: 600; }
+    .qs-text span { font-size: 0.74rem; color: var(--text-3); line-height: 1.3; }
+    .qs-text a { color: var(--orange); text-decoration: none; }
+    .qs-text a:hover { text-decoration: underline; }
+    .qs-divider { color: var(--text-3); font-size: 0.9rem; flex-shrink: 0; }
+    @media (max-width: 720px) {
+      .quickstart-inner { padding: 1rem; gap: 0.8rem; }
+      .qs-divider { display: none; }
+      .qs-steps { gap: 0.75rem; }
+    }
+
+    /* INSTRUCTOR AVATARS */
+    .person-avatar {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      margin-bottom: 6px;
+      flex-shrink: 0;
+    }
+
+    /* WEEK CARD — open accent + expand hint */
+    .chevron-wrap {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-shrink: 0;
+    }
+    .week-card.open { border-left: 3px solid var(--orange); }
+    .week-card.open .week-header { border-left: none; }
+    .week-card:not(.open) .week-header:hover .chevron { color: var(--orange); }
+
+    /* COURSE BLOCK spacing */
+    .course-block + .course-block { margin-top: 0.5rem; }
+
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 3px; }
-
-    .linkedin-icon {
-    font-size: 14px;
-    color: #0A66C2;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-
-  .linkedin-icon:hover {
-      color: #004182;
-  }
-
   </style>
 </head>
 <body>
@@ -292,13 +428,18 @@
       <span class="logo-sub">Teaching · Research · Innovation</span>
     </div>
     <nav>
-      <a href="#curriculum">Curriculum</a>
-      <a href="#capstone">Capstone</a>
-      <a href="#challenges">Challenges</a>
-      <a href="#cert">Certificate</a>
-      <a href="#instructors">Instructors</a>
-      <a href="#partners">Partners</a>
+      <div class="nav-links" id="nav-links">
+        <a href="#curriculum">Curriculum</a>
+        <a href="#capstone">Capstone</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#cert">Certificate</a>
+        <a href="#instructors">Instructors</a>
+        <a href="#partners">Partners</a>
+      </div>
       <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" id="theme-btn">☀️</button>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
   </div>
 </header>
@@ -308,7 +449,8 @@
     <div class="hero-breadcrumb">TRI AI Saturdays · Cohort 10</div>
     <div class="hero-tag">🌍 Google DeepMind AI Research Foundation Course</div>
     <h1>TRI AI Saturdays<br/>Cohort 10</h1>
-    <p class="hero-desc">A 16-week hands-on programme taking you from language model fundamentals to building your own Small Language Model — grounded in real-world problem solving and community impact.</p>
+    <p class="hero-desc">A free, 16-week hands-on programme where you go from language model fundamentals all the way to building your own Small Language Model — in community with 3,000+ learners across Africa and beyond.</p>
+    <p class="hero-outcome">🎯 By the end you'll understand how language models work from the inside out, how to train a language model on your local data, and participate in a project.</p>
     <div class="hero-chips">
       <div class="chip"><strong>Start</strong><span>May 31, 2026</span></div>
       <div class="chip"><strong>End</strong><span>Sep 19, 2026</span></div>
@@ -325,6 +467,39 @@
   </div>
 </div>
 <div class="hero-rule"></div>
+
+
+<!-- QUICK-START STRIP -->
+<div class="quickstart-outer">
+  <div class="quickstart-inner">
+    <div class="qs-label">🚀 Getting started</div>
+    <div class="qs-steps">
+      <div class="qs-step">
+        <div class="qs-num">1</div>
+        <div class="qs-text">
+          <strong>Join the community</strong>
+          <span>Discord &amp; Google Groups links sent after acceptance</span>
+        </div>
+      </div>
+      <!-- <div class="qs-divider">→</div> -->
+      <div class="qs-step">
+        <div class="qs-num">2</div>
+        <div class="qs-text">
+          <strong>Access course materials</strong>
+          <span>Free on <a href="https://www.skills.google/" target="_blank">Google Skills Boost</a> — click any lesson below</span>
+        </div>
+      </div>
+      <!-- <div class="qs-divider">→</div> -->
+      <div class="qs-step">
+        <div class="qs-num">3</div>
+        <div class="qs-text">
+          <strong>Show up twice in a week</strong>
+          <span>Live lectures 11am–1pm WAT · Labs every Wednesday</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="page-body">
   <aside class="sidebar">
@@ -399,7 +574,7 @@
           <span class="wk-num">Week 1</span>
           <div class="wtg"><div class="week-title">Introduction to Language Modeling</div><div class="week-date">Lecture: Sat, June 6, 2026 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Tejumade Afonja</span></div>
-          <div class="chevron">▼</div>
+          <div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="ll-label">Lessons &amp; Labs — est. 46 min</div>
@@ -418,7 +593,7 @@
           <span class="wk-num">Week 2</span>
           <div class="wtg"><div class="week-title">From N-grams to Transformers</div><div class="week-date">Lab: Wed, June 10 · Lecture: Sat, June 13 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Lab: Tejumade Afonja</span><span class="ic">Lecture: Tobias Lorenz</span></div>
-          <div class="chevron">▼</div>
+          <div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -448,7 +623,7 @@
           <span class="wk-num">Week 3</span>
           <div class="wtg"><div class="week-title">Training a Language Model</div><div class="week-date">Lab: Wed, June 17 · Lecture: Sat, June 20 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Oduguwa Damilola</span></div>
-          <div class="chevron">▼</div>
+          <div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -487,7 +662,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 4</span>
           <div class="wtg"><div class="week-title">Introduction to Text &amp; Data Preprocessing</div><div class="week-date">Lab: Wed, June 24 · Lecture: Sat, June 27 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Foutse Yuehgoh</span></div><div class="chevron">▼</div>
+          <div class="ic-row"><span class="ic">Foutse Yuehgoh</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -516,7 +691,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 5</span>
           <div class="wtg"><div class="week-title">Tokenization</div><div class="week-date">Lab: Wed, July 1 · Lecture: Sat, July 4 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Abdulsamad Baruwa</span></div><div class="chevron">▼</div>
+          <div class="ic-row"><span class="ic">Abdulsamad Baruwa</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -540,7 +715,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 6</span>
           <div class="wtg"><div class="week-title">Embeddings</div><div class="week-date">Lab: Wed, July 8 · Lecture: Sat, July 11 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Kaletsidik Mekonnen</span></div><div class="chevron">▼</div>
+          <div class="ic-row"><span class="ic">Kaletsidik Mekonnen</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -582,7 +757,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 8</span>
           <div class="wtg"><div class="week-title">Introduction to Neural Networks</div><div class="week-date">Lab: Wed, July 22 · Lecture: Sat, July 25 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Timi Owolabi</span></div><div class="chevron">▼</div>
+          <div class="ic-row"><span class="ic">Timi Owolabi</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -610,7 +785,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 9</span>
           <div class="wtg"><div class="week-title">Modeling Complex Data with MLP</div><div class="week-date">Lab: Wed, July 29 · Lecture: Sat, Aug 1 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Chimdi Walter Ndubuisi</span></div><div class="chevron">▼</div>
+          <div class="ic-row"><span class="ic">Chimdi Walter Ndubuisi</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -636,7 +811,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 10</span>
           <div class="wtg"><div class="week-title">Gradients &amp; Backpropagation</div><div class="week-date">Lab: Wed, Aug 5 · Lecture: Sat, Aug 8 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Fortune Adekogbe</span></div><div class="chevron">▼</div>
+          <div class="ic-row"><span class="ic">Fortune Adekogbe</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -677,7 +852,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 11</span>
           <div class="wtg"><div class="week-title">Architecture of Modern Large Language Models</div><div class="week-date">Lab: Wed, Aug 12 · Lecture: Sat, Aug 15 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Lab: Josiah Isong</span><span class="ic">Lecture: Olumide Okubadejo</span></div><div class="chevron">▼</div>
+          <div class="ic-row"><span class="ic">Lab: Josiah Isong</span><span class="ic">Lecture: Olumide Okubadejo</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -701,7 +876,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 12</span>
           <div class="wtg"><div class="week-title">The Attention Mechanism</div><div class="week-date">Lab: Wed, Aug 19 · Lecture: Sat, Aug 22 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Blessed Guda</span></div><div class="chevron">▼</div>
+          <div class="ic-row"><span class="ic">Blessed Guda</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -723,7 +898,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 13</span>
           <div class="wtg"><div class="week-title">Positional Embeddings &amp; Mapping Stakeholder Values</div><div class="week-date">Lab: Wed, Aug 26 · Lecture: Sat, Aug 29 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Aminu Hamza Nababa</span></div><div class="chevron">▼</div>
+          <div class="ic-row"><span class="ic">Aminu Hamza Nababa</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -748,7 +923,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 14</span>
           <div class="wtg"><div class="week-title">Putting it all together: Transformer Block, MLP &amp; Layer Normalization</div><div class="week-date">Lab: Wed, Sep 2 · Lecture: Sat, Sep 5 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Lab: Josiah Isong</span><span class="ic">Lecture: Olumide Okubadejo</span></div><div class="chevron">▼</div>
+          <div class="ic-row"><span class="ic">Lab: Josiah Isong</span><span class="ic">Lecture: Olumide Okubadejo</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -865,8 +1040,8 @@
       <div class="sec-title">Instructors &amp; Tutors</div>
       <div class="people-grid">
         <div class="person-card">
+          <div class="person-avatar" style="background:#FE661222;color:#FE6612;border:1.5px solid #FE661244">TA</div>
           <div class="person-name">Tejumade Afonja</div>
-          <!-- <div class="person-role">Instructor</div> -->
           <div class="person-affiliation">PhD Researcher, CISPA</div>
           <div class="person-weeks">Weeks 1 (Lecture) &amp; 2 (Lab)</div>
           <div class="person-links">
@@ -874,18 +1049,17 @@
           </div>
         </div>
         <div class="person-card">
+          <div class="person-avatar" style="background:#4A7CC922;color:#4A7CC9;border:1.5px solid #4A7CC944">TL</div>
           <div class="person-name">Tobias Lorenz</div>
-          <!-- <div class="person-role">Instructor</div> -->
           <div class="person-affiliation">PhD Researcher, CISPA</div>
           <div class="person-weeks">Week 2 (Lecture)</div>
           <div class="person-links">
             <a href="https://www.linkedin.com/in/t-lorenz" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
           </div>
-          <!-- <div class="person-links"><a href="#tobias-lorenz-linkedin" target="_blank" class="person-link">LinkedIn ↗</a></div> -->
         </div>
         <div class="person-card">
+          <div class="person-avatar" style="background:#2ECDB822;color:#2ECDB8;border:1.5px solid #2ECDB844">OD</div>
           <div class="person-name">Oduguwa Damilola</div>
-          <!-- <div class="person-role">Instructor</div> -->
           <div class="person-affiliation">ML Engineer, Bluechip</div>
           <div class="person-weeks">Week 3 (Lab &amp; Lecture)</div>
           <div class="person-links">
@@ -893,8 +1067,8 @@
           </div>
         </div>
         <div class="person-card">
+          <div class="person-avatar" style="background:#a78bfa22;color:#a78bfa;border:1.5px solid #a78bfa44">FY</div>
           <div class="person-name">Foutse Yuehgoh</div>
-          <!-- <div class="person-role">Instructor</div> -->
           <div class="person-affiliation">AI Researcher, Freelancer</div>
           <div class="person-weeks">Week 4 (Lab &amp; Lecture)</div>
           <div class="person-links">
@@ -902,17 +1076,17 @@
           </div>
         </div>
         <div class="person-card">
+          <div class="person-avatar" style="background:#FE661222;color:#FE6612;border:1.5px solid #FE661244">AB</div>
           <div class="person-name">Abdulsamad Baruwa</div>
-          <!-- <div class="person-role">Instructor</div> -->
           <div class="person-affiliation">AI Engineer, Steloy AI</div>
-          <div class="person-weeks">Week 5 (Lab &amp; Lecture) </div>
+          <div class="person-weeks">Week 5 (Lab &amp; Lecture)</div>
           <div class="person-links">
-            <a href="#" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#abdulsamad-baruwa-linkedin" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
         <div class="person-card">
+          <div class="person-avatar" style="background:#4A7CC922;color:#4A7CC9;border:1.5px solid #4A7CC944">KM</div>
           <div class="person-name">Kaletsidik Mekonnen</div>
-          <!-- <div class="person-role">Instructor</div> -->
           <div class="person-affiliation">AI Engineer</div>
           <div class="person-weeks">Week 6 (Lab &amp; Lecture)</div>
           <div class="person-links">
@@ -920,68 +1094,69 @@
           </div>
         </div>
         <div class="person-card">
+          <div class="person-avatar" style="background:#2ECDB822;color:#2ECDB8;border:1.5px solid #2ECDB844">TO</div>
           <div class="person-name">Timi Owolabi</div>
-          <!-- <div class="person-role">Instructor</div> -->
-           <div class="person-affiliation">ML Engineer, Quidax</div>
+          <div class="person-affiliation">ML Engineer, Quidax</div>
           <div class="person-weeks">Week 8 (Lab &amp; Lecture)</div>
           <div class="person-links">
             <a href="https://www.linkedin.com/in/timi-owolabi" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
         <div class="person-card">
+          <div class="person-avatar" style="background:#a78bfa22;color:#a78bfa;border:1.5px solid #a78bfa44">CW</div>
+          <div class="person-name">Chimdi Walter Ndubuisi</div>
+          <div class="person-affiliation">PhD Researcher, University of Missouri-Columbia</div>
+          <div class="person-weeks">Week 9 (Lab &amp; Lecture)</div>
+          <div class="person-links">
+            <a href="https://www.linkedin.com/in/chimdi-walter-ndubuisi-518607158/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-avatar" style="background:#FE661222;color:#FE6612;border:1.5px solid #FE661244">FA</div>
           <div class="person-name">Fortune Adekogbe</div>
-          <!-- <div class="person-role">Instructor</div> -->
-           <div class="person-affiliation">PhD Researcher, University of Michigan</div>
+          <div class="person-affiliation">PhD Researcher, University of Michigan</div>
           <div class="person-weeks">Week 10 (Lab &amp; Lecture)</div>
           <div class="person-links">
             <a href="https://www.linkedin.com/in/fortune-adekogbe/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
         <div class="person-card">
+          <div class="person-avatar" style="background:#4A7CC922;color:#4A7CC9;border:1.5px solid #4A7CC944">JI</div>
           <div class="person-name">Josiah Isong</div>
-          <!-- <div class="person-role">Instructor</div> -->
-           <div class="person-affiliation">Senior Backend Engineer, Hiyr Ai</div>
-          <div class="person-weeks">Weeks 11&amp; 14 (Lab)</div>
+          <div class="person-affiliation">Senior Backend Engineer, Hiyr AI</div>
+          <div class="person-weeks">Weeks 11 &amp; 14 (Lab)</div>
           <div class="person-links">
-            <a href="www.linkedin.com/in/isong-josiah" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/isong-josiah" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
         <div class="person-card">
+          <div class="person-avatar" style="background:#2ECDB822;color:#2ECDB8;border:1.5px solid #2ECDB844">OO</div>
           <div class="person-name">Olumide Okubadejo</div>
-          <!-- <div class="person-role">Instructor</div> -->
-           <div class="person-affiliation">Adjunct Professor (Guest), ESIEE PARIS</div>
+          <div class="person-affiliation">Adjunct Professor (Guest), ESIEE Paris</div>
           <div class="person-weeks">Weeks 11 &amp; 14 (Lecture)</div>
           <div class="person-links">
             <a href="https://www.linkedin.com/in/olumide-okubadejo" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
         <div class="person-card">
+          <div class="person-avatar" style="background:#a78bfa22;color:#a78bfa;border:1.5px solid #a78bfa44">BG</div>
           <div class="person-name">Blessed Guda</div>
-          <!-- <div class="person-role">Instructor</div> -->
-           <div class="person-affiliation">PhD Researcher, Carnegie Mellon University Africa</div>
+          <div class="person-affiliation">PhD Researcher, Carnegie Mellon University Africa</div>
           <div class="person-weeks">Week 12 (Lab &amp; Lecture)</div>
           <div class="person-links">
             <a href="https://www.linkedin.com/in/blessed-guda/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
         <div class="person-card">
-          <div class="person-name">Chimdi Walter Ndubuisi</div>
-          <!-- <div class="person-role">Instructor</div> -->
-           <div class="person-affiliation">PhD Researcher, University of Missouri-Columbia</div>
-          <div class="person-weeks">Week 9 (Lab &amp; Lecture)</div>
-          <div class="person-links">
-            <a href="https://www.linkedin.com/in/chimdi-walter-ndubuisi-518607158/ target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
-          </div>
-        </div>
-        <div class="person-card">
+          <div class="person-avatar" style="background:#FE661222;color:#FE6612;border:1.5px solid #FE661244">AH</div>
           <div class="person-name">Aminu Hamza Nababa</div>
-          <!-- <div class="person-role">Instructor</div> -->
-           <div class="person-affiliation">Deep Learning Specialist, Arewa Data Science Academy</div>
+          <div class="person-affiliation">Deep Learning Specialist, Arewa Data Science Academy</div>
           <div class="person-weeks">Week 13 (Lab &amp; Lecture)</div>
           <div class="person-links">
             <a href="https://www.linkedin.com/in/alamin-h-nababa" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
+      
       </div>
     </div>
 
@@ -996,11 +1171,7 @@
         </div>
         <div class="person-card">
           <div class="person-name">Adetola Adetunji</div>
-          <div class="person-role">Cohort 10 Project Manager</div>
-        </div>
-        <div class="person-card">
-          <div class="person-name">Joscha Cüppers</div>
-          <div class="person-role">Cohort 10 Capstone Project Lead</div>
+          <div class="person-role">Project Manager</div>
         </div>
         <div class="person-card">
           <div class="person-name">Oluwafemi Azeez</div>
@@ -1013,6 +1184,10 @@
         <div class="person-card">
           <div class="person-name">Kenechi Dukor</div>
           <div class="person-role">Technology &amp; Communications Director</div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Joscha Cüppers</div>
+          <div class="person-role">Cohort 10 Capstone Project Lead</div>
         </div>
         <div class="person-card">
           <div class="person-name">Mmesomachukwu Osele</div>
@@ -1059,7 +1234,7 @@
           <circle cx="114" cy="74" r="4" fill="#2ECDB8"/>
         </svg>
       </div>
-      <p>Teaching · Research · Innovation<br/>Advancing AI education, research, and innovation across Africa. Since 2017.</p>
+      <p>Teaching · Research · Innovation<br/>Advancing AI education, research, and innovation across Africa. Since 2018.</p>
     </div>
     <div class="footer-col">
       <h5>Programme</h5>
@@ -1110,6 +1285,22 @@
     if (w1) w1.classList.add('open');
   });
   function toggleWeek(header) { header.parentElement.classList.toggle('open'); }
+  function toggleNav() {
+    const nav = document.getElementById('nav-links');
+    const btn = document.getElementById('hamburger');
+    nav.classList.toggle('open');
+    btn.classList.toggle('open');
+  }
+  // Close mobile nav on link click
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        document.getElementById('nav-links').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('open');
+      });
+    });
+  });
+
   function jumpTo(id) {
     const el = document.getElementById(id);
     if (!el) return;
