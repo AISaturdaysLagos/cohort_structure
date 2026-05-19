@@ -5,18 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cohort 10 · TRI AI Saturdays</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;800&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
-    /* ── DARK THEME (default) ── */
+    
+
     :root {
       --bg:          #0a0a0a;
       --bg-1:        #111111;
       --bg-2:        #191919;
       --bg-3:        #222222;
       --border:      rgba(255,255,255,0.07);
-      --border-md:   rgba(255,255,255,0.12);
+      --border-md:   rgba(255,255,255,0.13);
       --text:        #E5E5E5;
-      --text-2:      rgba(229,229,229,0.65);
-      --text-3:      rgba(229,229,229,0.38);
+      --text-2:      rgba(229,229,229,0.75);
+      --text-3:      rgba(229,229,229,0.5);
       --orange:      #FE6612;
       --orange-dim:  rgba(254,102,18,0.1);
       --orange-mid:  rgba(254,102,18,0.18);
@@ -26,18 +28,16 @@
       --purple:      #a78bfa;
       --purple-dim:  rgba(167,139,250,0.1);
     }
-
-    /* ── LIGHT THEME ── */
     [data-theme="light"] {
-      --bg:          #ffffff;
-      --bg-1:        #f7f7f5;
+      --bg:          #fdf6eb;
+      --bg-1:        #ffffff;
       --bg-2:        #efefed;
       --bg-3:        #e4e4e1;
       --border:      rgba(0,0,0,0.08);
-      --border-md:   rgba(0,0,0,0.13);
+      --border-md:   rgba(0,0,0,0.14);
       --text:        #0a0a0a;
-      --text-2:      rgba(10,10,10,0.55);
-      --text-3:      rgba(10,10,10,0.35);
+      --text-2:      rgba(10,10,10,0.65);
+      --text-3:      rgba(10,10,10,0.42);
       --orange:      #e05508;
       --orange-dim:  rgba(224,85,8,0.08);
       --orange-mid:  rgba(224,85,8,0.15);
@@ -47,430 +47,114 @@
       --purple:      #7c3aed;
       --purple-dim:  rgba(124,58,237,0.08);
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { transition: background 0.2s, color 0.2s; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      font-size: 16px;
-      transition: background 0.2s, color 0.2s;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; font-size: 16px; transition: background 0.2s, color 0.2s; }
 
-    /* ── THEME TOGGLE ── */
+    /* THEME TOGGLE */
     .theme-toggle {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 7px;
-      border: 1px solid rgba(255,255,255,0.15);
-      background: rgba(255,255,255,0.08);
-      color: rgba(229,229,229,0.75);
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: background 0.15s, color 0.15s;
-      flex-shrink: 0;
-      margin-left: 6px;
+      display: flex; align-items: center; justify-content: center;
+      width: 32px; height: 32px; border-radius: 7px;
+      border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.08);
+      color: rgba(229,229,229,0.75); cursor: pointer; font-size: 0.9rem;
+      transition: background 0.15s, color 0.15s; flex-shrink: 0; margin-left: 6px;
     }
     .theme-toggle:hover { background: rgba(255,255,255,0.15); color: #E5E5E5; }
 
-    /* ── HEADER — always dark, flush with hero ── */
-    header {
-      background: #0a0a0a;
-      border-bottom: 1px solid rgba(255,255,255,0.07);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-    .logo {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.1rem;
-      letter-spacing: -0.03em;
-      color: #E5E5E5;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    /* HEADER */
+    header { background: #0a0a0a; border-bottom: 1px solid rgba(255,255,255,0.07); position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 1160px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { display: flex; align-items: center; gap: 10px; }
     .logo-div { width: 1px; height: 16px; background: rgba(255,255,255,0.15); }
-    .logo-sub {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: rgba(229,229,229,0.35);
-    }
+    .logo-sub { font-size: 0.8rem; font-weight: 500; color: rgba(229,229,229,0.35); }
     nav { display: flex; align-items: center; gap: 2px; }
-    nav a {
-      color: rgba(229,229,229,0.68);
-      text-decoration: none;
-      font-size: 0.82rem;
-      font-weight: 500;
-      padding: 5px 10px;
-      border-radius: 6px;
-      transition: color 0.15s, background 0.15s;
-    }
+    nav a { color: rgba(229,229,229,0.68); text-decoration: none; font-size: 0.82rem; font-weight: 500; padding: 5px 10px; border-radius: 6px; transition: color 0.15s, background 0.15s; }
     nav a:hover { color: #E5E5E5; background: rgba(255,255,255,0.07); }
-    @media (max-width: 720px) { .hm { display: none; } }
 
-    /* ── HERO — always dark, full bleed ── */
-    .hero-outer {
-      background: #0a0a0a;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-outer::before {
-      content: '';
-      position: absolute;
-      top: -80px; right: -100px;
-      width: 500px; height: 500px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(254,102,18,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-outer::after {
-      content: '';
-      position: absolute;
-      bottom: -60px; left: 5%;
-      width: 360px; height: 360px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 4.5rem 2rem 4rem;
-      position: relative;
-      z-index: 1;
-    }
-    .hero-breadcrumb {
-      font-size: 0.73rem;
-      color: rgba(229,229,229,0.42);
-      margin-bottom: 1.4rem;
-    }
-    .hero-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #FE6612;
-      border: 1px solid rgba(254,102,18,0.3);
-      background: rgba(254,102,18,0.1);
-      padding: 4px 14px;
-      border-radius: 20px;
-      margin-bottom: 1.3rem;
-    }
-    .hero h1 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: clamp(2.2rem, 5.5vw, 3.6rem);
-      line-height: 1.02;
-      letter-spacing: -0.04em;
-      color: #E5E5E5;
-      margin-bottom: 1rem;
-      max-width: 700px;
-    }
-    .hero-desc {
-      font-size: 1rem;
-      color: rgba(229,229,229,0.68);
-      max-width: 560px;
-      margin-bottom: 2rem;
-      line-height: 1.65;
-    }
-    .hero-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-bottom: 2.5rem;
-    }
-    .chip {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 7px;
-      padding: 6px 12px;
-      font-size: 0.79rem;
-      color: rgba(229,229,229,0.68);
-    }
+    /* HERO */
+    .hero-outer { background: #0a0a0a; position: relative; overflow: hidden; }
+    .hero-outer::before { content: ''; position: absolute; top: -80px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(254,102,18,0.08) 0%, transparent 70%); pointer-events: none; }
+    .hero-outer::after { content: ''; position: absolute; bottom: -60px; left: 5%; width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%); pointer-events: none; }
+    .hero { max-width: 1160px; margin: 0 auto; padding: 4.5rem 2rem 4rem; position: relative; z-index: 1; }
+    .hero-breadcrumb { font-size: 0.73rem; color: rgba(229,229,229,0.42); margin-bottom: 1.4rem; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #FE6612; border: 1px solid rgba(254,102,18,0.3); background: rgba(254,102,18,0.1); padding: 4px 14px; border-radius: 20px; margin-bottom: 1.3rem; }
+    .hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1.02; letter-spacing: -0.04em; color: #E5E5E5; margin-bottom: 1rem; max-width: 700px; }
+    .hero-desc { font-size: 1rem; color: rgba(229,229,229,0.68); max-width: 560px; margin-bottom: 2rem; line-height: 1.65; }
+    .hero-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.5rem; }
+    .chip { display: flex; align-items: center; gap: 6px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 7px; padding: 6px 12px; font-size: 0.79rem; color: rgba(229,229,229,0.68); }
     .chip strong { color: #E5E5E5; font-weight: 600; }
-
-    /* ── HERO STATS ── */
-    .hero-stats {
-      display: inline-flex;
-      align-items: stretch;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .hero-stat {
-      padding: 1.1rem 1.8rem;
-      text-align: center;
-      border-right: 1px solid rgba(255,255,255,0.08);
-    }
+    .hero-stats { display: inline-flex; align-items: stretch; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden; }
+    .hero-stat { padding: 1.1rem 1.8rem; text-align: center; border-right: 1px solid rgba(255,255,255,0.08); }
     .hero-stat:last-child { border-right: none; }
-    .stat-num {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.85rem;
-      letter-spacing: -0.04em;
-      color: #E5E5E5;
-      line-height: 1;
-    }
+    .stat-num { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.85rem; letter-spacing: -0.04em; color: #E5E5E5; line-height: 1; }
     .stat-num sup { font-size: 1rem; color: #FE6612; vertical-align: super; }
-    .stat-label {
-      font-size: 0.7rem;
-      color: rgba(229,229,229,0.48);
-      margin-top: 5px;
-      white-space: nowrap;
-    }
-    @media (max-width: 600px) {
-      .hero-stats { flex-wrap: wrap; }
-      .hero-stat { border-bottom: 1px solid rgba(255,255,255,0.08); border-right: none; }
-    }
+    .stat-label { font-size: 0.7rem; color: rgba(229,229,229,0.48); margin-top: 5px; white-space: nowrap; }
+    @media (max-width: 600px) { .hero-stats { flex-wrap: wrap; } .hero-stat { border-bottom: 1px solid rgba(255,255,255,0.08); border-right: none; } }
+    .hero-rule { height: 1px; background: linear-gradient(90deg, #FE6612 0%, rgba(254,102,18,0.2) 40%, transparent 100%); }
 
-    /* orange accent rule separating hero from body */
-    .hero-rule {
-      height: 1px;
-      background: linear-gradient(90deg, #FE6612 0%, rgba(254,102,18,0.2) 40%, transparent 100%);
-    }
+    /* PAGE LAYOUT */
+    .page-body { max-width: 1160px; margin: 0 auto; padding: 2.5rem 2rem 6rem; display: grid; grid-template-columns: 215px 1fr; gap: 2.5rem; align-items: start; }
+    @media (max-width: 820px) { .page-body { grid-template-columns: 1fr; } .sidebar { position: static !important; } }
 
-    /* ── PAGE BODY ── */
-    .page-body {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem 6rem;
-      display: grid;
-      grid-template-columns: 200px 1fr;
-      gap: 3rem;
-      align-items: start;
-    }
-    @media (max-width: 820px) {
-      .page-body { grid-template-columns: 1fr; }
-      .sidebar { position: static !important; }
-    }
-
-    /* ── SIDEBAR ── */
-    .sidebar { position: sticky; top: 80px; }
-    .sb-block { margin-bottom: 1.5rem; }
-    .sb-heading {
-      font-size: 0.67rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      margin-bottom: 0.5rem;
-      padding: 0 6px;
-    }
-    .sb-link {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px;
-      border-radius: 7px;
-      text-decoration: none;
-      color: var(--text-2);
-      font-size: 0.86rem;
-      cursor: pointer;
-      transition: color 0.12s, background 0.12s;
-      line-height: 1.3;
-    }
+    /* ── SIDEBAR — distinct panel style ── */
+    .sidebar { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 0.6rem; }
+    .sb-block { background: var(--bg-1); border: 1px solid var(--border-md); border-radius: 12px; padding: 0.85rem; }
+    .sb-heading { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.45rem; padding: 0 4px; }
+    .sb-link { display: flex; align-items: center; gap: 8px; padding: 5px 8px; border-radius: 6px; text-decoration: none; color: var(--text-2); font-size: 0.82rem; cursor: pointer; transition: color 0.12s, background 0.12s; line-height: 1.3; }
     .sb-link:hover { color: var(--text); background: var(--bg-2); }
     .sb-link.active { color: var(--orange); background: var(--orange-dim); }
-    .wnum {
-      font-size: 0.63rem;
-      font-weight: 700;
-      background: var(--bg-3);
-      color: var(--text-3);
-      width: 18px; height: 18px;
-      display: grid; place-items: center;
-      border-radius: 4px;
-      flex-shrink: 0;
-    }
+    .wnum { font-size: 0.63rem; font-weight: 700; background: var(--bg-3); color: var(--text-3); width: 18px; height: 18px; display: grid; place-items: center; border-radius: 4px; flex-shrink: 0; }
     .sb-link.active .wnum { background: var(--orange); color: #0a0a0a; }
-
-    .cert-sb {
-      background: var(--bg-1);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1rem;
-    }
-    .cert-sb h4 { font-size: 0.74rem; font-weight: 700; margin-bottom: 0.6rem; }
-    .cert-sb ul {
-      list-style: none;
-      font-size: 0.82rem;
-      color: var(--text-2);
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-    }
+    .cert-sb h4 { font-size: 0.74rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .cert-sb ul { list-style: none; font-size: 0.78rem; color: var(--text-2); display: flex; flex-direction: column; gap: 5px; }
     .cert-sb ul li::before { content: '✓ '; color: var(--orange); }
 
     /* ── SECTION LABELS ── */
-    .sec-eyebrow {
-      font-size: 0.67rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      margin-bottom: 0.4rem;
-    }
-    .sec-title {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.3rem;
-      letter-spacing: -0.03em;
-      margin-bottom: 1.4rem;
-    }
+    .sec-eyebrow { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.3rem; }
+    .sec-title { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.03em; margin-bottom: 1.4rem; padding-left: 0.8rem; border-left: 3px solid var(--orange); }
 
-    /* ── MILESTONES ── */
-    .milestones {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 3rem;
-      background: var(--border);
-    }
+    /* SECTION SEPARATOR */
+    .section-sep { padding-top: 2.5rem; margin-top: 1.5rem; border-top: 1px solid var(--border-md); }
+
+    /* MILESTONES */
+    .milestones { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1px; border: 1px solid var(--border-md); border-radius: 10px; overflow: hidden; margin-bottom: 3rem; background: var(--border-md); }
     .mc { background: var(--bg-1); padding: 1rem 1.1rem; transition: background 0.12s; }
     .mc:hover { background: var(--bg-2); }
-    .mc-date {
-      font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 0.8rem;
-      color: var(--orange);
-      margin-bottom: 3px;
-    }
+    .mc-date { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.8rem; color: var(--orange); margin-bottom: 3px; }
     .mc-label { font-size: 0.85rem; color: var(--text-2); line-height: 1.4; }
 
-    /* ── COURSE BLOCK ── */
-    .course-block { margin-bottom: 2rem; }
-    .course-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 0.85rem 1.2rem;
-      background: var(--bg-2);
-      border: 1px solid var(--border);
-      border-bottom: none;
-      border-radius: 10px 10px 0 0;
-    }
-    .cpill {
-      font-size: 0.64rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 3px 9px;
-      border-radius: 5px;
-    }
+    /* COURSE BLOCKS */
+    .course-block { margin-bottom: 2.5rem; }
+    .course-header { display: flex; align-items: center; gap: 10px; padding: 0.9rem 1.2rem; background: var(--bg-2); border: 1px solid var(--border-md); border-bottom: none; border-radius: 10px 10px 0 0; }
+    .cpill { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 9px; border-radius: 5px; }
     .cpill.orange { background: var(--orange-dim); color: var(--orange); border: 1px solid var(--orange-border); }
     .cpill.green  { background: var(--green-dim);  color: var(--green);  border: 1px solid rgba(34,197,94,0.2); }
     .cpill.purple { background: var(--purple-dim); color: var(--purple); border: 1px solid rgba(167,139,250,0.2); }
-    .course-header h3 { font-weight: 600; font-size: 0.9rem; letter-spacing: -0.01em; }
-    .course-weeks { font-size: 0.75rem; color: var(--text-3); margin-left: auto; }
-
-    .course-outcomes {
-      background: var(--bg-1);
-      border: 1px solid var(--border);
-      border-bottom: none;
-      padding: 0.7rem 1.2rem;
-    }
-    .course-outcomes ul { list-style: none; display: flex; flex-direction: column; gap: 2px; }
-    .course-outcomes ul li { font-size: 0.85rem; color: var(--text-3); display: flex; gap: 7px; }
+    .course-header h3 { font-weight: 600; font-size: 0.95rem; letter-spacing: -0.01em; }
+    .course-weeks { font-size: 0.75rem; color: var(--text-3); margin-left: auto; white-space: nowrap; }
+    .course-outcomes { background: var(--bg-1); border: 1px solid var(--border-md); border-bottom: none; padding: 0.75rem 1.2rem; }
+    .course-outcomes ul { list-style: none; display: flex; flex-direction: column; gap: 3px; }
+    .course-outcomes ul li { font-size: 0.84rem; color: var(--text-2); display: flex; gap: 7px; }
     .course-outcomes ul li::before { content: '→'; color: var(--orange); flex-shrink: 0; }
 
-    /* ── WEEK CARD ── */
-    .week-card {
-      background: var(--bg-1);
-      border: 1px solid var(--border);
-      border-top: none;
-    }
+    /* WEEK CARDS */
+    .week-card { background: var(--bg-1); border: 1px solid var(--border-md); border-top: none; }
     .week-card:last-child { border-radius: 0 0 10px 10px; }
-
-    .week-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 0.9rem 1.2rem;
-      cursor: pointer;
-      user-select: none;
-      transition: background 0.12s;
-    }
+    .week-header { display: flex; align-items: center; gap: 10px; padding: 0.9rem 1.2rem; cursor: pointer; user-select: none; transition: background 0.12s; }
     .week-header:hover { background: var(--bg-2); }
-
-    .wk-num {
-      font-size: 0.63rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      background: var(--bg-3);
-      padding: 3px 8px;
-      border-radius: 4px;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
+    .wk-num { font-size: 0.63rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-3); background: var(--bg-3); padding: 3px 8px; border-radius: 4px; white-space: nowrap; flex-shrink: 0; }
     .week-card.open .wk-num { background: var(--orange-dim); color: var(--orange); }
-
     .wtg { flex: 1; min-width: 0; }
     .week-title { font-weight: 600; font-size: 0.97rem; color: var(--text); line-height: 1.3; }
     .week-date { font-size: 0.8rem; color: var(--text-3); margin-top: 2px; }
-
     .ic-row { display: flex; gap: 5px; flex-wrap: wrap; }
-    .ic {
-      font-size: 0.67rem;
-      font-weight: 500;
-      color: var(--text-3);
-      background: var(--bg-3);
-      border: 1px solid var(--border);
-      padding: 2px 7px;
-      border-radius: 20px;
-      white-space: nowrap;
-    }
-
-    .chevron {
-      color: var(--text-3);
-      font-size: 0.72rem;
-      transition: transform 0.2s;
-      flex-shrink: 0;
-    }
+    .ic { font-size: 0.67rem; font-weight: 500; color: var(--text-3); background: var(--bg-3); border: 1px solid var(--border); padding: 2px 7px; border-radius: 20px; white-space: nowrap; }
+    .chevron { color: var(--text-3); font-size: 0.72rem; transition: transform 0.2s; flex-shrink: 0; }
     .week-card.open .chevron { transform: rotate(180deg); }
-
-    /* ── WEEK BODY ── */
-    .week-body {
-      display: none;
-      border-top: 1px solid var(--border);
-      padding: 1.1rem 1.2rem;
-    }
+    .week-body { display: none; border-top: 1px solid var(--border-md); padding: 1.1rem 1.2rem; }
     .week-card.open .week-body { display: block; }
-
-    .sessions-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.7rem;
-      margin-bottom: 1.2rem;
-    }
+    .sessions-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-bottom: 1.2rem; }
     @media (max-width: 600px) { .sessions-row { grid-template-columns: 1fr; } }
-
     .sb2 { border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.85rem; }
     .sb2.lec { background: var(--orange-dim); border: 1px solid var(--orange-border); }
     .sb2.lab { background: rgba(255,255,255,0.04); border: 1px solid var(--border-md); }
@@ -479,156 +163,122 @@
     .sb2.lec .sl { color: var(--orange); }
     .sb2.lab .sl { color: var(--text-2); }
     .sb2 .sd { color: var(--text-2); line-height: 1.5; }
-
-    .ll-label {
-      font-size: 0.63rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      margin-bottom: 0.6rem;
-    }
+    .ll-label { font-size: 0.63rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); margin-bottom: 0.6rem; }
     .ll { list-style: none; display: flex; flex-direction: column; gap: 3px; }
-    .ll li {
-      font-size: 0.9rem;
-      display: flex;
-      align-items: baseline;
-      gap: 7px;
-      color: var(--text-2);
-      line-height: 1.5;
-    }
+    .ll li { font-size: 0.9rem; display: flex; align-items: baseline; gap: 7px; color: var(--text-2); line-height: 1.5; }
     .ll li::before { content: '·'; color: var(--text-3); font-size: 1rem; flex-shrink: 0; line-height: 1; }
     .ll li.is-lab::before  { content: '⚗'; font-size: 0.68rem; color: var(--text-2); }
     .ll li.is-chk::before  { content: '✓'; font-size: 0.68rem; color: var(--orange); }
-    .ll a {
-      color: var(--text-2);
-      text-decoration: none;
-      border-bottom: 1px solid var(--border-md);
-      transition: color 0.12s, border-color 0.12s;
-    }
+    .ll a { color: var(--text-2); text-decoration: none; border-bottom: 1px solid var(--border-md); transition: color 0.12s, border-color 0.12s; }
     .ll a:hover { color: var(--orange); border-color: var(--orange); }
-
-    /* ── DELIVERABLE TAGS ── */
-    .del-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-top: 1rem;
-      padding-top: 0.8rem;
-      border-top: 1px solid var(--border);
-    }
+    .del-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid var(--border); }
     .dt { font-size: 0.71rem; font-weight: 600; padding: 4px 10px; border-radius: 5px; }
     .dt.chal { background: var(--orange-dim); color: var(--orange); border: 1px solid var(--orange-border); }
     .dt.lab  { background: rgba(255,255,255,0.05); color: var(--text-2); border: 1px solid var(--border-md); }
     [data-theme="light"] .dt.lab { background: var(--bg-2); }
-
-    /* ── SPECIAL WEEKS ── */
-    .special-week {
-      background: var(--bg-1);
-      border: 1px solid var(--border);
-      border-top: none;
-      border-radius: 0 0 10px 10px;
-      padding: 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    .special-week { background: var(--bg-1); border: 1px solid var(--border-md); border-top: none; border-radius: 0 0 10px 10px; padding: 1.2rem; display: flex; align-items: center; gap: 12px; }
     .special-week .sw-icon { font-size: 1.3rem; }
     .special-week h4 { font-weight: 600; font-size: 0.87rem; margin-bottom: 3px; }
     .special-week p { font-size: 0.87rem; color: var(--text-2); }
 
-    /* ── CONTENT BOXES ── */
-    .cbox {
-      background: var(--bg-1);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.4rem;
-      margin-bottom: 2rem;
-    }
+    /* CONTENT BOXES */
+    .cbox { background: var(--bg-1); border: 1px solid var(--border-md); border-radius: 10px; padding: 1.4rem; margin-bottom: 2rem; }
     .cbox.dashed { border-style: dashed; background: var(--bg); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
     @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
-
-    .bi {
-      background: var(--bg-2);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1rem;
-      font-size: 0.88rem;
-    }
-    .bi h5 {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--orange);
-      margin-bottom: 0.6rem;
-    }
+    .bi { background: var(--bg-2); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; font-size: 0.88rem; }
+    .bi h5 { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.6rem; }
     .bi ul { list-style: none; }
     .bi ul li { color: var(--text-2); line-height: 1.8; display: flex; gap: 6px; }
     .bi ul li::before { content: '–'; color: var(--text-3); flex-shrink: 0; }
-
-    /* ── CERTIFICATE ── */
     .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
     @media (max-width: 600px) { .cert-grid { grid-template-columns: 1fr; } }
-    .cert-col-label {
-      font-size: 0.63rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      margin-bottom: 0.7rem;
-    }
+    .cert-col-label { font-size: 0.63rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); margin-bottom: 0.7rem; }
     .cert-col ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
     .cert-col ul li { font-size: 0.9rem; color: var(--text-2); display: flex; gap: 8px; align-items: baseline; }
     .cert-req ul li::before { content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
     .cert-enc ul li::before { content: '→'; color: var(--text-3); flex-shrink: 0; }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.07); }
-    .footer-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 2rem;
-    }
+    .footer-inner { max-width: 1160px; margin: 0 auto; padding: 2.5rem 2rem; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2rem; }
     @media (max-width: 820px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
     .footer-brand p { font-size: 0.77rem; color: rgba(229,229,229,0.38); line-height: 1.65; max-width: 240px; margin-top: 0.6rem; }
-    .footer-col h5 {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(229,229,229,0.38);
-      margin-bottom: 0.8rem;
-    }
+    .footer-col h5 { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(229,229,229,0.38); margin-bottom: 0.8rem; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
     .footer-col ul li a { font-size: 0.79rem; color: rgba(229,229,229,0.55); text-decoration: none; transition: color 0.12s; }
     .footer-col ul li a:hover { color: #FE6612; }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.07);
-      padding: 1.2rem 2rem;
-      max-width: 1160px;
-      margin: 0 auto;
-      font-size: 0.71rem;
-      color: rgba(229,229,229,0.28);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.07); padding: 1.2rem 2rem; max-width: 1160px; margin: 0 auto; font-size: 0.71rem; color: rgba(229,229,229,0.28); display: flex; justify-content: space-between; align-items: center; }
     .footer-bottom a { color: rgba(229,229,229,0.28); text-decoration: none; margin: 0 6px; }
     .footer-bottom a:hover { color: #FE6612; }
 
+    /* PARTNERS */
+    .partner-grid { display: flex; flex-wrap: wrap; gap: 1rem; align-items: stretch; }
+    .partner-card { background: var(--bg-1); border: 1px solid var(--border-md); border-radius: 12px; padding: 1.3rem 1.8rem; display: flex; flex-direction: column; justify-content: center; gap: 5px; min-width: 200px; }
+    .partner-card.future { border-style: dashed; background: transparent; font-size: 0.78rem; color: var(--text-3); align-items: center; justify-content: center; min-height: 72px; }
+    .partner-logo-card { background: #ffffff !important; border-color: rgba(0,0,0,0.1) !important; }
+    .partner-logo-img { height: 40px; width: auto; display: block; object-fit: contain; }
+
+    /* PEOPLE GRID */
+    .people-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.75rem; }
+    .person-card { background: var(--bg-1); border: 1px solid var(--border-md); border-radius: 10px; padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 2px; }
+    .person-name { font-weight: 600; font-size: 0.88rem; color: var(--text); line-height: 1.3; }
+    .person-role { font-size: 0.78rem; color: var(--text-2); line-height: 1.4; }
+    .person-affiliation { font-size: 0.73rem; color: var(--text-3); line-height: 1.3; font-style: italic; }
+    .person-weeks { display: inline-flex; align-items: center; font-size: 0.67rem; font-weight: 600; color: var(--orange); background: var(--orange-dim); border: 1px solid var(--orange-border); border-radius: 4px; padding: 2px 7px; margin-top: 7px; width: fit-content; }
+    .person-links { display: flex; gap: 8px; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); flex-wrap: wrap; }
+    .person-link { font-size: 0.71rem; font-weight: 500; color: var(--text-3); text-decoration: none; display: flex; align-items: center; gap: 3px; transition: color 0.12s; }
+    .person-link:hover { color: var(--orange); }
+
+    /* MOBILE */
+    @media (max-width: 720px) {
+      .header-inner { padding: 0 1rem; }
+      nav a { font-size: 0.75rem; padding: 4px 7px; }
+      .hero { padding: 2.5rem 1rem 2rem; }
+      .page-body { padding: 1.5rem 1rem 4rem; }
+    }
+    @media (max-width: 600px) {
+      .hero-chips { gap: 0.4rem; }
+      .chip { font-size: 0.74rem; padding: 5px 10px; }
+      .two-col { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+      .people-grid { grid-template-columns: 1fr 1fr; }
+      .partner-grid { flex-direction: column; }
+      .partner-card { min-width: unset; }
+      .milestones { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; padding: 1.5rem 1rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; padding: 1rem; }
+      .ic-row { display: none; }
+      .week-header { gap: 8px; padding: 0.75rem 0.9rem; }
+      .week-body { padding: 0.9rem 0.9rem; }
+      .del-row { gap: 4px; }
+      .dt { font-size: 0.67rem; }
+    }
+    @media (max-width: 420px) {
+      .people-grid { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2rem; }
+      .stat-num { font-size: 1.5rem; }
+      .hero-stat { padding: 0.9rem 1.1rem; }
+    }
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--bg-3); border-radius: 3px; }
+
+    .linkedin-icon {
+    font-size: 14px;
+    color: #0A66C2;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+
+  .linkedin-icon:hover {
+      color: #004182;
+  }
+
   </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="header-inner">
     <div class="logo">
@@ -646,12 +296,13 @@
       <a href="#capstone">Capstone</a>
       <a href="#challenges">Challenges</a>
       <a href="#cert">Certificate</a>
+      <a href="#instructors">Instructors</a>
+      <a href="#partners">Partners</a>
       <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" id="theme-btn">☀️</button>
     </nav>
   </div>
 </header>
 
-<!-- HERO — always dark, full bleed -->
 <div class="hero-outer">
   <div class="hero">
     <div class="hero-breadcrumb">TRI AI Saturdays · Cohort 10</div>
@@ -666,53 +317,51 @@
       <div class="chip"><strong>Free</strong><span>for accepted learners</span></div>
     </div>
     <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="stat-num">3,190</div>
-        <div class="stat-label">Registered participants</div>
-      </div>
-      <div class="hero-stat">
-        <div class="stat-num">83</div>
-        <div class="stat-label">Countries represented</div>
-      </div>
-      <div class="hero-stat">
-        <div class="stat-num">16</div>
-        <div class="stat-label">Weeks of learning</div>
-      </div>
-      <div class="hero-stat">
-        <div class="stat-num">4</div>
-        <div class="stat-label">Courses covered</div>
-      </div>
+      <div class="hero-stat"><div class="stat-num">3,190</div><div class="stat-label">Registered participants</div></div>
+      <div class="hero-stat"><div class="stat-num">83</div><div class="stat-label">Countries represented</div></div>
+      <div class="hero-stat"><div class="stat-num">16</div><div class="stat-label">Weeks of learning</div></div>
+      <div class="hero-stat"><div class="stat-num">4</div><div class="stat-label">Courses covered</div></div>
     </div>
   </div>
 </div>
 <div class="hero-rule"></div>
 
-<!-- PAGE BODY -->
 <div class="page-body">
-
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="sb-block">
-      <div class="sb-heading">Jump to Week</div>
-      <a class="sb-link" onclick="jumpTo('week1')"><span class="wnum">1</span> Intro to Language Modeling</a>
+      <div class="sb-heading">Programme</div>
+      <a class="sb-link" href="#curriculum">📅 Milestones</a>
+      <a class="sb-link" href="#capstone">🔧 Capstone</a>
+      <a class="sb-link" href="#challenges">🏆 Challenges</a>
+      <a class="sb-link" href="#cert">🏅 Certificate</a>
+    </div>
+    <div class="sb-block">
+      <div class="sb-heading">Curriculum</div>
+      <a class="sb-link" onclick="jumpTo('week1')"><span class="wnum">1</span> Intro to LM</a>
       <a class="sb-link" onclick="jumpTo('week2')"><span class="wnum">2</span> Ngrams → Transformers</a>
-      <a class="sb-link" onclick="jumpTo('week3')"><span class="wnum">3</span> Training a Language Model</a>
+      <a class="sb-link" onclick="jumpTo('week3')"><span class="wnum">3</span> Training a LM</a>
       <a class="sb-link" onclick="jumpTo('week4')"><span class="wnum">4</span> Text Preprocessing</a>
       <a class="sb-link" onclick="jumpTo('week5')"><span class="wnum">5</span> Tokenization</a>
       <a class="sb-link" onclick="jumpTo('week6')"><span class="wnum">6</span> Embeddings</a>
       <a class="sb-link" onclick="jumpTo('week7')"><span class="wnum">7</span> Break</a>
-      <a class="sb-link" onclick="jumpTo('week8')"><span class="wnum">8</span> Intro to Neural Networks</a>
-      <a class="sb-link" onclick="jumpTo('week9')"><span class="wnum">9</span> Multi-layer Perceptron</a>
-      <a class="sb-link" onclick="jumpTo('week10')"><span class="wnum">10</span> Gradients &amp; Backprop</a>
-      <a class="sb-link" onclick="jumpTo('week11')"><span class="wnum">11</span> Modern LLM Architecture</a>
-      <a class="sb-link" onclick="jumpTo('week12')"><span class="wnum">12</span> Attention Mechanism</a>
-      <a class="sb-link" onclick="jumpTo('week13')"><span class="wnum">13</span> Positional Embeddings</a>
+      <a class="sb-link" onclick="jumpTo('week8')"><span class="wnum">8</span> Neural Networks</a>
+      <a class="sb-link" onclick="jumpTo('week9')"><span class="wnum">9</span> MLP</a>
+      <a class="sb-link" onclick="jumpTo('week10')"><span class="wnum">10</span> Gradients</a>
+      <a class="sb-link" onclick="jumpTo('week11')"><span class="wnum">11</span> LLM Architecture</a>
+      <a class="sb-link" onclick="jumpTo('week12')"><span class="wnum">12</span> Attention</a>
+      <a class="sb-link" onclick="jumpTo('week13')"><span class="wnum">13</span> Positional Embed.</a>
       <a class="sb-link" onclick="jumpTo('week14')"><span class="wnum">14</span> Transformer Block</a>
       <a class="sb-link" onclick="jumpTo('week15')"><span class="wnum">15</span> Project Week</a>
       <a class="sb-link" onclick="jumpTo('week16')"><span class="wnum">16</span> Demo Day 🎉</a>
     </div>
-    <div class="cert-sb">
-      <h4>🏅 Certificate Requirements</h4>
+    <div class="sb-block">
+      <div class="sb-heading">Team</div>
+      <a class="sb-link" href="#instructors">🎓 Instructors</a>
+      <a class="sb-link" href="#team">👥 Organisers</a>
+      <a class="sb-link" href="#partners">🤝 Partners</a>
+    </div>
+    <div class="sb-block cert-sb">
+      <h4>🏅 Certificate</h4>
       <ul>
         <li>≥ 60% lecture attendance</li>
         <li>Complete SLM training lab</li>
@@ -722,7 +371,6 @@
     </div>
   </aside>
 
-  <!-- MAIN CONTENT -->
   <main>
 
     <!-- MILESTONES -->
@@ -738,26 +386,18 @@
       </div>
     </div>
 
-    <!-- ═══ COURSE 1 ═══ -->
+    <!-- COURSE 1 -->
     <div class="course-block">
-      <div class="course-header">
-        <span class="cpill orange">Course 1</span>
-        <h3>Foundations of Language Modeling</h3>
-        <span class="course-weeks">Weeks 1–3</span>
-      </div>
+      <div class="course-header"><span class="cpill orange">Course 1</span><h3>Foundations of Language Modeling</h3><span class="course-weeks">Weeks 1–3</span></div>
       <div class="course-outcomes"><ul>
         <li>Understand the ML development pipeline and strengths/limitations of language models</li>
         <li>Compare n-gram and transformer models through hands-on coding</li>
         <li>Define a community problem to tackle with machine learning</li>
       </ul></div>
-
       <div class="week-card" id="week1">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 1</span>
-          <div class="wtg">
-            <div class="week-title">Introduction to Language Modeling</div>
-            <div class="week-date">Lecture: Sat, June 6, 2026 · 11am–1pm WAT</div>
-          </div>
+          <div class="wtg"><div class="week-title">Introduction to Language Modeling</div><div class="week-date">Lecture: Sat, June 6, 2026 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Tejumade Afonja</span></div>
           <div class="chevron">▼</div>
         </div>
@@ -773,18 +413,11 @@
           </ul>
         </div>
       </div>
-
       <div class="week-card" id="week2">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 2</span>
-          <div class="wtg">
-            <div class="week-title">From N-grams to Transformers</div>
-            <div class="week-date">Lab: Wed, June 10 · Lecture: Sat, June 13 · 11am–1pm WAT</div>
-          </div>
-          <div class="ic-row">
-            <span class="ic">Lab: Tejumade Afonja</span>
-            <span class="ic">Lecture: Tobias Lorenz</span>
-          </div>
+          <div class="wtg"><div class="week-title">From N-grams to Transformers</div><div class="week-date">Lab: Wed, June 10 · Lecture: Sat, June 13 · 11am–1pm WAT</div></div>
+          <div class="ic-row"><span class="ic">Lab: Tejumade Afonja</span><span class="ic">Lecture: Tobias Lorenz</span></div>
           <div class="chevron">▼</div>
         </div>
         <div class="week-body">
@@ -810,14 +443,10 @@
           </ul>
         </div>
       </div>
-
       <div class="week-card" id="week3">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 3</span>
-          <div class="wtg">
-            <div class="week-title">Training a Language Model</div>
-            <div class="week-date">Lab: Wed, June 17 · Lecture: Sat, June 20 · 11am–1pm WAT</div>
-          </div>
+          <div class="wtg"><div class="week-title">Training a Language Model</div><div class="week-date">Lab: Wed, June 17 · Lecture: Sat, June 20 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Oduguwa Damilola</span></div>
           <div class="chevron">▼</div>
         </div>
@@ -841,36 +470,24 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597267" target="_blank">Additional resources and further reading </a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597269" target="_blank">Glossary</a></li>
           </ul>
-          <div class="del-row">
-            <span class="dt chal">🏆 Challenge 1: Develop your problem statement</span>
-            <span class="dt lab">⚗ Lab: Train your own SLM</span>
-          </div>
+          <div class="del-row"><span class="dt chal">🏆 Challenge 1: Develop your problem statement</span><span class="dt lab">⚗ Lab: Train your own SLM</span></div>
         </div>
       </div>
     </div>
 
-    <!-- ═══ COURSE 2 ═══ -->
+    <!-- COURSE 2 -->
     <div class="course-block">
-      <div class="course-header">
-        <span class="cpill orange">Course 2</span>
-        <h3>Text Data: Tokenization &amp; Embeddings</h3>
-        <span class="course-weeks">Weeks 4–6</span>
-      </div>
+      <div class="course-header"><span class="cpill orange">Course 2</span><h3>Text Data: Tokenization &amp; Embeddings</h3><span class="course-weeks">Weeks 4–6</span></div>
       <div class="course-outcomes"><ul>
         <li>Learn to prepare, structure, and represent text data for language models</li>
         <li>Investigate tokenization strategies (character, word, subword/BPE) and embeddings</li>
         <li>Design a dataset ethically using data cards</li>
       </ul></div>
-
       <div class="week-card" id="week4">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 4</span>
-          <div class="wtg">
-            <div class="week-title">Introduction to Text &amp; Data Preprocessing</div>
-            <div class="week-date">Lab: Wed, June 24 · Lecture: Sat, June 27 · 11am–1pm WAT</div>
-          </div>
-          <div class="ic-row"><span class="ic">Foutse Yuehgoh</span></div>
-          <div class="chevron">▼</div>
+          <div class="wtg"><div class="week-title">Introduction to Text &amp; Data Preprocessing</div><div class="week-date">Lab: Wed, June 24 · Lecture: Sat, June 27 · 11am–1pm WAT</div></div>
+          <div class="ic-row"><span class="ic">Foutse Yuehgoh</span></div><div class="chevron">▼</div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -892,26 +509,19 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597298" target="_blank">Additional resources and further reading </a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597299" target="_blank">Glossary</a></li>
           </ul>
-          <div class="del-row">
-            <span class="dt chal">🏆 Challenge 2: Build a dataset ethically with a Data Card</span>
-          </div>
+          <div class="del-row"><span class="dt chal">🏆 Challenge 2: Build a dataset ethically with a Data Card</span></div>
         </div>
       </div>
-
       <div class="week-card" id="week5">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 5</span>
-          <div class="wtg">
-            <div class="week-title">Tokenization</div>
-            <div class="week-date">Lab: Wed, July 1 · Lecture: Sat, July 4 · 11am–1pm WAT</div>
-          </div>
-          <div class="ic-row"><span class="ic">Abdulsamad Baruwa</span></div>
-          <div class="chevron">▼</div>
+          <div class="wtg"><div class="week-title">Tokenization</div><div class="week-date">Lab: Wed, July 1 · Lecture: Sat, July 4 · 11am–1pm WAT</div></div>
+          <div class="ic-row"><span class="ic">Abdulsamad Baruwa</span></div><div class="chevron">▼</div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
             <div class="sb2 lab"><div class="sl">🧪 Lab</div><div class="sd">Wed, July 1 · 7–9pm WAT</div></div>
-            <div class="sb2 lec"><div class="sl">📖 Lecture</div><div class="sd">Sat, July 4 · 11am–1pm WAT<!-- <br/><strong style="color:var(--orange)">★ In-person: Lagos</strong> --></div></div>
+            <div class="sb2 lec"><div class="sl">📖 Lecture</div><div class="sd">Sat, July 4 · 11am–1pm WAT</div></div>
           </div>
           <div class="ll-label">Lessons &amp; Labs — est. 1 hr 58 min</div>
           <ul class="ll">
@@ -923,21 +533,14 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597285" target="_blank">Whose voice is missing?</a></li>
             <li class="is-chk"><a href="https://www.skills.google/paths/3135/course_templates/1452/quizzes/597286" target="_blank">Knowledge Check 2</a></li>
           </ul>
-          <div class="del-row">
-            <span class="dt lab">⚗ Lab: Implement a BPE Tokenizer</span>
-          </div>
+          <div class="del-row"><span class="dt lab">⚗ Lab: Implement a BPE Tokenizer</span></div>
         </div>
       </div>
-
       <div class="week-card" id="week6">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 6</span>
-          <div class="wtg">
-            <div class="week-title">Embeddings</div>
-            <div class="week-date">Lab: Wed, July 8 · Lecture: Sat, July 11 · 11am–1pm WAT</div>
-          </div>
-          <div class="ic-row"><span class="ic">Kaletsidik Mekonnen</span></div>
-          <div class="chevron">▼</div>
+          <div class="wtg"><div class="week-title">Embeddings</div><div class="week-date">Lab: Wed, July 8 · Lecture: Sat, July 11 · 11am–1pm WAT</div></div>
+          <div class="ic-row"><span class="ic">Kaletsidik Mekonnen</span></div><div class="chevron">▼</div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -963,42 +566,23 @@
 
     <!-- BREAK -->
     <div class="course-block">
-      <div class="course-header">
-        <span class="cpill purple">Break</span>
-        <h3>Mid-Cohort Break</h3>
-        <span class="course-weeks">Week 7</span>
-      </div>
-      <div class="special-week" id="week7">
-        <div class="sw-icon">☀️</div>
-        <div>
-          <h4>Rest &amp; Catch-up Week</h4>
-          <p>No scheduled sessions. Use this time to review materials, work on your team project, or get ahead on challenge submissions.</p>
-        </div>
-      </div>
+      <div class="course-header"><span class="cpill purple">Break</span><h3>Mid-Cohort Break</h3><span class="course-weeks">Week 7</span></div>
+      <div class="special-week" id="week7"><div class="sw-icon">☀️</div><div><h4>Rest &amp; Catch-up Week</h4><p>No scheduled sessions. Use this time to review materials, work on your team project, or get ahead on challenge submissions.</p></div></div>
     </div>
 
-    <!-- ═══ COURSE 3 ═══ -->
+    <!-- COURSE 3 -->
     <div class="course-block">
-      <div class="course-header">
-        <span class="cpill orange">Course 3</span>
-        <h3>Neural Networks &amp; Training</h3>
-        <span class="course-weeks">Weeks 8–10</span>
-      </div>
+      <div class="course-header"><span class="cpill orange">Course 3</span><h3>Neural Networks &amp; Training</h3><span class="course-weeks">Weeks 8–10</span></div>
       <div class="course-outcomes"><ul>
         <li>Implement and evaluate the multilayer perceptron (MLP)</li>
         <li>Understand backpropagation, gradients, and stochastic gradient descent</li>
         <li>Spot and mitigate overfitting/underfitting in practice</li>
       </ul></div>
-
       <div class="week-card" id="week8">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 8</span>
-          <div class="wtg">
-            <div class="week-title">Introduction to Neural Networks</div>
-            <div class="week-date">Lab: Wed, July 22 · Lecture: Sat, July 25 · 11am–1pm WAT</div>
-          </div>
-          <div class="ic-row"><span class="ic">Timi Owolabi</span></div>
-          <div class="chevron">▼</div>
+          <div class="wtg"><div class="week-title">Introduction to Neural Networks</div><div class="week-date">Lab: Wed, July 22 · Lecture: Sat, July 25 · 11am–1pm WAT</div></div>
+          <div class="ic-row"><span class="ic">Timi Owolabi</span></div><div class="chevron">▼</div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -1022,16 +606,11 @@
           </ul>
         </div>
       </div>
-
       <div class="week-card" id="week9">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 9</span>
-          <div class="wtg">
-            <div class="week-title">Modeling Complex Data with MLP</div>
-            <div class="week-date">Lab: Wed, July 29 · Lecture: Sat, Aug 1 · 11am–1pm WAT</div>
-          </div>
-          <div class="ic-row"><span class="ic">Chimdi Walter Ndubuisi</span></div>
-          <div class="chevron">▼</div>
+          <div class="wtg"><div class="week-title">Modeling Complex Data with MLP</div><div class="week-date">Lab: Wed, July 29 · Lecture: Sat, Aug 1 · 11am–1pm WAT</div></div>
+          <div class="ic-row"><span class="ic">Chimdi Walter Ndubuisi</span></div><div class="chevron">▼</div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -1053,16 +632,11 @@
           </ul>
         </div>
       </div>
-
       <div class="week-card" id="week10">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 10</span>
-          <div class="wtg">
-            <div class="week-title">Gradients &amp; Backpropagation</div>
-            <div class="week-date">Lab: Wed, Aug 5 · Lecture: Sat, Aug 8 · 11am–1pm WAT</div>
-          </div>
-          <div class="ic-row"><span class="ic">Fortune Adekogbe</span></div>
-          <div class="chevron">▼</div>
+          <div class="wtg"><div class="week-title">Gradients &amp; Backpropagation</div><div class="week-date">Lab: Wed, Aug 5 · Lecture: Sat, Aug 8 · 11am–1pm WAT</div></div>
+          <div class="ic-row"><span class="ic">Fortune Adekogbe</span></div><div class="chevron">▼</div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -1086,39 +660,24 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597335" target="_blank">Looking forward</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597336" target="_blank">Glossary</a></li>
           </ul>
-          <div class="del-row">
-            <span class="dt chal">🏆 Challenge 3: Create an impact statement card</span>
-            <span class="dt lab">⚗ Lab: Train your model with Keras</span>
-          </div>
+          <div class="del-row"><span class="dt chal">🏆 Challenge 3: Create an impact statement card</span><span class="dt lab">⚗ Lab: Train your model with Keras</span></div>
         </div>
       </div>
     </div>
 
-    <!-- ═══ COURSE 4 ═══ -->
+    <!-- COURSE 4 -->
     <div class="course-block">
-      <div class="course-header">
-        <span class="cpill orange">Course 4</span>
-        <h3>Transformer Architecture</h3>
-        <span class="course-weeks">Weeks 11–14</span>
-      </div>
+      <div class="course-header"><span class="cpill orange">Course 4</span><h3>Transformer Architecture</h3><span class="course-weeks">Weeks 11–14</span></div>
       <div class="course-outcomes"><ul>
         <li>Explore the attention mechanism, masked attention, and multi-head attention</li>
         <li>Understand positional embeddings, layer normalization, and transformer blocks</li>
         <li>Build neural networks suited to language modeling</li>
       </ul></div>
-
       <div class="week-card" id="week11">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 11</span>
-          <div class="wtg">
-            <div class="week-title">Architecture of Modern Large Language Models</div>
-            <div class="week-date">Lab: Wed, Aug 12 · Lecture: Sat, Aug 15 · 11am–1pm WAT</div>
-          </div>
-          <div class="ic-row">
-            <span class="ic">Lab: Josiah Isong</span>
-            <span class="ic">Lecture: Olumide Okubadejo</span>
-          </div>
-          <div class="chevron">▼</div>
+          <div class="wtg"><div class="week-title">Architecture of Modern Large Language Models</div><div class="week-date">Lab: Wed, Aug 12 · Lecture: Sat, Aug 15 · 11am–1pm WAT</div></div>
+          <div class="ic-row"><span class="ic">Lab: Josiah Isong</span><span class="ic">Lecture: Olumide Okubadejo</span></div><div class="chevron">▼</div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -1138,16 +697,11 @@
           </ul>
         </div>
       </div>
-
       <div class="week-card" id="week12">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 12</span>
-          <div class="wtg">
-            <div class="week-title">The Attention Mechanism</div>
-            <div class="week-date">Lab: Wed, Aug 19 · Lecture: Sat, Aug 22 · 11am–1pm WAT</div>
-          </div>
-          <div class="ic-row"><span class="ic">Blessed Guda</span></div>
-          <div class="chevron">▼</div>
+          <div class="wtg"><div class="week-title">The Attention Mechanism</div><div class="week-date">Lab: Wed, Aug 19 · Lecture: Sat, Aug 22 · 11am–1pm WAT</div></div>
+          <div class="ic-row"><span class="ic">Blessed Guda</span></div><div class="chevron">▼</div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -1165,16 +719,11 @@
           </ul>
         </div>
       </div>
-
       <div class="week-card" id="week13">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 13</span>
-          <div class="wtg">
-            <div class="week-title">Positional Embeddings &amp; Mapping Stakeholder Values</div>
-            <div class="week-date">Lab: Wed, Aug 26 · Lecture: Sat, Aug 29 · 11am–1pm WAT</div>
-          </div>
-          <div class="ic-row"><span class="ic">Aminu Hamza Nababa</span></div>
-          <div class="chevron">▼</div>
+          <div class="wtg"><div class="week-title">Positional Embeddings &amp; Mapping Stakeholder Values</div><div class="week-date">Lab: Wed, Aug 26 · Lecture: Sat, Aug 29 · 11am–1pm WAT</div></div>
+          <div class="ic-row"><span class="ic">Aminu Hamza Nababa</span></div><div class="chevron">▼</div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -1192,24 +741,14 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1451/html_bundles/603277" target="_blank">Mapping stakeholders and social values</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1451/html_bundles/603278" target="_blank">Challenge: Design a mini-engagement plan</a></li>
           </ul>
-          <div class="del-row">
-            <span class="dt chal">🏆 Challenge 4: Design a mini-engagement plan</span>
-          </div>
+          <div class="del-row"><span class="dt chal">🏆 Challenge 4: Design a mini-engagement plan</span></div>
         </div>
       </div>
-
       <div class="week-card" id="week14">
         <div class="week-header" onclick="toggleWeek(this)">
           <span class="wk-num">Week 14</span>
-          <div class="wtg">
-            <div class="week-title">Putting it all together: Transformer Block, MLP &amp; Layer Normalization</div>
-            <div class="week-date">Lab: Wed, Sep 2 · Lecture: Sat, Sep 5 · 11am–1pm WAT</div>
-          </div>
-          <div class="ic-row">
-            <span class="ic">Lab: Josiah Isong</span>
-            <span class="ic">Lecture: Olumide Okubadejo</span>
-          </div>
-          <div class="chevron">▼</div>
+          <div class="wtg"><div class="week-title">Putting it all together: Transformer Block, MLP &amp; Layer Normalization</div><div class="week-date">Lab: Wed, Sep 2 · Lecture: Sat, Sep 5 · 11am–1pm WAT</div></div>
+          <div class="ic-row"><span class="ic">Lab: Josiah Isong</span><span class="ic">Lecture: Olumide Okubadejo</span></div><div class="chevron">▼</div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -1231,66 +770,39 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1451/html_bundles/603282" target="_blank">Additional resources and further reading </a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1451/html_bundles/603283" target="_blank">Glossary</a></li>
           </ul>
-          <div class="del-row">
-            <span class="dt lab">⚗ Lab: Implement masked multi-head attention</span>
-          </div>
+          <div class="del-row"><span class="dt lab">⚗ Lab: Implement masked multi-head attention</span></div>
         </div>
       </div>
     </div>
 
     <!-- PROJECT WEEK -->
     <div class="course-block">
-      <div class="course-header" style="background:var(--orange-dim);border-color:var(--orange-border);">
-        <span class="cpill orange">Week 15</span>
-        <h3>Project Week</h3>
-        <span class="course-weeks">Sep 6–12, 2026</span>
-      </div>
-      <div class="special-week" id="week15">
-        <div class="sw-icon">🛠️</div>
-        <div>
-          <h4>Final project sprint — no lectures</h4>
-          <p>Teams finalise their Jupyter Notebook, presentation slides, and demo. Mentors available for check-ins. Challenge Lab: Train A Small Language Model closes this week.</p>
-        </div>
-      </div>
+      <div class="course-header" style="background:var(--orange-dim);border-color:var(--orange-border);"><span class="cpill orange">Week 15</span><h3>Project Week</h3><span class="course-weeks">Sep 6–12, 2026</span></div>
+      <div class="special-week" id="week15"><div class="sw-icon">🛠️</div><div><h4>Final project sprint — no lectures</h4><p>Teams finalise their Jupyter Notebook, presentation slides, and demo. Mentors available for check-ins. Challenge Lab: Train A Small Language Model closes this week.</p></div></div>
     </div>
 
     <!-- DEMO DAY -->
     <div class="course-block">
-      <div class="course-header" style="background:var(--green-dim);border-color:rgba(34,197,94,0.2);">
-        <span class="cpill green">Week 16</span>
-        <h3>🎉 Demo Day</h3>
-        <span class="course-weeks">September 19, 2026</span>
-      </div>
-      <div class="special-week" id="week16">
-        <div class="sw-icon">🚀</div>
-        <div>
-          <h4>Online Demo Day — September 19, 2026</h4>
-          <p>Each team presents their problem &amp; motivation, dataset &amp; model, ethical considerations, and results. Top teams receive prizes. Format: Remote (Online).</p>
-        </div>
-      </div>
+      <div class="course-header" style="background:var(--green-dim);border-color:rgba(34,197,94,0.2);"><span class="cpill green">Week 16</span><h3>🎉 Demo Day</h3><span class="course-weeks">September 19, 2026</span></div>
+      <div class="special-week" id="week16"><div class="sw-icon">🚀</div><div><h4>Online Demo Day — September 19, 2026</h4><p>Each team presents their problem &amp; motivation, dataset &amp; model, ethical considerations, and results. Top teams receive prizes. Format: Remote (Online).</p></div></div>
     </div>
 
     <!-- CAPSTONE -->
-    <div id="capstone" style="margin-bottom:2rem">
+    <div id="capstone" class="section-sep">
       <div class="sec-eyebrow">Projects</div>
       <div class="sec-title">Capstone Project</div>
       <div class="cbox dashed">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.5rem">
-          <span style="font-size:1.1rem">🔧</span>
-          <span style="font-weight:600;font-size:0.9rem">Details coming soon</span>
-        </div>
-        <p style="font-size:0.82rem;color:var(--text-2);line-height:1.65">
-          Full capstone project guidelines — including team structure, deliverables, project requirements, and mentor details — will be published here once finalised. Check back soon!
-        </p>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.5rem"><span style="font-size:1.1rem">🔧</span><span style="font-weight:600;font-size:0.9rem">Details coming soon</span></div>
+        <p style="font-size:0.85rem;color:var(--text-2);line-height:1.65">Full capstone project guidelines — including team structure, deliverables, project requirements, and mentor details — will be published here once finalised. Check back soon!</p>
       </div>
     </div>
 
     <!-- CHALLENGES -->
-    <div id="challenges" style="margin-bottom:2rem">
+    <div id="challenges" class="section-sep">
       <div class="sec-eyebrow">Weekly Deliverables</div>
       <div class="sec-title">Cohort Challenges &amp; Labs</div>
       <div class="cbox">
-        <p style="font-size:0.82rem;color:var(--text-2);margin-bottom:0.5rem">Four challenges run alongside the weekly curriculum, each tied to a course. A final challenge lab caps the course technical work before Demo Day.</p>
+        <p style="font-size:0.85rem;color:var(--text-2);margin-bottom:1rem">Four challenges run alongside the weekly curriculum, each tied to a course. A final challenge lab caps the course technical work before Demo Day.</p>
         <div class="two-col">
           <div class="bi">
             <h5>All 4 Cohort Challenges</h5>
@@ -1320,7 +832,7 @@
     </div>
 
     <!-- CERTIFICATE -->
-    <div id="cert">
+    <div id="cert" class="section-sep">
       <div class="sec-eyebrow">Completion</div>
       <div class="sec-title">Certificate Requirements</div>
       <div class="cbox">
@@ -1347,10 +859,195 @@
       </div>
     </div>
 
+    <!-- INSTRUCTORS -->
+    <div id="instructors" class="section-sep">
+      <div class="sec-eyebrow">Teaching</div>
+      <div class="sec-title">Instructors &amp; Tutors</div>
+      <div class="people-grid">
+        <div class="person-card">
+          <div class="person-name">Tejumade Afonja</div>
+          <!-- <div class="person-role">Instructor</div> -->
+          <div class="person-affiliation">PhD Researcher, CISPA</div>
+          <div class="person-weeks">Weeks 1 (Lecture) &amp; 2 (Lab)</div>
+          <div class="person-links">
+            <a href="https://www.linkedin.com/in/tejumadeafonja" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Tobias Lorenz</div>
+          <!-- <div class="person-role">Instructor</div> -->
+          <div class="person-affiliation">PhD Researcher, CISPA</div>
+          <div class="person-weeks">Week 2 (Lecture)</div>
+          <div class="person-links">
+            <a href="https://www.linkedin.com/in/t-lorenz" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <!-- <div class="person-links"><a href="#tobias-lorenz-linkedin" target="_blank" class="person-link">LinkedIn ↗</a></div> -->
+        </div>
+        <div class="person-card">
+          <div class="person-name">Oduguwa Damilola</div>
+          <!-- <div class="person-role">Instructor</div> -->
+          <div class="person-affiliation">ML Engineer, Bluechip</div>
+          <div class="person-weeks">Week 3 (Lab &amp; Lecture)</div>
+          <div class="person-links">
+            <a href="https://linkedin.com/in/oduguwa-damilola" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Foutse Yuehgoh</div>
+          <!-- <div class="person-role">Instructor</div> -->
+          <div class="person-affiliation">AI Researcher, Freelancer</div>
+          <div class="person-weeks">Week 4 (Lab &amp; Lecture)</div>
+          <div class="person-links">
+            <a href="https://www.linkedin.com/in/foutse-yuehgoh-phd-9105b184/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Abdulsamad Baruwa</div>
+          <!-- <div class="person-role">Instructor</div> -->
+          <div class="person-affiliation">AI Engineer, Steloy AI</div>
+          <div class="person-weeks">Week 5 (Lab &amp; Lecture) </div>
+          <div class="person-links">
+            <a href="#" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Kaletsidik Mekonnen</div>
+          <!-- <div class="person-role">Instructor</div> -->
+          <div class="person-affiliation">AI Engineer</div>
+          <div class="person-weeks">Week 6 (Lab &amp; Lecture)</div>
+          <div class="person-links">
+            <a href="https://www.linkedin.com/in/kaletsidik-ayalew" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Timi Owolabi</div>
+          <!-- <div class="person-role">Instructor</div> -->
+           <div class="person-affiliation">ML Engineer, Quidax</div>
+          <div class="person-weeks">Week 8 (Lab &amp; Lecture)</div>
+          <div class="person-links">
+            <a href="https://www.linkedin.com/in/timi-owolabi" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Fortune Adekogbe</div>
+          <!-- <div class="person-role">Instructor</div> -->
+           <div class="person-affiliation">PhD Researcher, University of Michigan</div>
+          <div class="person-weeks">Week 10 (Lab &amp; Lecture)</div>
+          <div class="person-links">
+            <a href="https://www.linkedin.com/in/fortune-adekogbe/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Josiah Isong</div>
+          <!-- <div class="person-role">Instructor</div> -->
+           <div class="person-affiliation">Senior Backend Engineer, Hiyr Ai</div>
+          <div class="person-weeks">Weeks 11&amp; 14 (Lab)</div>
+          <div class="person-links">
+            <a href="www.linkedin.com/in/isong-josiah" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Olumide Okubadejo</div>
+          <!-- <div class="person-role">Instructor</div> -->
+           <div class="person-affiliation">Adjunct Professor (Guest), ESIEE PARIS</div>
+          <div class="person-weeks">Weeks 11 &amp; 14 (Lecture)</div>
+          <div class="person-links">
+            <a href="https://www.linkedin.com/in/olumide-okubadejo" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Blessed Guda</div>
+          <!-- <div class="person-role">Instructor</div> -->
+           <div class="person-affiliation">PhD Researcher, Carnegie Mellon University Africa</div>
+          <div class="person-weeks">Week 12 (Lab &amp; Lecture)</div>
+          <div class="person-links">
+            <a href="https://www.linkedin.com/in/blessed-guda/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Chimdi Walter Ndubuisi</div>
+          <!-- <div class="person-role">Instructor</div> -->
+           <div class="person-affiliation">PhD Researcher, University of Missouri-Columbia</div>
+          <div class="person-weeks">Week 9 (Lab &amp; Lecture)</div>
+          <div class="person-links">
+            <a href="https://www.linkedin.com/in/chimdi-walter-ndubuisi-518607158/ target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Aminu Hamza Nababa</div>
+          <!-- <div class="person-role">Instructor</div> -->
+           <div class="person-affiliation">Deep Learning Specialist, Arewa Data Science Academy</div>
+          <div class="person-weeks">Week 13 (Lab &amp; Lecture)</div>
+          <div class="person-links">
+            <a href="https://www.linkedin.com/in/alamin-h-nababa" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORGANISERS -->
+    <div id="team" class="section-sep">
+      <div class="sec-eyebrow">Behind the scenes</div>
+      <div class="sec-title">Organisers</div>
+      <div class="people-grid">
+        <div class="person-card">
+          <div class="person-name">Tejumade Afonja</div>
+          <div class="person-role">Programme Director</div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Adetola Adetunji</div>
+          <div class="person-role">Cohort 10 Project Manager</div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Joscha Cüppers</div>
+          <div class="person-role">Cohort 10 Capstone Project Lead</div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Oluwafemi Azeez</div>
+          <div class="person-role">Research &amp; Innovation Director</div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Akintayo Jabar</div>
+          <div class="person-role">Head of Monitoring, Evaluation &amp; Learning</div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Kenechi Dukor</div>
+          <div class="person-role">Technology &amp; Communications Director</div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Mmesomachukwu Osele</div>
+          <div class="person-role">T&amp;C Expert Volunteer</div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Jesuyanmife Egbewale</div>
+          <div class="person-role">Programme Volunteer</div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Israel Ekundayo</div>
+          <div class="person-role">Programme Volunteer</div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Gerald Iwejuo</div>
+          <div class="person-role">T&amp;C Volunteer</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PARTNERS -->
+    <div id="partners" class="section-sep" style="margin-bottom:2rem">
+      <div class="sec-eyebrow">Supported by</div>
+      <div class="sec-title">Partners</div>
+      <div class="partner-grid">
+        <div class="partner-card partner-logo-card">
+          <img src="./assets/googledeepmind.svg" alt="Google DeepMind" class="partner-logo-img"/>
+        </div>
+        <div class="partner-card future">+ More partners coming soon</div>
+      </div>
+    </div>
+
   </main>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
@@ -1398,34 +1095,21 @@
 </footer>
 
 <script>
-  // ── THEME ──
   const root = document.documentElement;
   const btn  = () => document.getElementById('theme-btn');
-
   function applyTheme(theme) {
     root.setAttribute('data-theme', theme);
     localStorage.setItem('tri-ai-theme', theme);
     if (btn()) btn().textContent = theme === 'light' ? '🌙' : '☀️';
   }
-
-  function toggleTheme() {
-    const current = root.getAttribute('data-theme') || 'dark';
-    applyTheme(current === 'dark' ? 'light' : 'dark');
-  }
-
+  function toggleTheme() { applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); }
   document.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('tri-ai-theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    applyTheme(saved || (prefersDark ? 'dark' : 'light'));
+    applyTheme(saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
     const w1 = document.getElementById('week1');
     if (w1) w1.classList.add('open');
   });
-
-  // ── WEEK CARDS ──
-  function toggleWeek(header) {
-    header.parentElement.classList.toggle('open');
-  }
-
+  function toggleWeek(header) { header.parentElement.classList.toggle('open'); }
   function jumpTo(id) {
     const el = document.getElementById(id);
     if (!el) return;
