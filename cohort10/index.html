@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cohort 10 · TRI AI Saturdays</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;800&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
   <style>
     /* ── DARK THEME (default) ── */
     :root {
@@ -14,13 +14,13 @@
       --bg-3:        #222222;
       --border:      rgba(255,255,255,0.07);
       --border-md:   rgba(255,255,255,0.12);
-      --text:        #f0ede8;
-      --text-2:      rgba(240,237,232,0.55);
-      --text-3:      rgba(240,237,232,0.28);
-      --orange:      #f97316;
-      --orange-dim:  rgba(249,115,22,0.1);
-      --orange-mid:  rgba(249,115,22,0.18);
-      --orange-border: rgba(249,115,22,0.25);
+      --text:        #E5E5E5;
+      --text-2:      rgba(229,229,229,0.65);
+      --text-3:      rgba(229,229,229,0.38);
+      --orange:      #FE6612;
+      --orange-dim:  rgba(254,102,18,0.1);
+      --orange-mid:  rgba(254,102,18,0.18);
+      --orange-border: rgba(254,102,18,0.25);
       --green:       #22c55e;
       --green-dim:   rgba(34,197,94,0.1);
       --purple:      #a78bfa;
@@ -38,10 +38,10 @@
       --text:        #0a0a0a;
       --text-2:      rgba(10,10,10,0.55);
       --text-3:      rgba(10,10,10,0.35);
-      --orange:      #ea6b0e;
-      --orange-dim:  rgba(234,107,14,0.08);
-      --orange-mid:  rgba(234,107,14,0.15);
-      --orange-border: rgba(234,107,14,0.22);
+      --orange:      #e05508;
+      --orange-dim:  rgba(224,85,8,0.08);
+      --orange-mid:  rgba(224,85,8,0.15);
+      --orange-border: rgba(224,85,8,0.22);
       --green:       #16a34a;
       --green-dim:   rgba(22,163,74,0.08);
       --purple:      #7c3aed;
@@ -55,7 +55,7 @@
       background: var(--bg);
       color: var(--text);
       line-height: 1.65;
-      font-size: 15px;
+      font-size: 16px;
       transition: background 0.2s, color 0.2s;
     }
 
@@ -69,17 +69,16 @@
       border-radius: 7px;
       border: 1px solid rgba(255,255,255,0.15);
       background: rgba(255,255,255,0.08);
-      color: rgba(255,255,255,0.7);
+      color: rgba(229,229,229,0.75);
       cursor: pointer;
       font-size: 0.9rem;
       transition: background 0.15s, color 0.15s;
       flex-shrink: 0;
       margin-left: 6px;
     }
-    .theme-toggle:hover { background: rgba(255,255,255,0.15); color: #fff; }
+    .theme-toggle:hover { background: rgba(255,255,255,0.15); color: #E5E5E5; }
 
-    /* ── HEADER ── */
-    /* Header sits on top of the hero so it blends in — hero is always dark */
+    /* ── HEADER — always dark, flush with hero ── */
     header {
       background: #0a0a0a;
       border-bottom: 1px solid rgba(255,255,255,0.07);
@@ -94,28 +93,27 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 56px;
+      height: 64px;
     }
     .logo {
       font-family: 'Syne', sans-serif;
       font-weight: 800;
       font-size: 1.1rem;
       letter-spacing: -0.03em;
-      color: #f0ede8;
+      color: #E5E5E5;
       display: flex;
       align-items: center;
       gap: 10px;
     }
-    .logo .ai { color: #f97316; }
     .logo-div { width: 1px; height: 16px; background: rgba(255,255,255,0.15); }
     .logo-sub {
-      font-size: 0.72rem;
+      font-size: 0.8rem;
       font-weight: 500;
-      color: rgba(240,237,232,0.35);
+      color: rgba(229,229,229,0.35);
     }
     nav { display: flex; align-items: center; gap: 2px; }
     nav a {
-      color: rgba(240,237,232,0.6);
+      color: rgba(229,229,229,0.68);
       text-decoration: none;
       font-size: 0.82rem;
       font-weight: 500;
@@ -123,7 +121,7 @@
       border-radius: 6px;
       transition: color 0.15s, background 0.15s;
     }
-    nav a:hover { color: #f0ede8; background: rgba(255,255,255,0.07); }
+    nav a:hover { color: #E5E5E5; background: rgba(255,255,255,0.07); }
     @media (max-width: 720px) { .hm { display: none; } }
 
     /* ── HERO — always dark, full bleed ── */
@@ -132,14 +130,13 @@
       position: relative;
       overflow: hidden;
     }
-    /* decorative circles */
     .hero-outer::before {
       content: '';
       position: absolute;
       top: -80px; right: -100px;
       width: 500px; height: 500px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(249,115,22,0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(254,102,18,0.08) 0%, transparent 70%);
       pointer-events: none;
     }
     .hero-outer::after {
@@ -160,7 +157,7 @@
     }
     .hero-breadcrumb {
       font-size: 0.73rem;
-      color: rgba(240,237,232,0.3);
+      color: rgba(229,229,229,0.42);
       margin-bottom: 1.4rem;
     }
     .hero-tag {
@@ -171,9 +168,9 @@
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #f97316;
-      border: 1px solid rgba(249,115,22,0.3);
-      background: rgba(249,115,22,0.1);
+      color: #FE6612;
+      border: 1px solid rgba(254,102,18,0.3);
+      background: rgba(254,102,18,0.1);
       padding: 4px 14px;
       border-radius: 20px;
       margin-bottom: 1.3rem;
@@ -184,13 +181,13 @@
       font-size: clamp(2.2rem, 5.5vw, 3.6rem);
       line-height: 1.02;
       letter-spacing: -0.04em;
-      color: #f0ede8;
+      color: #E5E5E5;
       margin-bottom: 1rem;
       max-width: 700px;
     }
     .hero-desc {
       font-size: 1rem;
-      color: rgba(240,237,232,0.6);
+      color: rgba(229,229,229,0.68);
       max-width: 560px;
       margin-bottom: 2rem;
       line-height: 1.65;
@@ -210,9 +207,9 @@
       border-radius: 7px;
       padding: 6px 12px;
       font-size: 0.79rem;
-      color: rgba(240,237,232,0.6);
+      color: rgba(229,229,229,0.68);
     }
-    .chip strong { color: #f0ede8; font-weight: 600; }
+    .chip strong { color: #E5E5E5; font-weight: 600; }
 
     /* ── HERO STATS ── */
     .hero-stats {
@@ -234,13 +231,13 @@
       font-weight: 800;
       font-size: 1.85rem;
       letter-spacing: -0.04em;
-      color: #f0ede8;
+      color: #E5E5E5;
       line-height: 1;
     }
-    .stat-num sup { font-size: 1rem; color: #f97316; vertical-align: super; }
+    .stat-num sup { font-size: 1rem; color: #FE6612; vertical-align: super; }
     .stat-label {
       font-size: 0.7rem;
-      color: rgba(240,237,232,0.35);
+      color: rgba(229,229,229,0.48);
       margin-top: 5px;
       white-space: nowrap;
     }
@@ -249,10 +246,10 @@
       .hero-stat { border-bottom: 1px solid rgba(255,255,255,0.08); border-right: none; }
     }
 
-    /* thin accent line separating hero from body */
+    /* orange accent rule separating hero from body */
     .hero-rule {
       height: 1px;
-      background: linear-gradient(90deg, #f97316 0%, rgba(249,115,22,0.2) 40%, transparent 100%);
+      background: linear-gradient(90deg, #FE6612 0%, rgba(254,102,18,0.2) 40%, transparent 100%);
     }
 
     /* ── PAGE BODY ── */
@@ -271,7 +268,7 @@
     }
 
     /* ── SIDEBAR ── */
-    .sidebar { position: sticky; top: 72px; }
+    .sidebar { position: sticky; top: 80px; }
     .sb-block { margin-bottom: 1.5rem; }
     .sb-heading {
       font-size: 0.67rem;
@@ -290,7 +287,7 @@
       border-radius: 7px;
       text-decoration: none;
       color: var(--text-2);
-      font-size: 0.79rem;
+      font-size: 0.86rem;
       cursor: pointer;
       transition: color 0.12s, background 0.12s;
       line-height: 1.3;
@@ -318,7 +315,7 @@
     .cert-sb h4 { font-size: 0.74rem; font-weight: 700; margin-bottom: 0.6rem; }
     .cert-sb ul {
       list-style: none;
-      font-size: 0.74rem;
+      font-size: 0.82rem;
       color: var(--text-2);
       display: flex;
       flex-direction: column;
@@ -363,7 +360,7 @@
       color: var(--orange);
       margin-bottom: 3px;
     }
-    .mc-label { font-size: 0.77rem; color: var(--text-2); line-height: 1.4; }
+    .mc-label { font-size: 0.85rem; color: var(--text-2); line-height: 1.4; }
 
     /* ── COURSE BLOCK ── */
     .course-block { margin-bottom: 2rem; }
@@ -398,7 +395,7 @@
       padding: 0.7rem 1.2rem;
     }
     .course-outcomes ul { list-style: none; display: flex; flex-direction: column; gap: 2px; }
-    .course-outcomes ul li { font-size: 0.77rem; color: var(--text-3); display: flex; gap: 7px; }
+    .course-outcomes ul li { font-size: 0.85rem; color: var(--text-3); display: flex; gap: 7px; }
     .course-outcomes ul li::before { content: '→'; color: var(--orange); flex-shrink: 0; }
 
     /* ── WEEK CARD ── */
@@ -435,8 +432,8 @@
     .week-card.open .wk-num { background: var(--orange-dim); color: var(--orange); }
 
     .wtg { flex: 1; min-width: 0; }
-    .week-title { font-weight: 600; font-size: 0.87rem; color: var(--text); line-height: 1.3; }
-    .week-date { font-size: 0.72rem; color: var(--text-3); margin-top: 2px; }
+    .week-title { font-weight: 600; font-size: 0.97rem; color: var(--text); line-height: 1.3; }
+    .week-date { font-size: 0.8rem; color: var(--text-3); margin-top: 2px; }
 
     .ic-row { display: flex; gap: 5px; flex-wrap: wrap; }
     .ic {
@@ -474,7 +471,7 @@
     }
     @media (max-width: 600px) { .sessions-row { grid-template-columns: 1fr; } }
 
-    .sb2 { border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.77rem; }
+    .sb2 { border-radius: 8px; padding: 0.7rem 0.9rem; font-size: 0.85rem; }
     .sb2.lec { background: var(--orange-dim); border: 1px solid var(--orange-border); }
     .sb2.lab { background: rgba(255,255,255,0.04); border: 1px solid var(--border-md); }
     [data-theme="light"] .sb2.lab { background: var(--bg-2); }
@@ -493,7 +490,7 @@
     }
     .ll { list-style: none; display: flex; flex-direction: column; gap: 3px; }
     .ll li {
-      font-size: 0.81rem;
+      font-size: 0.9rem;
       display: flex;
       align-items: baseline;
       gap: 7px;
@@ -520,12 +517,7 @@
       padding-top: 0.8rem;
       border-top: 1px solid var(--border);
     }
-    .dt {
-      font-size: 0.71rem;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 5px;
-    }
+    .dt { font-size: 0.71rem; font-weight: 600; padding: 4px 10px; border-radius: 5px; }
     .dt.chal { background: var(--orange-dim); color: var(--orange); border: 1px solid var(--orange-border); }
     .dt.lab  { background: rgba(255,255,255,0.05); color: var(--text-2); border: 1px solid var(--border-md); }
     [data-theme="light"] .dt.lab { background: var(--bg-2); }
@@ -543,7 +535,7 @@
     }
     .special-week .sw-icon { font-size: 1.3rem; }
     .special-week h4 { font-weight: 600; font-size: 0.87rem; margin-bottom: 3px; }
-    .special-week p { font-size: 0.78rem; color: var(--text-2); }
+    .special-week p { font-size: 0.87rem; color: var(--text-2); }
 
     /* ── CONTENT BOXES ── */
     .cbox {
@@ -562,7 +554,7 @@
       border: 1px solid var(--border);
       border-radius: 8px;
       padding: 1rem;
-      font-size: 0.81rem;
+      font-size: 0.88rem;
     }
     .bi h5 {
       font-size: 0.65rem;
@@ -588,12 +580,12 @@
       margin-bottom: 0.7rem;
     }
     .cert-col ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
-    .cert-col ul li { font-size: 0.83rem; color: var(--text-2); display: flex; gap: 8px; align-items: baseline; }
+    .cert-col ul li { font-size: 0.9rem; color: var(--text-2); display: flex; gap: 8px; align-items: baseline; }
     .cert-req ul li::before { content: '✓'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
     .cert-enc ul li::before { content: '→'; color: var(--text-3); flex-shrink: 0; }
 
     /* ── FOOTER ── */
-    footer { background: var(--bg-1); border-top: 1px solid var(--border); }
+    footer { background: #0a0a0a; border-top: 1px solid rgba(255,255,255,0.07); }
     .footer-inner {
       max-width: 1160px;
       margin: 0 auto;
@@ -603,31 +595,31 @@
       gap: 2rem;
     }
     @media (max-width: 820px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
-    .footer-brand p { font-size: 0.77rem; color: var(--text-3); line-height: 1.65; max-width: 240px; margin-top: 0.6rem; }
+    .footer-brand p { font-size: 0.77rem; color: rgba(229,229,229,0.38); line-height: 1.65; max-width: 240px; margin-top: 0.6rem; }
     .footer-col h5 {
       font-size: 0.65rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--text-3);
+      color: rgba(229,229,229,0.38);
       margin-bottom: 0.8rem;
     }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
-    .footer-col ul li a { font-size: 0.79rem; color: var(--text-2); text-decoration: none; transition: color 0.12s; }
-    .footer-col ul li a:hover { color: var(--orange); }
+    .footer-col ul li a { font-size: 0.79rem; color: rgba(229,229,229,0.55); text-decoration: none; transition: color 0.12s; }
+    .footer-col ul li a:hover { color: #FE6612; }
     .footer-bottom {
-      border-top: 1px solid var(--border);
+      border-top: 1px solid rgba(255,255,255,0.07);
       padding: 1.2rem 2rem;
       max-width: 1160px;
       margin: 0 auto;
       font-size: 0.71rem;
-      color: var(--text-3);
+      color: rgba(229,229,229,0.28);
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .footer-bottom a { color: var(--text-3); text-decoration: none; margin: 0 6px; }
-    .footer-bottom a:hover { color: var(--orange); }
+    .footer-bottom a { color: rgba(229,229,229,0.28); text-decoration: none; margin: 0 6px; }
+    .footer-bottom a:hover { color: #FE6612; }
 
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
@@ -636,11 +628,16 @@
 </head>
 <body>
 
-<!-- HEADER — always dark to sit flush with hero -->
+<!-- HEADER -->
 <header>
   <div class="header-inner">
     <div class="logo">
-      tri<span class="ai">AI</span>
+      <svg viewBox="0 0 200 88" height="44" xmlns="http://www.w3.org/2000/svg" aria-label="triAI" style="display:block;flex-shrink:0">
+        <text x="100" y="52" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="52"><tspan font-weight="500" letter-spacing="2" fill="#E5E5E5">tri</tspan><tspan font-weight="800" letter-spacing="3" fill="#D4A017">AI</tspan></text>
+        <circle cx="86" cy="74" r="4" fill="#FE6612"/>
+        <circle cx="100" cy="74" r="4" fill="#4A7CC9"/>
+        <circle cx="114" cy="74" r="4" fill="#2ECDB8"/>
+      </svg>
       <span class="logo-div"></span>
       <span class="logo-sub">Teaching · Research · Innovation</span>
     </div>
@@ -670,11 +667,11 @@
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <div class="stat-num">2,800<sup>+</sup></div>
+        <div class="stat-num">3,190</div>
         <div class="stat-label">Registered participants</div>
       </div>
       <div class="hero-stat">
-        <div class="stat-num">80<sup>+</sup></div>
+        <div class="stat-num">83</div>
         <div class="stat-label">Countries represented</div>
       </div>
       <div class="hero-stat">
@@ -688,7 +685,6 @@
     </div>
   </div>
 </div>
-<!-- orange accent rule separating hero from body -->
 <div class="hero-rule"></div>
 
 <!-- PAGE BODY -->
@@ -774,9 +770,6 @@
             <li class="is-lab"><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597241" target="_blank">Lab: Create your own probability distribution</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597242" target="_blank">Reflect on your findings</a></li>
             <li class="is-chk"><a href="https://www.skills.google/paths/3135/course_templates/1341/quizzes/597243" target="_blank">Knowledge Check 1</a></li>
-            
-            <!-- <li><a href="#">Learning objectives</a></li>
-            <li><a href="#">How to get the most out of this course</a></li> -->
           </ul>
         </div>
       </div>
@@ -898,7 +891,6 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597297" target="_blank">Looking forward</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597298" target="_blank">Additional resources</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597299" target="_blank">Glossary</a></li>
-
           </ul>
           <div class="del-row">
             <span class="dt chal">🏆 Challenge 2: Build a dataset ethically with a Data Card</span>
@@ -964,7 +956,6 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597297" target="_blank">Looking forward</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597298" target="_blank">Additional resources</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597299" target="_blank">Glossary</a></li>
-
           </ul>
         </div>
       </div>
@@ -1028,7 +1019,6 @@
             <li class="is-lab"><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597312" target="_blank">Lab: Make predictions with a single-layer neural network</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597304" target="_blank">Learning objectives</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597305" target="_blank">How to get the most out of this course</a></li>
-
           </ul>
         </div>
       </div>
@@ -1094,9 +1084,7 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597333" target="_blank">Summary</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597334" target="_blank">Additional resources</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597335" target="_blank">Looking forward</a></li>
-            <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597336" target="_blank">Glossary</a>
-            </li>
-
+            <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597336" target="_blank">Glossary</a></li>
           </ul>
           <div class="del-row">
             <span class="dt chal">🏆 Challenge 3: Create an impact statement card</span>
@@ -1242,7 +1230,6 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1451/html_bundles/603281" target="_blank">Looking forward</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1451/html_bundles/603282" target="_blank">Additional resources</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1451/html_bundles/603283" target="_blank">Glossary</a></li>
-
           </ul>
           <div class="del-row">
             <span class="dt lab">⚗ Lab: Implement masked multi-head attention</span>
@@ -1367,8 +1354,13 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="logo" style="display:inline-flex;margin-bottom:0.6rem">
-        tri<span class="ai">AI</span>
+      <div style="margin-bottom:0.6rem">
+        <svg viewBox="0 0 200 88" height="38" xmlns="http://www.w3.org/2000/svg" aria-label="triAI" style="display:block">
+          <text x="100" y="52" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="52"><tspan font-weight="500" letter-spacing="2" fill="#E5E5E5">tri</tspan><tspan font-weight="800" letter-spacing="3" fill="#D4A017">AI</tspan></text>
+          <circle cx="86" cy="74" r="4" fill="#FE6612"/>
+          <circle cx="100" cy="74" r="4" fill="#4A7CC9"/>
+          <circle cx="114" cy="74" r="4" fill="#2ECDB8"/>
+        </svg>
       </div>
       <p>Teaching · Research · Innovation<br/>Advancing AI education, research, and innovation across Africa. Since 2017.</p>
     </div>
