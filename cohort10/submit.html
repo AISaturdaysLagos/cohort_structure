@@ -535,8 +535,7 @@
   function resetForm() {
     document.getElementById('form-wrap').style.display = 'block';
     document.getElementById('success-card').style.display = 'none';
-    document.querySelector('form-card') && document.querySelector('form-card').reset();
-    // Clear fields manually
+    // Clear all fields
     ['name','email','slides-link','notebook-link','readings-link','notes'].forEach(id => {
       const el = document.getElementById(id);
       if (el) el.value = '';
@@ -545,6 +544,10 @@
     document.getElementById('session-type').value = '';
     document.querySelectorAll('.chip-btn').forEach(b => b.classList.remove('selected'));
     document.getElementById('error-msg').style.display = 'none';
+    // Reset submit button
+    const btn = document.querySelector('.btn-submit');
+    btn.disabled = false;
+    btn.textContent = 'Submit materials →';
   }
 </script>
 
