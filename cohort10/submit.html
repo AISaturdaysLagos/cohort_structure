@@ -454,7 +454,6 @@
 </div><!-- /page -->
 
 <script>
-  // Form action and field map are now handled directly in the hidden #gform element below.
 
   const FIELD_MAP = {
     name:         'entry.353245744',
@@ -486,6 +485,8 @@
     return true;
   }
 
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzsEncF_KxXXhbNtch8qBv7YLxrB_VvwktS8PqFVUIyZUK7AhkDhcoEDtPnODkTOH9Odg/exec';
+
   function handleSubmit() {
     document.getElementById('error-msg').style.display = 'none';
     if (!validate()) {
@@ -497,22 +498,31 @@
     btn.disabled = true;
     btn.textContent = 'Submitting…';
 
-    // Copy visible field values into the hidden Google Form inputs
-    document.getElementById('g-name').value         = document.getElementById('name').value;
-    document.getElementById('g-email').value        = document.getElementById('email').value;
-    document.getElementById('g-week').value         = document.getElementById('week').value;
-    document.getElementById('g-session-type').value = document.getElementById('session-type').value;
-    document.getElementById('g-slides-link').value  = document.getElementById('slides-link').value;
-    document.getElementById('g-notebook').value     = document.getElementById('notebook-link').value || '';
-    document.getElementById('g-readings').value     = document.getElementById('readings-link').value || '';
-    document.getElementById('g-notes').value        = document.getElementById('notes').value || '';
+    const params = new URLSearchParams({
+      name:         document.getElementById('name').value,
+      email:        document.getElementById('email').value,
+      week:         document.getElementById('week').value,
+      session_type: document.getElementById('session-type').value,
+      slides_link:  document.getElementById('slides-link').value,
+      notebook_link:document.getElementById('notebook-link').value || '',
+      readings_link:document.getElementById('readings-link').value || '',
+      notes:        document.getElementById('notes').value || ''
+    });
 
-    // Submit the hidden form — it posts to Google Forms inside the hidden iframe
-    // so the page never navigates away
-    document.getElementById('gform').submit();
-
-    // Show success after a short delay to let the POST fire
-    setTimeout(showSuccess, 800);
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString()
+    })
+    .then(() => showSuccess())
+    .catch(() => {
+      const btn = document.querySelector('.btn-submit');
+      btn.disabled = false;
+      btn.textContent = 'Submit materials →';
+      document.getElementById('error-msg').textContent = 'Something went wrong. Please try again or email cohorts@tri-ai.org.';
+      document.getElementById('error-msg').style.display = 'block';
+    });
   }
 
   function showSuccess() {
@@ -538,26 +548,6 @@
   }
 </script>
 
-<!-- Hidden iframe that catches the Google Form POST response (prevents page navigation) -->
-<iframe name="gform-target" id="gform-target" style="display:none" aria-hidden="true"></iframe>
-
-<!-- Hidden form that posts directly to Google Forms -->
-<form
-  id="gform"
-  action="https://docs.google.com/forms/d/e/1FAIpQLScd7TUHXa49mYyjkMFkDwiHRMmWatCm_GWRPcBLyCJXi24tDA/formResponse"
-  method="POST"
-  target="gform-target"
-  style="display:none"
->
-  <input type="hidden" id="g-name"         name="entry.353245744"/>
-  <input type="hidden" id="g-email"        name="entry.1027199280"/>
-  <input type="hidden" id="g-week"         name="entry.1739209780"/>
-  <input type="hidden" id="g-session-type" name="entry.809739635"/>
-  <input type="hidden" id="g-slides-link"  name="entry.149177349"/>
-  <input type="hidden" id="g-notebook"     name="entry.727080088"/>
-  <input type="hidden" id="g-readings"     name="entry.272507700"/>
-  <input type="hidden" id="g-notes"        name="entry.2095030728"/>
-</form>
 
 </body>
 </html>
