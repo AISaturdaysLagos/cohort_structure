@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Onboarding · TRI AI Saturdays Cohort 10</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:          #0a0a0a;
+      --bg-1:        #111111;
+      --bg-2:        #191919;
+      --bg-3:        #222222;
+      --border:      rgba(255,255,255,0.07);
+      --border-md:   rgba(255,255,255,0.13);
+      --text:        #E5E5E5;
+      --text-2:      rgba(229,229,229,0.75);
+      --text-3:      rgba(229,229,229,0.8);
+      --orange:      #FE6612;
+      --orange-dim:  rgba(254,102,18,0.1);
+      --orange-border:rgba(254,102,18,0.25);
+      --green:       #22c55e;
+      --green-dim:   rgba(34,197,94,0.12);
+      --blue:        #4A7CC9;
+      --blue-dim:    rgba(74,124,201,0.12);
+      --teal:        #2ECDB8;
+      --teal-dim:    rgba(46,205,184,0.12);
+      --purple:      #a78bfa;
+      --purple-dim:  rgba(167,139,250,0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--bg-1);
+      border-bottom: 1px solid var(--border-md);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+      justify-content: space-between;
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 10px; }
+    .logo-div { width: 1px; height: 16px; background: rgba(255,255,255,0.15); }
+    .logo-sub { font-size: 0.78rem; font-weight: 500; color: rgba(229,229,229,0.35); }
+    .header-link {
+      font-size: 0.8rem;
+      color: var(--text-3);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.15s;
+    }
+    .header-link:hover { color: var(--orange); }
+
+    /* HERO */
+    .hero-outer {
+      background: var(--bg-1);
+      border-bottom: 1px solid var(--border-md);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-outer::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(254,102,18,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 3rem;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--orange);
+      border: 1px solid var(--orange-border);
+      background: var(--orange-dim);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 1.2rem;
+    }
+    .hero-inner h1 {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 0.8rem;
+    }
+    .hero-inner p {
+      font-size: 0.95rem;
+      color: var(--text-2);
+      max-width: 580px;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .hstat { display: flex; flex-direction: column; gap: 2px; }
+    .hstat-num {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -0.04em;
+      color: var(--orange);
+    }
+    .hstat-label { font-size: 0.72rem; color: var(--text-3); }
+
+    /* ORANGE RULE */
+    .rule { height: 2px; background: linear-gradient(90deg, var(--orange) 0%, rgba(254,102,18,0.15) 50%, transparent 100%); }
+
+    /* MAIN */
+    .main { max-width: 860px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+    /* SECTION */
+    .section { margin-bottom: 3rem; }
+    .sec-eyebrow {
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.3rem;
+    }
+    .sec-title {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 800;
+      font-size: 1.3rem;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.2rem;
+      padding-left: 0.75rem;
+      border-left: 3px solid var(--orange);
+    }
+
+    /* CHECKLIST */
+    .checklist { display: flex; flex-direction: column; gap: 0.75rem; }
+    .check-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: var(--bg-1);
+      border: 1px solid var(--border-md);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      transition: border-color 0.15s;
+    }
+    .check-item:hover { border-color: rgba(254,102,18,0.3); }
+    .check-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .check-content { flex: 1; }
+    .check-title { font-weight: 700; font-size: 0.9rem; margin-bottom: 3px; }
+    .check-desc { font-size: 0.82rem; color: var(--text-2); line-height: 1.5; }
+    .check-desc a { color: var(--orange); text-decoration: none; font-weight: 600; }
+    .check-desc a:hover { text-decoration: underline; }
+    .check-note {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 0.72rem;
+      color: var(--text-3);
+      background: var(--bg-3);
+      border-radius: 5px;
+      padding: 2px 8px;
+    }
+
+    /* ZOOM BANNER */
+    .zoom-banner {
+      background: var(--blue-dim);
+      border: 1px solid rgba(74,124,201,0.25);
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-top: 1rem;
+      font-size: 0.84rem;
+    }
+    .zoom-banner .icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+    .zoom-banner strong { color: var(--blue); display: block; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 2px; }
+    .zoom-banner p { color: var(--text-2); line-height: 1.5; }
+
+    /* SCHEDULE */
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 600px) { .schedule-grid { grid-template-columns: 1fr; } }
+    .sched-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border-md);
+      border-radius: 12px;
+      padding: 1.2rem;
+    }
+    .sched-card .day {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.5rem;
+    }
+    .sched-card h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .sched-card .time {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-2);
+      margin-bottom: 0.5rem;
+    }
+    .sched-card p { font-size: 0.82rem; color: var(--text-3); line-height: 1.5; }
+
+    /* COURSE CARDS */
+    .course-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .course-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border-md);
+      border-radius: 12px;
+      padding: 1.1rem 1.2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .course-badge {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 5px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .c1 { background: var(--orange-dim); color: var(--orange); border: 1px solid var(--orange-border); }
+    .c2 { background: var(--blue-dim);   color: var(--blue);   border: 1px solid rgba(74,124,201,0.25); }
+    .c3 { background: var(--teal-dim);   color: var(--teal);   border: 1px solid rgba(46,205,184,0.25); }
+    .c4 { background: var(--purple-dim); color: var(--purple); border: 1px solid rgba(167,139,250,0.25); }
+    .course-card h4 { font-size: 0.88rem; font-weight: 700; margin-bottom: 3px; }
+    .course-card p { font-size: 0.8rem; color: var(--text-2); line-height: 1.5; }
+    .course-card .weeks { font-size: 0.72rem; color: var(--text-3); margin-top: 4px; }
+
+    /* PREP RESOURCES */
+    .prep-group { margin-bottom: 1.5rem; }
+    .prep-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 0.6rem;
+      padding-left: 2px;
+    }
+    .resource-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .resource-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border-md);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .resource-card:hover { border-color: var(--orange-border); background: var(--bg-2); }
+    .resource-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: #ff000015;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 0.85rem;
+      color: #ff4444;
+    }
+    .resource-info { flex: 1; }
+    .resource-title { font-size: 0.84rem; font-weight: 600; color: var(--text); line-height: 1.3; }
+    .resource-by { font-size: 0.72rem; color: var(--text-3); margin-top: 2px; }
+    .resource-arrow { color: var(--text-3); font-size: 0.75rem; }
+
+    /* CERT */
+    .cert-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .cert-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: var(--text-2);
+      background: var(--bg-1);
+      border: 1px solid var(--border-md);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+    }
+    .cert-check {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--green-dim);
+      border: 1px solid rgba(34,197,94,0.3);
+      color: var(--green);
+      font-size: 0.6rem;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* COMMUNITY */
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 0.75rem;
+    }
+    .community-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border-md);
+      border-radius: 12px;
+      padding: 1.1rem 1.2rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .community-card:hover { border-color: var(--orange-border); background: var(--bg-2); }
+    .community-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .community-info { flex: 1; }
+    .community-name { font-size: 0.85rem; font-weight: 700; color: var(--text); }
+    .community-desc { font-size: 0.73rem; color: var(--text-3); margin-top: 1px; }
+
+    /* SOCIAL */
+    .social-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-1);
+      border: 1px solid var(--border-md);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-2);
+      text-decoration: none;
+      transition: all 0.15s;
+    }
+    .social-btn:hover { border-color: var(--orange-border); color: var(--text); }
+
+    /* FOOTER */
+    footer {
+      background: var(--bg-1);
+      border-top: 1px solid var(--border-md);
+      padding: 2rem;
+      text-align: center;
+    }
+    footer p { font-size: 0.78rem; color: var(--text-3); line-height: 1.7; }
+    footer a { color: var(--orange); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem; }
+      .hero-inner { padding: 2.5rem 1rem 2rem; }
+      .main { padding: 2rem 1rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <svg viewBox="0 0 200 88" height="40" xmlns="http://www.w3.org/2000/svg" aria-label="triAI" style="display:block;flex-shrink:0">
+      <text x="100" y="52" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="52">
+        <tspan font-weight="500" letter-spacing="2" fill="#E5E5E5">tri</tspan><tspan font-weight="800" letter-spacing="3" fill="#D4A017">AI</tspan>
+      </text>
+      <circle cx="86" cy="74" r="4" fill="#FE6612"/>
+      <circle cx="100" cy="74" r="4" fill="#4A7CC9"/>
+      <circle cx="114" cy="74" r="4" fill="#2ECDB8"/>
+    </svg>
+    <span class="logo-div"></span>
+    <span class="logo-sub">Cohort 10 · Onboarding</span>
+  </div>
+  <a href="./index.html" class="header-link">← Cohort page</a>
+</header>
+
+<div class="hero-outer">
+  <div class="hero-inner">
+    <div class="hero-tag">🎉 You have been accepted</div>
+    <h1>Welcome to<br/>Cohort 10</h1>
+    <p>Everything you need to get started — your action steps, course overview, preparation resources, and community links. Complete the steps below before <strong>May 31</strong> so you are ready for Day 1.</p>
+    <div class="hero-stats">
+      <div class="hstat"><span class="hstat-num">3,000+</span><span class="hstat-label">Participants</span></div>
+      <div class="hstat"><span class="hstat-num">83</span><span class="hstat-label">Countries</span></div>
+      <div class="hstat"><span class="hstat-num">16</span><span class="hstat-label">Weeks</span></div>
+      <div class="hstat"><span class="hstat-num">May 31</span><span class="hstat-label">Start date</span></div>
+    </div>
+  </div>
+</div>
+<div class="rule"></div>
+
+<div class="main">
+
+  <!-- STEP 1 — ACTION STEPS -->
+  <div class="section">
+    <div class="sec-eyebrow">Before May 31</div>
+    <div class="sec-title">Complete these steps</div>
+    <div class="checklist">
+
+      <div class="check-item">
+        <div class="check-num">1</div>
+        <div class="check-content">
+          <div class="check-title">Create a Google Cloud Skills Boost account</div>
+          <div class="check-desc">
+            All your weekly course materials are on Google Cloud Skills Boost — it is free.<br/>
+            <a href="https://www.skills.google/users/sign_up" target="_blank">Create your account →</a>
+          </div>
+          <span class="check-note">After you create your account, we will email you an invitation to join the cohort pathway.</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-num">2</div>
+        <div class="check-content">
+          <div class="check-title">Accept the Skills Boost cohort invitation</div>
+          <div class="check-desc">
+            Check your email for the invitation link after completing Step 1. You must accept it to access the curriculum. 
+            Check the Getting Started Guide <a href="https://services.google.com/fh/files/misc/googlecloud-careerlaunchpad-student-guide.pdf" target="_blank">here →</a> for detailed instructions with screenshots.
+            If you do not see your invitation within 24 hours, check your spam folder or email <a href="mailto:cohorts@tri-ai.org">cohorts@tri-ai.org</a>.
+          </div>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-num">3</div>
+        <div class="check-content">
+          <div class="check-title">Join the Cohort 10 Discord</div>
+          <div class="check-desc">
+            Our main community space for announcements, help, and discussions throughout the cohort.<br/>
+            <a href="https://discord.gg/8sA4Tkgpkt" target="_blank">Join Discord →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-num">4</div>
+        <div class="check-content">
+          <div class="check-title">Join the Cohort 10 mailing list</div>
+          <div class="check-desc">
+            Weekly recaps, session reminders, and important updates are sent here. Do not miss this.<br/>
+            <a href="https://groups.google.com/a/tri-ai.org/g/cohort-10" target="_blank">Join mailing list →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="check-item">
+        <div class="check-num">5</div>
+        <div class="check-content">
+          <div class="check-title">Join Google Classroom</div>
+          <div class="check-desc">
+            Resources, assignments, and challenge submissions will be shared here.<br/>
+            <a href="#" target="_blank">Join Classroom → [LINK]</a>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="check-item">
+        <div class="check-num">5</div>
+        <div class="check-content">
+          <div class="check-title">Complete prerequisite refreshers if needed</div>
+          <div class="check-desc">
+            Review the preparation resources below — Python, linear algebra, and probability. A solid foundation will help you get much more from every session.
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="zoom-banner">
+      <div class="icon">🔗</div>
+      <div>
+        <strong>Zoom link</strong>
+        <p>Your session Zoom link will be shared with you in Week 1, once all participants have completed onboarding. Make sure you complete Steps 1–4 before May 31 so we can send it to you in time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCHEDULE -->
+  <div class="section">
+    <div class="sec-eyebrow">Programme · May 31 – Sep 19, 2026</div>
+    <div class="sec-title">Your weekly schedule</div>
+    <div class="schedule-grid">
+        <div class="sched-card">
+        <div class="day">Every Wednesday</div>
+        <h4>Lab Session</h4>
+        <div class="time">7:00pm – 9:00pm WAT</div>
+        <p>Hands-on walkthroughs of notebooks and coding exercises. A great time to work through problems and get help from the instructor.</p>
+      </div>
+      <div class="sched-card">
+        <div class="day">Every Saturday</div>
+        <h4>Live Lecture</h4>
+        <div class="time">11:00am – 1:00pm WAT</div>
+        <p>Core teaching sessions covering the week's concepts, delivered by an instructor. Interactive — come ready to engage and ask questions.</p>
+      </div>
+      
+    </div>
+    <div style="margin-top:1rem;background:var(--bg-1);border:1px solid var(--border-md);border-radius:12px;padding:1rem 1.2rem;">
+      <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.6rem;">Throughout the cohort you will also have</div>
+      <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+        <span style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:6px;padding:4px 10px;font-size:0.78rem;color:var(--text-2)">📧 Weekly recap emails</span>
+        <span style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:6px;padding:4px 10px;font-size:0.78rem;color:var(--text-2)">💬 Community discussions</span>
+        <span style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:6px;padding:4px 10px;font-size:0.78rem;color:var(--text-2)">🧠 Trivia & engagement activities</span>
+        <span style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:6px;padding:4px 10px;font-size:0.78rem;color:var(--text-2)">🧑‍🏫 Mentor support for projects</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHAT YOU WILL LEARN -->
+  <div class="section">
+    <div class="sec-eyebrow">Curriculum</div>
+    <div class="sec-title">What you will learn</div>
+    <div class="course-list">
+      <div class="course-card">
+        <span class="course-badge c1">Course 1</span>
+        <div>
+          <h4>Foundations of Language Modeling</h4>
+          <p>How language models work, the role of probability, the difference between n-grams and transformers, and how to train your first Small Language Model (SLM).</p>
+          <div class="weeks">Weeks 1 – 3</div>
+        </div>
+      </div>
+      <div class="course-card">
+        <span class="course-badge c2">Course 2</span>
+        <div>
+          <h4>Text Data: Tokenization &amp; Embeddings</h4>
+          <p>How machines read and represent text — data preprocessing, tokenization strategies including Byte Pair Encoding (BPE), word embeddings, and ethical dataset design.</p>
+          <div class="weeks">Weeks 4 – 6</div>
+        </div>
+      </div>
+      <div class="course-card">
+        <span class="course-badge c3">Course 3</span>
+        <div>
+          <h4>Neural Networks &amp; Training</h4>
+          <p>The multilayer perceptron, backpropagation, gradient descent, hyperparameter tuning, and how to train and evaluate neural networks in practice using Keras.</p>
+          <div class="weeks">Weeks 8 – 10</div>
+        </div>
+      </div>
+      <div class="course-card">
+        <span class="course-badge c4">Course 4</span>
+        <div>
+          <h4>Transformer Architecture</h4>
+          <p>The attention mechanism, masked and multi-head attention, positional embeddings, layer normalization, and how the full transformer model is built and trained.</p>
+          <div class="weeks">Weeks 11 – 14</div>
+        </div>
+      </div>
+      <div class="course-card">
+        <span class="course-badge" style="background:var(--green-dim);color:var(--green);border:1px solid rgba(34,197,94,0.25);">Week 16</span>
+        <div>
+          <h4>Demo Day — September 19, 2026</h4>
+          <p>Each team presents their Small Language Model project to the community — covering their problem, dataset, model, and ethical considerations. Top teams receive prizes.</p>
+          <div class="weeks">More details on the project will be shared in the coming weeks</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:0.75rem">
+      <a href="./index.html" style="font-size:0.82rem;color:var(--orange);text-decoration:none;font-weight:600;">View the full week-by-week curriculum →</a>
+    </div>
+  </div>
+
+  <!-- CERTIFICATE -->
+  <div class="section">
+    <div class="sec-eyebrow">Completion</div>
+    <div class="sec-title">Certificate requirements</div>
+    <ul class="cert-list">
+      <li><span class="cert-check">✓</span>Attend at least <strong>60% of Saturday lectures</strong></li>
+      <li><span class="cert-check">✓</span>Complete the <strong>"Train A Small Language Model"</strong> <a href="https://www.skills.google/course_templates/1453/labs/595070" target="_blank" style="font-size:0.82rem;color:var(--orange);text-decoration:none;font-weight:600;">(Challenge Lab)</a></li>
+      <li><span class="cert-check">✓</span>Submit all <strong>four cohort challenges</strong> as a team <a href="./index.html#challenges" target="_blank" style="font-size:0.82rem;color:var(--orange);text-decoration:none;font-weight:600;">(View challenges)</a></li>
+      <li><span class="cert-check">✓</span>Participate in a <strong>final capstone project</strong> as a team <a href="./index.html#challenges" target="_blank" style="font-size:0.82rem;color:var(--orange);text-decoration:none;font-weight:600;">(View projects)</a></li>
+    </ul>
+  </div>
+
+  <!-- PREP RESOURCES -->
+  <div class="section">
+    <div class="sec-eyebrow">Prepare ahead</div>
+    <div class="sec-title">Prerequisite resources</div>
+    <p style="font-size:0.85rem;color:var(--text-2);margin-bottom:1.5rem;line-height:1.65;">
+      You do not need to be an expert — but a solid foundation in Python, basic mathematics, and probability will help you get much more from every session. If any of these feel unfamiliar, we strongly recommend working through the resources below before May 31.
+    </p>
+
+    <div class="prep-group">
+      <div class="prep-label">🐍 Python</div>
+      <div class="resource-list">
+        <a href="https://www.youtube.com/watch?v=-nUIV5TOnl4" target="_blank" class="resource-card">
+          <div class="resource-icon"><i class="fa-brands fa-youtube"></i></div>
+          <div class="resource-info">
+            <div class="resource-title">Python Refresher</div>
+            <div class="resource-by">By Steven Kolawole</div>
+          </div>
+          <span class="resource-arrow">↗</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=K5KVEU3aaeQ" target="_blank" class="resource-card">
+          <div class="resource-icon"><i class="fa-brands fa-youtube"></i></div>
+          <div class="resource-info">
+            <div class="resource-title">Python Full Course for Beginners</div>
+            <div class="resource-by">YouTube</div>
+          </div>
+          <span class="resource-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="prep-group">
+      <div class="prep-label">📐 Linear Algebra</div>
+      <div class="resource-list">
+        <a href="https://www.youtube.com/watch?v=tClanqLla9o&list=PLD0HH4Qq3rccNiAM7n2hQ22yQ4ICCX5Q0&index=11" target="_blank" class="resource-card">
+          <div class="resource-icon"><i class="fa-brands fa-youtube"></i></div>
+          <div class="resource-info">
+            <div class="resource-title">Linear Algebra</div>
+            <div class="resource-by">By Kenechi Dukor</div>
+          </div>
+          <span class="resource-arrow">↗</span>
+        </a>
+        <a href="https://www.youtube.com/watch?v=uZeDTwWcnuY&list=PLD80i8An1OEGZ2tYimemzwC3xqkU0jKUg" target="_blank" class="resource-card">
+          <div class="resource-icon"><i class="fa-brands fa-youtube"></i></div>
+          <div class="resource-info">
+            <div class="resource-title">Linear Algebra for Machine Learning</div>
+            <div class="resource-by">YouTube</div>
+          </div>
+          <span class="resource-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="prep-group">
+      <div class="prep-label">🎲 Probability</div>
+      <div class="resource-list">
+        <a href="https://www.youtube.com/watch?v=y0wBs5clRYk" target="_blank" class="resource-card">
+          <div class="resource-icon"><i class="fa-brands fa-youtube"></i></div>
+          <div class="resource-info">
+            <div class="resource-title">Basics of Probability</div>
+            <div class="resource-by">By Emefa Duah</div>
+          </div>
+          <span class="resource-arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMMUNITY -->
+  <div class="section">
+    <div class="sec-eyebrow">Community</div>
+    <div class="sec-title">Join the conversation</div>
+    <div class="community-grid">
+      <a href="https://discord.gg/8sA4Tkgpkt" target="_blank" class="community-card">
+        <div class="community-icon" style="background:rgba(88,101,242,0.15);color:#5865F2;"><i class="fa-brands fa-discord"></i></div>
+        <div class="community-info">
+          <div class="community-name">Discord</div>
+          <div class="community-desc">Main community hub — announcements, help &amp; discussions</div>
+        </div>
+      </a>
+      <a href="https://groups.google.com/a/tri-ai.org/g/cohort-10" target="_blank" class="community-card">
+        <div class="community-icon" style="background:rgba(254,102,18,0.12);color:var(--orange);"><i class="fa-solid fa-envelope"></i></div>
+        <div class="community-info">
+          <div class="community-name">Mailing List</div>
+          <div class="community-desc">Weekly recaps and important programme updates</div>
+        </div>
+      </a>
+      <a href="https://www.skills.google/paths/3135" target="_blank" class="community-card">
+        <div class="community-icon" style="background:rgba(74,124,201,0.12);color:var(--blue);"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="community-info">
+          <div class="community-name">Google Skills Boost</div>
+          <div class="community-desc">All course materials — free access</div>
+        </div>
+      </a>
+      <a href="./index.html" class="community-card">
+        <div class="community-icon" style="background:rgba(46,205,184,0.12);color:var(--teal);"><i class="fa-solid fa-calendar"></i></div>
+        <div class="community-info">
+          <div class="community-name">Cohort Programme Page</div>
+          <div class="community-desc">Full curriculum, schedule &amp; instructor info</div>
+        </div>
+      </a>
+    </div>
+
+    <div style="margin-top:1.5rem">
+      <div class="sec-eyebrow" style="margin-bottom:0.7rem">Follow TRI AI Saturdays</div>
+      <div class="social-row">
+        <a href="https://www.youtube.com/@AISaturdaysLagos" target="_blank" class="social-btn"><i class="fa-brands fa-youtube" style="color:#ff4444"></i> YouTube</a>
+        <a href="https://x.com/aisaturdaylagos" target="_blank" class="social-btn"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
+        <a href="https://www.linkedin.com/company/aisaturdayslagos" target="_blank" class="social-btn"><i class="fa-brands fa-linkedin" style="color:#0A66C2"></i> LinkedIn</a>
+        <a href="https://github.com/AISaturdaysLagos" target="_blank" class="social-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.instagram.com/aisaturdayslagos" target="_blank" class="social-btn"><i class="fa-brands fa-instagram" style="color:#E1306C"></i> Instagram</a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /main -->
+
+<footer>
+  <p>
+    Questions? Email us at <a href="mailto:cohorts@tri-ai.org">cohorts@tri-ai.org</a><br/>
+    <a href="./index.html">← Back to Cohort 10 programme page</a> &nbsp;·&nbsp;
+    <a href="https://tri-ai.org" target="_blank">tri-ai.org</a><br/>
+    <span style="margin-top:0.3rem;display:block;">© 2026 TRI AI — Teaching · Research · Innovation</span>
+  </p>
+</footer>
+
+</body>
+</html>
