@@ -493,43 +493,30 @@
       return;
     }
 
-    // Build form data
-    const data = {
-      name:         document.getElementById('name').value,
-      email:        document.getElementById('email').value,
-      week:         document.getElementById('week').value,
-      session_type: document.getElementById('session-type').value,
-      slides_link:  document.getElementById('slides-link').value,
-      notebook_link:document.getElementById('notebook-link').value,
-      readings_link:document.getElementById('readings-link').value,
-      notes:        document.getElementById('notes').value,
-    };
+    const btn = document.querySelector('.btn-submit');
+    btn.disabled = true;
+    btn.textContent = 'Submitting…';
 
-    // Submit to Google Forms via hidden iframe (no CORS issues)
-    if (FORM_ACTION !== 'REPLACE_WITH_GOOGLE_FORM_ACTION_URL') {
-      const params = new URLSearchParams();
-      for (const [key, entryId] of Object.entries(FIELD_MAP)) {
-        params.append(entryId, data[key] || '');
-      }
-      const iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.name = 'hidden-submit';
-      document.body.appendChild(iframe);
+    // Build URL-encoded body mapping each field to its Google Form entry ID
+    const params = new URLSearchParams();
+    params.append(FIELD_MAP.name,          document.getElementById('name').value);
+    params.append(FIELD_MAP.email,         document.getElementById('email').value);
+    params.append(FIELD_MAP.week,          document.getElementById('week').value);
+    params.append(FIELD_MAP.session_type,  document.getElementById('session-type').value);
+    params.append(FIELD_MAP.slides_link,   document.getElementById('slides-link').value);
+    params.append(FIELD_MAP.notebook_link, document.getElementById('notebook-link').value || '');
+    params.append(FIELD_MAP.readings_link, document.getElementById('readings-link').value || '');
+    params.append(FIELD_MAP.notes,         document.getElementById('notes').value || '');
 
-      const form = document.createElement('form');
-      form.action = FORM_ACTION;
-      form.method = 'POST';
-      form.target = 'hidden-submit';
-      form.innerHTML = params.toString().split('&').map(pair => {
-        const [k, v] = pair.split('=');
-        return `<input type="hidden" name="${decodeURIComponent(k)}" value="${decodeURIComponent(v)}">`;
-      }).join('');
-      document.body.appendChild(form);
-      form.submit();
-    }
-
-    // Show success regardless (Google Forms doesn't return a success response cross-origin)
-    showSuccess();
+    // fetch with mode:'no-cors' — response is opaque but submission goes through
+    fetch(FORM_ACTION, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString()
+    })
+    .then(() => { showSuccess(); })
+    .catch(() => { showSuccess(); });
   }
 
   function showSuccess() {
