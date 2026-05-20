@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Submit Materials · TRI AI Saturdays Cohort 10</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:       #0a0a0a;
+      --bg-1:     #111111;
+      --bg-2:     #191919;
+      --bg-3:     #222222;
+      --border:   rgba(255,255,255,0.07);
+      --border-md:rgba(255,255,255,0.13);
+      --text:     #E5E5E5;
+      --text-2:   rgba(229,229,229,0.75);
+      --text-3:   rgba(229,229,229,0.5);
+      --orange:   #FE6612;
+      --orange-dim:rgba(254,102,18,0.1);
+      --orange-border:rgba(254,102,18,0.25);
+      --green:    #22c55e;
+      --green-dim:rgba(34,197,94,0.12);
+      --red:      #f87171;
+      --red-dim:  rgba(248,113,113,0.1);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--bg-1);
+      border-bottom: 1px solid var(--border-md);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 10px; }
+    .logo-div { width: 1px; height: 16px; background: rgba(255,255,255,0.15); }
+    .logo-sub { font-size: 0.78rem; font-weight: 500; color: rgba(229,229,229,0.35); }
+    .back-link {
+      margin-left: auto;
+      font-size: 0.8rem;
+      color: var(--text-3);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.15s;
+    }
+    .back-link:hover { color: var(--orange); }
+
+    /* PAGE */
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+    .page-eyebrow {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.4rem;
+    }
+    .page-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      padding-left: 0.8rem;
+      border-left: 3px solid var(--orange);
+    }
+    .page-desc {
+      font-size: 0.88rem;
+      color: var(--text-2);
+      margin-bottom: 2.5rem;
+      line-height: 1.65;
+    }
+    .page-desc a { color: var(--orange); text-decoration: none; }
+    .page-desc a:hover { text-decoration: underline; }
+
+    /* DEADLINE BANNER */
+    .deadline-banner {
+      background: var(--orange-dim);
+      border: 1px solid var(--orange-border);
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 2rem;
+      font-size: 0.85rem;
+    }
+    .deadline-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+    .deadline-banner strong { color: var(--orange); display: block; margin-bottom: 2px; font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .deadline-banner p { color: var(--text-2); line-height: 1.5; }
+
+    /* FORM CARD */
+    .form-card {
+      background: var(--bg-1);
+      border: 1px solid var(--border-md);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .form-section {
+      padding: 1.5rem 1.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .form-section:last-child { border-bottom: none; }
+    .section-label {
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1rem;
+    }
+    .field { margin-bottom: 1.1rem; }
+    .field:last-child { margin-bottom: 0; }
+    label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    label .req { color: var(--orange); margin-left: 3px; }
+    label .opt {
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: var(--text-3);
+      margin-left: 4px;
+    }
+    .field-hint {
+      font-size: 0.76rem;
+      color: var(--text-3);
+      margin-top: 5px;
+      line-height: 1.4;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    select,
+    textarea {
+      width: 100%;
+      background: var(--bg-2);
+      border: 1px solid var(--border-md);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.88rem;
+      padding: 0.6rem 0.85rem;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      appearance: none;
+    }
+    input::placeholder, textarea::placeholder { color: var(--text-3); }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(254,102,18,0.12);
+    }
+    select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(229,229,229,0.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.85rem center;
+      padding-right: 2rem;
+      cursor: pointer;
+    }
+    select option { background: #1a1a1a; }
+    textarea { resize: vertical; min-height: 90px; line-height: 1.55; }
+
+    /* FIELD GRID */
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 520px) { .field-row { grid-template-columns: 1fr; } }
+
+    /* FILE TYPE CHIPS */
+    .chip-group { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2px; }
+    .chip-btn {
+      background: var(--bg-2);
+      border: 1px solid var(--border-md);
+      border-radius: 7px;
+      color: var(--text-2);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 5px 12px;
+      cursor: pointer;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: all 0.15s;
+    }
+    .chip-btn:hover { border-color: var(--orange); color: var(--text); }
+    .chip-btn.selected { background: var(--orange-dim); border-color: var(--orange); color: var(--orange); font-weight: 600; }
+
+    /* SUBMIT SECTION */
+    .submit-section {
+      padding: 1.4rem 1.6rem;
+      background: var(--bg-2);
+      border-top: 1px solid var(--border-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .submit-note {
+      font-size: 0.78rem;
+      color: var(--text-3);
+      flex: 1;
+      min-width: 180px;
+    }
+    .submit-note strong { color: var(--text-2); }
+    .btn-submit {
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.65rem 1.6rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+      white-space: nowrap;
+    }
+    .btn-submit:hover { opacity: 0.9; }
+    .btn-submit:active { transform: scale(0.98); }
+    .btn-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    /* SUCCESS STATE */
+    .success-card {
+      display: none;
+      background: var(--green-dim);
+      border: 1px solid rgba(34,197,94,0.25);
+      border-radius: 14px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .success-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .success-card h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--green); }
+    .success-card p { font-size: 0.88rem; color: var(--text-2); max-width: 400px; margin: 0 auto 1.2rem; line-height: 1.6; }
+    .btn-again {
+      background: transparent;
+      border: 1px solid var(--border-md);
+      border-radius: 8px;
+      color: var(--text-2);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.5rem 1.2rem;
+      cursor: pointer;
+      transition: border-color 0.15s;
+    }
+    .btn-again:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* ERROR */
+    .error-msg {
+      display: none;
+      background: var(--red-dim);
+      border: 1px solid rgba(248,113,113,0.25);
+      border-radius: 8px;
+      padding: 0.7rem 1rem;
+      font-size: 0.82rem;
+      color: var(--red);
+      margin-top: 0.8rem;
+    }
+
+    /* FOOTER */
+    .page-footer {
+      margin-top: 2.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-3);
+    }
+    .page-footer a { color: var(--text-3); text-decoration: none; }
+    .page-footer a:hover { color: var(--orange); }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem; }
+      .page { padding: 2rem 1rem 4rem; }
+      .submit-section { flex-direction: column; align-items: stretch; }
+      .btn-submit { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <svg viewBox="0 0 200 88" height="40" xmlns="http://www.w3.org/2000/svg" aria-label="triAI" style="display:block;flex-shrink:0">
+      <text x="100" y="52" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="52">
+        <tspan font-weight="500" letter-spacing="2" fill="#E5E5E5">tri</tspan><tspan font-weight="800" letter-spacing="3" fill="#D4A017">AI</tspan>
+      </text>
+      <circle cx="86" cy="74" r="4" fill="#FE6612"/>
+      <circle cx="100" cy="74" r="4" fill="#4A7CC9"/>
+      <circle cx="114" cy="74" r="4" fill="#2ECDB8"/>
+    </svg>
+    <span class="logo-div"></span>
+    <span class="logo-sub">Cohort 10 · Facilitator Portal</span>
+  </div>
+  <a href="./index.html" class="back-link">← Cohort page</a>
+</header>
+
+<div class="page">
+
+  <div class="page-eyebrow">Facilitators</div>
+  <h1 class="page-title">Submit Your Materials</h1>
+  <p class="page-desc">
+    Use this form to share your slides, lab notebooks, and any supporting resources for your session.
+    Please submit at least <strong>5 days before your scheduled date</strong> — a working draft link is fine.
+    If you have questions, reach out to <a href="mailto:cohorts@tri-ai.org">cohorts@tri-ai.org</a>.
+  </p>
+
+  <div class="deadline-banner">
+    <div class="deadline-icon">⏰</div>
+    <div>
+      <strong>Deadline reminder</strong>
+      <p>Slides are due <strong>5 days before your session</strong>. Early submissions help us provide better feedback. If you're still finalising, share a draft link — you can update it any time.</p>
+    </div>
+  </div>
+
+  <!-- FORM -->
+  <div id="form-wrap">
+    <div class="form-card">
+
+      <!-- YOUR DETAILS -->
+      <div class="form-section">
+        <div class="section-label">Your details</div>
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Full name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="e.g. Tejumade Afonja" required autocomplete="name"/>
+          </div>
+          <div class="field">
+            <label for="email">Email address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- SESSION -->
+      <div class="form-section">
+        <div class="section-label">Your session</div>
+        <div class="field-row">
+          <div class="field">
+            <label for="week">Week &amp; topic <span class="req">*</span></label>
+            <select id="week" name="week" required onchange="updateTopic()">
+              <option value="" disabled selected>Select your week</option>
+              <option value="Week 1 — Introduction to Language Modeling">Week 1 — Introduction to Language Modeling</option>
+              <option value="Week 2 — From N-grams to Transformers">Week 2 — From N-grams to Transformers</option>
+              <option value="Week 3 — Training a Language Model">Week 3 — Training a Language Model</option>
+              <option value="Week 4 — Introduction to Text &amp; Data Preprocessing">Week 4 — Text &amp; Data Preprocessing</option>
+              <option value="Week 5 — Tokenization">Week 5 — Tokenization</option>
+              <option value="Week 6 — Embeddings">Week 6 — Embeddings</option>
+              <option value="Week 8 — Introduction to Neural Networks">Week 8 — Introduction to Neural Networks</option>
+              <option value="Week 9 — Modeling Complex Data with MLP">Week 9 — Modeling Complex Data with MLP</option>
+              <option value="Week 10 — Gradients &amp; Backpropagation">Week 10 — Gradients &amp; Backpropagation</option>
+              <option value="Week 11 — Architecture of Modern Large Language Models">Week 11 — Architecture of Modern LLMs</option>
+              <option value="Week 12 — The Attention Mechanism">Week 12 — The Attention Mechanism</option>
+              <option value="Week 13 — Positional Embeddings &amp; Stakeholder Values">Week 13 — Positional Embeddings &amp; Stakeholder Values</option>
+              <option value="Week 14 — Transformer Block, MLP &amp; Layer Normalization">Week 14 — Transformer Block, MLP &amp; Layer Norm</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Session type <span class="req">*</span></label>
+            <div class="chip-group" id="session-type-group">
+              <button type="button" class="chip-btn" data-value="Lecture" onclick="selectType(this)">📖 Lecture</button>
+              <button type="button" class="chip-btn" data-value="Lab" onclick="selectType(this)">🧪 Lab</button>
+              <button type="button" class="chip-btn" data-value="Both" onclick="selectType(this)">Both</button>
+            </div>
+            <input type="hidden" id="session-type" name="session_type"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- MATERIALS -->
+      <div class="form-section">
+        <div class="section-label">Materials</div>
+
+        <div class="field">
+          <label for="slides-link">Slides link <span class="req">*</span></label>
+          <input type="url" id="slides-link" name="slides_link" placeholder="https://docs.google.com/presentation/..." required/>
+          <p class="field-hint">Google Slides, Canva, or any shareable link. A draft is fine — make sure link sharing is set to "Anyone with the link can view".</p>
+        </div>
+
+        <div class="field">
+          <label for="notebook-link">Lab notebook link <span class="opt">(optional)</span></label>
+          <input type="url" id="notebook-link" name="notebook_link" placeholder="https://colab.research.google.com/..."/>
+          <p class="field-hint">Google Colab, Jupyter, or GitHub link to your notebook.</p>
+        </div>
+
+        <div class="field">
+          <label for="readings-link">Pre-reading resources <span class="opt">(optional)</span></label>
+          <input type="url" id="readings-link" name="readings_link" placeholder="https://..."/>
+          <p class="field-hint">A link to a doc, folder, or page listing resources you want students to review before your session.</p>
+        </div>
+      </div>
+
+      <!-- NOTES -->
+      <div class="form-section">
+        <div class="section-label">Additional notes</div>
+        <div class="field">
+          <label for="notes">Anything else we should know? <span class="opt">(optional)</span></label>
+          <textarea id="notes" name="notes" placeholder="e.g. content still being finalised, specific setup instructions for students, tools they should install beforehand..."></textarea>
+        </div>
+      </div>
+
+    </div><!-- /form-card -->
+
+    <div id="error-msg" class="error-msg">
+      Please fill in all required fields before submitting.
+    </div>
+
+    <div class="submit-section" style="background:var(--bg-1);border:1px solid var(--border-md);border-top:none;border-radius:0 0 14px 14px;">
+      <p class="submit-note">
+        <strong>Need to update your submission?</strong> Just submit again — we'll use the most recent entry.
+      </p>
+      <button class="btn-submit" type="button" onclick="handleSubmit()">Submit materials →</button>
+    </div>
+  </div><!-- /form-wrap -->
+
+  <!-- SUCCESS STATE -->
+  <div class="success-card" id="success-card">
+    <div class="success-icon">✅</div>
+    <h2>Submission received!</h2>
+    <p>Thank you for sharing your materials. We'll review them and get back to you with any feedback before your session. If you need to update anything, just submit again.</p>
+    <button class="btn-again" onclick="resetForm()">Submit another session</button>
+  </div>
+
+  <div class="page-footer">
+    <a href="./index.html">← Back to Cohort 10 page</a>
+    &nbsp;·&nbsp;
+    Questions? <a href="mailto:hello@tri-ai.org">hello@tri-ai.org</a>
+    &nbsp;·&nbsp;
+    © 2026 TRI AI
+  </div>
+
+</div><!-- /page -->
+
+<script>
+  // ── REPLACE THIS URL with your Google Form action endpoint ──
+  // How to get it: In Google Forms → ⋮ → Get pre-filled link → fill a test entry
+  // → submit → copy the URL shown → replace /viewform with /formResponse
+  const FORM_ACTION = 'REPLACE_WITH_GOOGLE_FORM_ACTION_URL';
+
+  // Map Google Form field entry IDs here after creating your form
+  const FIELD_MAP = {
+    name:         'entry.XXXXXXXXX',
+    email:        'entry.XXXXXXXXX',
+    week:         'entry.XXXXXXXXX',
+    session_type: 'entry.XXXXXXXXX',
+    slides_link:  'entry.XXXXXXXXX',
+    notebook_link:'entry.XXXXXXXXX',
+    readings_link:'entry.XXXXXXXXX',
+    notes:        'entry.XXXXXXXXX',
+  };
+
+  function selectType(btn) {
+    document.querySelectorAll('.chip-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    document.getElementById('session-type').value = btn.dataset.value;
+  }
+
+  function updateTopic() {
+    // topic is embedded in the week option value — nothing extra needed
+  }
+
+  function validate() {
+    const required = ['name','email','week','session-type','slides-link'];
+    for (const id of required) {
+      const el = document.getElementById(id);
+      if (!el || !el.value.trim()) return false;
+    }
+    return true;
+  }
+
+  function handleSubmit() {
+    document.getElementById('error-msg').style.display = 'none';
+    if (!validate()) {
+      document.getElementById('error-msg').style.display = 'block';
+      return;
+    }
+
+    // Build form data
+    const data = {
+      name:         document.getElementById('name').value,
+      email:        document.getElementById('email').value,
+      week:         document.getElementById('week').value,
+      session_type: document.getElementById('session-type').value,
+      slides_link:  document.getElementById('slides-link').value,
+      notebook_link:document.getElementById('notebook-link').value,
+      readings_link:document.getElementById('readings-link').value,
+      notes:        document.getElementById('notes').value,
+    };
+
+    // Submit to Google Forms via hidden iframe (no CORS issues)
+    if (FORM_ACTION !== 'REPLACE_WITH_GOOGLE_FORM_ACTION_URL') {
+      const params = new URLSearchParams();
+      for (const [key, entryId] of Object.entries(FIELD_MAP)) {
+        params.append(entryId, data[key] || '');
+      }
+      const iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.name = 'hidden-submit';
+      document.body.appendChild(iframe);
+
+      const form = document.createElement('form');
+      form.action = FORM_ACTION;
+      form.method = 'POST';
+      form.target = 'hidden-submit';
+      form.innerHTML = params.toString().split('&').map(pair => {
+        const [k, v] = pair.split('=');
+        return `<input type="hidden" name="${decodeURIComponent(k)}" value="${decodeURIComponent(v)}">`;
+      }).join('');
+      document.body.appendChild(form);
+      form.submit();
+    }
+
+    // Show success regardless (Google Forms doesn't return a success response cross-origin)
+    showSuccess();
+  }
+
+  function showSuccess() {
+    document.getElementById('form-wrap').style.display = 'none';
+    const sc = document.getElementById('success-card');
+    sc.style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function resetForm() {
+    document.getElementById('form-wrap').style.display = 'block';
+    document.getElementById('success-card').style.display = 'none';
+    document.querySelector('form-card') && document.querySelector('form-card').reset();
+    // Clear fields manually
+    ['name','email','slides-link','notebook-link','readings-link','notes'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.value = '';
+    });
+    document.getElementById('week').value = '';
+    document.getElementById('session-type').value = '';
+    document.querySelectorAll('.chip-btn').forEach(b => b.classList.remove('selected'));
+    document.getElementById('error-msg').style.display = 'none';
+  }
+</script>
+</body>
+</html>
