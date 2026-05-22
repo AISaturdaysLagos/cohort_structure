@@ -541,15 +541,16 @@
     { week: 4,  date: 'June 28, 2026',    topic: 'Text & Data Preprocessing' },
     { week: 5,  date: 'July 5, 2026',     topic: 'Tokenization' },
     { week: 6,  date: 'July 12, 2026',    topic: 'Embeddings' },
-    { week: 7,  date: 'July 26, 2026',    topic: 'Introduction to Neural Networks' },
-    { week: 8,  date: 'August 2, 2026',   topic: 'Modeling Complex Data with MLP' },
-    { week: 9,  date: 'August 9, 2026',   topic: 'Gradients & Backpropagation' },
-    { week: 10, date: 'August 16, 2026',  topic: 'Architecture of Modern LLMs' },
-    { week: 11, date: 'August 23, 2026',  topic: 'The Attention Mechanism' },
-    { week: 12, date: 'August 30, 2026',  topic: 'Positional Embeddings' },
-    { week: 13, date: 'September 6, 2026',topic: 'Project Week' },
-    { week: 14, date: 'September 13, 2026',topic: 'Transformer Block & Layer Normalization' },
-    { week: 15, date: 'September 19, 2026',topic: 'Demo Day 🎉' },
+    { week: 7,  date: 'July 19, 2026',    topic: 'Mid-Cohort Break', isBreak: true },
+    { week: 8,  date: 'July 26, 2026',    topic: 'Introduction to Neural Networks' },
+    { week: 9,  date: 'August 2, 2026',   topic: 'Modeling Complex Data with MLP' },
+    { week: 10, date: 'August 9, 2026',   topic: 'Gradients & Backpropagation' },
+    { week: 11, date: 'August 16, 2026',  topic: 'Architecture of Modern LLMs' },
+    { week: 12, date: 'August 23, 2026',  topic: 'The Attention Mechanism' },
+    { week: 13, date: 'August 30, 2026',  topic: 'Positional Embeddings' },
+    { week: 14, date: 'September 6, 2026', topic: 'Project Week' },
+    { week: 15, date: 'September 13, 2026',topic: 'Transformer Block & Layer Normalization' },
+    { week: 16, date: 'September 19, 2026',topic: 'Demo Day 🎉' },
   ];
 
   // State
@@ -584,6 +585,20 @@
     currentWeek = wk.week;
     document.getElementById('week-label').textContent =
       `Week ${wk.week} · ${wk.date}`;
+
+    // If it's the break week, show a friendly message instead of the form
+    if (wk.isBreak) {
+      document.getElementById('subtitle').textContent =
+        'This is the mid-cohort break week — no session today. Enjoy the rest and see you next Saturday!';
+      document.getElementById('step-1').style.display = 'none';
+      document.getElementById('progress-bar').style.display = 'none';
+      const banner = document.createElement('div');
+      banner.className = 'banner info';
+      banner.innerHTML = '<span class="bi">☀️</span><span>No check-in needed this week. The form will reopen for Week 8 on July 26.</span>';
+      document.querySelector('.page').insertBefore(banner, document.getElementById('step-1'));
+      return;
+    }
+
     document.getElementById('subtitle').textContent =
       `Enter your registered email to confirm attendance for today's session: ${wk.topic}.`;
   }
@@ -635,18 +650,9 @@
         errEl.style.display = 'flex';
       }
     } catch (err) {
-      // If script URL not set yet, show step 2 with demo mode
-      if (SCRIPT_URL === 'REPLACE_WITH_ATTENDANCE_APPS_SCRIPT_URL') {
-        studentEmail     = email;
-        studentFirstName = email.split('@')[0];
-        studentLastName  = '';
-        studentName      = email.split('@')[0];
-        showStep2(false);
-      } else {
-        document.getElementById('email-error-msg').textContent =
-          'Something went wrong. Please try again or email cohorts@tri-ai.org.';
-        errEl.style.display = 'flex';
-      }
+      document.getElementById('email-error-msg').textContent =
+        'Something went wrong. Please try again or email cohorts@tri-ai.org.';
+      errEl.style.display = 'flex';
     }
 
     btn.disabled = false;
