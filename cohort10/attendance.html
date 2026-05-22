@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saturday Check-in · TRI AI Saturdays Cohort 10</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:          #0a0a0a;
+      --bg-1:        #111111;
+      --bg-2:        #191919;
+      --bg-3:        #222222;
+      --border:      rgba(255,255,255,0.07);
+      --border-md:   rgba(255,255,255,0.13);
+      --text:        #E5E5E5;
+      --text-2:      rgba(229,229,229,0.75);
+      --text-3:      rgba(229,229,229,0.5);
+      --orange:      #FE6612;
+      --orange-dim:  rgba(254,102,18,0.1);
+      --orange-border: rgba(254,102,18,0.25);
+      --green:       #22c55e;
+      --green-dim:   rgba(34,197,94,0.12);
+      --red:         #f87171;
+      --red-dim:     rgba(248,113,113,0.1);
+      --yellow:      #fbbf24;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--bg-1);
+      border-bottom: 1px solid var(--border-md);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo-wrap { display: flex; align-items: center; gap: 10px; }
+    .logo-div  { width: 1px; height: 16px; background: rgba(255,255,255,0.15); }
+    .logo-sub  { font-size: 0.78rem; font-weight: 500; color: rgba(229,229,229,0.35); }
+    .back-link { font-size: 0.8rem; color: var(--text-3); text-decoration: none; transition: color 0.15s; }
+    .back-link:hover { color: var(--orange); }
+
+    /* PAGE */
+    .page {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    /* WEEK PILL */
+    .week-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange-dim);
+      border: 1px solid var(--orange-border);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.2rem;
+    }
+    .week-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--orange);
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+
+    h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.7rem, 5vw, 2.2rem);
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-2);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    /* FORM CARD */
+    .card {
+      background: var(--bg-1);
+      border: 1px solid var(--border-md);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .card-section {
+      padding: 1.4rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-section:last-child { border-bottom: none; }
+    .section-label {
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 0.9rem;
+    }
+
+    /* INPUTS */
+    label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    label .opt { font-size: 0.7rem; font-weight: 400; color: var(--text-3); margin-left: 4px; }
+    .field { margin-bottom: 1.1rem; }
+    .field:last-child { margin-bottom: 0; }
+    .field-hint { font-size: 0.75rem; color: var(--text-3); margin-top: 5px; line-height: 1.4; }
+    input[type="email"],
+    textarea {
+      width: 100%;
+      background: var(--bg-2);
+      border: 1px solid var(--border-md);
+      border-radius: 8px;
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.9rem;
+      padding: 0.65rem 0.9rem;
+      outline: none;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    input::placeholder, textarea::placeholder { color: var(--text-3); }
+    input:focus, textarea:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(254,102,18,0.12);
+    }
+    input.error { border-color: var(--red); box-shadow: 0 0 0 3px var(--red-dim); }
+    textarea { resize: vertical; min-height: 80px; line-height: 1.55; }
+
+    /* ATTENDANCE OPTIONS */
+    .att-options { display: flex; flex-direction: column; gap: 8px; }
+    .att-option {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0.75rem 1rem;
+      background: var(--bg-2);
+      border: 1px solid var(--border-md);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .att-option:hover { border-color: var(--orange-border); }
+    .att-option.selected {
+      background: var(--orange-dim);
+      border-color: var(--orange);
+    }
+    .att-option input[type="radio"] { display: none; }
+    .att-radio {
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      border: 2px solid var(--border-md);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.15s;
+    }
+    .att-option.selected .att-radio {
+      border-color: var(--orange);
+      background: var(--orange);
+    }
+    .att-option.selected .att-radio::after {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #fff;
+    }
+    .att-label { font-size: 0.88rem; font-weight: 600; }
+    .att-desc  { font-size: 0.75rem; color: var(--text-3); margin-top: 1px; }
+
+    /* STAR RATING */
+    .star-row { display: flex; gap: 8px; }
+    .star {
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--bg-3);
+      transition: color 0.12s, transform 0.1s;
+      user-select: none;
+      line-height: 1;
+    }
+    .star:hover, .star.active { color: var(--yellow); }
+    .star:hover { transform: scale(1.15); }
+    .star-label {
+      font-size: 0.78rem;
+      color: var(--text-3);
+      margin-top: 6px;
+      min-height: 18px;
+    }
+
+    /* STUDENT GREETING */
+    .greeting-card {
+      background: var(--green-dim);
+      border: 1px solid rgba(34,197,94,0.25);
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.4rem;
+    }
+    .greeting-card .icon { font-size: 1.4rem; flex-shrink: 0; }
+    .greeting-card strong { font-size: 0.95rem; font-weight: 700; color: var(--green); display: block; }
+    .greeting-card span  { font-size: 0.8rem; color: var(--text-2); }
+
+    /* ERROR / INFO BANNERS */
+    .banner {
+      border-radius: 10px;
+      padding: 0.9rem 1.1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.84rem;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+    }
+    .banner.error  { background: var(--red-dim);   border: 1px solid rgba(248,113,113,0.25); color: var(--red); }
+    .banner.info   { background: var(--orange-dim); border: 1px solid var(--orange-border);  color: var(--text-2); }
+    .banner .bi { flex-shrink: 0; font-size: 1rem; margin-top: 1px; }
+
+    /* SUBMIT FOOTER */
+    .card-footer {
+      background: var(--bg-2);
+      border-top: 1px solid var(--border-md);
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-note { font-size: 0.76rem; color: var(--text-3); flex: 1; min-width: 140px; }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 0.65rem 1.5rem;
+      border-radius: 8px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.15s, transform 0.1s;
+      white-space: nowrap;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn-primary { background: var(--orange); color: #fff; }
+    .btn-primary:hover:not(:disabled) { opacity: 0.9; }
+    .btn-ghost { background: transparent; color: var(--text-2); border: 1px solid var(--border-md); }
+    .btn-ghost:hover { border-color: var(--orange-border); color: var(--text); }
+
+    /* LOADING SPINNER */
+    .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,0.25);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      flex-shrink: 0;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* SUCCESS */
+    .success-card {
+      display: none;
+      background: var(--green-dim);
+      border: 1px solid rgba(34,197,94,0.25);
+      border-radius: 14px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .success-card .big-icon { font-size: 3rem; margin-bottom: 1rem; }
+    .success-card h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--green); margin-bottom: 0.5rem; }
+    .success-card p { font-size: 0.88rem; color: var(--text-2); max-width: 380px; margin: 0 auto 1.2rem; line-height: 1.65; }
+
+    /* ALREADY SUBMITTED */
+    .already-card {
+      display: none;
+      background: var(--orange-dim);
+      border: 1px solid var(--orange-border);
+      border-radius: 14px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+    .already-card h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--orange); margin-bottom: 0.5rem; }
+    .already-card p { font-size: 0.88rem; color: var(--text-2); max-width: 380px; margin: 0 auto; line-height: 1.65; }
+
+    /* PROGRESS INDICATOR */
+    .progress { display: flex; align-items: center; gap: 8px; margin-bottom: 2rem; }
+    .progress-step {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.75rem; font-weight: 600;
+    }
+    .progress-dot {
+      width: 22px; height: 22px; border-radius: 50%;
+      display: grid; place-items: center;
+      font-size: 0.65rem; font-weight: 800;
+    }
+    .progress-dot.done   { background: var(--green);  color: #fff; }
+    .progress-dot.active { background: var(--orange); color: #fff; }
+    .progress-dot.todo   { background: var(--bg-3); color: var(--text-3); }
+    .progress-line { flex: 1; height: 1px; background: var(--border-md); }
+
+    /* PAGE FOOTER */
+    .page-footer { margin-top: 2rem; text-align: center; font-size: 0.74rem; color: var(--text-3); }
+    .page-footer a { color: var(--text-3); text-decoration: none; }
+    .page-footer a:hover { color: var(--orange); }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem; }
+      .page  { padding: 2rem 1rem 4rem; }
+      .card-footer { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <svg viewBox="0 0 200 88" height="40" xmlns="http://www.w3.org/2000/svg" aria-label="triAI" style="display:block;flex-shrink:0">
+      <text x="100" y="52" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="52">
+        <tspan font-weight="500" letter-spacing="2" fill="#E5E5E5">tri</tspan><tspan font-weight="800" letter-spacing="3" fill="#D4A017">AI</tspan>
+      </text>
+      <circle cx="86" cy="74" r="4" fill="#FE6612"/>
+      <circle cx="100" cy="74" r="4" fill="#4A7CC9"/>
+      <circle cx="114" cy="74" r="4" fill="#2ECDB8"/>
+    </svg>
+    <span class="logo-div"></span>
+    <span class="logo-sub">Cohort 10 · Saturday Check-in</span>
+  </div>
+  <a href="./index.html" class="back-link">← Cohort page</a>
+</header>
+
+<div class="page">
+
+  <!-- WEEK PILL -->
+  <div class="week-pill">
+    <span class="week-dot"></span>
+    <span id="week-label">Week — · Loading…</span>
+  </div>
+
+  <h1>Saturday<br/>Check-in</h1>
+  <p class="subtitle" id="subtitle">Enter your registered email to confirm your attendance and share feedback on today's session.</p>
+
+  <!-- STEP INDICATOR -->
+  <div class="progress" id="progress-bar">
+    <div class="progress-step">
+      <div class="progress-dot active" id="dot-1">1</div>
+      <span id="label-1" style="color:var(--text-2)">Verify</span>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step">
+      <div class="progress-dot todo" id="dot-2">2</div>
+      <span id="label-2" style="color:var(--text-3)">Feedback</span>
+    </div>
+  </div>
+
+  <!-- ── STEP 1: EMAIL ── -->
+  <div id="step-1">
+    <div class="card">
+      <div class="card-section">
+        <div class="section-label">Your details</div>
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" placeholder="Enter your registered email" autocomplete="email" autocapitalize="none"/>
+          <p class="field-hint">Use the same email you registered with. This is how we verify you are an enrolled participant.</p>
+        </div>
+        <div id="email-error" style="display:none" class="banner error">
+          <span class="bi">✗</span>
+          <span id="email-error-msg">This email was not found in our records. Please check and try again, or email cohorts@tri-ai.org.</span>
+        </div>
+      </div>
+      <div class="card-footer">
+        <p class="footer-note">Your email is only used to verify enrolment and record attendance.</p>
+        <button class="btn btn-primary" id="btn-verify" onclick="verifyEmail()">
+          Continue →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── STEP 2: FEEDBACK ── -->
+  <div id="step-2" style="display:none">
+
+    <!-- Greeting -->
+    <div class="greeting-card" id="greeting">
+      <span class="icon">👋</span>
+      <div>
+        <strong id="student-name">Welcome!</strong>
+        <span id="session-info">Attendance confirmed for today's session</span>
+      </div>
+    </div>
+
+    <!-- Already submitted banner -->
+    <div id="already-banner" style="display:none" class="banner info">
+      <span class="bi">ℹ️</span>
+      <span>You have already submitted attendance for this week. You can still update your feedback below — we will use your most recent response.</span>
+    </div>
+
+    <div class="card">
+
+      <!-- Attendance type -->
+      <div class="card-section">
+        <div class="section-label">Attendance</div>
+        <label>How did you participate today?</label>
+        <div class="att-options" id="att-options">
+          <label class="att-option" onclick="selectAtt(this, 'live')">
+            <input type="radio" name="att" value="live"/>
+            <div class="att-radio"></div>
+            <div>
+              <div class="att-label">📡 Attended live</div>
+              <div class="att-desc">I joined the Zoom session in real time</div>
+            </div>
+          </label>
+          <label class="att-option" onclick="selectAtt(this, 'recording')">
+            <input type="radio" name="att" value="recording"/>
+            <div class="att-radio"></div>
+            <div>
+              <div class="att-label">🎬 Watched the recording</div>
+              <div class="att-desc">I watched the session on YouTube after it aired</div>
+            </div>
+          </label>
+          <label class="att-option" onclick="selectAtt(this, 'missed')">
+            <input type="radio" name="att" value="missed"/>
+            <div class="att-radio"></div>
+            <div>
+              <div class="att-label">❌ Could not attend</div>
+              <div class="att-desc">I missed this session</div>
+            </div>
+          </label>
+        </div>
+        <div id="att-error" style="display:none;margin-top:8px" class="banner error">
+          <span class="bi">✗</span>Please select how you participated.
+        </div>
+      </div>
+
+      <!-- Star rating (hidden if missed) -->
+      <div class="card-section" id="rating-section">
+        <div class="section-label">Session rating</div>
+        <label>How would you rate today's session?</label>
+        <div class="star-row" id="stars">
+          <span class="star" onclick="setRating(1)" onmouseover="hoverRating(1)" onmouseout="resetHover()">★</span>
+          <span class="star" onclick="setRating(2)" onmouseover="hoverRating(2)" onmouseout="resetHover()">★</span>
+          <span class="star" onclick="setRating(3)" onmouseover="hoverRating(3)" onmouseout="resetHover()">★</span>
+          <span class="star" onclick="setRating(4)" onmouseover="hoverRating(4)" onmouseout="resetHover()">★</span>
+          <span class="star" onclick="setRating(5)" onmouseover="hoverRating(5)" onmouseout="resetHover()">★</span>
+        </div>
+        <div class="star-label" id="star-label">Click to rate</div>
+      </div>
+
+      <!-- Feedback questions (hidden if missed) -->
+      <div class="card-section" id="feedback-section">
+        <div class="section-label">Quick feedback</div>
+        <div class="field">
+          <label for="q1">What was most useful or interesting today? <span class="opt">(optional)</span></label>
+          <textarea id="q1" placeholder="e.g. The lab walkthrough really helped me understand tokenization…" rows="3"></textarea>
+        </div>
+        <div class="field">
+          <label for="q2">Any questions or topics you'd like more help with? <span class="opt">(optional)</span></label>
+          <textarea id="q2" placeholder="e.g. I'm still unsure how BPE works in practice…" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <p class="footer-note">Feedback is shared anonymously with instructors to improve future sessions.</p>
+        <button class="btn btn-primary" id="btn-submit" onclick="submitAttendance()">
+          Submit →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SUCCESS ── -->
+  <div class="success-card" id="success-card">
+    <div class="big-icon">✅</div>
+    <h2>Attendance recorded!</h2>
+    <p id="success-msg">Thank you for checking in. Your attendance and feedback have been saved. See you next Saturday!</p>
+    <button class="btn btn-ghost" onclick="resetForm()" style="margin:0 auto">← Check in again</button>
+  </div>
+
+  <!-- ── ALREADY SUBMITTED (standalone) ── -->
+  <div class="already-card" id="already-card">
+    <div style="font-size:2.5rem;margin-bottom:1rem">📋</div>
+    <h2>Already checked in</h2>
+    <p>You have already submitted your attendance for this week. If you want to update your feedback, <a href="#" onclick="showStep2(); return false;" style="color:var(--orange)">click here</a> to go back.</p>
+  </div>
+
+  <div class="page-footer">
+    Questions? <a href="mailto:cohorts@tri-ai.org">cohorts@tri-ai.org</a>
+    &nbsp;·&nbsp; <a href="./index.html">Cohort page</a>
+    &nbsp;·&nbsp; © 2026 TRI AI
+  </div>
+
+</div><!-- /page -->
+
+<script>
+  // ── CONFIG ──────────────────────────────────────────────
+  // Replace with your Google Apps Script Web App URL for attendance
+  const SCRIPT_URL = 'REPLACE_WITH_ATTENDANCE_APPS_SCRIPT_URL';
+
+  // Cohort schedule — Saturday lecture dates for each week
+  const COHORT_WEEKS = [
+    { week: 1,  date: 'June 7, 2026',     topic: 'Introduction to Language Modeling' },
+    { week: 2,  date: 'June 14, 2026',    topic: 'From N-grams to Transformers' },
+    { week: 3,  date: 'June 21, 2026',    topic: 'Training a Language Model' },
+    { week: 4,  date: 'June 28, 2026',    topic: 'Text & Data Preprocessing' },
+    { week: 5,  date: 'July 5, 2026',     topic: 'Tokenization' },
+    { week: 6,  date: 'July 12, 2026',    topic: 'Embeddings' },
+    { week: 7,  date: 'July 26, 2026',    topic: 'Introduction to Neural Networks' },
+    { week: 8,  date: 'August 2, 2026',   topic: 'Modeling Complex Data with MLP' },
+    { week: 9,  date: 'August 9, 2026',   topic: 'Gradients & Backpropagation' },
+    { week: 10, date: 'August 16, 2026',  topic: 'Architecture of Modern LLMs' },
+    { week: 11, date: 'August 23, 2026',  topic: 'The Attention Mechanism' },
+    { week: 12, date: 'August 30, 2026',  topic: 'Positional Embeddings' },
+    { week: 13, date: 'September 6, 2026',topic: 'Project Week' },
+    { week: 14, date: 'September 13, 2026',topic: 'Transformer Block & Layer Normalization' },
+    { week: 15, date: 'September 19, 2026',topic: 'Demo Day 🎉' },
+  ];
+
+  // State
+  let currentWeek = 1;
+  let studentEmail = '';
+  let studentName  = '';
+  let rating = 0;
+  let attType = '';
+
+  // ── AUTO-DETECT CURRENT WEEK ────────────────────────────
+  function detectWeek() {
+    const now  = new Date();
+    const saturday = new Date(now);
+    // Snap to current/most recent Saturday
+    const day = now.getDay(); // 0=Sun … 6=Sat
+    saturday.setDate(now.getDate() - ((day + 1) % 7)); // rewind to last Saturday
+    saturday.setHours(0,0,0,0);
+
+    let found = COHORT_WEEKS[0];
+    for (const w of COHORT_WEEKS) {
+      const wDate = new Date(w.date);
+      wDate.setHours(0,0,0,0);
+      if (wDate <= saturday) found = w;
+    }
+    return found;
+  }
+
+  function initPage() {
+    const wk = detectWeek();
+    currentWeek = wk.week;
+    document.getElementById('week-label').textContent =
+      `Week ${wk.week} · ${wk.date}`;
+    document.getElementById('subtitle').textContent =
+      `Enter your registered email to confirm attendance for today's session: ${wk.topic}.`;
+  }
+
+  // ── STEP 1: VERIFY EMAIL ────────────────────────────────
+  async function verifyEmail() {
+    const emailEl = document.getElementById('email');
+    const errEl   = document.getElementById('email-error');
+    const btn     = document.getElementById('btn-verify');
+    const email   = emailEl.value.trim().toLowerCase();
+
+    // Basic format check
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      emailEl.classList.add('error');
+      document.getElementById('email-error-msg').textContent =
+        'Please enter a valid email address.';
+      errEl.style.display = 'flex';
+      return;
+    }
+
+    emailEl.classList.remove('error');
+    errEl.style.display = 'none';
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span> Checking…';
+
+    try {
+      const params = new URLSearchParams({
+        action: 'verify',
+        email,
+        week: currentWeek
+      });
+      const res = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString()
+      });
+      const data = await res.json();
+
+      if (data.valid) {
+        studentEmail = email;
+        studentName  = data.name || email.split('@')[0];
+        showStep2(data.alreadySubmitted);
+      } else {
+        emailEl.classList.add('error');
+        document.getElementById('email-error-msg').textContent =
+          data.message || 'This email was not found. Please check or email cohorts@tri-ai.org.';
+        errEl.style.display = 'flex';
+      }
+    } catch (err) {
+      // If script URL not set yet, show step 2 with demo mode
+      if (SCRIPT_URL === 'REPLACE_WITH_ATTENDANCE_APPS_SCRIPT_URL') {
+        studentEmail = email;
+        studentName  = email.split('@')[0];
+        showStep2(false);
+      } else {
+        document.getElementById('email-error-msg').textContent =
+          'Something went wrong. Please try again or email cohorts@tri-ai.org.';
+        errEl.style.display = 'flex';
+      }
+    }
+
+    btn.disabled = false;
+    btn.innerHTML = 'Continue →';
+  }
+
+  function showStep2(alreadySubmitted = false) {
+    document.getElementById('step-1').style.display = 'none';
+    document.getElementById('step-2').style.display = 'block';
+
+    // Update progress
+    document.getElementById('dot-1').className = 'progress-dot done';
+    document.getElementById('dot-1').textContent = '✓';
+    document.getElementById('label-1').style.color = 'var(--text-3)';
+    document.getElementById('dot-2').className = 'progress-dot active';
+    document.getElementById('label-2').style.color = 'var(--text-2)';
+
+    // Greeting
+    const wk = COHORT_WEEKS[currentWeek - 1];
+    document.getElementById('student-name').textContent = `Hi ${studentName}!`;
+    document.getElementById('session-info').textContent =
+      `Week ${currentWeek} · ${wk.topic}`;
+
+    if (alreadySubmitted) {
+      document.getElementById('already-banner').style.display = 'flex';
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // ── ATTENDANCE SELECTION ────────────────────────────────
+  function selectAtt(el, type) {
+    document.querySelectorAll('.att-option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    attType = type;
+    document.getElementById('att-error').style.display = 'none';
+
+    // Hide rating/feedback if missed
+    const showFeedback = type !== 'missed';
+    document.getElementById('rating-section').style.display  = showFeedback ? 'block' : 'none';
+    document.getElementById('feedback-section').style.display = showFeedback ? 'block' : 'none';
+  }
+
+  // ── STAR RATING ─────────────────────────────────────────
+  const STAR_LABELS = ['','Not useful','Somewhat useful','Useful','Very useful','Excellent!'];
+
+  function hoverRating(n) {
+    document.querySelectorAll('.star').forEach((s, i) => {
+      s.classList.toggle('active', i < n);
+    });
+    document.getElementById('star-label').textContent = STAR_LABELS[n];
+  }
+  function setRating(n) {
+    rating = n;
+    hoverRating(n);
+  }
+  function resetHover() {
+    hoverRating(rating);
+    document.getElementById('star-label').textContent = rating ? STAR_LABELS[rating] : 'Click to rate';
+  }
+
+  // ── STEP 2: SUBMIT ──────────────────────────────────────
+  async function submitAttendance() {
+    if (!attType) {
+      document.getElementById('att-error').style.display = 'flex';
+      document.getElementById('att-error').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    const btn = document.getElementById('btn-submit');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span> Submitting…';
+
+    const params = new URLSearchParams({
+      action:    'submit',
+      email:     studentEmail,
+      name:      studentName,
+      week:      currentWeek,
+      attended:  attType,
+      rating:    attType !== 'missed' ? rating : '',
+      feedback1: document.getElementById('q1').value.trim(),
+      feedback2: document.getElementById('q2').value.trim(),
+    });
+
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString()
+      });
+    } catch (_) { /* no-cors always "fails" from fetch perspective */ }
+
+    // Always show success — submission is fire-and-forget
+    showSuccess();
+
+    btn.disabled = false;
+    btn.innerHTML = 'Submit →';
+  }
+
+  function showSuccess() {
+    document.getElementById('step-1').style.display = 'none';
+    document.getElementById('step-2').style.display = 'none';
+    document.getElementById('progress-bar').style.display = 'none';
+    document.getElementById('subtitle').style.display = 'none';
+    document.querySelector('h1').style.display = 'none';
+    document.querySelector('.week-pill').style.display = 'none';
+
+    const sc = document.getElementById('success-card');
+    sc.style.display = 'block';
+
+    if (attType === 'missed') {
+      document.getElementById('success-msg').textContent =
+        'We have recorded that you missed this session. No worries — the recording will be on YouTube. We hope to see you next Saturday!';
+    } else {
+      document.getElementById('success-msg').textContent =
+        'Thank you for checking in and sharing your feedback. It helps us improve every session. See you next Saturday!';
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function resetForm() {
+    // Reset all state
+    studentEmail = ''; studentName = ''; rating = 0; attType = '';
+    document.getElementById('email').value = '';
+    document.getElementById('email').classList.remove('error');
+    document.getElementById('email-error').style.display = 'none';
+    document.getElementById('q1').value = '';
+    document.getElementById('q2').value = '';
+    document.querySelectorAll('.att-option').forEach(o => o.classList.remove('selected'));
+    document.getElementById('star-label').textContent = 'Click to rate';
+    document.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
+    document.getElementById('rating-section').style.display = 'block';
+    document.getElementById('feedback-section').style.display = 'block';
+
+    // Reset UI
+    document.getElementById('success-card').style.display = 'none';
+    document.getElementById('already-banner').style.display = 'none';
+    document.querySelector('h1').style.display = 'block';
+    document.querySelector('.week-pill').style.display = 'inline-flex';
+    document.getElementById('subtitle').style.display = 'block';
+    document.getElementById('progress-bar').style.display = 'flex';
+    document.getElementById('dot-1').className = 'progress-dot active';
+    document.getElementById('dot-1').textContent = '1';
+    document.getElementById('dot-2').className = 'progress-dot todo';
+    document.getElementById('step-1').style.display = 'block';
+    document.getElementById('step-2').style.display = 'none';
+  }
+
+  // Enter key on email field
+  document.addEventListener('DOMContentLoaded', () => {
+    initPage();
+    document.getElementById('email').addEventListener('keydown', e => {
+      if (e.key === 'Enter') verifyEmail();
+    });
+  });
+</script>
+</body>
+</html>
