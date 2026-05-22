@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Saturday Check-in · TRI AI Saturdays Cohort 10</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --bg:          #0a0a0a;
@@ -554,8 +554,10 @@
 
   // State
   let currentWeek = 1;
-  let studentEmail = '';
-  let studentName  = '';
+  let studentEmail     = '';
+  let studentFirstName = '';
+  let studentLastName  = '';
+  let studentName      = '';
   let rating = 0;
   let attType = '';
 
@@ -621,8 +623,10 @@
       const data = await res.json();
 
       if (data.valid) {
-        studentEmail = email;
-        studentName  = data.name || email.split('@')[0];
+        studentEmail     = email;
+        studentFirstName = data.firstName || '';
+        studentLastName  = data.lastName  || '';
+        studentName      = data.name || (data.firstName + ' ' + data.lastName).trim() || email.split('@')[0];
         showStep2(data.alreadySubmitted);
       } else {
         emailEl.classList.add('error');
@@ -633,8 +637,10 @@
     } catch (err) {
       // If script URL not set yet, show step 2 with demo mode
       if (SCRIPT_URL === 'REPLACE_WITH_ATTENDANCE_APPS_SCRIPT_URL') {
-        studentEmail = email;
-        studentName  = email.split('@')[0];
+        studentEmail     = email;
+        studentFirstName = email.split('@')[0];
+        studentLastName  = '';
+        studentName      = email.split('@')[0];
         showStep2(false);
       } else {
         document.getElementById('email-error-msg').textContent =
@@ -717,7 +723,8 @@
     const params = new URLSearchParams({
       action:    'submit',
       email:     studentEmail,
-      name:      studentName,
+      firstName: studentFirstName,
+      lastName:  studentLastName,
       week:      currentWeek,
       attended:  attType,
       rating:    attType !== 'missed' ? rating : '',
