@@ -307,18 +307,6 @@
     .success-card h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--green); margin-bottom: 0.5rem; }
     .success-card p { font-size: 0.88rem; color: var(--text-2); max-width: 380px; margin: 0 auto 1.2rem; line-height: 1.65; }
 
-    /* ALREADY SUBMITTED */
-    .already-card {
-      display: none;
-      background: var(--orange-dim);
-      border: 1px solid var(--orange-border);
-      border-radius: 14px;
-      padding: 2.5rem;
-      text-align: center;
-    }
-    .already-card h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--orange); margin-bottom: 0.5rem; }
-    .already-card p { font-size: 0.88rem; color: var(--text-2); max-width: 380px; margin: 0 auto; line-height: 1.65; }
-
     /* PROGRESS INDICATOR */
     .progress { display: flex; align-items: center; gap: 8px; margin-bottom: 2rem; }
     .progress-step {
@@ -513,13 +501,6 @@
     <button class="btn btn-ghost" onclick="resetForm()" style="margin:0 auto">← Check in again</button>
   </div>
 
-  <!-- ── ALREADY SUBMITTED (standalone) ── -->
-  <div class="already-card" id="already-card">
-    <div style="font-size:2.5rem;margin-bottom:1rem">📋</div>
-    <h2>Already checked in</h2>
-    <p>You have already submitted your attendance for this week. If you want to update your feedback, <a href="#" onclick="showStep2(); return false;" style="color:var(--orange)">click here</a> to go back.</p>
-  </div>
-
   <div class="page-footer">
     Questions? <a href="mailto:cohorts@tri-ai.org">cohorts@tri-ai.org</a>
     &nbsp;·&nbsp; <a href="./index.html">Cohort page</a>
@@ -564,43 +545,95 @@
 
   // ── AUTO-DETECT CURRENT WEEK ────────────────────────────
   function detectWeek() {
-    const now  = new Date();
-    const saturday = new Date(now);
-    // Snap to current/most recent Saturday
-    const day = now.getDay(); // 0=Sun … 6=Sat
-    saturday.setDate(now.getDate() - ((day + 1) % 7)); // rewind to last Saturday
-    saturday.setHours(0,0,0,0);
+    const now = new Date();
+    now.setHours(0, 0, 0, 0); // normalise to local midnight
 
     let found = COHORT_WEEKS[0];
     for (const w of COHORT_WEEKS) {
       const wDate = new Date(w.date);
-      wDate.setHours(0,0,0,0);
-      if (wDate <= saturday) found = w;
+      wDate.setHours(0, 0, 0, 0);
+      // Move forward as long as the week's Saturday has passed or is today
+      if (now >= wDate) found = w;
     }
     return found;
   }
 
+  // Cohort open window
+  const COHORT_OPEN  = new Date('June 7, 2026');   // first Saturday
+  const COHORT_CLOSE = new Date('September 26, 2026'); // one week after Demo Day
+
+  function showFormClosed(message, detail) {
+    document.getElementById('step-1').style.display = 'none';
+    document.getElementById('progress-bar').style.display = 'none';
+    document.querySelector('.week-pill').style.display = 'none';
+    document.querySelector('h1').textContent = message;
+    document.getElementById('subtitle').textContent = detail;
+  }
+
   function initPage() {
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+    const cohortOpen  = new Date(COHORT_OPEN);  cohortOpen.setHours(0,0,0,0);
+    const cohortClose = new Date(COHORT_CLOSE); cohortClose.setHours(0,0,0,0);
+
+    // Before cohort starts
+    if (now < cohortOpen) {
+      document.getElementById('week-label').textContent = 'Opens June 7, 2026';
+      showFormClosed(
+        'Not open yet',
+        'The attendance form opens on Saturday June 7, 2026 — the first lecture of Cohort 10. See you then!'
+      );
+      return;
+    }
+
+    // After cohort ends
+    if (now > cohortClose) {
+      document.getElementById('week-label').textContent = 'Cohort 10 complete';
+      showFormClosed(
+        'Cohort complete',
+        'TRI AI Saturdays Cohort 10 has ended. Thank you for being part of this journey!'
+      );
+      return;
+    }
+
     const wk = detectWeek();
     currentWeek = wk.week;
     document.getElementById('week-label').textContent =
       `Week ${wk.week} · ${wk.date}`;
 
-    // If it's the break week, show a friendly message instead of the form
+    // Break week
     if (wk.isBreak) {
-      document.getElementById('subtitle').textContent =
-        'This is the mid-cohort break week — no session today. Enjoy the rest and see you next Saturday!';
-      document.getElementById('step-1').style.display = 'none';
-      document.getElementById('progress-bar').style.display = 'none';
+      showFormClosed(
+        'Mid-cohort break',
+        'No session this week — enjoy the rest! The form reopens for Week 8 on Saturday July 26.'
+      );
       const banner = document.createElement('div');
       banner.className = 'banner info';
-      banner.innerHTML = '<span class="bi">☀️</span><span>No check-in needed this week. The form will reopen for Week 8 on July 26.</span>';
-      document.querySelector('.page').insertBefore(banner, document.getElementById('step-1'));
+      banner.style.marginTop = '1rem';
+      banner.innerHTML = '<span class="bi">☀️</span><span>Check-in will reopen on July 26 for Week 8.</span>';
+      document.querySelector('.page').appendChild(banner);
       return;
     }
 
-    document.getElementById('subtitle').textContent =
-      `Enter your registered email to confirm attendance for today's session: ${wk.topic}.`;
+    // Normal week — calculate the closing date (Friday before next Saturday)
+    const nextWeekIdx = COHORT_WEEKS.findIndex(w => w.week === wk.week) + 1;
+    if (nextWeekIdx < COHORT_WEEKS.length) {
+      const nextEntry   = COHORT_WEEKS[nextWeekIdx];
+      const nextSat     = new Date(nextEntry.date);
+      nextSat.setHours(0,0,0,0);
+      nextSat.setDate(nextSat.getDate() - 1); // Friday before next Saturday
+      const daysLeft    = Math.round((nextSat - now) / (1000 * 60 * 60 * 24));
+      const closingNote = nextEntry.isBreak
+        ? (daysLeft === 0 ? 'Last day to check in before the mid-cohort break.'
+                          : `Check-in closes in ${daysLeft} day${daysLeft === 1 ? '' : 's'} — before the mid-cohort break.`)
+        : (daysLeft === 0 ? `Last day to check in for Week ${wk.week}. Enter your email below.`
+                          : `Check-in closes in ${daysLeft} day${daysLeft === 1 ? '' : 's'} (Friday).`);
+      document.getElementById('subtitle').textContent =
+        `Enter your email to confirm attendance for Week ${wk.week}: ${wk.topic}. ${closingNote}`;
+    } else {
+      document.getElementById('subtitle').textContent =
+        `Enter your registered email to confirm attendance for Week ${wk.week}: ${wk.topic}.`;
+    }
   }
 
   // ── STEP 1: VERIFY EMAIL ────────────────────────────────
@@ -643,6 +676,7 @@
         studentLastName  = data.lastName  || '';
         studentName      = data.name || (data.firstName + ' ' + data.lastName).trim() || email.split('@')[0];
         showStep2(data.alreadySubmitted);
+        return; // step 1 is now hidden — don't reset button
       } else {
         emailEl.classList.add('error');
         document.getElementById('email-error-msg').textContent =
@@ -655,6 +689,7 @@
       errEl.style.display = 'flex';
     }
 
+    // Only reached on error — restore button
     btn.disabled = false;
     btn.innerHTML = 'Continue →';
   }
@@ -778,7 +813,7 @@
 
   function resetForm() {
     // Reset all state
-    studentEmail = ''; studentName = ''; rating = 0; attType = '';
+    studentEmail = ''; studentFirstName = ''; studentLastName = ''; studentName = ''; rating = 0; attType = '';
     document.getElementById('email').value = '';
     document.getElementById('email').classList.remove('error');
     document.getElementById('email-error').style.display = 'none';
