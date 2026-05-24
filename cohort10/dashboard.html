@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Organiser Dashboard · TRI AI Saturdays Cohort 10</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#0a0a0a;--bg1:#111;--bg2:#191919;--bg3:#222;--bdr:rgba(255,255,255,.07);--bdrm:rgba(255,255,255,.13);--t:#E5E5E5;--t2:rgba(229,229,229,.7);--t3:rgba(229,229,229,.4);--or:#FE6612;--or2:rgba(254,102,18,.12);--orb:rgba(254,102,18,.25);--gr:#22c55e;--gr2:rgba(34,197,94,.12);--re:#f87171;--re2:rgba(248,113,113,.12);--bl:#4A7CC9;--bl2:rgba(74,124,201,.12);--ye:#fbbf24}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--t);font-size:13px;line-height:1.5}
+input,button,select{font-family:inherit}
+::-webkit-scrollbar{width:5px;height:5px}::-webkit-scrollbar-track{background:var(--bg1)}::-webkit-scrollbar-thumb{background:#333;border-radius:3px}
+
+/* SCREENS */
+#login-screen{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:2rem}
+#dashboard{display:none;min-height:100vh;flex-direction:column}
+
+/* LOGIN */
+.login-box{width:100%;max-width:360px}
+.login-logo{text-align:center;margin-bottom:2rem}
+.login-logo svg{display:block;margin:0 auto 1rem}
+.login-logo .ttl{font-size:13px;font-weight:700}.login-logo .sub{font-size:11px;color:var(--t3);margin-top:3px}
+.login-card{background:var(--bg1);border:1px solid var(--bdrm);border-radius:14px;padding:1.5rem}
+.field-label{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-bottom:6px}
+.text-input{width:100%;background:var(--bg2);border:1px solid var(--bdrm);border-radius:8px;color:var(--t);padding:.65rem .9rem;font-size:14px;outline:none;margin-bottom:1rem}
+.text-input:focus{border-color:var(--or)}
+.text-input.err{border-color:var(--re)}
+.btn-full{width:100%;background:var(--or);color:#fff;border:none;border-radius:8px;padding:.65rem;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-full:disabled{opacity:.6;cursor:not-allowed}
+.login-err{font-size:12px;color:var(--re);margin-bottom:1rem;display:none}
+
+/* LAYOUT */
+#app-inner{display:flex;flex:1}
+aside{width:210px;background:var(--bg1);border-right:1px solid var(--bdrm);display:flex;flex-direction:column;position:fixed;top:0;bottom:0;z-index:10}
+main{margin-left:210px;flex:1;padding:1.5rem 1.8rem;overflow-x:hidden}
+
+/* SIDEBAR */
+.sb-head{padding:1.1rem 1rem;border-bottom:1px solid var(--bdr)}
+.sb-ey{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--or);margin-bottom:3px}
+.sb-t{font-size:14px;font-weight:800;letter-spacing:-.02em}
+.sb-s{font-size:10px;color:var(--t3);margin-top:2px}
+nav{flex:1;padding:.4rem 0}
+.nav-btn{display:flex;align-items:center;gap:9px;padding:8px 1rem 8px .75rem;background:transparent;border:none;border-left:3px solid transparent;color:var(--t2);font-size:13px;font-weight:600;cursor:pointer;width:100%;text-align:left;transition:all .15s}
+.nav-btn:hover{color:var(--t);background:rgba(255,255,255,.02)}
+.nav-btn.on{background:var(--or2);border-left-color:var(--or);color:var(--or)}
+.nav-badge{margin-left:auto;background:var(--re2);color:var(--re);border:1px solid rgba(248,113,113,.25);font-size:9px;font-weight:700;padding:1px 6px;border-radius:10px}
+.sb-foot{padding:.9rem;border-top:1px solid var(--bdr)}
+.sb-week{font-size:10px;color:var(--t3);margin-bottom:6px}
+#btn-refresh{width:100%;background:var(--bg2);border:1px solid var(--bdrm);border-radius:7px;color:var(--t2);font-size:11px;font-weight:600;padding:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px}
+#btn-refresh:hover{border-color:var(--orb);color:var(--t)}
+
+/* PAGE HEADER */
+.ph{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1.4rem}
+.ph-ey{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--or);margin-bottom:3px}
+.ph-h{font-size:22px;font-weight:800;letter-spacing:-.04em}
+.ph-d{font-size:11px;color:var(--t3)}
+
+/* VIEWS */
+.view{display:none}.view.on{display:block}
+
+/* CARDS */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px}
+.card{background:var(--bg1);border:1px solid var(--bdrm);border-radius:12px;padding:1.2rem;margin-bottom:14px}
+.card.nm{margin-bottom:0}
+.c-ey{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
+.c-t{font-size:15px;font-weight:700;margin-bottom:1rem}
+.stat-l{font-size:10px;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+.stat-v{font-size:26px;font-weight:800;letter-spacing:-.04em;line-height:1}
+.stat-s{font-size:11px;color:var(--t3);margin-top:5px}
+
+/* TABLE */
+.tbl-wrap{background:var(--bg1);border:1px solid var(--bdrm);border-radius:12px;overflow:hidden;margin-bottom:14px}
+table{width:100%;border-collapse:collapse}
+th{padding:10px 12px;text-align:left;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);background:var(--bg2);border-bottom:1px solid var(--bdrm)}
+th.c,td.c{text-align:center}
+td{padding:9px 12px;border-bottom:1px solid var(--bdr);font-size:12px}
+tr:last-child td{border-bottom:none}
+.tbl-foot{padding:9px 12px;border-top:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;font-size:11px;color:var(--t3)}
+.pg-btn{background:transparent;border:1px solid var(--bdrm);border-radius:5px;color:var(--t2);padding:3px 10px;font-size:11px;cursor:pointer}
+.pg-btn:disabled{opacity:.35;cursor:not-allowed}
+
+/* HEATMAP CELLS */
+.hc{width:20px;height:20px;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700}
+.hc-y{background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:var(--gr)}
+.hc-n{background:rgba(248,113,113,.12);border:1px solid rgba(248,113,113,.2);color:var(--re)}
+.hc-x{background:var(--bg3);border:1px solid var(--bdr);color:var(--t3)}
+
+/* BADGES */
+.badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:4px}
+.bc{background:var(--re2);color:var(--re);border:1px solid rgba(248,113,113,.25)}
+.bw{background:rgba(251,191,36,.12);color:var(--ye);border:1px solid rgba(251,191,36,.25)}
+.bo{background:var(--gr2);color:var(--gr);border:1px solid rgba(34,197,94,.25)}
+
+/* RATE BAR */
+.rb-wrap{display:flex;align-items:center;gap:6px}
+.rb-track{width:48px;height:5px;background:var(--bg3);border-radius:3px;overflow:hidden}
+.rb-fill{height:100%;border-radius:3px}
+
+/* FILTER ROW */
+.fr{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.si{flex:1;min-width:180px;background:var(--bg2);border:1px solid var(--bdrm);border-radius:8px;color:var(--t);padding:7px 12px;font-size:12px;outline:none}
+.si:focus{border-color:var(--or)}
+.pill{background:transparent;border:1px solid var(--bdrm);border-radius:7px;color:var(--t2);padding:5px 12px;font-size:12px;font-weight:600;cursor:pointer;transition:all .15s}
+.pill:hover{border-color:var(--orb);color:var(--t)}
+.pill.on{background:var(--or2);border-color:var(--or);color:var(--or)}
+
+/* EMAIL BTN */
+.eb{background:var(--or2);color:var(--or);border:1px solid var(--orb);border-radius:6px;padding:4px 10px;font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap}
+.eb.sent{background:var(--gr2);color:var(--gr);border-color:rgba(34,197,94,.3)}
+.btn-email-all{background:var(--or);color:#fff;border:none;border-radius:8px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer}
+
+/* STARS */
+.stars span{font-size:13px}
+.s-on{color:var(--ye)}.s-off{color:var(--bg3)}
+
+/* FB GRID */
+.fbg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.fbc{background:var(--bg1);border:1px solid var(--bdrm);border-radius:12px;padding:1rem}
+.fb-q{background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:.65rem .9rem;font-size:12px;color:var(--t2);margin-bottom:6px;line-height:1.5}
+
+/* STATES */
+.loading{display:flex;align-items:center;gap:12px;padding:3rem;color:var(--t3)}
+.spin{width:20px;height:20px;border:2px solid rgba(255,255,255,.1);border-top-color:var(--or);border-radius:50%;animation:sp .6s linear infinite;flex-shrink:0}
+@keyframes sp{to{transform:rotate(360deg)}}
+.empty{padding:3rem;text-align:center;color:var(--t3)}
+.empty-i{font-size:2rem;margin-bottom:.5rem}
+.err-box{background:var(--re2);border:1px solid rgba(248,113,113,.25);border-radius:10px;padding:1rem;color:var(--re);font-size:13px}
+
+/* BREAKDOWN */
+.bk-row{margin-bottom:10px}
+.bk-row:last-child{margin-bottom:0}
+.bk-head{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px;color:var(--t2)}
+.bk-track{height:6px;background:var(--bg3);border-radius:3px;overflow:hidden}
+.bk-fill{height:100%;border-radius:3px;transition:width .5s}
+
+/* TOAST */
+#toast{position:fixed;top:20px;right:20px;background:var(--gr2);border:1px solid rgba(34,197,94,.3);border-radius:8px;padding:8px 16px;font-size:12px;font-weight:600;color:var(--gr);z-index:999;display:none;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+</style>
+</head>
+<body>
+
+<div id="toast"></div>
+
+<!-- LOGIN -->
+<div id="login-screen">
+  <div class="login-box">
+    <div class="login-logo">
+      <svg viewBox="0 0 200 88" height="44" xmlns="http://www.w3.org/2000/svg">
+        <text x="100" y="52" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="52">
+          <tspan font-weight="500" letter-spacing="2" fill="#E5E5E5">tri</tspan>
+          <tspan font-weight="800" letter-spacing="3" fill="#D4A017">AI</tspan>
+        </text>
+        <circle cx="86" cy="74" r="4" fill="#FE6612"/>
+        <circle cx="100" cy="74" r="4" fill="#4A7CC9"/>
+        <circle cx="114" cy="74" r="4" fill="#2ECDB8"/>
+      </svg>
+      <div class="ttl">Cohort 10 &middot; Organiser Dashboard</div>
+      <div class="sub">Enter your dashboard password to continue</div>
+    </div>
+    <div class="login-card">
+      <label class="field-label">Password</label>
+      <div id="login-err" class="login-err">Incorrect password. Please try again.</div>
+      <input id="pw-input" type="password" class="text-input" placeholder="Enter password"/>
+      <button id="btn-login" class="btn-full">Sign in &rarr;</button>
+    </div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard">
+  <div id="app-inner">
+    <aside>
+      <div class="sb-head">
+        <div class="sb-ey">triAI Saturdays</div>
+        <div class="sb-t">Cohort 10</div>
+        <div class="sb-s">Organiser Dashboard</div>
+      </div>
+      <nav>
+        <button class="nav-btn on" data-view="overview"><span style="font-size:11px;opacity:.7">&#9632;</span><span>Overview</span></button>
+        <button class="nav-btn" data-view="attendance"><span style="font-size:11px;opacity:.7">&#9776;</span><span>Attendance</span></button>
+        <button class="nav-btn" data-view="atrisk"><span style="font-size:11px;opacity:.7">&#9888;</span><span style="flex:1">At Risk</span><span id="atrisk-badge" class="nav-badge" style="display:none">0</span></button>
+        <button class="nav-btn" data-view="feedback"><span style="font-size:11px;opacity:.7">&#9733;</span><span>Feedback</span></button>
+      </nav>
+      <div class="sb-foot">
+        <div class="sb-week" id="sb-week-info">Week &mdash; of 16</div>
+        <button id="btn-refresh">&#8635; Refresh</button>
+      </div>
+    </aside>
+
+    <main>
+      <!-- OVERVIEW -->
+      <div id="view-overview" class="view on">
+        <div class="ph">
+          <div><div class="ph-ey">Overview</div><h1 class="ph-h">Cohort Dashboard</h1></div>
+          <div class="ph-d">May 31 &ndash; Sep 19, 2026</div>
+        </div>
+        <div class="grid4" id="stat-cards">
+          <div class="card" style="margin-bottom:0"><div class="stat-l">Total Enrolled</div><div class="stat-v" style="color:var(--or)" id="stat-enrolled">—</div><div class="stat-s">83 countries</div></div>
+          <div class="card" style="margin-bottom:0"><div class="stat-l" id="stat-wk-label">This Week</div><div class="stat-v" style="color:var(--bl)" id="stat-rate">—</div><div class="stat-s" id="stat-attended-n">— students</div></div>
+          <div class="card" style="margin-bottom:0"><div class="stat-l">At Risk (2+ absences)</div><div class="stat-v" style="color:var(--re)" id="stat-atrisk">—</div><div class="stat-s" id="stat-critical-n">— critical</div></div>
+          <div class="card" style="margin-bottom:0"><div class="stat-l">Avg Attendance</div><div class="stat-v" style="color:var(--gr)" id="stat-avg">—</div><div class="stat-s" id="stat-avg-sub">Weeks 1–?</div></div>
+        </div>
+        <div class="card">
+          <div class="c-ey" style="color:var(--or)">Attendance Rate</div>
+          <div class="c-t">Weekly attendance trend</div>
+          <div id="trend-empty" class="empty" style="display:none"><div class="empty-i">&#128200;</div>No attendance data yet — form opens June 7</div>
+          <canvas id="chart-trend" height="80"></canvas>
+        </div>
+        <div class="grid2">
+          <div class="card nm">
+            <div class="c-ey" style="color:var(--re)">Drop-off</div>
+            <div class="c-t">Students lost per week</div>
+            <div id="dropoff-empty" class="empty" style="display:none"><div class="empty-i">&#128201;</div>Available after Week 2</div>
+            <canvas id="chart-dropoff" height="100"></canvas>
+          </div>
+          <div class="card nm">
+            <div class="c-ey" style="color:var(--or)">Latest week</div>
+            <div class="c-t" id="breakdown-title">Week — breakdown</div>
+            <div id="breakdown-body"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ATTENDANCE -->
+      <div id="view-attendance" class="view">
+        <div class="ph">
+          <div><div class="ph-ey">Attendance Tracker</div><h1 class="ph-h">Weekly Attendance</h1></div>
+          <div class="ph-d">May 31 &ndash; Sep 19, 2026</div>
+        </div>
+        <div class="fr">
+          <input type="text" id="att-search" class="si" placeholder="Search name or email&hellip;"/>
+          <button class="pill on" data-f="all">All</button>
+          <button class="pill" data-f="critical">Critical</button>
+          <button class="pill" data-f="warning">Warning</button>
+          <button class="pill" data-f="ok">On track</button>
+        </div>
+        <div class="tbl-wrap" id="att-table-wrap">
+          <div class="loading"><div class="spin"></div>Loading&hellip;</div>
+        </div>
+      </div>
+
+      <!-- AT RISK -->
+      <div id="view-atrisk" class="view">
+        <div class="ph">
+          <div><div class="ph-ey">At-Risk Students</div><h1 class="ph-h">Students Needing Outreach</h1></div>
+          <div class="ph-d">May 31 &ndash; Sep 19, 2026</div>
+        </div>
+        <div class="grid3" id="atrisk-stats">
+          <div class="card" style="margin-bottom:0"><div class="stat-l">Critical (3+ weeks)</div><div class="stat-v" style="color:var(--re)" id="ar-critical">—</div></div>
+          <div class="card" style="margin-bottom:0"><div class="stat-l">Warning (2 weeks)</div><div class="stat-v" style="color:var(--ye)" id="ar-warning">—</div></div>
+          <div class="card" style="margin-bottom:0"><div class="stat-l">Outreach sent</div><div class="stat-v" style="color:var(--gr)" id="ar-sent">0</div></div>
+        </div>
+        <div style="margin-bottom:14px"></div>
+        <div class="fr">
+          <input type="text" id="ar-search" class="si" placeholder="Search&hellip;"/>
+          <button id="btn-email-all" class="btn-email-all">Email all critical</button>
+        </div>
+        <div class="tbl-wrap" id="ar-table-wrap">
+          <div class="loading"><div class="spin"></div>Loading&hellip;</div>
+        </div>
+      </div>
+
+      <!-- FEEDBACK -->
+      <div id="view-feedback" class="view">
+        <div class="ph">
+          <div><div class="ph-ey">Feedback</div><h1 class="ph-h">Session Feedback</h1></div>
+          <div class="ph-d">May 31 &ndash; Sep 19, 2026</div>
+        </div>
+        <div id="fb-cards" class="fbg"></div>
+        <div class="grid2">
+          <div class="card nm">
+            <div class="c-ey" style="color:var(--or)">Satisfaction</div>
+            <div class="c-t">Avg rating by week</div>
+            <canvas id="chart-rating" height="100"></canvas>
+          </div>
+          <div class="card nm">
+            <div class="c-ey" style="color:var(--or)">Engagement</div>
+            <div class="c-t">Responses per week</div>
+            <canvas id="chart-responses" height="100"></canvas>
+          </div>
+        </div>
+        <div id="fb-written" style="margin-top:14px"></div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzmQaJ1KdHpMJ6fpavLeuvbAFSyl6MA69S_Rf4ldN9IqV9Id6RkrHL801cX6BklJ7mmIg/exec';
+let KEY = ''; // set at login — never stored in source
+const PAGE = 50;
+const ENROLLED = 3146;
+const WEEK_META = [
+  {w:1,d:'Jun 7'},{w:2,d:'Jun 14'},{w:3,d:'Jun 21'},{w:4,d:'Jun 28'},
+  {w:5,d:'Jul 5'},{w:6,d:'Jul 12'},{w:7,d:'Jul 19',br:true},{w:8,d:'Jul 26'},
+  {w:9,d:'Aug 2'},{w:10,d:'Aug 9'},{w:11,d:'Aug 16'},{w:12,d:'Aug 23'},
+  {w:13,d:'Aug 30'},{w:14,d:'Sep 6'},{w:15,d:'Sep 13'},{w:16,d:'Sep 19'}
+];
+
+// State
+let state = { overview:null, atrisk:null, students:null, feedback:null,
+  attFilter:'all', attSearch:'', attPage:1, arSearch:'', emailSent:new Set() };
+let charts = {};
+
+// ── CHART DEFAULTS ──
+Chart.defaults.color = 'rgba(229,229,229,0.4)';
+Chart.defaults.font.family = "'Plus Jakarta Sans', sans-serif";
+Chart.defaults.font.size = 11;
+
+// ── API ──
+async function api(action, params={}) {
+  const qs = new URLSearchParams({key:KEY, action, ...params}).toString();
+  const r = await fetch(SCRIPT_URL + '?' + qs);
+  const d = await r.json();
+  if (d.error) throw new Error(d.error);
+  return d;
+}
+
+// ── TOAST ──
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.style.display = 'block';
+  clearTimeout(el._t);
+  el._t = setTimeout(() => el.style.display = 'none', 3000);
+}
+
+// ── LOGIN ──
+document.getElementById('btn-login').addEventListener('click', doLogin);
+document.getElementById('pw-input').addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
+
+async function doLogin() {
+  const btn = document.getElementById('btn-login');
+  const pw = document.getElementById('pw-input').value.trim();
+  if (!pw) return;
+  btn.disabled = true;
+  btn.innerHTML = '<div class="spin" style="border-top-color:#fff;width:14px;height:14px;border-width:2px"></div> Connecting&hellip;';
+  document.getElementById('login-err').style.display = 'none';
+  KEY = pw; // use entered password as the API key
+  try {
+    const data = await api('overview');
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('dashboard').style.display = 'flex';
+    state.overview = data;
+    renderOverview();
+  } catch(e) {
+    KEY = ''; // clear key on failed login
+    document.getElementById('login-err').style.display = 'block';
+    document.getElementById('pw-input').classList.add('err');
+  }
+  btn.disabled = false;
+  btn.innerHTML = 'Sign in &rarr;';
+}
+
+// ── NAVIGATION ──
+document.querySelectorAll('.nav-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('on'));
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('on'));
+    btn.classList.add('on');
+    const v = btn.dataset.view;
+    document.getElementById('view-' + v).classList.add('on');
+    if (v === 'atrisk'    && !state.atrisk)    loadAtRisk();
+    if (v === 'attendance' && !state.students) loadStudents();
+    if (v === 'feedback'  && !state.feedback)  loadFeedback();
+  });
+});
+
+document.getElementById('btn-refresh').addEventListener('click', async () => {
+  state.overview = null; state.atrisk = null; state.students = null; state.feedback = null;
+  const data = await api('overview');
+  state.overview = data;
+  renderOverview();
+  toast('Data refreshed');
+});
+
+// ── OVERVIEW ──
+function renderOverview() {
+  const ov = state.overview;
+  if (!ov) return;
+  const weekly = ov.weeklyStats || [];
+  const enr = ov.totalEnrolled || ENROLLED;
+  const cur = ov.currentWeek || 1;
+  const last = weekly[weekly.length-1] || {};
+  const avg = weekly.length ? Math.round(weekly.reduce((s,w)=>s+w.rate,0)/weekly.length) : 0;
+
+  document.getElementById('stat-enrolled').textContent = enr.toLocaleString();
+  document.getElementById('stat-wk-label').textContent = `Week ${cur} Attendance`;
+  document.getElementById('stat-rate').textContent = (last.rate||0) + '%';
+  document.getElementById('stat-attended-n').textContent = (last.attended||0).toLocaleString() + ' students';
+  document.getElementById('stat-atrisk').textContent = (ov.atRiskCount||0).toLocaleString();
+  document.getElementById('stat-critical-n').textContent = (ov.criticalCount||0).toLocaleString() + ' critical';
+  document.getElementById('stat-avg').textContent = avg + '%';
+  document.getElementById('stat-avg-sub').textContent = `Weeks 1–${cur}`;
+  document.getElementById('sb-week-info').textContent = `Week ${cur} of 16`;
+
+  // At-risk badge
+  const badge = document.getElementById('atrisk-badge');
+  if (ov.atRiskCount > 0) { badge.textContent = ov.atRiskCount.toLocaleString(); badge.style.display=''; }
+
+  // Trend chart
+  if (weekly.length === 0) {
+    document.getElementById('trend-empty').style.display = '';
+    document.getElementById('chart-trend').style.display = 'none';
+  } else {
+    document.getElementById('trend-empty').style.display = 'none';
+    document.getElementById('chart-trend').style.display = '';
+    buildChart('chart-trend', 'line', weekly.map(w=>'Wk '+w.week), [{
+      label:'Attendance %', data:weekly.map(w=>w.rate),
+      borderColor:'#FE6612', backgroundColor:'rgba(254,102,18,0.1)',
+      fill:true, tension:.4, pointRadius:4, pointBackgroundColor:'#FE6612'
+    }], { y:{ min:0, max:100, ticks:{ callback:v=>v+'%' } } });
+  }
+
+  // Drop-off chart
+  const dropoff = weekly.slice(1).map((w,i)=>({ label:'Wk '+w.week, lost:Math.max(0,(weekly[i].attended||0)-(w.attended||0)) }));
+  if (dropoff.length === 0) {
+    document.getElementById('dropoff-empty').style.display = '';
+    document.getElementById('chart-dropoff').style.display = 'none';
+  } else {
+    document.getElementById('dropoff-empty').style.display = 'none';
+    document.getElementById('chart-dropoff').style.display = '';
+    buildChart('chart-dropoff','bar', dropoff.map(d=>d.label),[{
+      label:'Students lost', data:dropoff.map(d=>d.lost),
+      backgroundColor:'rgba(248,113,113,0.6)', borderRadius:3
+    }]);
+  }
+
+  // Breakdown
+  document.getElementById('breakdown-title').textContent = `Week ${cur} breakdown`;
+  const total = (last.live||0)+(last.recording||0)+(last.missed||0);
+  document.getElementById('breakdown-body').innerHTML = [
+    {l:'Attended live',    v:last.live||0,      c:'var(--gr)'},
+    {l:'Watched recording',v:last.recording||0, c:'var(--bl)'},
+    {l:'Missed',           v:last.missed||0,    c:'var(--re)'}
+  ].map(r => {
+    const pct = total>0 ? Math.round(r.v/total*100) : 0;
+    return `<div class="bk-row">
+      <div class="bk-head"><span>${r.l}</span><span style="font-weight:700">${r.v.toLocaleString()} <span style="color:var(--t3);font-weight:400">(${pct}%)</span></span></div>
+      <div class="bk-track"><div class="bk-fill" style="width:${pct}%;background:${r.c}"></div></div>
+    </div>`;
+  }).join('');
+}
+
+// ── ATTENDANCE TABLE ──
+async function loadStudents(page=1) {
+  state.attPage = page;
+  const wrap = document.getElementById('att-table-wrap');
+  wrap.innerHTML = '<div class="loading"><div class="spin"></div>Loading…</div>';
+  try {
+    const data = await api('students', {page, pageSize:PAGE, search:state.attSearch, filter:state.attFilter});
+    state.students = data;
+    renderStudentsTable();
+  } catch(e) {
+    wrap.innerHTML = `<div class="err-box" style="margin:1rem">Error: ${e.message}</div>`;
+  }
+}
+
+function renderStudentsTable() {
+  const d = state.students;
+  if (!d) return;
+  const wrap = document.getElementById('att-table-wrap');
+  if (d.students.length === 0) {
+    wrap.innerHTML = '<div class="empty"><div class="empty-i">&#128101;</div>No students found</div>';
+    return;
+  }
+  const weeks = d.currentWeek;
+  const hCols = Array.from({length:weeks},(_,i)=>`<th class="c">W${i+1}</th>`).join('');
+  const rows = d.students.map(s => {
+    const pct = weeks > 0 ? Math.round(s.totalAtt/weeks*100) : 0;
+    const bg = pct>=60?'var(--gr)':pct>=40?'var(--ye)':'var(--re)';
+    const cells = Array.from({length:weeks},(_,i)=>{
+      const att = s.attendance[i+1];
+      if (att === undefined) return `<td class="c"><div class="hc hc-x">&ndash;</div></td>`;
+      return att ? `<td class="c"><div class="hc hc-y">&#10003;</div></td>`
+                 : `<td class="c"><div class="hc hc-n">&#10007;</div></td>`;
+    }).join('');
+    const badge = s.consecutive>=3 ? '<span class="badge bc">Critical</span>'
+                : s.consecutive>=2 ? '<span class="badge bw">Warning</span>'
+                : '<span class="badge bo">On track</span>';
+    return `<tr>
+      <td><div style="font-size:12px;font-weight:600">${s.firstName} ${s.lastName}</div><div style="font-size:10px;color:var(--t3)">${s.email}</div></td>
+      ${cells}
+      <td><div class="rb-wrap"><div class="rb-track"><div class="rb-fill" style="width:${pct}%;background:${bg}"></div></div><span style="font-size:11px;color:var(--t2)">${pct}%</span></div></td>
+      <td>${badge}</td>
+    </tr>`;
+  }).join('');
+
+  const from = (state.attPage-1)*PAGE+1, to = Math.min(state.attPage*PAGE,d.total);
+  wrap.innerHTML = `<div style="overflow-x:auto"><table>
+    <thead><tr><th>Student</th>${hCols}<th>Rate</th><th>Status</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table></div>
+  <div class="tbl-foot">
+    <span>Showing ${from}&ndash;${to} of ${d.total.toLocaleString()} students</span>
+    <div style="display:flex;gap:6px">
+      <button class="pg-btn" id="pg-prev" ${state.attPage<=1?'disabled':''}>&#8592; Prev</button>
+      <button class="pg-btn" id="pg-next" ${state.attPage*PAGE>=d.total?'disabled':''}>Next &#8594;</button>
+    </div>
+  </div>`;
+  document.getElementById('pg-prev')?.addEventListener('click', ()=>loadStudents(state.attPage-1));
+  document.getElementById('pg-next')?.addEventListener('click', ()=>loadStudents(state.attPage+1));
+}
+
+// Attendance filters
+document.getElementById('att-search').addEventListener('input', e => {
+  state.attSearch = e.target.value; state.students = null; loadStudents(1);
+});
+document.querySelectorAll('[data-f]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-f]').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+    state.attFilter = btn.dataset.f; state.students = null; loadStudents(1);
+  });
+});
+
+// ── AT RISK ──
+async function loadAtRisk() {
+  const wrap = document.getElementById('ar-table-wrap');
+  wrap.innerHTML = '<div class="loading"><div class="spin"></div>Loading…</div>';
+  try {
+    const data = await api('atrisk');
+    state.atrisk = data;
+    renderAtRisk();
+  } catch(e) {
+    wrap.innerHTML = `<div class="err-box" style="margin:1rem">Error: ${e.message}</div>`;
+  }
+}
+
+function renderAtRisk() {
+  const d = state.atrisk;
+  if (!d) return;
+  const critical = d.students.filter(s=>s.consecutiveAbsences>=3).length;
+  const warning  = d.students.filter(s=>s.consecutiveAbsences===2).length;
+  document.getElementById('ar-critical').textContent = critical.toLocaleString();
+  document.getElementById('ar-warning').textContent  = warning.toLocaleString();
+  document.getElementById('ar-sent').textContent     = state.emailSent.size.toLocaleString();
+
+  const wrap = document.getElementById('ar-table-wrap');
+  const filtered = d.students.filter(s => {
+    if (!state.arSearch) return true;
+    const q = state.arSearch.toLowerCase();
+    return `${s.firstName} ${s.lastName} ${s.email}`.toLowerCase().includes(q);
+  });
+
+  if (filtered.length === 0) {
+    wrap.innerHTML = '<div class="empty"><div class="empty-i">&#10003;</div>No at-risk students &mdash; great work!</div>';
+    return;
+  }
+
+  const rows = filtered.map(s => {
+    const weeks = d.currentWeek;
+    const pct = weeks>0 ? Math.round(s.totalAttended/weeks*100) : 0;
+    const bg = pct>=60?'var(--gr)':'var(--re)';
+    const badge = s.consecutiveAbsences>=3 ? '<span class="badge bc">Critical</span>' : '<span class="badge bw">Warning</span>';
+    const btnCls = state.emailSent.has(s.email) ? 'eb sent' : 'eb';
+    const btnTxt = state.emailSent.has(s.email) ? '&#10003; Sent' : 'Email';
+    return `<tr>
+      <td><div style="font-size:12px;font-weight:600">${s.firstName} ${s.lastName}</div></td>
+      <td style="font-size:11px;color:var(--t3)">${s.email}</td>
+      <td class="c">${s.lastAttended ? 'Week '+s.lastAttended : '<span style="color:var(--re)">Never</span>'}</td>
+      <td class="c"><span style="font-size:18px;font-weight:800;color:${s.consecutiveAbsences>=3?'var(--re)':'var(--ye)'}">${s.consecutiveAbsences}</span></td>
+      <td><div class="rb-wrap"><div class="rb-track"><div class="rb-fill" style="width:${pct}%;background:${bg}"></div></div><span style="font-size:11px;color:var(--t2)">${pct}%</span></div></td>
+      <td>${badge}</td>
+      <td><button class="${btnCls}" data-email="${s.email}" data-name="${s.firstName} ${s.lastName}">${btnTxt}</button></td>
+    </tr>`;
+  }).join('');
+
+  wrap.innerHTML = `<table>
+    <thead><tr><th>Student</th><th>Email</th><th class="c">Last attended</th><th class="c">Absences</th><th>Attendance</th><th>Status</th><th>Action</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table>`;
+
+  wrap.querySelectorAll('.eb:not(.sent)').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.emailSent.add(btn.dataset.email);
+      btn.className = 'eb sent';
+      btn.innerHTML = '&#10003; Sent';
+      document.getElementById('ar-sent').textContent = state.emailSent.size.toLocaleString();
+      toast('Outreach queued for ' + btn.dataset.name);
+    });
+  });
+}
+
+document.getElementById('ar-search').addEventListener('input', e => {
+  state.arSearch = e.target.value;
+  if (state.atrisk) renderAtRisk();
+});
+document.getElementById('btn-email-all').addEventListener('click', () => {
+  if (!state.atrisk) return;
+  state.atrisk.students.filter(s=>s.consecutiveAbsences>=3).forEach(s=>state.emailSent.add(s.email));
+  renderAtRisk();
+  toast('Outreach queued for all critical students');
+});
+
+// ── FEEDBACK ──
+async function loadFeedback() {
+  document.getElementById('fb-cards').innerHTML = '<div class="loading"><div class="spin"></div>Loading…</div>';
+  try {
+    const data = await api('feedback');
+    state.feedback = data;
+    renderFeedback();
+  } catch(e) {
+    document.getElementById('fb-cards').innerHTML = `<div class="err-box">Error: ${e.message}</div>`;
+  }
+}
+
+function renderFeedback() {
+  const d = state.feedback;
+  if (!d || d.weeks.length===0) {
+    document.getElementById('fb-cards').innerHTML = '<div class="empty"><div class="empty-i">&#128172;</div>No feedback yet &mdash; available after the first session</div>';
+    return;
+  }
+  const recent = d.weeks.slice(-4);
+  document.getElementById('fb-cards').innerHTML = recent.map(w => {
+    const meta = WEEK_META.find(m=>m.w===w.week);
+    const r = w.avgRating||0;
+    const col = r>=4?'var(--gr)':r>=3?'var(--ye)':'var(--re)';
+    const stars = [1,2,3,4,5].map(s=>`<span class="star ${s<=Math.round(r)?'s-on':'s-off'}">&#9733;</span>`).join('');
+    return `<div class="fbc">
+      <div style="font-size:10px;color:var(--t3);margin-bottom:4px">Week ${w.week}${meta?' &middot; '+meta.d:''}</div>
+      <div style="font-size:24px;font-weight:800;letter-spacing:-.04em;color:${col}">${r||'&mdash;'}<span style="font-size:13px">${r?'/5':''}</span></div>
+      <div class="stars" style="margin:6px 0 4px">${stars}</div>
+      <div style="font-size:10px;color:var(--t3)">${w.ratingCount.toLocaleString()} responses</div>
+    </div>`;
+  }).join('');
+
+  const labels = d.weeks.map(w=>'Wk '+w.week);
+  buildChart('chart-rating','line',labels,[{
+    label:'Avg rating', data:d.weeks.map(w=>w.avgRating),
+    borderColor:'#2ECDB8', backgroundColor:'rgba(46,205,184,0.1)',
+    fill:true, tension:.4, pointRadius:4, pointBackgroundColor:'#2ECDB8'
+  }],{y:{min:1,max:5}});
+  buildChart('chart-responses','bar',labels,[{
+    label:'Responses', data:d.weeks.map(w=>w.ratingCount),
+    backgroundColor:'rgba(74,124,201,0.6)', borderRadius:4
+  }]);
+
+  const last = d.weeks[d.weeks.length-1];
+  const fb1 = last.recentFeedback1||[];
+  const fb2 = last.recentFeedback2||[];
+  if (fb1.length>0||fb2.length>0) {
+    document.getElementById('fb-written').innerHTML = `<div class="card">
+      <div class="c-ey" style="color:var(--or)">Written feedback</div>
+      <div class="c-t">Most recent &mdash; Week ${last.week}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Most useful</div>
+          ${fb1.map(f=>`<div class="fb-q">"${f}"</div>`).join('')}
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Questions & needs</div>
+          ${fb2.map(f=>`<div class="fb-q">"${f}"</div>`).join('')}
+        </div>
+      </div>
+    </div>`;
+  }
+}
+
+// ── CHART HELPER ──
+function buildChart(id, type, labels, datasets, extraScales={}) {
+  if (charts[id]) charts[id].destroy();
+  const ctx = document.getElementById(id).getContext('2d');
+  charts[id] = new Chart(ctx, {
+    type,
+    data: { labels, datasets },
+    options: {
+      responsive:true, maintainAspectRatio:true,
+      plugins:{ legend:{ display:false }, tooltip:{ backgroundColor:'#191919', borderColor:'rgba(255,255,255,.13)', borderWidth:1, titleColor:'rgba(229,229,229,.4)', bodyColor:'#E5E5E5', padding:10 } },
+      scales:{
+        x:{ grid:{ color:'rgba(255,255,255,.06)' }, ticks:{ color:'rgba(229,229,229,.4)' }, border:{ display:false } },
+        y:{ grid:{ color:'rgba(255,255,255,.06)' }, ticks:{ color:'rgba(229,229,229,.4)' }, border:{ display:false }, ...extraScales.y },
+        ...extraScales
+      }
+    }
+  });
+}
+</script>
+</body>
+</html>
