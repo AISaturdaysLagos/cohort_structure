@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Skills Boost Email Update · TRI AI Saturdays Cohort 10</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0a0a0a;--bg1:#111;--bg2:#191919;--bg3:#222;--bdrm:rgba(255,255,255,.13);--bdr:rgba(255,255,255,.07);--t:#E5E5E5;--t2:rgba(229,229,229,.7);--t3:rgba(229,229,229,.4);--or:#FE6612;--or2:rgba(254,102,18,.12);--orb:rgba(254,102,18,.25);--gr:#22c55e;--gr2:rgba(34,197,94,.12);--re:#f87171;--re2:rgba(248,113,113,.12);--bl:#4A7CC9}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--t);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.5rem;font-size:13px}
+input,button{font-family:inherit}
+
+.wrap{width:100%;max-width:440px}
+
+/* HEADER */
+.logo{text-align:center;margin-bottom:2rem}
+.logo svg{display:block;margin:0 auto 1rem}
+.logo-title{font-size:13px;font-weight:700;color:var(--t)}
+.logo-sub{font-size:11px;color:var(--t3);margin-top:3px}
+
+/* CARD */
+.card{background:var(--bg1);border:1px solid var(--bdrm);border-radius:16px;padding:1.6rem;margin-bottom:1rem}
+.card-title{font-size:15px;font-weight:800;letter-spacing:-.02em;margin-bottom:.3rem}
+.card-sub{font-size:12px;color:var(--t3);margin-bottom:1.4rem;line-height:1.5}
+
+/* STEPS */
+.steps{display:flex;gap:8px;margin-bottom:1.6rem}
+.step{height:3px;flex:1;border-radius:2px;background:var(--bg3);transition:background .3s}
+.step.done{background:var(--or)}
+
+/* FIELD */
+.field{margin-bottom:1rem}
+.label{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);margin-bottom:6px}
+.input{width:100%;background:var(--bg2);border:1px solid var(--bdrm);border-radius:8px;color:var(--t);padding:.65rem .9rem;font-size:14px;outline:none;transition:border-color .15s}
+.input:focus{border-color:var(--or)}
+.input.err{border-color:var(--re)}
+.input:disabled{opacity:.5;cursor:not-allowed}
+
+/* MESSAGES */
+.err-msg{font-size:12px;color:var(--re);margin-top:5px;display:none}
+.info-box{background:var(--or2);border:1px solid var(--orb);border-radius:8px;padding:.75rem 1rem;font-size:12px;color:var(--t2);margin-bottom:1rem;line-height:1.5}
+.info-box strong{color:var(--or)}
+.existing-box{background:rgba(74,124,201,.1);border:1px solid rgba(74,124,201,.25);border-radius:8px;padding:.75rem 1rem;font-size:12px;color:var(--t2);margin-bottom:1rem;line-height:1.5}
+.existing-box strong{color:var(--bl)}
+
+/* BUTTONS */
+.btn{width:100%;background:var(--or);color:#fff;border:none;border-radius:9px;padding:.7rem;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .15s}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+.btn-ghost{width:100%;background:transparent;border:1px solid var(--bdrm);border-radius:9px;padding:.65rem;font-size:13px;font-weight:600;color:var(--t2);cursor:pointer;margin-top:.5rem}
+.btn-ghost:hover{border-color:var(--orb);color:var(--t)}
+
+/* SPINNER */
+.spin{width:14px;height:14px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:sp .6s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* NAME CHIP */
+.name-chip{background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:.6rem .9rem;font-size:13px;font-weight:600;margin-bottom:1.2rem;display:flex;align-items:center;gap:8px}
+.name-chip .av{width:28px;height:28px;border-radius:50%;background:var(--or2);border:1px solid var(--orb);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--or);flex-shrink:0}
+
+/* SUCCESS */
+.success{text-align:center;padding:1.5rem 0}
+.success-icon{font-size:3rem;margin-bottom:1rem}
+.success-title{font-size:18px;font-weight:800;margin-bottom:.5rem}
+.success-sub{font-size:13px;color:var(--t3);line-height:1.6}
+.success-email{background:var(--gr2);border:1px solid rgba(34,197,94,.25);border-radius:8px;padding:.6rem 1rem;font-size:13px;font-weight:600;color:var(--gr);margin:1rem 0;word-break:break-all}
+
+/* FOOTER */
+.footer{text-align:center;font-size:11px;color:var(--t3);margin-top:1rem}
+.footer a{color:var(--or);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER -->
+  <div class="logo">
+    <svg viewBox="0 0 200 88" height="44" xmlns="http://www.w3.org/2000/svg">
+      <text x="100" y="52" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="52">
+        <tspan font-weight="500" letter-spacing="2" fill="#E5E5E5">tri</tspan>
+        <tspan font-weight="800" letter-spacing="3" fill="#D4A017">AI</tspan>
+      </text>
+      <circle cx="86" cy="74" r="4" fill="#FE6612"/>
+      <circle cx="100" cy="74" r="4" fill="#4A7CC9"/>
+      <circle cx="114" cy="74" r="4" fill="#2ECDB8"/>
+    </svg>
+    <div class="logo-title">AI Saturdays &middot; Cohort 10</div>
+    <div class="logo-sub">Skills Boost Email Update</div>
+  </div>
+
+  <!-- STEP 1 — VERIFY COHORT EMAIL -->
+  <div id="step1" class="card">
+    <div class="steps">
+      <div class="step done" id="s1"></div>
+      <div class="step" id="s2"></div>
+    </div>
+    <div class="card-title">Verify your cohort email</div>
+    <div class="card-sub">Enter the email address you registered with when you applied for Cohort 10.</div>
+
+    <div class="info-box">
+      <strong>Why do this?</strong><br>
+      If you created your Google Cloud Skills Boost account with a different email, we need to know that email to send you the right course invitation.
+    </div>
+
+    <div class="field">
+      <label class="label" for="cohort-email">Your registered cohort email</label>
+      <input id="cohort-email" class="input" type="email" placeholder="e.g. amara@gmail.com" autocomplete="email"/>
+      <div id="email-err" class="err-msg"></div>
+    </div>
+    <button id="btn-verify" class="btn">Verify email &rarr;</button>
+  </div>
+
+  <!-- STEP 2 — ENTER SKILLS BOOST EMAIL -->
+  <div id="step2" class="card" style="display:none">
+    <div class="steps">
+      <div class="step done"></div>
+      <div class="step done"></div>
+    </div>
+    <div class="card-title">Enter your Skills Boost email</div>
+    <div class="card-sub">Enter the email you used (or plan to use) to create your Google Cloud Skills Boost account.</div>
+
+    <div id="name-chip" class="name-chip">
+      <div class="av" id="name-av">?</div>
+      <span id="name-label">Loading…</span>
+    </div>
+
+    <div id="existing-notice" class="existing-box" style="display:none">
+      <strong>Already submitted:</strong> You previously shared <span id="existing-email" style="font-family:monospace"></span> with us. You can update it below if needed.
+    </div>
+
+    <div class="field">
+      <label class="label" for="sb-email">Skills Boost account email</label>
+      <input id="sb-email" class="input" type="email" placeholder="e.g. amara.work@gmail.com" autocomplete="email"/>
+      <div id="sb-err" class="err-msg"></div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="sb-email-confirm">Confirm Skills Boost email</label>
+      <input id="sb-email-confirm" class="input" type="email" placeholder="Re-enter the email above" autocomplete="email"/>
+      <div id="sb-confirm-err" class="err-msg"></div>
+    </div>
+
+    <button id="btn-submit" class="btn">Submit &rarr;</button>
+    <button id="btn-back" class="btn-ghost">&larr; Use a different cohort email</button>
+  </div>
+
+  <!-- SUCCESS -->
+  <div id="step3" class="card" style="display:none">
+    <div class="success">
+      <div class="success-icon">&#10003;</div>
+      <div class="success-title" id="success-title">Email saved!</div>
+      <div class="success-sub" id="success-sub">We'll send your Google Cloud Skills Boost course invitation to:</div>
+      <div class="success-email" id="success-email"></div>
+      <div class="success-sub">If you need to change it, refresh the page and submit again.</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Questions? Email <a href="mailto:cohorts@tri-ai.org">cohorts@tri-ai.org</a>
+  </div>
+</div>
+
+<script>
+const SCRIPT_URL = 'AKfycbwEgDhN5bil6_fZ8sjlu0Ussl1iB6MSMdEgG8aVGklaPDKS9vpWks2DERrV2OKFN2QO'; 
+
+let cohortEmail = '';
+
+async function post(action, params) {
+  const body = new URLSearchParams({ action, ...params });
+  const res  = await fetch(SCRIPT_URL, { method:'POST', body });
+  const data = await res.json();
+  return data;
+}
+
+function setLoading(btn, loading, defaultText) {
+  btn.disabled = loading;
+  btn.innerHTML = loading
+    ? '<div class="spin"></div> Please wait…'
+    : defaultText;
+}
+
+function showErr(id, msg) {
+  const el = document.getElementById(id);
+  el.textContent = msg;
+  el.style.display = msg ? 'block' : 'none';
+}
+
+// ── STEP 1: VERIFY ────────────────────────────────────────────
+document.getElementById('btn-verify').addEventListener('click', verifyEmail);
+document.getElementById('cohort-email').addEventListener('keydown', e => {
+  if (e.key === 'Enter') verifyEmail();
+});
+
+async function verifyEmail() {
+  const emailEl = document.getElementById('cohort-email');
+  const email   = emailEl.value.trim().toLowerCase();
+  showErr('email-err', '');
+  emailEl.classList.remove('err');
+
+  if (!email) { showErr('email-err', 'Please enter your email.'); emailEl.classList.add('err'); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showErr('email-err', 'Please enter a valid email address.');
+    emailEl.classList.add('err'); return;
+  }
+
+  const btn = document.getElementById('btn-verify');
+  setLoading(btn, true, 'Verify email &rarr;');
+
+  try {
+    const res = await post('verify', { email });
+
+    if (res.status === 'not_found') {
+      showErr('email-err', res.message || 'Email not found. Please use your registered cohort email.');
+      emailEl.classList.add('err');
+    } else if (res.status === 'found') {
+      cohortEmail = email;
+      const initials = ((res.firstName||'?')[0] + (res.lastName||'?')[0]).toUpperCase();
+      document.getElementById('name-av').textContent    = initials;
+      document.getElementById('name-label').textContent = `${res.firstName} ${res.lastName}`;
+
+      if (res.existingNewEmail) {
+        document.getElementById('existing-email').textContent = res.existingNewEmail;
+        document.getElementById('existing-notice').style.display = '';
+        document.getElementById('sb-email').value = res.existingNewEmail;
+        document.getElementById('sb-email-confirm').value = res.existingNewEmail;
+      } else {
+        document.getElementById('existing-notice').style.display = 'none';
+      }
+
+      document.getElementById('step1').style.display = 'none';
+      document.getElementById('step2').style.display = '';
+      document.getElementById('sb-email').focus();
+    } else {
+      showErr('email-err', res.message || 'Something went wrong. Please try again.');
+    }
+  } catch(e) {
+    showErr('email-err', 'Could not connect. Check your internet and try again.');
+  }
+
+  setLoading(btn, false, 'Verify email &rarr;');
+}
+
+// ── STEP 2: SUBMIT ────────────────────────────────────────────
+document.getElementById('btn-back').addEventListener('click', () => {
+  document.getElementById('step2').style.display = 'none';
+  document.getElementById('step1').style.display = '';
+  showErr('sb-err', '');
+  showErr('sb-confirm-err', '');
+});
+
+document.getElementById('btn-submit').addEventListener('click', submitEmail);
+document.getElementById('sb-email-confirm').addEventListener('keydown', e => {
+  if (e.key === 'Enter') submitEmail();
+});
+
+async function submitEmail() {
+  const sbEl   = document.getElementById('sb-email');
+  const confEl = document.getElementById('sb-email-confirm');
+  const sb     = sbEl.value.trim().toLowerCase();
+  const conf   = confEl.value.trim().toLowerCase();
+
+  showErr('sb-err', '');
+  showErr('sb-confirm-err', '');
+  sbEl.classList.remove('err');
+  confEl.classList.remove('err');
+
+  if (!sb) { showErr('sb-err', 'Please enter your Skills Boost email.'); sbEl.classList.add('err'); return; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(sb)) {
+    showErr('sb-err', 'Please enter a valid email address.'); sbEl.classList.add('err'); return;
+  }
+  if (sb !== conf) {
+    showErr('sb-confirm-err', 'Emails do not match. Please check and try again.');
+    confEl.classList.add('err'); return;
+  }
+
+  const btn = document.getElementById('btn-submit');
+  setLoading(btn, true, 'Submit &rarr;');
+
+  try {
+    const res = await post('save', { oldEmail: cohortEmail, newEmail: sb });
+
+    if (res.status === 'saved' || res.status === 'updated') {
+      const isUpdate = res.status === 'updated';
+      document.getElementById('success-title').textContent  = isUpdate ? 'Email updated!' : 'Email saved!';
+      document.getElementById('success-sub').textContent    = "We'll send your Google Cloud Skills Boost course invitation to:";
+      document.getElementById('success-email').textContent  = sb;
+      document.getElementById('step2').style.display = 'none';
+      document.getElementById('step3').style.display = '';
+    } else {
+      showErr('sb-err', res.message || 'Something went wrong. Please try again.');
+    }
+  } catch(e) {
+    showErr('sb-err', 'Could not connect. Check your internet and try again.');
+  }
+
+  setLoading(btn, false, 'Submit &rarr;');
+}
+</script>
+</body>
+</html>
