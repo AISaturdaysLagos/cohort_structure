@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
 <style>
+
 :root{--bg:#0a0a0a;--bg1:#111;--bg2:#191919;--bg3:#222;--bdr:rgba(255,255,255,.07);--bdrm:rgba(255,255,255,.13);--t:#E5E5E5;--t2:rgba(229,229,229,.7);--t3:rgba(229,229,229,.4);--or:#FE6612;--or2:rgba(254,102,18,.12);--orb:rgba(254,102,18,.25);--gr:#22c55e;--gr2:rgba(34,197,94,.12);--re:#f87171;--re2:rgba(248,113,113,.12);--bl:#4A7CC9;--bl2:rgba(74,124,201,.12);--ye:#fbbf24}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--t);font-size:13px;line-height:1.5}
@@ -137,15 +138,117 @@ tr:last-child td{border-bottom:none}
 .bk-track{height:6px;background:var(--bg3);border-radius:3px;overflow:hidden}
 .bk-fill{height:100%;border-radius:3px;transition:width .5s}
 
+/* WEEK SELECTOR */
+.wk-pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.wk-pill{background:var(--bg2);border:1px solid var(--bdrm);border-radius:7px;color:var(--t3);padding:4px 10px;font-size:11px;font-weight:700;cursor:pointer;min-width:36px;text-align:center;transition:all .15s}
+.wk-pill:hover{border-color:var(--orb);color:var(--t)}
+.wk-pill.on{background:var(--or2);border-color:var(--or);color:var(--or)}
+.wk-pill.br{opacity:.4;cursor:default;pointer-events:none}
+
+/* WEEK DETAIL STATS */
+.wk-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.wk-stat{background:var(--bg1);border:1px solid var(--bdrm);border-radius:10px;padding:.85rem 1rem}
+.wk-stat .lbl{font-size:10px;color:var(--t3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.wk-stat .val{font-size:22px;font-weight:800;letter-spacing:-.04em;line-height:1}
+
+/* ATT STATUS */
+.att-status{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;padding:3px 9px;border-radius:5px}
+.att-live{background:rgba(34,197,94,.12);color:var(--gr);border:1px solid rgba(34,197,94,.25)}
+.att-rec {background:rgba(74,124,201,.12);color:var(--bl);border:1px solid rgba(74,124,201,.25)}
+.att-miss{background:rgba(248,113,113,.12);color:var(--re);border:1px solid rgba(248,113,113,.2)}
+
+/* FEEDBACK INLINE */
+.fb-inline{font-size:11px;color:var(--t2);background:var(--bg2);border-radius:5px;padding:3px 8px;margin-top:3px;line-height:1.4;font-style:italic}
+
+/* TABS */
+.att-tabs{display:flex;gap:0;margin-bottom:14px;background:var(--bg2);border:1px solid var(--bdrm);border-radius:8px;padding:3px}
+.att-tab{flex:1;padding:6px;font-size:12px;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--t2);border-radius:6px;font-family:inherit;transition:all .15s}
+.att-tab.on{background:var(--bg1);color:var(--t);box-shadow:0 1px 3px rgba(0,0,0,.3)}
+
 /* TOAST */
 #toast{position:fixed;top:20px;right:20px;background:var(--gr2);border:1px solid rgba(34,197,94,.3);border-radius:8px;padding:8px 16px;font-size:12px;font-weight:600;color:var(--gr);z-index:999;display:none;box-shadow:0 4px 16px rgba(0,0,0,.4)}
+
+/* ── MOBILE HEADER ── */
+#mob-header{display:none;position:fixed;top:0;left:0;right:0;height:56px;background:var(--bg1);border-bottom:1px solid var(--bdrm);z-index:200;align-items:center;justify-content:space-between;padding:0 1rem}
+#mob-title{font-size:14px;font-weight:700}
+#mob-logo{display:flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:var(--or)}
+
+/* ── MOBILE BOTTOM NAV ── */
+#mob-nav{display:none;position:fixed;bottom:0;left:0;right:0;background:var(--bg1);border-top:1px solid var(--bdrm);z-index:200;padding:0 0 env(safe-area-inset-bottom,0px)}
+.mnb{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;background:transparent;border:none;color:var(--t3);font-size:9px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;padding:8px 0;font-family:inherit;transition:color .15s}
+.mnb .mni{font-size:18px;line-height:1}
+.mnb.on{color:var(--or)}
+.mnb-badge{background:var(--re2);color:var(--re);border:1px solid rgba(248,113,113,.25);font-size:8px;font-weight:700;padding:1px 5px;border-radius:8px;position:absolute;top:6px;right:calc(50% - 22px)}
+.mnb-wrap{position:relative;display:flex;flex-direction:column;align-items:center;gap:2px;flex:1}
+
+/* ── RESPONSIVE BREAKPOINTS ── */
+@media (max-width: 768px) {
+  aside { display: none !important; }
+  main { margin-left: 0 !important; padding: 4.5rem 1rem 5rem !important; }
+  #mob-header { display: flex; }
+  #mob-nav { display: flex; }
+
+  /* Grids */
+  .grid4  { grid-template-columns: 1fr 1fr !important; }
+  .grid2  { grid-template-columns: 1fr !important; }
+  .grid3  { grid-template-columns: 1fr 1fr !important; }
+  .wk-stats { grid-template-columns: 1fr 1fr !important; }
+  .fbg    { grid-template-columns: 1fr 1fr !important; }
+
+  /* Page header */
+  .ph { flex-direction: column; gap: 4px; margin-bottom: 1rem !important; }
+  .ph-h { font-size: 18px !important; }
+  .ph-d { display: none; }
+
+  /* Cards */
+  .card { padding: .9rem 1rem !important; }
+  .stat-v { font-size: 22px !important; }
+
+  /* Tables: horizontal scroll */
+  .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  table { min-width: 500px; }
+  #att-table-wrap table { min-width: 700px; }
+  #wk-table-wrap  table { min-width: 100%; }
+  #wk-table-wrap td:last-child { max-width: 140px; word-break: break-word; font-size: 11px; }
+  #wk-table-wrap th:last-child { min-width: 100px; }
+  #wk-table-wrap td:last-child { max-width: 160px; word-break: break-word; }
+
+  /* Heatmap — scroll hint */
+  #att-table-wrap { position: relative; }
+
+  /* Week pills wrap tightly */
+  .wk-pills { gap: 4px !important; }
+  .wk-pill  { padding: 3px 7px !important; font-size: 10px !important; min-width: 30px !important; }
+
+  /* Charts shorter */
+  canvas { max-height: 160px; }
+
+  /* Att tabs */
+  .att-tabs { margin-bottom: 10px !important; }
+
+  /* Trio grid */
+  .trio-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Filter row */
+  .fr { gap: 6px !important; }
+  .si { min-width: 0 !important; }
+  .pill { padding: 4px 8px !important; font-size: 11px !important; }
+}
+
+@media (max-width: 400px) {
+  .grid4  { grid-template-columns: 1fr !important; }
+  .grid3  { grid-template-columns: 1fr !important; }
+  .wk-stats { grid-template-columns: 1fr 1fr !important; }
+}
+
+
 </style>
 </head>
 <body>
 
 <div id="toast"></div>
 
-<!-- LOGIN -->
+<!-- ── LOGIN ──────────────────────────────────────────────── -->
 <div id="login-screen">
   <div class="login-box">
     <div class="login-logo">
@@ -170,8 +273,48 @@ tr:last-child td{border-bottom:none}
   </div>
 </div>
 
-<!-- DASHBOARD -->
+<!-- ── DASHBOARD (hidden until login) ─────────────────────── -->
 <div id="dashboard">
+
+  <!-- Mobile header — fixed top bar, only visible on mobile -->
+  <div id="mob-header">
+    <div id="mob-logo">
+      <svg viewBox="0 0 200 88" height="28" xmlns="http://www.w3.org/2000/svg">
+        <text x="100" y="52" text-anchor="middle" font-family="Plus Jakarta Sans,sans-serif" font-size="52">
+          <tspan font-weight="500" letter-spacing="2" fill="#E5E5E5">tri</tspan>
+          <tspan font-weight="800" letter-spacing="3" fill="#D4A017">AI</tspan>
+        </text>
+        <circle cx="86" cy="74" r="4" fill="#FE6612"/>
+        <circle cx="100" cy="74" r="4" fill="#4A7CC9"/>
+        <circle cx="114" cy="74" r="4" fill="#2ECDB8"/>
+      </svg>
+      Cohort 10
+    </div>
+    <div id="mob-title">Dashboard</div>
+    <button id="btn-refresh-mob" style="background:transparent;border:none;color:var(--t2);font-size:18px;cursor:pointer;padding:4px">&#8635;</button>
+  </div>
+
+  <!-- Mobile bottom nav — fixed bottom bar, only visible on mobile -->
+  <div id="mob-nav">
+    <button class="mnb on" data-view="overview">
+      <div class="mnb-wrap"><span class="mni">&#9632;</span><span>Overview</span></div>
+    </button>
+    <button class="mnb" data-view="attendance">
+      <div class="mnb-wrap"><span class="mni">&#9776;</span><span>Attendance</span></div>
+    </button>
+    <button class="mnb" data-view="atrisk">
+      <div class="mnb-wrap" style="position:relative">
+        <span class="mni">&#9888;</span>
+        <span id="mob-badge" style="display:none;position:absolute;top:-4px;right:-8px;background:var(--re2);color:var(--re);border:1px solid rgba(248,113,113,.25);font-size:8px;font-weight:700;padding:1px 4px;border-radius:8px">0</span>
+        <span>At Risk</span>
+      </div>
+    </button>
+    <button class="mnb" data-view="feedback">
+      <div class="mnb-wrap"><span class="mni">&#9733;</span><span>Feedback</span></div>
+    </button>
+  </div>
+
+  <!-- Desktop sidebar + main content -->
   <div id="app-inner">
     <aside>
       <div class="sb-head">
@@ -192,22 +335,23 @@ tr:last-child td{border-bottom:none}
     </aside>
 
     <main>
+
       <!-- OVERVIEW -->
       <div id="view-overview" class="view on">
         <div class="ph">
           <div><div class="ph-ey">Overview</div><h1 class="ph-h">Cohort Dashboard</h1></div>
           <div class="ph-d">May 31 &ndash; Sep 19, 2026</div>
         </div>
-        <div class="grid4" id="stat-cards">
-          <div class="card" style="margin-bottom:0"><div class="stat-l">Total Enrolled</div><div class="stat-v" style="color:var(--or)" id="stat-enrolled">—</div><div class="stat-s">83 countries</div></div>
-          <div class="card" style="margin-bottom:0"><div class="stat-l" id="stat-wk-label">This Week</div><div class="stat-v" style="color:var(--bl)" id="stat-rate">—</div><div class="stat-s" id="stat-attended-n">— students</div></div>
-          <div class="card" style="margin-bottom:0"><div class="stat-l">At Risk (2+ absences)</div><div class="stat-v" style="color:var(--re)" id="stat-atrisk">—</div><div class="stat-s" id="stat-critical-n">— critical</div></div>
-          <div class="card" style="margin-bottom:0"><div class="stat-l">Avg Attendance</div><div class="stat-v" style="color:var(--gr)" id="stat-avg">—</div><div class="stat-s" id="stat-avg-sub">Weeks 1–?</div></div>
+        <div class="grid4">
+          <div class="card" style="margin-bottom:0"><div class="stat-l">Total Enrolled</div><div class="stat-v" style="color:var(--or)" id="stat-enrolled">&mdash;</div><div class="stat-s">83 countries</div></div>
+          <div class="card" style="margin-bottom:0"><div class="stat-l" id="stat-wk-label">This Week</div><div class="stat-v" style="color:var(--bl)" id="stat-rate">&mdash;</div><div class="stat-s" id="stat-attended-n">&mdash; students</div></div>
+          <div class="card" style="margin-bottom:0"><div class="stat-l">At Risk (2+ absences)</div><div class="stat-v" style="color:var(--re)" id="stat-atrisk">&mdash;</div><div class="stat-s" id="stat-critical-n">&mdash; critical</div></div>
+          <div class="card" style="margin-bottom:0"><div class="stat-l">Avg Attendance</div><div class="stat-v" style="color:var(--gr)" id="stat-avg">&mdash;</div><div class="stat-s" id="stat-avg-sub">Weeks 1&ndash;?</div></div>
         </div>
         <div class="card">
           <div class="c-ey" style="color:var(--or)">Attendance Rate</div>
           <div class="c-t">Weekly attendance trend</div>
-          <div id="trend-empty" class="empty" style="display:none"><div class="empty-i">&#128200;</div>No attendance data yet — form opens June 7</div>
+          <div id="trend-empty" class="empty" style="display:none"><div class="empty-i">&#128200;</div>No attendance data yet &mdash; form opens June 7</div>
           <canvas id="chart-trend" height="80"></canvas>
         </div>
         <div class="grid2">
@@ -219,7 +363,7 @@ tr:last-child td{border-bottom:none}
           </div>
           <div class="card nm">
             <div class="c-ey" style="color:var(--or)">Latest week</div>
-            <div class="c-t" id="breakdown-title">Week — breakdown</div>
+            <div class="c-t" id="breakdown-title">Week &mdash; breakdown</div>
             <div id="breakdown-body"></div>
           </div>
         </div>
@@ -231,15 +375,40 @@ tr:last-child td{border-bottom:none}
           <div><div class="ph-ey">Attendance Tracker</div><h1 class="ph-h">Weekly Attendance</h1></div>
           <div class="ph-d">May 31 &ndash; Sep 19, 2026</div>
         </div>
-        <div class="fr">
-          <input type="text" id="att-search" class="si" placeholder="Search name or email&hellip;"/>
-          <button class="pill on" data-f="all">All</button>
-          <button class="pill" data-f="critical">Critical</button>
-          <button class="pill" data-f="warning">Warning</button>
-          <button class="pill" data-f="ok">On track</button>
+        <div class="att-tabs">
+          <button class="att-tab on" id="tab-week">Week view</button>
+          <button class="att-tab" id="tab-heatmap">Full heatmap</button>
         </div>
-        <div class="tbl-wrap" id="att-table-wrap">
-          <div class="loading"><div class="spin"></div>Loading&hellip;</div>
+        <!-- WEEK VIEW -->
+        <div id="att-week-view">
+          <div id="wk-selector" class="wk-pills">
+            <div class="loading"><div class="spin"></div>Loading weeks&hellip;</div>
+          </div>
+          <div id="wk-stats" class="wk-stats" style="display:none">
+            <div class="wk-stat"><div class="lbl">Attended live</div><div class="val" id="wks-live" style="color:var(--gr)">&mdash;</div></div>
+            <div class="wk-stat"><div class="lbl">Watched recording</div><div class="val" id="wks-rec" style="color:var(--bl)">&mdash;</div></div>
+            <div class="wk-stat"><div class="lbl">Missed</div><div class="val" id="wks-miss" style="color:var(--re)">&mdash;</div></div>
+            <div class="wk-stat"><div class="lbl">Avg rating</div><div class="val" id="wks-rating" style="color:var(--ye)">&mdash;</div></div>
+          </div>
+          <div class="fr" id="wk-search-row" style="display:none">
+            <input type="text" id="wk-search" class="si" placeholder="Search name or email&hellip;"/>
+          </div>
+          <div class="tbl-wrap" id="wk-table-wrap">
+            <div class="empty"><div class="empty-i">&#128197;</div>Select a week above</div>
+          </div>
+        </div>
+        <!-- HEATMAP VIEW -->
+        <div id="att-heatmap-view" style="display:none">
+          <div class="fr">
+            <input type="text" id="att-search" class="si" placeholder="Search name or email&hellip;"/>
+            <button class="pill on" data-f="all">All</button>
+            <button class="pill" data-f="critical">Critical</button>
+            <button class="pill" data-f="warning">Warning</button>
+            <button class="pill" data-f="ok">On track</button>
+          </div>
+          <div class="tbl-wrap" id="att-table-wrap">
+            <div class="loading"><div class="spin"></div>Loading&hellip;</div>
+          </div>
         </div>
       </div>
 
@@ -249,9 +418,9 @@ tr:last-child td{border-bottom:none}
           <div><div class="ph-ey">At-Risk Students</div><h1 class="ph-h">Students Needing Outreach</h1></div>
           <div class="ph-d">May 31 &ndash; Sep 19, 2026</div>
         </div>
-        <div class="grid3" id="atrisk-stats">
-          <div class="card" style="margin-bottom:0"><div class="stat-l">Critical (3+ weeks)</div><div class="stat-v" style="color:var(--re)" id="ar-critical">—</div></div>
-          <div class="card" style="margin-bottom:0"><div class="stat-l">Warning (2 weeks)</div><div class="stat-v" style="color:var(--ye)" id="ar-warning">—</div></div>
+        <div class="grid3">
+          <div class="card" style="margin-bottom:0"><div class="stat-l">Critical (3+ weeks)</div><div class="stat-v" style="color:var(--re)" id="ar-critical">&mdash;</div></div>
+          <div class="card" style="margin-bottom:0"><div class="stat-l">Warning (2 weeks)</div><div class="stat-v" style="color:var(--ye)" id="ar-warning">&mdash;</div></div>
           <div class="card" style="margin-bottom:0"><div class="stat-l">Outreach sent</div><div class="stat-v" style="color:var(--gr)" id="ar-sent">0</div></div>
         </div>
         <div style="margin-bottom:14px"></div>
@@ -285,9 +454,10 @@ tr:last-child td{border-bottom:none}
         </div>
         <div id="fb-written" style="margin-top:14px"></div>
       </div>
+
     </main>
-  </div>
-</div>
+  </div><!-- /app-inner -->
+</div><!-- /dashboard -->
 
 <script>
 const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzmQaJ1KdHpMJ6fpavLeuvbAFSyl6MA69S_Rf4ldN9IqV9Id6RkrHL801cX6BklJ7mmIg/exec';
@@ -302,7 +472,7 @@ const WEEK_META = [
 ];
 
 // State
-let state = { overview:null, atrisk:null, students:null, feedback:null,
+let state = { overview:null, atrisk:null, students:null, feedback:null, weekDetail:null, selectedWeek:null, allWeeks:[], weekSearch:'', weekPage:1,
   attFilter:'all', attSearch:'', attPage:1, arSearch:'', emailSent:new Set() };
 let charts = {};
 
@@ -357,17 +527,28 @@ async function doLogin() {
 }
 
 // ── NAVIGATION ──
+function switchView(v) {
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.toggle('on', b.dataset.view === v));
+  document.querySelectorAll('.mnb').forEach(b => b.classList.toggle('on', b.dataset.view === v));
+  document.querySelectorAll('.view').forEach(vw => vw.classList.remove('on'));
+  document.getElementById('view-' + v).classList.add('on');
+  // Update mobile title
+  const titles = {overview:'Dashboard',attendance:'Attendance',atrisk:'At Risk',feedback:'Feedback'};
+  document.getElementById('mob-title').textContent = titles[v] || 'Dashboard';
+  if (v === 'atrisk'    && !state.atrisk)       loadAtRisk();
+  if (v === 'attendance' && !state.allWeeks.length) loadWeekSelector();
+  if (v === 'feedback'  && !state.feedback)     loadFeedback();
+}
+
 document.querySelectorAll('.nav-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('on'));
-    document.querySelectorAll('.view').forEach(v => v.classList.remove('on'));
-    btn.classList.add('on');
-    const v = btn.dataset.view;
-    document.getElementById('view-' + v).classList.add('on');
-    if (v === 'atrisk'    && !state.atrisk)    loadAtRisk();
-    if (v === 'attendance' && !state.students) loadStudents();
-    if (v === 'feedback'  && !state.feedback)  loadFeedback();
-  });
+  btn.addEventListener('click', () => switchView(btn.dataset.view));
+});
+document.querySelectorAll('.mnb[data-view]').forEach(btn => {
+  btn.addEventListener('click', () => switchView(btn.dataset.view));
+});
+document.getElementById('btn-refresh-mob').addEventListener('click', () => {
+  state.overview = null; state.atrisk = null; state.students = null; state.feedback = null;
+  api('overview').then(data => { state.overview = data; renderOverview(); toast('Refreshed'); });
 });
 
 document.getElementById('btn-refresh').addEventListener('click', async () => {
@@ -388,19 +569,31 @@ function renderOverview() {
   const last = weekly[weekly.length-1] || {};
   const avg = weekly.length ? Math.round(weekly.reduce((s,w)=>s+w.rate,0)/weekly.length) : 0;
 
+  // Use last data week for labels when test/historical data exists
+  const dataWeek = weekly.length ? weekly[weekly.length-1].week : cur;
+  const labelWk  = Math.max(cur, dataWeek);
+
   document.getElementById('stat-enrolled').textContent = enr.toLocaleString();
-  document.getElementById('stat-wk-label').textContent = `Week ${cur} Attendance`;
+  document.getElementById('stat-wk-label').textContent = `Week ${labelWk} Attendance`;
   document.getElementById('stat-rate').textContent = (last.rate||0) + '%';
   document.getElementById('stat-attended-n').textContent = (last.attended||0).toLocaleString() + ' students';
   document.getElementById('stat-atrisk').textContent = (ov.atRiskCount||0).toLocaleString();
   document.getElementById('stat-critical-n').textContent = (ov.criticalCount||0).toLocaleString() + ' critical';
   document.getElementById('stat-avg').textContent = avg + '%';
-  document.getElementById('stat-avg-sub').textContent = `Weeks 1–${cur}`;
-  document.getElementById('sb-week-info').textContent = `Week ${cur} of 16`;
+  document.getElementById('stat-avg-sub').textContent = `Weeks 1–${labelWk}`;
+  // Show latest week with actual data, or calendar week, whichever is higher
+  const latestDataWeek = weekly.length ? weekly[weekly.length - 1].week : 0;
+  const displayWeek    = Math.max(cur, latestDataWeek);
+  const preStart       = cur <= 1 && latestDataWeek === 0;
+  document.getElementById('sb-week-info').textContent = preStart
+    ? 'Cohort starts Jun 7'
+    : `Week ${displayWeek} of 16`;
 
   // At-risk badge
   const badge = document.getElementById('atrisk-badge');
   if (ov.atRiskCount > 0) { badge.textContent = ov.atRiskCount.toLocaleString(); badge.style.display=''; }
+  const mobBadge = document.getElementById('mob-badge');
+  if (mobBadge && ov.atRiskCount > 0) { mobBadge.textContent = ov.atRiskCount; mobBadge.style.display=''; }
 
   // Trend chart
   if (weekly.length === 0) {
@@ -431,7 +624,7 @@ function renderOverview() {
   }
 
   // Breakdown
-  document.getElementById('breakdown-title').textContent = `Week ${cur} breakdown`;
+  document.getElementById('breakdown-title').textContent = `Week ${labelWk} breakdown`;
   const total = (last.live||0)+(last.recording||0)+(last.missed||0);
   document.getElementById('breakdown-body').innerHTML = [
     {l:'Attended live',    v:last.live||0,      c:'var(--gr)'},
@@ -444,6 +637,131 @@ function renderOverview() {
       <div class="bk-track"><div class="bk-fill" style="width:${pct}%;background:${r.c}"></div></div>
     </div>`;
   }).join('');
+}
+
+// ── ATTENDANCE TABS ──
+document.getElementById('tab-week').addEventListener('click', () => {
+  document.getElementById('tab-week').classList.add('on');
+  document.getElementById('tab-heatmap').classList.remove('on');
+  document.getElementById('att-week-view').style.display = '';
+  document.getElementById('att-heatmap-view').style.display = 'none';
+});
+document.getElementById('tab-heatmap').addEventListener('click', () => {
+  document.getElementById('tab-heatmap').classList.add('on');
+  document.getElementById('tab-week').classList.remove('on');
+  document.getElementById('att-heatmap-view').style.display = '';
+  document.getElementById('att-week-view').style.display = 'none';
+  if (!state.students) loadStudents();
+});
+
+// ── WEEK SELECTOR ──
+function buildWeekSelector(allWeeks) {
+  state.allWeeks = allWeeks;
+  const BREAK_WEEK = 7;
+  // Show pills for weeks 1-16
+  const maxW = Math.max(...allWeeks, 16);
+  let pills = '';
+  for (let w = 1; w <= maxW; w++) {
+    if (w === BREAK_WEEK) {
+      pills += `<span class="wk-pill br" title="Mid-cohort break">7&#8209;BR</span>`;
+    } else {
+      const hasData = allWeeks.includes(w);
+      pills += `<button class="wk-pill${hasData?'':' br'}" data-w="${w}" title="Week ${w}"${hasData?'':' disabled'}>W${w}</button>`;
+    }
+  }
+  document.getElementById('wk-selector').innerHTML = pills;
+  document.querySelectorAll('.wk-pill[data-w]').forEach(btn => {
+    btn.addEventListener('click', () => selectWeek(parseInt(btn.dataset.w)));
+  });
+  // Auto-select first available week
+  if (allWeeks.length > 0) selectWeek(allWeeks[0]);
+}
+
+async function selectWeek(week, page=1, search=state.weekSearch) {
+  document.querySelectorAll('.wk-pill[data-w]').forEach(b => b.classList.toggle('on', parseInt(b.dataset.w) === week));
+  state.selectedWeek = week;
+  state.weekPage = page;
+  document.getElementById('wk-table-wrap').innerHTML = '<div class="loading"><div class="spin"></div>Loading week ' + week + '&hellip;</div>';
+  document.getElementById('wk-stats').style.display = 'none';
+  try {
+    const data = await api('weekdetail', { week, page, pageSize:50, search });
+    state.weekDetail = data;
+    // Show search box once a week is selected
+    document.getElementById('wk-search-row').style.display = '';
+    renderWeekDetail(data);
+  } catch(e) {
+    document.getElementById('wk-table-wrap').innerHTML = `<div class="err-box" style="margin:1rem">Error: ${e.message}</div>`;
+  }
+}
+
+// Debounced search handler for week view
+let wkSearchTimer;
+document.addEventListener('DOMContentLoaded', () => {
+  const wkInput = document.getElementById('wk-search');
+  if (wkInput) {
+    wkInput.addEventListener('input', e => {
+      clearTimeout(wkSearchTimer);
+      wkSearchTimer = setTimeout(() => {
+        state.weekSearch = e.target.value.trim();
+        if (state.selectedWeek) selectWeek(state.selectedWeek, 1, state.weekSearch);
+      }, 350);
+    });
+  }
+});
+
+function renderWeekDetail(d) {
+  // Stats bar
+  document.getElementById('wks-live').textContent   = d.live.toLocaleString();
+  document.getElementById('wks-rec').textContent    = d.recording.toLocaleString();
+  document.getElementById('wks-miss').textContent   = d.missed.toLocaleString();
+  document.getElementById('wks-rating').textContent = d.avgRating ? d.avgRating + '/5' : '—';
+  document.getElementById('wk-stats').style.display = '';
+
+  if (d.students.length === 0) {
+    document.getElementById('wk-table-wrap').innerHTML = '<div class="empty"><div class="empty-i">&#128197;</div>No data for this week</div>';
+    return;
+  }
+
+  // Sort: live first, then recording, then missed
+  const order = { live:0, recording:1, missed:2 };
+  const sorted = [...d.students].sort((a,b) => (order[a.attended]||0) - (order[b.attended]||0));
+
+  const rows = sorted.map(s => {
+    const badgeCls = s.attended === 'live' ? 'att-live' : s.attended === 'recording' ? 'att-rec' : 'att-miss';
+    const badgeTxt = s.attended === 'live' ? '&#128225; Live' : s.attended === 'recording' ? '&#127909; Recording' : '&#10007; Missed';
+    const stars = s.rating ? [1,2,3,4,5].map(i => `<span style="color:${i<=s.rating?'var(--ye)':'var(--bg3)'}">&#9733;</span>`).join('') : '';
+    const fb1 = s.feedback1 ? `<div class="fb-inline">"${s.feedback1}"</div>` : '';
+    const fb2 = s.feedback2 ? `<div class="fb-inline" style="color:var(--t3)">"${s.feedback2}"</div>` : '';
+    return `<tr>
+      <td><div style="font-size:12px;font-weight:600">${s.firstName} ${s.lastName}</div><div style="font-size:10px;color:var(--t3)">${s.email}</div></td>
+      <td><span class="att-status ${badgeCls}">${badgeTxt}</span></td>
+      <td>${stars}</td>
+      <td style="max-width:260px">${fb1}${fb2}</td>
+    </tr>`;
+  }).join('');
+
+  const from = ((d.page||1)-1)*50+1;
+  const to   = Math.min((d.page||1)*50, d.total||d.students.length);
+  const total = d.total || d.students.length;
+  const hasPrev = (d.page||1) > 1;
+  const hasNext = (d.page||1)*50 < total;
+
+  document.getElementById('wk-table-wrap').innerHTML = `<div style="overflow-x:auto"><table>
+    <thead><tr><th>Student</th><th>Attendance</th><th>Rating</th><th>Feedback</th></tr></thead>
+    <tbody>${rows}</tbody>
+  </table></div>
+  <div class="tbl-foot">
+    <span>Showing ${from}&ndash;${to} of ${total.toLocaleString()} students</span>
+    <div style="display:flex;gap:6px">
+      <button class="pg-btn" id="wk-pg-prev" ${hasPrev?'':'disabled'}>&#8592; Prev</button>
+      <button class="pg-btn" id="wk-pg-next" ${hasNext?'':'disabled'}>Next &#8594;</button>
+    </div>
+  </div>`;
+
+  document.getElementById('wk-pg-prev')?.addEventListener('click', () =>
+    selectWeek(state.selectedWeek, (d.page||1)-1, state.weekSearch));
+  document.getElementById('wk-pg-next')?.addEventListener('click', () =>
+    selectWeek(state.selectedWeek, (d.page||1)+1, state.weekSearch));
 }
 
 // ── ATTENDANCE TABLE ──
@@ -460,6 +778,16 @@ async function loadStudents(page=1) {
   }
 }
 
+async function loadWeekSelector() {
+  try {
+    // Get week list from a lightweight weekdetail call
+    const data = await api('weekdetail', { week: 1 });
+    if (data.allWeeks && data.allWeeks.length > 0) buildWeekSelector(data.allWeeks);
+  } catch(e) {
+    document.getElementById('wk-selector').innerHTML = `<div style="color:var(--re);font-size:12px">Error loading weeks: ${e.message}</div>`;
+  }
+}
+
 function renderStudentsTable() {
   const d = state.students;
   if (!d) return;
@@ -468,7 +796,7 @@ function renderStudentsTable() {
     wrap.innerHTML = '<div class="empty"><div class="empty-i">&#128101;</div>No students found</div>';
     return;
   }
-  const weeks = d.currentWeek;
+  const weeks = d.maxWeek || d.currentWeek;
   const hCols = Array.from({length:weeks},(_,i)=>`<th class="c">W${i+1}</th>`).join('');
   const rows = d.students.map(s => {
     const pct = weeks > 0 ? Math.round(s.totalAtt/weeks*100) : 0;
@@ -553,7 +881,7 @@ function renderAtRisk() {
   }
 
   const rows = filtered.map(s => {
-    const weeks = d.currentWeek;
+    const weeks = d.maxWeek || d.currentWeek || (state.overview && state.overview.weeklyStats.length ? state.overview.weeklyStats[state.overview.weeklyStats.length-1].week : 1);
     const pct = weeks>0 ? Math.round(s.totalAttended/weeks*100) : 0;
     const bg = pct>=60?'var(--gr)':'var(--re)';
     const badge = s.consecutiveAbsences>=3 ? '<span class="badge bc">Critical</span>' : '<span class="badge bw">Warning</span>';
