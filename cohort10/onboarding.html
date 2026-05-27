@@ -16,6 +16,7 @@
       --blue:#4A7CC9;--blue-dim:rgba(74,124,201,0.12);
       --teal:#2ECDB8;--teal-dim:rgba(46,205,184,0.12);
       --purple:#a78bfa;--purple-dim:rgba(167,139,250,0.12);
+      --yellow:#fbbf24;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:15px}
@@ -37,7 +38,7 @@
     .hstat-label{font-size:0.72rem;color:var(--text-3)}
     .rule{height:2px;background:linear-gradient(90deg,var(--orange) 0%,rgba(254,102,18,0.15) 50%,transparent 100%)}
     .main{max-width:860px;margin:0 auto;padding:3rem 2rem 5rem}
-    .section{margin-bottom:3rem}
+    .section{margin-bottom:3rem;scroll-margin-top:76px}
     .sec-eyebrow{font-size:0.63rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);margin-bottom:0.3rem}
     .sec-title{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.3rem;letter-spacing:-0.03em;margin-bottom:1.2rem;padding-left:0.75rem;border-left:3px solid var(--orange)}
     .checklist{display:flex;flex-direction:column;gap:0.75rem}
@@ -54,6 +55,8 @@
     .zoom-banner .icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
     .zoom-banner strong{color:var(--blue);display:block;font-size:0.78rem;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:2px}
     .zoom-banner p{color:var(--text-2);line-height:1.5}
+    .zoom-banner a{color:var(--blue);font-weight:600;text-decoration:none}
+    .zoom-banner a:hover{text-decoration:underline}
     .schedule-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
     @media(max-width:600px){.schedule-grid{grid-template-columns:1fr}}
     .sched-card{background:var(--bg-1);border:1px solid var(--border-md);border-radius:12px;padding:1.2rem}
@@ -61,6 +64,12 @@
     .sched-card h4{font-size:0.95rem;font-weight:700;margin-bottom:0.3rem}
     .sched-card .time{font-size:0.88rem;font-weight:600;color:var(--text-2);margin-bottom:0.5rem}
     .sched-card p{font-size:0.82rem;color:var(--text-3);line-height:1.5}
+    .sched-card .zoom-link{display:inline-flex;align-items:center;gap:5px;margin-top:0.7rem;font-size:0.78rem;font-weight:700;color:var(--blue);text-decoration:none}
+    .sched-card .zoom-link:hover{text-decoration:underline}
+    .schedule-callout{margin-top:1rem;background:var(--orange-dim);border:1px solid var(--orange-border);border-radius:12px;padding:1rem 1.2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .schedule-callout .sc-left .sc-label{font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--orange);margin-bottom:3px}
+    .schedule-callout .sc-left p{font-size:0.84rem;color:var(--text-2)}
+    .schedule-callout a.sc-btn{display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;text-decoration:none;font-size:0.85rem;font-weight:700;padding:0.6rem 1.3rem;border-radius:8px;white-space:nowrap;flex-shrink:0}
     .course-list{display:flex;flex-direction:column;gap:0.75rem}
     .course-card{background:var(--bg-1);border:1px solid var(--border-md);border-radius:12px;padding:1.1rem 1.2rem;display:flex;gap:1rem;align-items:flex-start}
     .course-badge{font-size:0.62rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;padding:3px 9px;border-radius:5px;white-space:nowrap;flex-shrink:0;margin-top:2px}
@@ -135,7 +144,7 @@
 <div class="main">
 
   <!-- SETUP STEPS -->
-  <div class="section">
+  <div class="section" id="steps">
     <div class="sec-eyebrow">Before May 31</div>
     <div class="sec-title">Complete these steps</div>
     <div class="checklist">
@@ -189,6 +198,19 @@
       <div class="check-item">
         <div class="check-num">5</div>
         <div class="check-content">
+          <div class="check-title">Register for Zoom &mdash; all sessions are online</div>
+          <div class="check-desc">
+            Saturday lectures and Wednesday lab sessions are both held on Zoom. There are two separate registrations &mdash; please sign up for both.<br/>
+            <a href="https://us06web.zoom.us/meeting/register/zf3nL38vSLq47X8CLt3VrA#/registration" target="_blank">Register for Saturday lectures &rarr;</a><br/>
+            <a href="https://us06web.zoom.us/meeting/register/SpBIuun4Q52q0ohtt3ltHA#/registration" target="_blank">Register for Wednesday labs &rarr;</a>
+          </div>
+          <span class="check-note">Register for both &middot; You will receive the Zoom link by email after each registration</span>
+        </div>
+      </div>
+
+      <div class="check-item">
+        <div class="check-num">6</div>
+        <div class="check-content">
           <div class="check-title">Bookmark the weekly attendance form</div>
           <div class="check-desc">
             After each Saturday session, fill in the short check-in form to record your attendance and share feedback. It takes 2 minutes and counts toward your certificate.<br/>
@@ -199,28 +221,21 @@
       </div>
 
       <div class="check-item">
-        <div class="check-num">6</div>
+        <div class="check-num">7</div>
         <div class="check-content">
           <div class="check-title">Complete prerequisite refreshers if needed</div>
           <div class="check-desc">
-            Review the preparation resources below &mdash; Python, linear algebra, and probability. A solid foundation will help you get much more from every session.
+            Review the preparation resources below &mdash; Python, linear algebra, and probability. A solid foundation will help you get much more from every session.<br/>
+            <a href="#prerequisites">Jump to prerequisites &rarr;</a>
           </div>
         </div>
       </div>
 
     </div>
-
-    <div class="zoom-banner">
-      <div class="icon">&#128279;</div>
-      <div>
-        <strong>Zoom link</strong>
-        <p>Your session Zoom link will be shared with you in Week 1, once all participants have completed onboarding. Make sure you complete Steps 1&ndash;4 before May 31 so we can send it to you in time.</p>
-      </div>
-    </div>
   </div>
 
   <!-- ATTENDANCE -->
-  <div class="section">
+  <div class="section" id="attendance">
     <div class="sec-eyebrow">Every week &middot; Starting June 7</div>
     <div class="sec-title">Weekly attendance check-in</div>
     <p style="font-size:0.85rem;color:var(--text-2);margin-bottom:1.2rem;line-height:1.65;">
@@ -276,36 +291,47 @@
   </div>
 
   <!-- SCHEDULE -->
-  <div class="section">
+  <div class="section" id="schedule">
     <div class="sec-eyebrow">Programme &middot; May 31 &ndash; Sep 19, 2026</div>
     <div class="sec-title">Your weekly schedule</div>
     <div class="schedule-grid">
       <div class="sched-card">
-        <div class="day">Every Wednesday</div>
+        <div class="day">Every Wednesday &middot; From Week 2</div>
         <h4>Lab Session</h4>
         <div class="time">7:00pm &ndash; 9:00pm WAT</div>
         <p>Hands-on walkthroughs of notebooks and coding exercises. A great time to work through problems and get help from the instructor.</p>
+        <a href="https://us06web.zoom.us/meeting/register/SpBIuun4Q52q0ohtt3ltHA#/registration" target="_blank" class="zoom-link">&#128249; Register for lab Zoom &rarr;</a>
       </div>
       <div class="sched-card">
-        <div class="day">Every Saturday</div>
+        <div class="day">Every Saturday &middot; Starting June 7</div>
         <h4>Live Lecture</h4>
         <div class="time">11:00am &ndash; 1:00pm WAT</div>
         <p>Core teaching sessions covering the week's concepts, delivered by an instructor. Interactive &mdash; come ready to engage and ask questions.</p>
+        <a href="https://us06web.zoom.us/meeting/register/zf3nL38vSLq47X8CLt3VrA#/registration" target="_blank" class="zoom-link">&#128249; Register for lecture Zoom &rarr;</a>
       </div>
     </div>
+
     <div style="margin-top:1rem;background:var(--bg-1);border:1px solid var(--border-md);border-radius:12px;padding:1rem 1.2rem;">
       <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.6rem;">Throughout the cohort you will also have</div>
       <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
-        <span style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:6px;padding:4px 10px;font-size:0.78rem;color:var(--text-2)">&#128231; Weekly recap emails</span>
+        <span style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:6px;padding:4px 10px;font-size:0.78rem;color:var(--text-2)">&#128231; Weekly recap emails every Sunday</span>
         <span style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:6px;padding:4px 10px;font-size:0.78rem;color:var(--text-2)">&#128172; Community discussions</span>
         <span style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:6px;padding:4px 10px;font-size:0.78rem;color:var(--text-2)">&#129504; Trivia &amp; engagement activities</span>
         <span style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:6px;padding:4px 10px;font-size:0.78rem;color:var(--text-2)">&#129489;&#8205;&#127979; Mentor support for projects</span>
       </div>
     </div>
+
+    <div class="schedule-callout">
+      <div class="sc-left">
+        <div class="sc-label">&#128197; Full week-by-week schedule</div>
+        <p>See every session, topic, and instructor for all 16 weeks on the cohort programme page.</p>
+      </div>
+      <a href="./index.html#schedule" target="_blank" class="sc-btn">View full schedule &rarr;</a>
+    </div>
   </div>
 
   <!-- WHAT YOU WILL LEARN -->
-  <div class="section">
+  <div class="section" id="curriculum">
     <div class="sec-eyebrow">Curriculum</div>
     <div class="sec-title">What you will learn</div>
     <div class="course-list">
@@ -356,19 +382,19 @@
   </div>
 
   <!-- CERTIFICATE -->
-  <div class="section">
+  <div class="section" id="certificate">
     <div class="sec-eyebrow">Completion</div>
     <div class="sec-title">Certificate requirements</div>
     <ul class="cert-list">
       <li><span class="cert-check">&#10003;</span>Attend at least <strong>60% of Saturday lectures</strong></li>
       <li><span class="cert-check">&#10003;</span>Complete the <strong>&ldquo;Train A Small Language Model&rdquo;</strong> <a href="https://www.skills.google/course_templates/1453/labs/595070" target="_blank" style="font-size:0.82rem;color:var(--orange);text-decoration:none;font-weight:600;">(Challenge Lab)</a></li>
       <li><span class="cert-check">&#10003;</span>Submit all <strong>four cohort challenges</strong> as a team <a href="./index.html#challenges" target="_blank" style="font-size:0.82rem;color:var(--orange);text-decoration:none;font-weight:600;">(View challenges)</a></li>
-      <li><span class="cert-check">&#10003;</span>Participate in a <strong>final capstone project</strong> as a team <a href="./index.html#capstone" target="_blank" style="font-size:0.82rem;color:var(--orange);text-decoration:none;font-weight:600;">(View projects)</a></li>
+      <li><span class="cert-check">&#10003;</span>Participate in a <strong>final capstone project</strong> as a team <a href="./index.html#challenges" target="_blank" style="font-size:0.82rem;color:var(--orange);text-decoration:none;font-weight:600;">(View projects)</a></li>
     </ul>
   </div>
 
   <!-- PREP RESOURCES -->
-  <div class="section">
+  <div class="section" id="prerequisites">
     <div class="sec-eyebrow">Prepare ahead</div>
     <div class="sec-title">Prerequisite resources</div>
     <p style="font-size:0.85rem;color:var(--text-2);margin-bottom:1.5rem;line-height:1.65;">
@@ -417,7 +443,7 @@
   </div>
 
   <!-- COMMUNITY -->
-  <div class="section">
+  <div class="section" id="community">
     <div class="sec-eyebrow">Community</div>
     <div class="sec-title">Join the conversation</div>
     <div class="community-grid">
@@ -437,9 +463,13 @@
         <div class="community-icon" style="background:rgba(46,205,184,0.12);color:var(--teal);"><i class="fa-solid fa-calendar"></i></div>
         <div class="community-info"><div class="community-name">Cohort Programme Page</div><div class="community-desc">Full curriculum, schedule &amp; instructor info</div></div>
       </a>
+      <a href="./guidelines.html" class="community-card">
+        <div class="community-icon" style="background:rgba(251,191,36,0.1);color:var(--yellow);"><i class="fa-solid fa-book-open"></i></div>
+        <div class="community-info"><div class="community-name">Community Guidelines</div><div class="community-desc">Expected behaviour, session norms &amp; how we support each other</div></div>
+      </a>
     </div>
     <div style="margin-top:1.5rem">
-      <div class="sec-eyebrow" style="margin-bottom:0.7rem">Follow TRI AI</div>
+      <div class="sec-eyebrow" style="margin-bottom:0.7rem">Follow TRI AI Saturdays</div>
       <div class="social-row">
         <a href="https://www.youtube.com/@AISaturdaysLagos" target="_blank" class="social-btn"><i class="fa-brands fa-youtube" style="color:#ff4444"></i> YouTube</a>
         <a href="https://x.com/aisaturdaylagos" target="_blank" class="social-btn"><i class="fa-brands fa-x-twitter"></i> X / Twitter</a>
