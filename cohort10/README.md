@@ -103,7 +103,7 @@ Please review the [Community Guidelines](https://aisaturdayslagos.github.io/coho
  
 ## 🤝 Partners
  
-This cohort is proudly supported by **Google DeepMind** and Implemented by TRI AI.
+This cohort is proudly supported by **Google DeepMind** and implemented by TRI AI.
  
 ---
  
@@ -112,11 +112,12 @@ This cohort is proudly supported by **Google DeepMind** and Implemented by TRI A
 Questions? Email **[cohorts@tri-ai.org](mailto:cohorts@tri-ai.org)**
  
 Follow us: 
-AI Saturdays:
+- AI Saturdays:
 [YouTube](https://www.youtube.com/@AISaturdaysLagos) · [X/Twitter](https://x.com/aisaturdaylagos) · [LinkedIn](https://www.linkedin.com/company/aisaturdayslagos) · [GitHub](https://github.com/AISaturdaysLagos) · [Instagram](https://www.instagram.com/aisaturdayslagos)
 
-TRI AI
+- TRI AI:
 [LinkedIn](https://www.linkedin.com/company/triaiorg/posts/?feedView=all) · [Website](https://tri-ai.org/) · [GitHub](https://github.com/Tri-AI-org)
+
 ---
  
 *© 2026 TRI AI — Teaching · Research · Innovation | [tri-ai.org](https://tri-ai.org)*
