@@ -516,21 +516,21 @@
 
   // Cohort schedule — Saturday lecture dates for each week
   const COHORT_WEEKS = [
-    { week: 1,  date: 'June 7, 2026',     topic: 'Introduction to Language Modeling' },
-    { week: 2,  date: 'June 14, 2026',    topic: 'From N-grams to Transformers' },
-    { week: 3,  date: 'June 21, 2026',    topic: 'Training a Language Model' },
-    { week: 4,  date: 'June 28, 2026',    topic: 'Text & Data Preprocessing' },
-    { week: 5,  date: 'July 5, 2026',     topic: 'Tokenization' },
-    { week: 6,  date: 'July 12, 2026',    topic: 'Embeddings' },
-    { week: 7,  date: 'July 19, 2026',    topic: 'Mid-Cohort Break', isBreak: true },
-    { week: 8,  date: 'July 26, 2026',    topic: 'Introduction to Neural Networks' },
-    { week: 9,  date: 'August 2, 2026',   topic: 'Modeling Complex Data with MLP' },
-    { week: 10, date: 'August 9, 2026',   topic: 'Gradients & Backpropagation' },
-    { week: 11, date: 'August 16, 2026',  topic: 'Architecture of Modern LLMs' },
-    { week: 12, date: 'August 23, 2026',  topic: 'The Attention Mechanism' },
-    { week: 13, date: 'August 30, 2026',  topic: 'Positional Embeddings' },
-    { week: 14, date: 'September 6, 2026', topic: 'Project Week' },
-    { week: 15, date: 'September 13, 2026',topic: 'Transformer Block & Layer Normalization' },
+    { week: 1,  date: 'June 6, 2026',     topic: 'Introduction to Language Modeling' },
+    { week: 2,  date: 'June 13, 2026',    topic: 'From N-grams to Transformers' },
+    { week: 3,  date: 'June 20, 2026',    topic: 'Training a Language Model' },
+    { week: 4,  date: 'June 27, 2026',    topic: 'Text & Data Preprocessing' },
+    { week: 5,  date: 'July 4, 2026',     topic: 'Tokenization' },
+    { week: 6,  date: 'July 11, 2026',    topic: 'Embeddings' },
+    { week: 7,  date: 'July 18, 2026',    topic: 'Mid-Cohort Break', isBreak: true },
+    { week: 8,  date: 'July 25, 2026',    topic: 'Introduction to Neural Networks' },
+    { week: 9,  date: 'August 1, 2026',   topic: 'Modeling Complex Data with MLP' },
+    { week: 10, date: 'August 8, 2026',   topic: 'Gradients & Backpropagation' },
+    { week: 11, date: 'August 15, 2026',  topic: 'Architecture of Modern LLMs' },
+    { week: 12, date: 'August 22, 2026',  topic: 'The Attention Mechanism' },
+    { week: 13, date: 'August 29, 2026',  topic: 'Positional Embeddings' },
+    { week: 14, date: 'September 5, 2026', topic: 'Project Week' },
+    { week: 15, date: 'September 12, 2026',topic: 'Transformer Block & Layer Normalization' },
     { week: 16, date: 'September 19, 2026',topic: 'Demo Day 🎉' },
   ];
 
@@ -559,7 +559,7 @@
   }
 
   // Cohort open window
-  const COHORT_OPEN  = new Date('June 7, 2026');   // first Saturday
+  const COHORT_OPEN  = new Date('June 6, 2026');   // first Saturday
   const COHORT_CLOSE = new Date('September 26, 2026'); // one week after Demo Day
 
   function showFormClosed(message, detail) {
@@ -578,10 +578,10 @@
 
     // Before cohort starts
     if (now < cohortOpen) {
-      document.getElementById('week-label').textContent = 'Opens June 7, 2026';
+      document.getElementById('week-label').textContent = 'Opens June 6, 2026';
       showFormClosed(
         'Not open yet',
-        'The attendance form opens on Saturday June 7, 2026 — the first lecture of Cohort 10. See you then!'
+        'The attendance form opens on Saturday June 6, 2026 — the first day of Cohort 10. See you then!'
       );
       return;
     }
@@ -605,12 +605,12 @@
     if (wk.isBreak) {
       showFormClosed(
         'Mid-cohort break',
-        'No session this week — enjoy the rest! The form reopens for Week 8 on Saturday July 26.'
+        'No session this week — enjoy the rest! The form reopens for Week 8 on Saturday July 25.'
       );
       const banner = document.createElement('div');
       banner.className = 'banner info';
       banner.style.marginTop = '1rem';
-      banner.innerHTML = '<span class="bi">☀️</span><span>Check-in will reopen on July 26 for Week 8.</span>';
+      banner.innerHTML = '<span class="bi">☀️</span><span>Check-in will reopen on July 25 for Week 8.</span>';
       document.querySelector('.page').appendChild(banner);
       return;
     }
