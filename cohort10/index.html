@@ -204,7 +204,7 @@
     .course-outcomes ul li::before { content: '→'; color: var(--orange); flex-shrink: 0; }
 
     /* WEEK CARDS */
-    .week-card { background: var(--bg-1); border: 1px solid var(--border-md); border-top: none; }
+    .week-card { background: var(--bg-1); border: 1px solid var(--border-md); border-top: none; ; scroll-margin-top: 80px;}
     .week-card:last-child { border-radius: 0 0 10px 10px; }
     .week-card.open { border-left: 3px solid var(--orange); }
     .week-header { display: flex; align-items: center; gap: 10px; padding: 0.9rem 1.2rem; cursor: pointer; user-select: none; transition: background 0.12s; }
@@ -245,7 +245,7 @@
     .dt.chal { background: var(--orange-dim); color: var(--orange); border: 1px solid var(--orange-border); }
     .dt.lab  { background: rgba(255,255,255,0.05); color: var(--text-2); border: 1px solid var(--border-md); }
     [data-theme="light"] .dt.lab { background: var(--bg-2); }
-    .special-week { background: var(--bg-1); border: 1px solid var(--border-md); border-top: none; border-radius: 0 0 10px 10px; padding: 1.2rem; display: flex; align-items: center; gap: 12px; }
+    .special-week { background: var(--bg-1); border: 1px solid var(--border-md); border-top: none; border-radius: 0 0 10px 10px; padding: 1.2rem; display: flex; align-items: center; gap: 12px; scroll-margin-top: 80px;}
     .special-week .sw-icon { font-size: 1.3rem; }
     .special-week h4 { font-weight: 600; font-size: 0.87rem; margin-bottom: 3px; }
     .special-week p { font-size: 0.87rem; color: var(--text-2); }
@@ -519,7 +519,7 @@
       </ul></div>
       <div class="week-card" id="week1">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 1</span>
+          <a class="wk-num" href="#week1" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 1</a>
           <div class="wtg"><div class="week-title">Introduction to Language Modeling</div><div class="week-date">Lecture: Sat, June 6, 2026 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Tejumade Afonja</span></div>
           <div class="chevron-wrap"><span class="chevron">▼</span></div>
@@ -541,7 +541,7 @@
       </div>
       <div class="week-card" id="week2">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 2</span>
+          <a class="wk-num" href="#week2" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 2</a>
           <div class="wtg"><div class="week-title">From N-grams to Transformers</div><div class="week-date">Lab: Wed, June 10 · Lecture: Sat, June 13 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Lab: Tobias Lorenz</span><span class="ic">Lecture: Tobias Lorenz & Deborah Dormah Kanubala</span></div>
           <div class="chevron-wrap"><span class="chevron">▼</span></div>
@@ -571,7 +571,7 @@
       </div>
       <div class="week-card" id="week3">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 3</span>
+          <a class="wk-num" href="#week3" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 3</a>
           <div class="wtg"><div class="week-title">Training a Language Model</div><div class="week-date">Lab: Wed, June 17 · Lecture: Sat, June 20 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Oduguwa Damilola</span></div>
           <div class="chevron-wrap"><span class="chevron">▼</span></div>
@@ -612,7 +612,7 @@
       </ul></div>
       <div class="week-card" id="week4">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 4</span>
+          <a class="wk-num" href="#week4" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 4</a>
           <div class="wtg"><div class="week-title">Introduction to Text &amp; Data Preprocessing</div><div class="week-date">Lab: Wed, June 24 · Lecture: Sat, June 27 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Foutse Yuehgoh</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
@@ -641,7 +641,7 @@
       </div>
       <div class="week-card" id="week5">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 5</span>
+          <a class="wk-num" href="#week5" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 5</a>
           <div class="wtg"><div class="week-title">Tokenization</div><div class="week-date">Lab: Wed, July 1 · Lecture: Sat, July 4 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Abdulsamad Baruwa</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
@@ -665,7 +665,7 @@
       </div>
       <div class="week-card" id="week6">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 6</span>
+          <a class="wk-num" href="#week6" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 6</a>
           <div class="wtg"><div class="week-title">Embeddings</div><div class="week-date">Lab: Wed, July 8 · Lecture: Sat, July 11 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Kaletsidik Mekonnen</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
@@ -708,7 +708,7 @@
       </ul></div>
       <div class="week-card" id="week8">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 8</span>
+          <a class="wk-num" href="#week8" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 8</a>
           <div class="wtg"><div class="week-title">Introduction to Neural Networks</div><div class="week-date">Lab: Wed, July 22 · Lecture: Sat, July 25 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Timi Owolabi</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
@@ -736,7 +736,7 @@
       </div>
       <div class="week-card" id="week9">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 9</span>
+          <a class="wk-num" href="#week9" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 9</a>
           <div class="wtg"><div class="week-title">Modeling Complex Data with MLP</div><div class="week-date">Lab: Wed, July 29 · Lecture: Sat, Aug 1 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Chimdi Walter Ndubuisi</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
@@ -762,7 +762,7 @@
       </div>
       <div class="week-card" id="week10">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 10</span>
+          <a class="wk-num" href="#week10" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 10</a>
           <div class="wtg"><div class="week-title">Gradients &amp; Backpropagation</div><div class="week-date">Lab: Wed, Aug 5 · Lecture: Sat, Aug 8 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Fortune Adekogbe</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
@@ -804,7 +804,7 @@
       </ul></div>
       <div class="week-card" id="week11">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 11</span>
+          <a class="wk-num" href="#week11" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 11</a>
           <div class="wtg"><div class="week-title">Architecture of Modern Large Language Models</div><div class="week-date">Lab: Wed, Aug 12 · Lecture: Sat, Aug 15 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Lab: Josiah Isong</span><span class="ic">Lecture: Olumide Okubadejo</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
@@ -828,7 +828,7 @@
       </div>
       <div class="week-card" id="week12">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 12</span>
+          <a class="wk-num" href="#week12" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 12</a>
           <div class="wtg"><div class="week-title">The Attention Mechanism</div><div class="week-date">Lab: Wed, Aug 19 · Lecture: Sat, Aug 22 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Blessed Guda</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
@@ -850,7 +850,7 @@
       </div>
       <div class="week-card" id="week13">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 13</span>
+          <a class="wk-num" href="#week13" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 13</a>
           <div class="wtg"><div class="week-title">Positional Embeddings &amp; Mapping Stakeholder Values</div><div class="week-date">Lab: Wed, Aug 26 · Lecture: Sat, Aug 29 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Aminu Hamza Nababa</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
@@ -875,7 +875,7 @@
       </div>
       <div class="week-card" id="week14">
         <div class="week-header" onclick="toggleWeek(this)">
-          <span class="wk-num">Week 14</span>
+          <a class="wk-num" href="#week14" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 14</a>
           <div class="wtg"><div class="week-title">Putting it all together: Transformer Block, MLP &amp; Layer Normalization</div><div class="week-date">Lab: Wed, Sep 2 · Lecture: Sat, Sep 5 · 11am–1pm WAT</div></div>
           <div class="ic-row"><span class="ic">Lab: Josiah Isong</span><span class="ic">Lecture: Olumide Okubadejo</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
