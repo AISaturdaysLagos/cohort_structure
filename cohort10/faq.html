@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ · TRI AI Saturdays Cohort 10</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg:#0a0a0a;--bg-1:#111111;--bg-2:#191919;--bg-3:#222222;
+      --border:rgba(255,255,255,0.07);--border-md:rgba(255,255,255,0.13);
+      --text:#E5E5E5;--text-2:rgba(229,229,229,0.75);--text-3:rgba(229,229,229,0.5);
+      --orange:#FE6612;--orange-dim:rgba(254,102,18,0.1);--orange-border:rgba(254,102,18,0.25);
+      --blue:#4A7CC9;--blue-dim:rgba(74,124,201,0.12);
+      --green:#22c55e;--green-dim:rgba(34,197,94,0.12);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.65;font-size:15px}
+
+    /* HEADER */
+    header{background:var(--bg-1);border-bottom:1px solid var(--border-md);position:sticky;top:0;z-index:100;height:64px;display:flex;align-items:center;padding:0 2rem;justify-content:space-between}
+    .logo-wrap{display:flex;align-items:center;gap:10px}
+    .logo-div{width:1px;height:16px;background:rgba(255,255,255,0.15)}
+    .logo-sub{font-size:0.78rem;font-weight:500;color:rgba(229,229,229,0.35)}
+    .header-link{font-size:0.8rem;color:var(--text-3);text-decoration:none;transition:color 0.15s}
+    .header-link:hover{color:var(--orange)}
+
+    /* HERO */
+    .hero-outer{background:var(--bg-1);border-bottom:1px solid var(--border-md);position:relative;overflow:hidden}
+    .hero-outer::before{content:'';position:absolute;top:-60px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(254,102,18,0.07) 0%,transparent 70%);pointer-events:none}
+    .hero-inner{max-width:860px;margin:0 auto;padding:3rem 2rem 2.5rem;position:relative;z-index:1}
+    .hero-tag{display:inline-flex;align-items:center;gap:7px;font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--orange);border:1px solid var(--orange-border);background:var(--orange-dim);padding:4px 12px;border-radius:20px;margin-bottom:1rem}
+    .hero-inner h1{font-weight:800;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-0.04em;line-height:1.05;margin-bottom:0.5rem}
+    .hero-inner p{font-size:0.92rem;color:var(--text-2);max-width:540px;line-height:1.65;margin-bottom:1.2rem}
+
+    /* SEARCH */
+    .search-wrap{position:relative;max-width:480px}
+    .search-wrap input{width:100%;background:var(--bg-2);border:1px solid var(--border-md);border-radius:10px;color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;font-size:0.88rem;padding:0.7rem 1rem 0.7rem 2.5rem;outline:none;transition:border-color 0.15s}
+    .search-wrap input:focus{border-color:var(--orange)}
+    .search-wrap input::placeholder{color:var(--text-3)}
+    .search-icon{position:absolute;left:0.8rem;top:50%;transform:translateY(-50%);color:var(--text-3);font-size:0.85rem;pointer-events:none}
+    .search-count{font-size:0.75rem;color:var(--text-3);margin-top:0.5rem;min-height:18px}
+    .rule{height:2px;background:linear-gradient(90deg,var(--orange) 0%,rgba(254,102,18,0.15) 50%,transparent 100%)}
+
+    /* LAYOUT */
+    .main{max-width:860px;margin:0 auto;padding:2.5rem 2rem 5rem}
+
+    /* CATEGORY PILLS */
+    .cat-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem}
+    .cat-pill{background:var(--bg-2);border:1px solid var(--border-md);border-radius:20px;padding:5px 14px;font-size:0.76rem;font-weight:600;color:var(--text-3);cursor:pointer;transition:all 0.15s;white-space:nowrap}
+    .cat-pill:hover{border-color:var(--orange-border);color:var(--text)}
+    .cat-pill.on{background:var(--orange-dim);border-color:var(--orange);color:var(--orange)}
+
+    /* FAQ GROUPS */
+    .faq-group{margin-bottom:2.5rem}
+    .faq-group[data-cat]{transition:opacity 0.2s}
+    .group-label{font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);margin-bottom:0.75rem;padding-left:2px}
+
+    /* FAQ ITEMS */
+    .faq-item{background:var(--bg-1);border:1px solid var(--border-md);border-radius:10px;margin-bottom:6px;overflow:hidden;transition:border-color 0.15s}
+    .faq-item.open{border-color:rgba(254,102,18,0.3)}
+    .faq-item.hidden{display:none}
+    .faq-q{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.9rem 1.1rem;cursor:pointer;user-select:none;transition:background 0.12s}
+    .faq-q:hover{background:var(--bg-2)}
+    .q-text{font-size:0.88rem;font-weight:600;color:var(--text);line-height:1.4;flex:1}
+    .q-text mark{background:rgba(254,102,18,0.2);color:var(--orange);border-radius:2px;padding:0 2px}
+    .faq-chevron{color:var(--text-3);font-size:0.7rem;flex-shrink:0;transition:transform 0.2s}
+    .faq-item.open .faq-chevron{transform:rotate(180deg)}
+    .faq-a{display:none;padding:0 1.1rem 1rem;font-size:0.85rem;color:var(--text-2);line-height:1.7;border-top:1px solid var(--border)}
+    .faq-item.open .faq-a{display:block}
+    .faq-a a{color:var(--orange);text-decoration:none;font-weight:600;word-break:break-all}
+    .faq-a a:hover{text-decoration:underline}
+
+    /* EMPTY STATE */
+    .empty{display:none;text-align:center;padding:3rem 1rem;color:var(--text-3)}
+    .empty-icon{font-size:2rem;margin-bottom:0.5rem}
+    .empty p{font-size:0.88rem}
+
+    /* FOOTER */
+    footer{background:var(--bg-1);border-top:1px solid var(--border-md);padding:2rem;text-align:center}
+    footer p{font-size:0.78rem;color:var(--text-3);line-height:1.7}
+    footer a{color:var(--orange);text-decoration:none}
+    footer a:hover{text-decoration:underline}
+
+    @media(max-width:600px){
+      header{padding:0 1rem}
+      .hero-inner{padding:2rem 1rem 2rem}
+      .main{padding:2rem 1rem 4rem}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <svg viewBox="0 0 200 88" height="40" xmlns="http://www.w3.org/2000/svg" style="display:block;flex-shrink:0">
+      <text x="100" y="52" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="52">
+        <tspan font-weight="500" letter-spacing="2" fill="#E5E5E5">tri</tspan><tspan font-weight="800" letter-spacing="3" fill="#D4A017">AI</tspan>
+      </text>
+      <circle cx="86" cy="74" r="4" fill="#FE6612"/>
+      <circle cx="100" cy="74" r="4" fill="#4A7CC9"/>
+      <circle cx="114" cy="74" r="4" fill="#2ECDB8"/>
+    </svg>
+    <span class="logo-div"></span>
+    <span class="logo-sub">Cohort 10 &middot; FAQ</span>
+  </div>
+  <a href="./index.html" class="header-link">&#8592; Cohort page</a>
+</header>
+
+<div class="hero-outer">
+  <div class="hero-inner">
+    <div class="hero-tag">&#10067; Frequently Asked Questions</div>
+    <h1>Got questions?<br/>We have answers.</h1>
+    <p>Common questions from Cohort 10 participants. Can't find what you're looking for? Email us at <a href="mailto:cohorts@tri-ai.org" style="color:var(--orange);font-weight:600;text-decoration:none">cohorts@tri-ai.org</a>.</p>
+    <div class="search-wrap">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" id="search-input" placeholder="Search questions&hellip;" autocomplete="off"/>
+    </div>
+    <div class="search-count" id="search-count"></div>
+  </div>
+</div>
+<div class="rule"></div>
+
+<div class="main">
+
+  <div class="cat-row" id="cat-row">
+    <button class="cat-pill on" data-cat="all">All</button>
+    <button class="cat-pill" data-cat="sessions">Sessions &amp; Schedule</button>
+    <button class="cat-pill" data-cat="materials">Course Materials</button>
+    <button class="cat-pill" data-cat="skillsboost">Skills Boost</button>
+    <button class="cat-pill" data-cat="cert">Certificate &amp; Projects</button>
+    <button class="cat-pill" data-cat="community">Community</button>
+    <button class="cat-pill" data-cat="other">Other</button>
+  </div>
+
+  <!-- SESSIONS & SCHEDULE -->
+  <div class="faq-group" data-cat="sessions">
+    <div class="group-label">&#128197; Sessions &amp; Schedule</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Do I need to complete Week 1 lectures before the first class?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Yes — you should complete the self-paced materials before the Saturday lecture, and the labs before the Wednesday lab session. Week 1 just started today, so there is still time.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Are lectures on both Wednesday and Saturday? Is the content the same?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">No — they cover different content. Lectures are on <strong>Saturdays (11am–1pm WAT)</strong> and cover the week's core concepts. Coding labs are on <strong>Wednesdays (7–9pm WAT)</strong> and are hands-on practice sessions.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Is Wednesday lab attendance mandatory?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Wednesday labs are strongly encouraged but are not part of the certificate requirements. If you miss a lab session, you will need to work through it on your own.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Will sessions be recorded?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Yes. All sessions are livestreamed and recorded on YouTube: <a href="https://www.youtube.com/@AISaturdaysLagos" target="_blank">youtube.com/@AISaturdaysLagos</a></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">When is the next Zoom meeting and where do I find the link?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Lectures are every Saturday starting June 6, labs every Wednesday from Week 2. There are <strong>separate Zoom links</strong> for Saturday lectures and Wednesday labs — both were sent to your registered email after you completed onboarding registration.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">How do I add sessions to my calendar?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Use this link to subscribe to the programme calendar: <a href="https://calendar.google.com/calendar/u/0?cid=cHJvZ3JhbW1lQHRyaS1haS5vcmc" target="_blank">Add to Google Calendar</a></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Where do I find the attendance form?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">The attendance form opens every Saturday and closes the following Friday. Link: <a href="./attendance.html" target="_blank">attendance form</a>. Note: attendance does not open until Saturday June 6 — the first lecture day.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">What if someone fills in the attendance form without actually attending?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">The programme expects all participants to report their attendance honestly. The form is based on trust — misreporting affects your team and the integrity of the cohort.</div>
+    </div>
+
+  </div>
+
+  <!-- COURSE MATERIALS -->
+  <div class="faq-group" data-cat="materials">
+    <div class="group-label">&#128218; Course Materials &amp; Labs</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Where do I find the course materials?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">On the cohort website: <a href="./index.html" target="_blank">aisaturdayslagos.github.io/cohort_structure/cohort10</a>. Each week's lessons and labs are linked directly from the curriculum section.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">How do I access the labs?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Labs are hosted on Google Cloud Skills Boost. You are encouraged to go through them before the Wednesday lab sessions. Labs are run on Google Colab: <a href="https://colab.research.google.com/" target="_blank">colab.research.google.com</a></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Can I use a notebook environment other than Google Colab?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Yes, you can use other notebook environments. Google Colab is recommended because it requires no setup and runs in your browser for free.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Can we complete the programme faster than 16 weeks since all materials are available?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Yes, you can self-pace through the materials. However, the team can only answer questions and provide support relevant to the current week's content.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Are Courses 5–8 covered after Courses 1–4?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Yes. Courses 1–4 are covered in Cohort 10 (16 weeks). Courses 5–8 will be covered in Cohort 11.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Do I need any special hardware like a GPU?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">No special hardware is needed. Everything runs on Google Colab and Google Cloud Skills Boost — a regular laptop or desktop with internet access is all you need.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Can I see projects from previous cohorts?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Yes — previous cohort projects are on GitHub: <a href="https://github.com/AISaturdaysLagos" target="_blank">github.com/AISaturdaysLagos</a></div>
+    </div>
+
+  </div>
+
+  <!-- SKILLS BOOST -->
+  <div class="faq-group" data-cat="skillsboost">
+    <div class="group-label">&#9729; Google Cloud Skills Boost</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">I haven't received my Google Cloud Skills Boost invitation. What should I do?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">First make sure you have created an account at <a href="https://www.skills.google/" target="_blank">skills.google</a>, then follow the onboarding instructions: <a href="./onboarding.html" target="_blank">onboarding page</a>. If the problem persists, email <a href="mailto:cohorts@tri-ai.org">cohorts@tri-ai.org</a>.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Google Cloud keeps asking for credit card information. Do I need to pay?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a"><strong>No.</strong> You do not need to enter a credit card or pay for anything. Follow the course exactly as we've outlined it — the cohort pathway on Skills Boost is completely free. If you are being prompted for payment, email <a href="mailto:cohorts@tri-ai.org">cohorts@tri-ai.org</a> for help.</div>
+    </div>
+
+  </div>
+
+  <!-- PREREQUISITES -->
+  <div class="faq-group" data-cat="materials">
+    <div class="group-label">&#128218; Prerequisites &amp; Background</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">What background knowledge do I need for this cohort?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">See the prerequisites section of the onboarding page: <a href="./onboarding.html#prerequisites" target="_blank">onboarding.html#prerequisites</a>. Basic Python, linear algebra, and probability are recommended.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">I'm a complete beginner with no technical background. Can I keep up?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Yes, if you are willing to put in the work. Start with the refresher courses linked in the onboarding email — Python, Linear Algebra, and Probability. They will help you follow along from day one.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">I don't know Python. What should I do?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Take the Python refresher course linked in the onboarding email, or go directly to the prerequisites section: <a href="./onboarding.html#prerequisites" target="_blank">onboarding.html#prerequisites</a>.</div>
+    </div>
+
+  </div>
+
+  <!-- CERTIFICATE & PROJECTS -->
+  <div class="faq-group" data-cat="cert">
+    <div class="group-label">&#127941; Certificate &amp; Projects</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">What certificate do we receive?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">A certificate of completion from TRI AI Saturdays. To qualify you need at least 60% lecture attendance, complete the SLM challenge lab, submit all four cohort challenges as a team, and participate in the final capstone project.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Will I be automatically eligible for Cohort 11 after finishing?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Yes — if you complete Cohort 10 and receive a certificate of completion, you will be eligible for Cohort 11, which covers Courses 5–8.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Why is the full programme split across two cohorts?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">The curriculum is very detailed — Courses 1–4 alone take 16 weeks to cover thoroughly. Splitting across two cohorts ensures you build a genuine understanding of each topic rather than rushing through it.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">How will teams be formed for the project?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Groups will be assigned in Week 2 and you will be notified by email. Projects are group-based and start in Week 5.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Can we choose our own project topic?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">There will be several topics to choose from. You won't have completely free choice, but you will have options. More details will be shared in Week 2.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Are there internship opportunities after graduation?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">There are no direct internship placements through the programme. However, the knowledge and projects you build here will strengthen your portfolio and help you in your future job search.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Will we be supported by Google DeepMind experts?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">Google DeepMind experts designed and developed the curriculum. During the cohort, you are supported by our facilitators and instructors who will guide you through the material.</div>
+    </div>
+
+  </div>
+
+  <!-- COMMUNITY -->
+  <div class="faq-group" data-cat="community">
+    <div class="group-label">&#128172; Community &amp; Communication</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">How do I join the Discord?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a"><a href="https://discord.com/invite/8sA4Tkgpkt" target="_blank">discord.com/invite/8sA4Tkgpkt</a></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">How do I join the mailing list?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a"><a href="https://groups.google.com/a/tri-ai.org/g/cohort-10" target="_blank">groups.google.com/a/tri-ai.org/g/cohort-10</a></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Is there a WhatsApp group?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">No. The only official community channels are <strong>Discord</strong> and the <strong>Google Groups mailing list</strong>. Please use those for all questions and discussions.</div>
+    </div>
+
+  </div>
+
+  <!-- OTHER -->
+  <div class="faq-group" data-cat="other">
+    <div class="group-label">&#128717; Other</div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggle(this)">
+        <span class="q-text">Do we need to pay for anything?</span>
+        <span class="faq-chevron">&#9660;</span>
+      </div>
+      <div class="faq-a">No. The entire programme is free for accepted participants — including the course materials on Google Cloud Skills Boost.</div>
+    </div>
+
+  </div>
+
+  <div class="empty" id="empty-state">
+    <div class="empty-icon">&#128269;</div>
+    <p>No questions found for &ldquo;<span id="empty-query"></span>&rdquo;<br/>Try a different search or <a href="mailto:cohorts@tri-ai.org" style="color:var(--orange)">email us your question</a>.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>
+    Still have questions? Email <a href="mailto:cohorts@tri-ai.org">cohorts@tri-ai.org</a><br/>
+    <a href="./index.html">&#8592; Back to Cohort 10 programme</a> &nbsp;&middot;&nbsp;
+    <a href="./onboarding.html">Onboarding</a> &nbsp;&middot;&nbsp;
+    <a href="https://tri-ai.org" target="_blank">tri-ai.org</a><br/>
+    <span style="margin-top:0.3rem;display:block">&copy; 2026 TRI AI &mdash; Teaching &middot; Research &middot; Innovation</span>
+  </p>
+</footer>
+
+<script>
+  // ── ACCORDION ──────────────────────────────────────────────
+  function toggle(btn) {
+    const item = btn.parentElement;
+    item.classList.toggle('open');
+  }
+
+  // ── CATEGORY FILTER ────────────────────────────────────────
+  document.querySelectorAll('.cat-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('on'));
+      pill.classList.add('on');
+      const cat = pill.dataset.cat;
+      document.querySelectorAll('.faq-group').forEach(g => {
+        if (cat === 'all' || g.dataset.cat === cat) {
+          g.style.display = '';
+        } else {
+          g.style.display = 'none';
+        }
+      });
+      filterItems();
+    });
+  });
+
+  // ── SEARCH ─────────────────────────────────────────────────
+  let searchTimer;
+  document.getElementById('search-input').addEventListener('input', e => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => filterItems(e.target.value.trim()), 200);
+  });
+
+  function filterItems(query) {
+    query = (query || document.getElementById('search-input').value.trim()).toLowerCase();
+    const activeCat = document.querySelector('.cat-pill.on')?.dataset.cat || 'all';
+    let visible = 0;
+
+    document.querySelectorAll('.faq-group').forEach(group => {
+      const catMatch = activeCat === 'all' || group.dataset.cat === activeCat;
+      if (!catMatch) { group.style.display = 'none'; return; }
+      group.style.display = '';
+
+      let groupVisible = 0;
+      group.querySelectorAll('.faq-item').forEach(item => {
+        const qEl = item.querySelector('.q-text');
+        const aEl = item.querySelector('.faq-a');
+        const qText = qEl.textContent.toLowerCase();
+        const aText = aEl.textContent.toLowerCase();
+        const match = !query || qText.includes(query) || aText.includes(query);
+
+        if (match) {
+          item.classList.remove('hidden');
+          groupVisible++;
+          visible++;
+          // Highlight matching text in question
+          if (query) {
+            const orig = qEl.dataset.orig || qEl.textContent;
+            qEl.dataset.orig = orig;
+            const re = new RegExp('(' + query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+            qEl.innerHTML = orig.replace(re, '<mark>$1</mark>');
+          } else {
+            if (qEl.dataset.orig) qEl.innerHTML = qEl.dataset.orig;
+          }
+        } else {
+          item.classList.add('hidden');
+          if (qEl.dataset.orig) qEl.innerHTML = qEl.dataset.orig;
+        }
+      });
+
+      // Hide group header if all its items are hidden
+      group.style.display = groupVisible === 0 ? 'none' : '';
+    });
+
+    // Count + empty state
+    const countEl = document.getElementById('search-count');
+    const emptyEl = document.getElementById('empty-state');
+    if (query) {
+      countEl.textContent = visible === 0 ? 'No results found' : `${visible} result${visible === 1 ? '' : 's'}`;
+      emptyEl.style.display = visible === 0 ? 'block' : 'none';
+      document.getElementById('empty-query').textContent = query;
+    } else {
+      countEl.textContent = '';
+      emptyEl.style.display = 'none';
+    }
+  }
+</script>
+</body>
+</html>
