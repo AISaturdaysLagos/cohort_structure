@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cohort 10 · TRI AI Saturdays</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;800&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;800&display=swap" rel="stylesheet"/>
   <style>
     :root {
       --bg:          #0a0a0a;
@@ -16,7 +16,7 @@
       --border-md:   rgba(255,255,255,0.13);
       --text:        #E5E5E5;
       --text-2:      rgba(229,229,229,0.75);
-      --text-3:      rgba(229,229,229,1);
+      --text-3:      rgba(229,229,229,0.5);
       --orange:      #FE6612;
       --orange-dim:  rgba(254,102,18,0.1);
       --orange-mid:  rgba(254,102,18,0.18);
@@ -56,15 +56,15 @@
       --footer-bottom-c: rgba(229,229,229,0.8);
     }
     [data-theme="light"] {
-      --bg:          #ffffff;
+      --bg:          #fdf6eb;
       --bg-1:        #ffffff;
-      --bg-2:        #fdf6eb;
-      --bg-3:        #fdf6eb;
+      --bg-2:        #efefed;
+      --bg-3:        #e4e4e1;
       --border:      rgba(0,0,0,0.08);
       --border-md:   rgba(0,0,0,0.14);
       --text:        #0a0a0a;
       --text-2:      rgba(10,10,10,0.8);
-      --text-3:      rgba(10,10,10,1);
+      --text-3:      rgba(10,10,10,0.42);
       --orange:      #e05508;
       --orange-dim:  rgba(224,85,8,0.08);
       --orange-mid:  rgba(224,85,8,0.15);
@@ -105,7 +105,7 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { transition: background 0.2s, color 0.2s; }
-    body { font-family: "Plus Jakarta Sans", Inter, system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; font-size: 16px; transition: background 0.2s, color 0.2s; }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.65; font-size: 16px; transition: background 0.2s, color 0.2s; }
 
     /* THEME TOGGLE */
     .theme-toggle {
@@ -145,7 +145,7 @@
     .hero { max-width: 1160px; margin: 0 auto; padding: 4.5rem 2rem 4rem; position: relative; z-index: 1; }
     .hero-breadcrumb { font-size: 0.73rem; color: var(--hero-crumb); margin-bottom: 1.4rem; }
     .hero-tag { display: inline-flex; align-items: center; gap: 7px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange); border: 1px solid var(--orange-border); background: var(--orange-dim); padding: 4px 14px; border-radius: 20px; margin-bottom: 1.3rem; }
-    .hero h1 { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1.02; letter-spacing: -0.04em; color: var(--hero-h1); margin-bottom: 1rem; max-width: 700px; transition: color 0.2s; }
+    .hero h1 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: clamp(2.2rem, 5.5vw, 3.6rem); line-height: 1.02; letter-spacing: -0.04em; color: var(--hero-h1); margin-bottom: 1rem; max-width: 700px; transition: color 0.2s; }
     .hero-desc { font-size: 1rem; color: var(--hero-desc); max-width: 560px; margin-bottom: 1rem; line-height: 1.65; }
     .hero-outcome { font-size: 0.88rem; color: var(--hero-outcome-c); margin-bottom: 2rem; max-width: 560px; }
     .hero-chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.5rem; }
@@ -154,7 +154,7 @@
     .hero-stats { display: inline-flex; align-items: stretch; background: var(--stat-bg); border: 1px solid var(--stat-border); border-radius: 12px; overflow: hidden; }
     .hero-stat { padding: 1.1rem 1.8rem; text-align: center; border-right: 1px solid var(--stat-divider); }
     .hero-stat:last-child { border-right: none; }
-    .stat-num { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; font-size: 1.85rem; letter-spacing: -0.04em; color: var(--stat-num-c); line-height: 1; }
+    .stat-num { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.85rem; letter-spacing: -0.04em; color: var(--stat-num-c); line-height: 1; }
     .stat-num sup { font-size: 1rem; color: var(--orange); vertical-align: super; }
     .stat-label { font-size: 0.7rem; color: var(--stat-label-c); margin-top: 5px; white-space: nowrap; }
     @media (max-width: 600px) { .hero-stats { flex-wrap: wrap; } .hero-stat { border-bottom: 1px solid var(--stat-divider); border-right: none; } }
@@ -179,14 +179,14 @@
 
     /* SECTION LABELS */
     .sec-eyebrow { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 0.3rem; }
-    .sec-title { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.03em; margin-bottom: 1.4rem; padding-left: 0.8rem; border-left: 3px solid var(--orange); }
+    .sec-title { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.03em; margin-bottom: 1.4rem; padding-left: 0.8rem; border-left: 3px solid var(--orange); }
     .section-sep { padding-top: 2.5rem; margin-top: 1.5rem; border-top: 1px solid var(--border-md); }
 
     /* MILESTONES */
     .milestones { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1px; border: 1px solid var(--border-md); border-radius: 10px; overflow: hidden; margin-bottom: 3rem; background: var(--border-md); }
     .mc { background: var(--bg-1); padding: 1rem 1.1rem; transition: background 0.12s; }
     .mc:hover { background: var(--bg-2); }
-    .mc-date { font-family: "Plus Jakarta Sans", sans-serif; font-weight: 700; font-size: 0.8rem; color: var(--orange); margin-bottom: 3px; }
+    .mc-date { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.8rem; color: var(--orange); margin-bottom: 3px; }
     .mc-label { font-size: 0.85rem; color: var(--text-2); line-height: 1.4; }
 
     /* COURSE BLOCKS */
@@ -204,7 +204,7 @@
     .course-outcomes ul li::before { content: '→'; color: var(--orange); flex-shrink: 0; }
 
     /* WEEK CARDS */
-    .week-card { background: var(--bg-1); border: 1px solid var(--border-md); border-top: none; ; scroll-margin-top: 80px;}
+    .week-card { background: var(--bg-1); border: 1px solid var(--border-md); border-top: none; scroll-margin-top: 80px; }
     .week-card:last-child { border-radius: 0 0 10px 10px; }
     .week-card.open { border-left: 3px solid var(--orange); }
     .week-header { display: flex; align-items: center; gap: 10px; padding: 0.9rem 1.2rem; cursor: pointer; user-select: none; transition: background 0.12s; }
@@ -245,7 +245,7 @@
     .dt.chal { background: var(--orange-dim); color: var(--orange); border: 1px solid var(--orange-border); }
     .dt.lab  { background: rgba(255,255,255,0.05); color: var(--text-2); border: 1px solid var(--border-md); }
     [data-theme="light"] .dt.lab { background: var(--bg-2); }
-    .special-week { background: var(--bg-1); border: 1px solid var(--border-md); border-top: none; border-radius: 0 0 10px 10px; padding: 1.2rem; display: flex; align-items: center; gap: 12px; scroll-margin-top: 80px;}
+    .special-week { background: var(--bg-1); border: 1px solid var(--border-md); border-top: none; border-radius: 0 0 10px 10px; padding: 1.2rem; display: flex; align-items: center; gap: 12px; scroll-margin-top: 80px; }
     .special-week .sw-icon { font-size: 1.3rem; }
     .special-week h4 { font-weight: 600; font-size: 0.87rem; margin-bottom: 3px; }
     .special-week p { font-size: 0.87rem; color: var(--text-2); }
@@ -409,11 +409,11 @@
     <div class="hero-breadcrumb">TRI AI Saturdays · Cohort 10</div>
     <div class="hero-tag">🌍 Google DeepMind AI Research Foundation Course</div>
     <h1>TRI AI Saturdays<br/>Cohort 10</h1>
-    <p class="hero-desc">A free, 16-week hands-on programme where you go from language model fundamentals all the way to building your own Small Language Model — in community with 3,000+ learners across Africa and beyond.</p>
+    <p class="hero-desc">A free, 18-week hands-on programme where you go from language model fundamentals all the way to building your own Small Language Model — in community with 3,000+ learners across Africa and beyond.</p>
     <p class="hero-outcome">🎯 By the end you'll understand how language models work from the inside out, how to train a language model on your local data, and participate in a project.</p>
     <div class="hero-chips">
       <div class="chip"><strong>Start</strong><span>May 31, 2026</span></div>
-      <div class="chip"><strong>End</strong><span>Sep 19, 2026</span></div>
+      <div class="chip"><strong>End</strong><span>Sep 26, 2026</span></div>
       <div class="chip"><strong>Sessions</strong><span>Saturdays (Lecture) · Wednesdays (Lab)</span></div>
       <div class="chip"><strong>Format</strong><span>Online + Satellite Classes</span></div>
       <div class="chip"><strong>Free</strong><span>for accepted learners</span></div>
@@ -422,8 +422,17 @@
       <div class="hero-stat"><div class="stat-num">3,134</div><div class="stat-label">Registered participants</div></div>
       <div class="hero-stat"><div class="stat-num">83</div><div class="stat-label">Countries represented</div></div>
       <div class="hero-stat"><div class="stat-num">83%</div><div class="stat-label">From Africa</div></div>
-      <div class="hero-stat"><div class="stat-num">16</div><div class="stat-label">Weeks of learning</div></div>
+      <div class="hero-stat"><div class="stat-num">18</div><div class="stat-label">Weeks of learning</div></div>
       <div class="hero-stat"><div class="stat-num">4</div><div class="stat-label">Courses covered</div></div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.75rem;margin-top:1.8rem;flex-wrap:wrap">
+      <a href="https://www.youtube.com/watch?v=HsONQOoz0is&amp;list=PLD0HH4Qq3rcfBEpojk8MnPTwDaqhN2WH4" target="_blank" style="display:inline-flex;align-items:center;gap:7px;background:#ff44441a;border:1px solid rgba(255,68,68,0.3);color:#ff6b6b;text-decoration:none;font-size:0.84rem;font-weight:700;padding:8px 18px;border-radius:8px">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        Watch Cohort 10 Lectures
+      </a>
+      <a href="https://groups.google.com/a/tri-ai.org/g/community" target="_blank" style="display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;text-decoration:none;font-size:0.84rem;font-weight:700;padding:8px 18px;border-radius:8px">
+        Join the community &rarr;
+      </a>
     </div>
   </div>
 </div>
@@ -440,7 +449,7 @@
       </div>
       <div class="qs-step">
         <div class="qs-num">2</div>
-        <div class="qs-text"><strong>Access course materials</strong><span>Free on <a href="https://www.skills.google/collections/deepmind" target="_blank">Google Skills Boost</a> — click any lesson below</span></div>
+        <div class="qs-text"><strong>Access course materials</strong><span>Free on <a href="https://www.skills.google/" target="_blank">Google Skills Boost</a> — click any lesson below</span></div>
       </div>
       <div class="qs-step">
         <div class="qs-num">3</div>
@@ -475,8 +484,8 @@
       <a class="sb-link" onclick="jumpTo('week12')"><span class="wnum">12</span> Attention</a>
       <a class="sb-link" onclick="jumpTo('week13')"><span class="wnum">13</span> Positional Embed.</a>
       <a class="sb-link" onclick="jumpTo('week14')"><span class="wnum">14</span> Transformer Block</a>
-      <a class="sb-link" onclick="jumpTo('week15')"><span class="wnum">15</span> Project Week</a>
-      <a class="sb-link" onclick="jumpTo('week16')"><span class="wnum">16</span> Demo Day 🎉</a>
+      <a class="sb-link" onclick="jumpTo('week15')"><span class="wnum">15</span> Project Weeks</a>
+      <a class="sb-link" onclick="jumpTo('week18')"><span class="wnum">18</span> Demo Day 🎉</a>
     </div>
     <div class="sb-block">
       <div class="sb-heading">Team</div>
@@ -502,10 +511,10 @@
       <div class="sec-title">Key Milestones</div>
       <div class="milestones">
         <div class="mc"><div class="mc-date">May 31, 2026</div><div class="mc-label">Cohort Starts</div></div>
-        <div class="mc"><div class="mc-date">Sep 6–12, 2026</div><div class="mc-label">Project Week</div></div>
-        <div class="mc"><div class="mc-date">Sep 19, 2026</div><div class="mc-label">Demo Day 🎉</div></div>
-        <div class="mc"><div class="mc-date">Oct, 2026</div><div class="mc-label">Cohort 11 Begins</div></div>
-        <div class="mc"><div class="mc-date">Q1 2027</div><div class="mc-label">Post-cohort Hackathon</div></div>
+        <div class="mc"><div class="mc-date">Sep 12–26, 2026</div><div class="mc-label">Project Weeks</div></div>
+        <div class="mc"><div class="mc-date">Oct 3, 2026</div><div class="mc-label">Demo Day 🎉</div></div>
+        <div class="mc"><div class="mc-date">TBD, 2027</div><div class="mc-label">Cohort 11 Begins</div></div>
+        <div class="mc"><div class="mc-date">TBD, 2027</div><div class="mc-label">Post-cohort Hackathon</div></div>
       </div>
     </div>
 
@@ -533,9 +542,6 @@
             <li class="is-lab"><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597241" target="_blank">Lab: Create your own probability distribution</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597242" target="_blank">Reflect on your findings</a></li>
             <li class="is-chk"><a href="https://www.skills.google/paths/3135/course_templates/1341/quizzes/597243" target="_blank">Knowledge Check 1</a></li>
-            <li><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597238" target="_blank">Learning objectives</a></li>
-            <li><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597239" target="_blank">How to get the most out of the course</a></li>
-
           </ul>
         </div>
       </div>
@@ -543,8 +549,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <a class="wk-num" href="#week2" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 2</a>
           <div class="wtg"><div class="week-title">From N-grams to Transformers</div><div class="week-date">Lab: Wed, June 10 · Lecture: Sat, June 13 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Lab: Tobias Lorenz</span><span class="ic">Lecture: Tobias Lorenz & Deborah Dormah Kanubala</span></div>
-          <div class="chevron-wrap"><span class="chevron">▼</span></div>
+          <div class="ic-row"><span class="ic">Lab: Tobias Lorenz</span><span class="ic">Lecture: Tobias Lorenz & Deborah Dormah Kanubala</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -595,7 +600,6 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597266" target="_blank">Looking forward</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597267" target="_blank">Additional resources and further reading</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597269" target="_blank">Glossary</a></li>
-            <li><a href="https://www.skills.google/paths/3135/course_templates/1341/html_bundles/597268" target="_blank">Feedback</a></li>
           </ul>
           <div class="del-row"><span class="dt chal">🏆 Challenge 1: Develop your problem statement</span><span class="dt lab">⚗ Lab: Train your own SLM</span></div>
         </div>
@@ -631,10 +635,10 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597277" target="_blank">Data resources</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597278" target="_blank">Who owns the data?</a></li>
             <li class="is-chk"><a href="https://www.skills.google/paths/3135/course_templates/1452/quizzes/597279" target="_blank">Knowledge Check 1</a></li>
-            <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597293" target="_blank">Class activity: Why document data?</a></li>
-            <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597294" target="_blank">Challenge: Build a dataset ethically with a Data card</a></li>
-            <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597273" target="_blank">Learning objectives</a></li>
-            <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597274" target="_blank">How to get the most out of this course</a></li>
+            <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597296" target="_blank">Summary</a></li>
+            <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597297" target="_blank">Looking forward</a></li>
+            <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597298" target="_blank">Additional resources and further reading</a></li>
+            <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597299" target="_blank">Glossary</a></li>
           </ul>
           <div class="del-row"><span class="dt chal">🏆 Challenge 2: Build a dataset ethically with a Data Card</span></div>
         </div>
@@ -686,7 +690,6 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597297" target="_blank">Looking forward</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597298" target="_blank">Additional resources and further reading</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597299" target="_blank">Glossary</a></li>
-            <li><a href="https://www.skills.google/paths/3135/course_templates/1452/html_bundles/597300" target="_blank">Feedback</a></li>
           </ul>
         </div>
       </div>
@@ -710,12 +713,12 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <a class="wk-num" href="#week8" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 8</a>
           <div class="wtg"><div class="week-title">Introduction to Neural Networks</div><div class="week-date">Lab: Wed, July 22 · Lecture: Sat, July 25 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Timi Owolabi</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
+          <div class="ic-row"><span class="ic">Lab: Timi Owolabi</span><span class="ic">Lecture: Oluwafemi Azeez</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
-            <div class="sb2 lab"><div class="sl">🧪 Lab</div><div class="sd">Wed, July 22 · 7–9pm WAT</div></div>
-            <div class="sb2 lec"><div class="sl">📖 Lecture</div><div class="sd">Sat, July 25 · 11am–1pm WAT</div></div>
+            <div class="sb2 lab"><div class="sl">🧪 Lab</div><div class="sd">Wed, July 22 · 7–9pm WAT<br/>Timi Owolabi</div></div>
+            <div class="sb2 lec"><div class="sl">📖 Lecture</div><div class="sd">Sat, July 25 · 11am–1pm WAT<br/>Oluwafemi Azeez</div></div>
           </div>
           <div class="ll-label">Lessons &amp; Labs</div>
           <ul class="ll">
@@ -787,7 +790,6 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597334" target="_blank">Additional resources and further reading</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597335" target="_blank">Looking forward</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597336" target="_blank">Glossary</a></li>
-            <li><a href="https://www.skills.google/paths/3135/course_templates/1450/html_bundles/597337" target="_blank">Feedback</a></li>
           </ul>
           <div class="del-row"><span class="dt chal">🏆 Challenge 3: Create an impact statement card</span><span class="dt lab">⚗ Lab: Train your model with Keras</span></div>
         </div>
@@ -852,7 +854,7 @@
         <div class="week-header" onclick="toggleWeek(this)">
           <a class="wk-num" href="#week13" onclick="event.stopPropagation()" style="color:inherit;text-decoration:none">Week 13</a>
           <div class="wtg"><div class="week-title">Positional Embeddings &amp; Mapping Stakeholder Values</div><div class="week-date">Lab: Wed, Aug 26 · Lecture: Sat, Aug 29 · 11am–1pm WAT</div></div>
-          <div class="ic-row"><span class="ic">Aminu Hamza Nababa</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
+          <div class="ic-row"><span class="ic">Blessed Guda</span></div><div class="chevron-wrap"><span class="chevron">▼</span></div>
         </div>
         <div class="week-body">
           <div class="sessions-row">
@@ -898,8 +900,6 @@
             <li><a href="https://www.skills.google/paths/3135/course_templates/1451/html_bundles/603281" target="_blank">Looking forward</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1451/html_bundles/603282" target="_blank">Additional resources and further reading</a></li>
             <li><a href="https://www.skills.google/paths/3135/course_templates/1451/html_bundles/603283" target="_blank">Glossary</a></li>
-            <li><a href="https://www.skills.google/paths/3135/course_templates/1451/html_bundles/603284" target="_blank">Feedback</a></li>
-
           </ul>
           <div class="del-row"><span class="dt lab">⚗ Lab: Implement masked multi-head attention</span></div>
         </div>
@@ -910,21 +910,34 @@
     <div class="course-block">
       <div class="course-header" style="background:var(--orange-dim);border-color:var(--orange-border);"><span class="cpill orange">Week 15</span><h3>Project Week</h3><span class="course-weeks">Sep 6–12, 2026</span></div>
       <div class="special-week" id="week15"><div class="sw-icon">🛠️</div><div><h4>Final project sprint — no lectures</h4><p>Teams finalise their Jupyter Notebook, presentation slides, and demo. Mentors available for check-ins. Challenge Lab: Train A Small Language Model closes this week.</p></div></div>
+    <div class="special-week" id="week16"><div class="sw-icon">🛠️</div><div><h4>Project Week — Sep 19</h4><p>Continued project development. Challenge 4 deadline this week — submit your engagement plan. Selected teams for Demo Day announced.</p></div></div>
+    <div class="special-week" id="week17"><div class="sw-icon">🛠️</div><div><h4>Project Week — Sep 26</h4><p>Final sprint. All project submissions close this week. Teams refine slides and demos ahead of Demo Day on October 3.</p></div></div>
     </div>
 
     <!-- DEMO DAY -->
     <div class="course-block">
-      <div class="course-header" style="background:var(--green-dim);border-color:rgba(34,197,94,0.2);"><span class="cpill green">Week 16</span><h3>🎉 Demo Day</h3><span class="course-weeks">September 19, 2026</span></div>
-      <div class="special-week" id="week16"><div class="sw-icon">🚀</div><div><h4>Online Demo Day — September 19, 2026</h4><p>Each team presents their problem &amp; motivation, dataset &amp; model, ethical considerations, and results. Top teams receive prizes. Format: Remote (Online).</p></div></div>
+      <div class="course-header" style="background:var(--green-dim);border-color:rgba(34,197,94,0.2);"><span class="cpill green">Week 18</span><h3>🎉 Demo Day</h3><span class="course-weeks">October 3, 2026</span></div>
+      <div class="special-week" id="week18"><div class="sw-icon">🚀</div><div><h4>Online Demo Day — October 3, 2026</h4><p>Each team presents their problem &amp; motivation, dataset &amp; model, ethical considerations, and results. Top teams receive prizes. Format: Remote (Online).</p></div></div>
     </div>
 
     <!-- CAPSTONE -->
     <div id="capstone" class="section-sep">
       <div class="sec-eyebrow">Projects</div>
       <div class="sec-title">Capstone Project</div>
-      <div class="cbox dashed">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:0.5rem"><span style="font-size:1.1rem">🔧</span><span style="font-weight:600;font-size:0.9rem">Details coming soon</span></div>
-        <p style="font-size:0.85rem;color:var(--text-2);line-height:1.65">Full capstone project guidelines — including team structure, deliverables, project requirements, and mentor details — will be published here once finalised. Check back soon!</p>
+      <div class="cbox">
+        <p style="font-size:0.85rem;color:var(--text-2);margin-bottom:1.2rem;line-height:1.65">Nine real-world project tracks across language modeling, cultural preservation, healthcare, agriculture, and more. Choose your track in Weeks 4&ndash;7, form your team, and build a Small Language Model that solves a genuine problem. Top teams present on Demo Day &mdash; October 3, 2026.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-bottom:1.2rem">
+          <div style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:8px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--text-2)">&#128296; Toxicity Detection</div>
+          <div style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:8px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--text-2)">&#129504; Mental Health Sentiment</div>
+          <div style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:8px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--text-2)">&#127758; African LLM Tokenization</div>
+          <div style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:8px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--text-2)">&#9878;&#65039; Legal Advice SLM</div>
+          <div style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:8px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--text-2)">&#127807; Agriculture &amp; Climate SLM</div>
+          <div style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:8px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--text-2)">&#127973;&#65039; Medical Advice SLM</div>
+          <div style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:8px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--text-2)">&#127981; African Folktales SLM</div>
+          <div style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:8px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--text-2)">&#128172; Complaint Classification</div>
+          <div style="background:var(--bg-2);border:1px solid var(--border-md);border-radius:8px;padding:0.75rem 1rem;font-size:0.82rem;color:var(--text-2)">&#128209; RAG for Agronomic Advice</div>
+        </div>
+        <a href="./projects.html" style="display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;text-decoration:none;font-size:0.85rem;font-weight:700;padding:0.6rem 1.4rem;border-radius:8px">View all 9 projects &rarr;</a>
       </div>
     </div>
 
@@ -974,7 +987,7 @@
               <li>At least 60% lecture attendance</li>
               <li>Complete the "Train A Small Language Model" lab</li>
               <li>Submit all four cohort challenges (as a team)</li>
-              <li>Participate in a final capstone project (as a team)</li>
+              <li>Complete the final capstone project (as a team)</li>
             </ul>
           </div>
           <div class="cert-col cert-enc">
@@ -1006,10 +1019,9 @@
           <!-- <div class="person-avatar" style="background:#4A7CC922;color:#4A7CC9;border:1.5px solid #4A7CC944">TL</div> -->
           <div class="person-name">Tobias Lorenz</div>
           <div class="person-affiliation">PhD Researcher, CISPA</div>
-          <div class="person-weeks">Week 2 (Lab &amp; Lecture)</div>
+          <div class="person-weeks">Week 2 (Lecture)</div>
           <div class="person-links"><a href="https://www.linkedin.com/in/t-lorenz" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
         </div>
-         
         <div class="person-card">
           <!-- <div class="person-avatar" style="background:#2ECDB822;color:#2ECDB8;border:1.5px solid #2ECDB844">OD</div> -->
           <div class="person-name">Oduguwa Damilola</div>
@@ -1042,8 +1054,14 @@
           <!-- <div class="person-avatar" style="background:#2ECDB822;color:#2ECDB8;border:1.5px solid #2ECDB844">TO</div> -->
           <div class="person-name">Timi Owolabi</div>
           <div class="person-affiliation">ML Engineer, Quidax</div>
-          <div class="person-weeks">Week 8 (Lab &amp; Lecture)</div>
+          <div class="person-weeks">Week 8 (Lab)</div>
           <div class="person-links"><a href="https://www.linkedin.com/in/timi-owolabi" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+        <div class="person-card">
+          <div class="person-name">Oluwafemi Azeez</div>
+          <div class="person-affiliation">Snr ML Engineer, Loblaw Advance</div>
+          <div class="person-weeks">Week 8 (Lecture)</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/azeez-oluwafemi/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
         </div>
         <div class="person-card">
           <!-- <div class="person-avatar" style="background:#a78bfa22;color:#a78bfa;border:1.5px solid #a78bfa44">CW</div> -->
@@ -1077,17 +1095,11 @@
           <!-- <div class="person-avatar" style="background:#a78bfa22;color:#a78bfa;border:1.5px solid #a78bfa44">BG</div> -->
           <div class="person-name">Blessed Guda</div>
           <div class="person-affiliation">PhD Researcher, Carnegie Mellon University Africa</div>
-          <div class="person-weeks">Week 12 (Lab &amp; Lecture)</div>
+          <div class="person-weeks">Weeks 12 &amp; 13 (Lab &amp; Lecture)</div>
           <div class="person-links"><a href="https://www.linkedin.com/in/blessed-guda/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
         </div>
-        <div class="person-card">
-          <!-- <div class="person-avatar" style="background:#FE661222;color:#FE6612;border:1.5px solid #FE661244">AH</div> -->
-          <div class="person-name">Aminu Hamza Nababa</div>
-          <div class="person-affiliation">Deep Learning Specialist, Arewa Data Science Academy</div>
-          <div class="person-weeks">Week 13 (Lab &amp; Lecture)</div>
-          <div class="person-links"><a href="https://www.linkedin.com/in/alamin-h-nababa" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
-        </div>
-        <div class="person-card">
+
+          <div class="person-card">
           <!-- <div class="person-avatar" style="background:#4A7CC922;color:#4A7CC9;border:1.5px solid #4A7CC944">DK</div> -->
           <div class="person-name">Deborah Dormah Kanubala</div>
           <div class="person-affiliation">PhD Researcher, Saarland University</div>
@@ -1097,7 +1109,100 @@
       </div>
     </div>
 
-    <!-- ORGANISERS -->
+    <!-- MENTORS -->
+    <div id="mentors" class="section-sep">
+      <div class="sec-eyebrow">Project support</div>
+      <div class="sec-title">Mentors</div>
+      <div class="people-grid">
+
+        <div class="person-card">
+          <div class="person-name">Moses Olafenwa</div>
+          <div class="person-affiliation">United Kingdom</div>
+          <div class="person-weeks">① Latent Probing for Toxicity Detection</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/moses-olafenwa" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-name">Oluwaseun Ajayi</div>
+          <div class="person-affiliation">Nigeria</div>
+          <div class="person-weeks">⑨ RAG for Agronomic Document Retrieval</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/oluwaseun-a-ajayi" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-name">Samuel Taiwo</div>
+          <div class="person-affiliation">Nigeria</div>
+          <div class="person-weeks">⑤ Domain-Specific SLM for Agriculture & Climate &nbsp;·&nbsp; ⑨ RAG for Agronomic Document Retrieval</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/samuel-taiwo-oladipupo/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-name">Kosi Ashara</div>
+          <div class="person-affiliation">United Kingdom</div>
+          <div class="person-weeks">⑥ Domain-Specific SLM for Medical Advice</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/kosi-ashara-917bba164" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-name">Erick Otuoma</div>
+          <div class="person-affiliation">Kenya</div>
+          <div class="person-weeks">④ Domain-Specific SLM for Legal Advice</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/otuomadatascientist/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-name">David Taiwo Balogun</div>
+          <div class="person-affiliation">Nigeria</div>
+          <div class="person-weeks">④ Domain-Specific SLM for Legal Advice &nbsp;·&nbsp; ⑧ Complaint Classification (Transformer)</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/davidtaiwobalogun/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-name">Patrick Owor</div>
+          <div class="person-affiliation">Nigeria</div>
+          <div class="person-weeks">⑦ Domain-Specific SLM for African Folktales</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/patrickowor" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-name">Elinah Moyo</div>
+          <div class="person-affiliation">Zimbabwe</div>
+          <div class="person-weeks">③ African LLM Tokenisation via SuperBPE</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/elinah-moyo-981a57198/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-name">Sina Mohammadi</div>
+          <div class="person-affiliation">Japan</div>
+          <div class="person-weeks">② Latent Probing for Mental Health Sentiment</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/sina-mohammadi-56964b225" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-name">Odion Okonofua</div>
+          <div class="person-affiliation">Nigeria</div>
+          <div class="person-weeks">② Latent Probing for Mental Health Sentiment</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/odion-joel-okonofua-11244223b" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-name">John Evans Okyere</div>
+          <div class="person-affiliation">Ghana</div>
+          <div class="person-weeks">⑤ Domain-Specific SLM for Agriculture & Climate</div>
+          <div class="person-links"><a href="https://gh.linkedin.com/in/john-evans-okyere" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+        <div class="person-card">
+          <div class="person-name">Adnan Adetunji</div>
+          <div class="person-affiliation">Nigeria</div>
+          <div class="person-weeks">⑨ RAG for Agronomic Document Retrieval</div>
+          <div class="person-links"><a href="https://www.linkedin.com/in/adnan-adetunji/" target="_blank" class="person-link linkedin-icon"><i class="fa-brands fa-linkedin"></i></a></div>
+        </div>
+
+      </div>
+    </div>
+
+        <!-- ORGANISERS -->
     <div id="team" class="section-sep">
       <div class="sec-eyebrow">Behind the scenes</div>
       <div class="sec-title">Organisers</div>
@@ -1111,7 +1216,6 @@
         <div class="person-card"><div class="person-name">Ibrahim Gana</div><div class="person-role">Head of Partnership &amp; Grant</div></div>
         <div class="person-card"><div class="person-name">Mmesomachukwu Osele</div><div class="person-role">T&amp;C Expert Volunteer</div></div>
         <div class="person-card"><div class="person-name">Shadrack Adeyemi</div><div class="person-role">R&amp;I Expert Volunteer</div></div>
-
         <div class="person-card"><div class="person-name">Jesuyanmife Egbewale</div><div class="person-role">Programme Volunteer</div></div>
         <div class="person-card"><div class="person-name">Israel Ekundayo</div><div class="person-role">Programme Volunteer</div></div>
         <div class="person-card"><div class="person-name">Gerald Iwejuo</div><div class="person-role">T&amp;C Volunteer</div></div>
@@ -1165,9 +1269,11 @@
       <h5>Community</h5>
       <ul>
         <li><a href="https://github.com/AISaturdaysLagos" target="_blank">GitHub</a></li>
-        <li><a href="https://www.youtube.com/@AISaturdaysLagos" target="_blank">YouTube</a></li>
+        <li><a href="https://www.youtube.com/watch?v=HsONQOoz0is&amp;list=PLD0HH4Qq3rcfBEpojk8MnPTwDaqhN2WH4" target="_blank">Cohort 10 Lectures</a></li>
+        <li><a href="https://www.youtube.com/@AISaturdaysLagos" target="_blank">YouTube Channel</a></li>
         <li><a href="https://www.linkedin.com/company/triaiorg" target="_blank">LinkedIn</a></li>
         <li><a href="https://x.com/aisaturdaylagos" target="_blank">X / Twitter</a></li>
+        <li><a href="https://groups.google.com/a/tri-ai.org/g/community" target="_blank">Join our community</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -1181,7 +1287,13 @@
   </div>
   <div class="footer-bottom">
     <span>© 2026 TRI AI — Artificial Intelligence Teaching Research and Innovation for Africa Ltd/Gte.</span>
-    <span><a href="https://github.com/AISaturdaysLagos" target="_blank">AISaturdaysLagos on GitHub</a></span>
+    <span>
+      <a href="https://www.youtube.com/watch?v=HsONQOoz0is&amp;list=PLD0HH4Qq3rcfBEpojk8MnPTwDaqhN2WH4" target="_blank">Watch Cohort 10 lectures</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://groups.google.com/a/tri-ai.org/g/community" target="_blank">Join our community</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://github.com/AISaturdaysLagos" target="_blank">GitHub</a>
+    </span>
   </div>
 </footer>
 
@@ -1197,8 +1309,17 @@
   document.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('tri-ai-theme');
     applyTheme(saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-    const w1 = document.getElementById('week1');
-    if (w1) w1.classList.add('open');
+    const _h = window.location.hash;
+    if (_h && /^#week\d+$/.test(_h)) {
+      const _t = document.querySelector(_h);
+      if (_t) {
+        if (_t.classList.contains('week-card')) _t.classList.add('open');
+        setTimeout(() => _t.scrollIntoView({behavior:'smooth',block:'start'}), 150);
+      }
+    } else {
+      const w1 = document.getElementById('week1');
+      if (w1) w1.classList.add('open');
+    }
     document.querySelectorAll('#nav-links a').forEach(a => {
       a.addEventListener('click', () => {
         document.getElementById('nav-links').classList.remove('open');
