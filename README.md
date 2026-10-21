@@ -47,7 +47,7 @@ The cohort will run for **15 weeks**, broken down into:
 |-------------|----------------------------------------------------------------|----------------------------------------------------------------------|
 | GitHub      | All materials, assignments, and resources                      | [Cohort Repository](https://github.com/AISaturdaysLagos/flipped_cohort_structure/tree/main) |
 | Gmail Group | Announcements & Notifications                                 | [AI6 Lagos Group](https://groups.google.com/g/ai6lagos)              |
-| Zoom        | Weekly community sessions & project demos                      | Link shared weekly                                                  |
+| Zoom        | Weekly community sessions & project demos                      | [Link shared weekly - Recorded and uploaded to YouTube](https://youtube.com/playlist?list=PLD0HH4Qq3rccVMpm085twerpws37WJEpk&si=SGVltHi7ComYa7y6)       |
 | Discord     | Daily interaction, Q&A, accountability & support               | [Join Discord](https://discord.gg/HG5kE64dNr)                              |
 | YouTube     | Pre-recorded lectures & community session recordings           | [Pre-recorded Lectures & Lab](https://www.youtube.com/playlist?list=PLD0HH4Qq3rccNiAM7n2hQ22yQ4ICCX5Q0), [C9 - Weekly Community Sessions](https://www.youtube.com/playlist?list=PLD0HH4Qq3rccVMpm085twerpws37WJEpk)|
 | Slides      | Presentation used throughout the community sessions            | [View Slides](https://docs.google.com/presentation/d/1WwjuvcEyV9AZr0ADT1AniM2sBeKVAmW9SRrJfJtl0co/edit?usp=drive_link) |
